@@ -1,4 +1,4 @@
-# 12,Links
+# 12 - Links
 
 **Goal:** connect pages with `<a>`,the tag that makes the web a web.
 

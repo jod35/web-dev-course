@@ -1,4 +1,4 @@
-# 07,Meaning vs Looks (The Core Rule)
+# 07 - Meaning vs Looks (The Core Rule)
 
 **Goal:** learn the most important distinction in HTML text: **semantic** elements describe meaning; visual elements only change looks.
 

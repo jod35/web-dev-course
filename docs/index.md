@@ -2,7 +2,7 @@
 icon: lucide/house
 ---
 
-# Intro to HTML,What HTML Is
+# Intro to HTML - What HTML Is
 
 **Goal:** understand what HTML is, what it does, and how you write and save it,before you write your first page.
 

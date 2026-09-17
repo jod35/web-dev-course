@@ -1,4 +1,4 @@
-# 06,Combined: Headings + Paragraphs in the Basic Structure
+# 06 - Combined: Headings + Paragraphs in the Basic Structure
 
 **Goal:** see where text lives inside the skeleton from Chapter 01.
 

@@ -1,4 +1,4 @@
-# 02,What Are Headings?
+# 02 - What Are Headings?
 
 **Goal:** understand what headings **are for** before meeting all six levels.
 

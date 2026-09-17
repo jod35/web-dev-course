@@ -1,4 +1,4 @@
-# 13,Images
+# 13 - Images
 
 **Goal:** embed images accessibly with `img`,and caption them with `figure`.
 

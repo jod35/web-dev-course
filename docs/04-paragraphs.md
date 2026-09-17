@@ -1,4 +1,4 @@
-# 04,What Are Paragraphs?
+# 04 - What Are Paragraphs?
 
 **Goal:** understand paragraphs as blocks of thought,and how `br` and `hr` differ.
 

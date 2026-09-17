@@ -1,4 +1,4 @@
-# 11,Special Blocks
+# 11 - Special Blocks
 
 **Goal:** three block tags for exact whitespace, contact info, and fine print.
 

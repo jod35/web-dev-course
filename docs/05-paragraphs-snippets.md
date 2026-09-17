@@ -1,4 +1,4 @@
-# 05,Paragraphs, Breaks, Rules (Syntax)
+# 05 - Paragraphs, Breaks, Rules (Syntax)
 
 **Goal:** exact syntax for `p`, `br`, and `hr`.
 

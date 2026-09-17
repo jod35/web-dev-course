@@ -1,4 +1,4 @@
-# 18,Page Landmarks: header, nav, main, footer, article, aside
+# 18 - Page Landmarks: header, nav, main, footer, article, aside
 
 **Goal:** build a full page skeleton with landmark tags screen readers and search engines understand.
 

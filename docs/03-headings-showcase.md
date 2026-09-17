@@ -1,4 +1,4 @@
-# 03,Headings h1–h6 Showcase
+# 03 - Headings h1–h6 Showcase
 
 **Goal:** meet all six heading levels and see their relative sizes.
 

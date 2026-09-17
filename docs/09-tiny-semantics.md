@@ -1,4 +1,4 @@
-# 09,Tiny Semantics, Big Meaning
+# 09 - Tiny Semantics, Big Meaning
 
 **Goal:** small inline tags that carry machine-readable meaning: abbreviations, dates, edits, formulas.
 

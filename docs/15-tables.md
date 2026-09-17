@@ -1,4 +1,4 @@
-# 15,Tables
+# 15 - Tables
 
 **Goal:** present true tabular data with `table`,rows, headers, and captions.
 

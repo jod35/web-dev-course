@@ -1,4 +1,4 @@
-# 19,Mini Project: Bakery Page
+# 19 - Mini Project: Bakery Page
 
 **Goal:** prove Chapters 01–18 by building one complete page from a spec.
 

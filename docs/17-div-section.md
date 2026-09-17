@@ -1,4 +1,4 @@
-# 17,Grouping: div, section, span
+# 17 - Grouping: div, section, span
 
 **Goal:** group content with `div` (generic), `section` (thematic), and `span` (inline).
 

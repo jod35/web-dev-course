@@ -1,4 +1,4 @@
-# 10,Quotes: Block, Inline, Source
+# 10 - Quotes: Block, Inline, Source
 
 **Goal:** quote correctly with three tags, three jobs.
 

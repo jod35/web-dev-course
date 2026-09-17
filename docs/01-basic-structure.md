@@ -1,4 +1,4 @@
-# 01,Basic Structure of an HTML Page
+# 01 - Basic Structure of an HTML Page
 
 **Goal:** understand the skeleton every webpage is built on: declaration first, then one root, then metadata, then visible content.
 

@@ -1,4 +1,4 @@
-# 16,Forms Basics
+# 16 - Forms Basics
 
 **Goal:** collect user input with `form`, `label`, `input`, and `button`.
 
