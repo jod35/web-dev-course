@@ -1,0 +1,140 @@
+[project]
+site_url = "https://www.example.com/"
+site_name = "Learn HTML (MHSM Course)"
+# site_description = "This is the web develoment course under the web development skilling curriculum for Makerere High School Migadde (2026 and beyond)"
+# site_author = "Jonathan Ssali"
+
+# copyright = "Copyright &copy; 2026 Jonathan Ssali"
+
+# repo_url = "https://github.com/jod35/html_basics"
+# repo_name = "jod35/html_basics"
+# edit_uri = "edit/main/docs/"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Course Index" = "00-index.md" },
+  { "01 - Basic Structure" = "01-basic-structure.md" },
+  { "02 - What Are Headings?" = "02-headings.md" },
+  { "03 - Headings h1–h6 Showcase" = "03-headings-showcase.md" },
+  { "04 - What Are Paragraphs?" = "04-paragraphs.md" },
+  { "05 - Paragraphs, Breaks, Rules" = "05-paragraphs-snippets.md" },
+  { "06 - Combined: Headings + Paragraphs" = "06-combined-structure.md" },
+  { "07 - Meaning vs Looks" = "07-meaning-vs-looks.md" },
+  { "08 - Code Family" = "08-code-family.md" },
+  { "09 - Tiny Semantics" = "09-tiny-semantics.md" },
+  { "10 - Quotes" = "10-quotes.md" },
+  { "11 - Special Blocks" = "11-special-blocks.md" },
+  { "12 - Links" = "12-links.md" },
+  { "13 - Images" = "13-images.md" },
+  { "14 - Lists" = "14-lists.md" },
+  { "15 - Tables" = "15-tables.md" },
+  { "16 - Forms Basics" = "16-forms-basics.md" },
+  { "17 - Grouping: div, section, span" = "17-div-section.md" },
+  { "18 - Page Landmarks" = "18-landmarks.md" },
+  { "19 - Mini Project: Bakery Page" = "19-mini-project.md" },
+]
+
+# extra_css = ["stylesheets/extra.css"]
+# extra_javascript = ["javascripts/extra.js"]
+
+[project.theme]
+# variant = "classic"
+# custom_dir = "overrides"
+# favicon = "images/favicon.png"
+language = "en"
+features = [
+  "announce.dismiss",
+  # "content.action.edit",
+  # "content.action.view",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "header.autohide",
+  # "navigation.expand",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  # "navigation.instant.progress",
+  "navigation.path",
+  # "navigation.prune",
+  "navigation.sections",
+  # "navigation.tabs",
+  # "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  # "toc.follow",
+  # "toc.integrate",
+]
+
+# logo = "assets/logo.png"
+
+# [project.theme.icon]
+# logo = "lucide/smile"
+
+# [project.theme.font]
+# text = "Inter"
+# code = "Jetbrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/github"
+# link = "https://github.com/user/repo"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/mastodon"
+# link = "https://fosstodon.org/@user"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+# pymdownx.snippets.base_path = "includes"
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
+
+[project.markdown_extensions.zensical.extensions.glightbox]
+zoomable = true
