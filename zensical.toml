@@ -31,7 +31,6 @@ nav = [
   { "16 - Forms Basics" = "16-forms-basics.md" },
   { "17 - Grouping: div, section, span" = "17-div-section.md" },
   { "18 - Page Landmarks" = "18-landmarks.md" },
-  { "19 - Mini Project: Bakery Page" = "19-mini-project.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]

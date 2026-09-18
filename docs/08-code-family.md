@@ -4,7 +4,7 @@
 
 ## Tag reference
 
-### `<code>`,code fragment
+### `<code>` - code fragment
 
 Inline code with code meaning (usually monospace). For multi-line blocks, wrap in `<pre>` (Chapter 11):
 
@@ -12,7 +12,7 @@ Inline code with code meaning (usually monospace). For multi-line blocks, wrap i
 <p>Run <code>print(x)</code> to debug.</p>
 ```
 
-### `<kbd>`,keyboard input
+### `<kbd>` - keyboard input
 
 Keys the user must press. Put **each key** in its own tag:
 
@@ -20,7 +20,7 @@ Keys the user must press. Put **each key** in its own tag:
 <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
 ```
 
-### `<samp>`,sample output
+### `<samp>` - sample output
 
 Text a program produced:
 
@@ -28,7 +28,7 @@ Text a program produced:
 <p>Output: <samp>Saved.</samp></p>
 ```
 
-### `<var>`,variable
+### `<var>` - variable
 
 A math or programming variable (usually italic):
 
@@ -42,7 +42,7 @@ Combined example:
 <p>Set <var>name</var> with <code>input()</code>, press <kbd>Enter</kbd>, expect <samp>Hello!</samp></p>
 ```
 
-## Gotchas
+## Rules
 
 - `<code>` alone does **not** preserve line breaks,`<pre><code>…</code></pre>` does (see Chapter 11).
 - Don't use `<var>` for generic italics,that is `<i>` (or better, `<em>`).
@@ -56,4 +56,4 @@ Combined example:
 | `samp` | Program output | `<samp>Done.</samp>` |
 | `var` | Variable | `<var>x</var>` |
 
-**Next:** [09,Tiny Semantics](09-tiny-semantics.md) · **Prev:** [07,Meaning vs Looks](07-meaning-vs-looks.md)
+**Next:** [09 - Tiny Semantics](09-tiny-semantics.md) · **Prev:** [07 - Meaning vs Looks](07-meaning-vs-looks.md)

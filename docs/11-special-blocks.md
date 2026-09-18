@@ -4,7 +4,7 @@
 
 ## Tag reference
 
-### `<pre>`,preformatted text
+### `<pre>` - preformatted text
 
 Keeps **spaces and line breaks exactly** as typed,the only element that does. The home of multi-line code:
 
@@ -20,7 +20,7 @@ Pair with `<code>` for code blocks with meaning:
     print("hi")</code></pre>
 ```
 
-### `<address>`,contact info
+### `<address>` - contact info
 
 Contact information for the **page/section author or owner**,not any postal address found in text:
 
@@ -30,7 +30,7 @@ Contact information for the **page/section author or owner**,not any postal addr
 
 Browsers usually italicize it. It belongs near the footer or author bio.
 
-### `<small>`,fine print
+### `<small>` - fine print
 
 Side comments: copyright, disclaimers, legal notes, attributions:
 
@@ -40,7 +40,7 @@ Side comments: copyright, disclaimers, legal notes, attributions:
 
 Browsers render it one step smaller. It does **not** make text unimportant,only secondary.
 
-## Gotchas
+## Rules
 
 - Inside `<pre>`, you must still escape `<` as `&lt;` or the browser reads it as a tag.
 - `<address>` must not contain headings or sectioning content,only contact lines.
@@ -54,4 +54,4 @@ Browsers render it one step smaller. It does **not** make text unimportant,only 
 | `address` | Author/owner contact | Not any address |
 | `small` | Fine print | Still readable, not hidden |
 
-**Next:** [12,Links](12-links.md) · **Prev:** [10,Quotes](10-quotes.md)
+**Next:** [12 - Links](12-links.md) · **Prev:** [10 - Quotes](10-quotes.md)

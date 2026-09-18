@@ -2,7 +2,7 @@
 
 **Goal:** structure related items with unordered, ordered, and description lists.
 
-## `<ul>`,unordered list
+## `<ul>` - unordered list
 
 Bulleted items, order doesn't matter. Each item is an `<li>`:
 
@@ -14,7 +14,7 @@ Bulleted items, order doesn't matter. Each item is an `<li>`:
 </ul>
 ```
 
-## `<ol>`,ordered list
+## `<ol>` - ordered list
 
 Numbered items, order matters,steps, rankings. Browsers number automatically:
 
@@ -50,7 +50,7 @@ An `<li>` can hold a whole sub-list,the nested list goes **inside** the `<li>`, 
 </ul>
 ```
 
-## `<dl>`,description list
+## `<dl>` - description list
 
 Term/definition pairs,glossaries, menus with descriptions, metadata:
 
@@ -69,7 +69,7 @@ Term/definition pairs,glossaries, menus with descriptions, metadata:
 | `dt` | Term |
 | `dd` | Definition/description |
 
-## Gotchas
+## Rules
 
 - Only `<li>` may be a direct child of `ul`/`ol`,no bare text or `<p>` wrappers at that level.
 - Don't fake lists with `<br>` or `-` dashes; readers lose the count and structure.
@@ -83,4 +83,4 @@ Term/definition pairs,glossaries, menus with descriptions, metadata:
 | `ol` | Order matters | Numbers (auto) |
 | `dl` | Term → definition | None |
 
-**Next:** [15,Tables](15-tables.md) · **Prev:** [13,Images](13-images.md)
+**Next:** [15 - Tables](15-tables.md) · **Prev:** [13 - Images](13-images.md)

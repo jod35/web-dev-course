@@ -8,13 +8,13 @@ icon: lucide/house
 
 ## What is HTML?
 
-**HTML = HyperText Markup Language.**
+**HTML = HyperText , Language.**
 
-- **HyperText**,text that can link to other text. A page that can point to another page via links.
-- **Markup**,you *mark up* plain text with labels that say what each part *is*.
-- **Language**,a fixed set of labels (called *tags*) that every browser understands.
+- **HyperText**: text that can link to other text. A page that can point to another page via links.
+- **Markup**: you *mark up* plain text with labels that say what each part *is*.
+- **Language**: a fixed set of labels (called *tags*) that every browser understands.
 
-HTML is **not a programming language**. It has no logic, no variables, no `if` statements. It is a **markup language**: it describes the *structure and meaning* of content.
+HTML is **not a programming language**. It has no logic, no variables, no `if` statements. It is a **, language**: it describes the *structure and meaning* of content.
 
 ## What does HTML do?
 
@@ -131,10 +131,10 @@ You just wrote HTML: two elements, four tags, one title and one paragraph. Every
 
 | Idea | Detail |
 |------|--------|
-| What HTML is | HyperText Markup Language,labels for structure and meaning |
+| What HTML is | HyperText , Language,labels for structure and meaning |
 | What it does | Says what content *is*; browser renders it; CSS handles looks, JS handles behaviour |
 | Tag | The bracketed label: `<p>`, `</p>` |
 | Element | Whole unit: opening tag + content + closing tag (or a lone void element like `<br>`) |
 | How it lives | Plain-text `.html` file, written in a code editor, opened in a browser |
 
-**Next:** [Course Index](00-index.md),how the course is organised, then [01,Basic Structure](01-basic-structure.md).
+**Next:** [Course Index](00-index.md),how the course is organised, then [01 - Basic Structure](01-basic-structure.md).

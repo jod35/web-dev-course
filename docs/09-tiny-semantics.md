@@ -1,10 +1,10 @@
-# 09 - Tiny Semantics, Big Meaning
+# 09 - Tiny Semantics - Big Meaning
 
 **Goal:** small inline tags that carry machine-readable meaning: abbreviations, dates, edits, formulas.
 
 ## Tag reference
 
-### `<abbr>`,abbreviation
+### `<abbr>` - abbreviation
 
 `title` **must** hold the full form,shown as a tooltip and announced by screen readers:
 
@@ -32,7 +32,7 @@ An `<abbr>` without `title` is pointless,never omit it.
 
 Search engines and calendars can parse `datetime`,plain text they cannot.
 
-### `<del>` / `<ins>`,edits
+### `<del>` / `<ins>` - edits
 
 Deleted and inserted text. Browsers strike through `<del>` and underline `<ins>` **with meaning** (a document history, not decoration):
 
@@ -50,7 +50,7 @@ Optional `cite` (source URL) and `datetime` attributes record *why/when*:
 <del cite="https://example.com/menu-v2" datetime="2026-09-01">Old menu</del>
 ```
 
-### `<sub>` / `<sup>`,subscript / superscript
+### `<sub>` / `<sup>` - subscript / superscript
 
 Formulas and footnotes,**not** generic small/raised styling:
 
@@ -58,7 +58,7 @@ Formulas and footnotes,**not** generic small/raised styling:
 <p>H<sub>2</sub>O and x<sup>2</sup></p>
 ```
 
-## Gotchas
+## Rules
 
 - `<del>`/`<ins>` can wrap block content too (whole paragraphs), not just words.
 - For footnote markers pair `<sup>` with a matching link (Chapter 12).
@@ -72,4 +72,4 @@ Formulas and footnotes,**not** generic small/raised styling:
 | `del` / `ins` | `cite`, `datetime` (optional) | `<del>old</del> <ins>new</ins>` |
 | `sub` / `sup` |,| `H<sub>2</sub>O`, `x<sup>2</sup>` |
 
-**Next:** [10,Quotes](10-quotes.md) · **Prev:** [08,Code Family](08-code-family.md)
+**Next:** [10 - Quotes](10-quotes.md) · **Prev:** [08 - Code Family](08-code-family.md)

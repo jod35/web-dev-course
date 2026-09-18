@@ -22,7 +22,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 
 ## Tag reference
 
-### `<!DOCTYPE html>`,declaration, line 1
+### `<!DOCTYPE html>` - declaration, line 1
 
 - Declares the document as **HTML5** so browsers render in standards mode (not quirks mode).
 - **Not a tag**,no closing tag, no attributes. Always the very first line, nothing above it.
@@ -31,7 +31,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 <!DOCTYPE html>
 ```
 
-### `<html>`,root element, line 2
+### `<html>` - root element, line 2
 
 - The **parent of everything**. Wraps `<head>` and `<body>`. Needs `</html>` as the last line.
 - `lang` sets the page language for **SEO and screen readers**:
@@ -46,7 +46,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 | `sw` | Swahili |
 | `fr` | French |
 
-### `<head>`,invisible metadata
+### `<head>` - invisible metadata
 
 - Holds setup the visitor **never sees on the page**: `<title>`, `<meta charset>`, `<meta viewport>`, `<link>` to CSS, `<script>` to JS.
 - First child of `<html>`. Always **before** `<body>`.
@@ -65,7 +65,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 | `<meta charset="utf-8">` | Character encoding,include always |
 | `<meta name="viewport" …>` | Makes mobile browsers scale correctly,include always |
 
-### `<body>`,visible content
+### `<body>` - visible content
 
 - **Everything you see** goes here: headings, paragraphs, lists, images, links, divs.
 - Second child of `<html>`. Exactly **one** `<body>` per page.
@@ -94,7 +94,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 - `<html>` is the **parent**; `<head>` and `<body>` are its **children**.
 - `<head>` always **before** `<body>`. Nothing visible ever goes in `<head>` (except `<title>` on the tab).
 
-## Rules / gotchas
+## Rules
 
 - One `<!DOCTYPE>`, one `<html>`, one `<head>`, one `<body>`,no more.
 - Close tags in reverse order: `<html>` opens second, closes last.
@@ -109,6 +109,6 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 | 3rd | `<head>` | Invisible metadata |
 | 4th | `<body>` | Visible content |
 
-**Next:** [02,What Are Headings?](02-headings.md)
+**Next:** [02 - What Are Headings?](02-headings.md)
 
 

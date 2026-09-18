@@ -10,7 +10,7 @@ Semantic elements tell **browsers, screen readers, and search engines** what tex
 
 ## Tag reference
 
-### `<strong>`,importance
+### `<strong>` - importance
 
 Renders bold **and** is announced as important by screen readers. Carries SEO weight:
 
@@ -18,7 +18,7 @@ Renders bold **and** is announced as important by screen readers. Carries SEO we
 <p>Warning: <strong>Do not enter.</strong></p>
 ```
 
-### `<b>`,visual bold only
+### `<b>` - visual bold only
 
 Looks bold. Means **nothing** to assistive tech or search:
 
@@ -28,7 +28,7 @@ Looks bold. Means **nothing** to assistive tech or search:
 
 Prefer `<strong>` unless you explicitly mean "styling only" (e.g., a product name in a review).
 
-### `<em>`,emphasis
+### `<em>` - emphasis
 
 Renders italic **and** is stressed by screen readers:
 
@@ -36,7 +36,7 @@ Renders italic **and** is stressed by screen readers:
 <p>We are <em>closed</em> today.</p>
 ```
 
-### `<i>`,visual italic only
+### `<i>` - visual italic only
 
 ```html
 <p>The term <i>croissant</i> is French.</p>
@@ -44,7 +44,7 @@ Renders italic **and** is stressed by screen readers:
 
 Typical legitimate uses: foreign words, technical terms, transliterations. For stress, use `<em>`.
 
-### `<mark>`,highlighted passage
+### `<mark>` - highlighted passage
 
 Marks text as **relevant**,like a highlighter pen (default yellow background):
 
@@ -52,7 +52,7 @@ Marks text as **relevant**,like a highlighter pen (default yellow background):
 <p>Result: <mark>passed</mark></p>
 ```
 
-## Gotchas
+## Rules
 
 - Nesting is fine: `<strong><em>both</em></strong>`,close in reverse order.
 - `<b>`/`<i>` are not deprecated,they are just meaning-free. Use them rarely and deliberately.
@@ -67,4 +67,4 @@ Marks text as **relevant**,like a highlighter pen (default yellow background):
 | `i` | None | Italic |
 | `mark` | Relevant/hit | Highlighted |
 
-**Next:** [08,Code Family](08-code-family.md) · **Prev:** [06,Combined](06-combined-structure.md)
+**Next:** [08 - Code Family](08-code-family.md) · **Prev:** [06 - Combined](06-combined-structure.md)

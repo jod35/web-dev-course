@@ -47,7 +47,7 @@
 
 `required` blocks empty submission; `name` is the key the server receives,an input without `name` sends nothing.
 
-## Gotchas
+## Rules
 
 - Clicking a `<label>` focuses its input,if it doesn't, your `for`/`id` mismatch.
 - `method="get"` puts data in the URL (searchable/shareable); `post` hides it in the request (orders, logins).
@@ -61,4 +61,4 @@
 | Name everything | No `name` = no data sent |
 | Submit | `<button type="submit">`, not a link |
 
-**Next:** [17,Grouping](17-div-section.md) · **Prev:** [15,Tables](15-tables.md)
+**Next:** [17 - Grouping](17-div-section.md) · **Prev:** [15 - Tables](15-tables.md)

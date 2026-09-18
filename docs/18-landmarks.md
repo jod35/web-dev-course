@@ -27,7 +27,7 @@ Screen-reader users jump straight to `<nav>` or `<main>`; search engines weigh `
 
 ## Tag reference
 
-### `<header>`,intro of page or section
+### `<header>` - intro of page or section
 
 Page banner (logo, title) or the intro of a `section`/`article`. Not one-per-page,one per scope:
 
@@ -38,7 +38,7 @@ Page banner (logo, title) or the intro of a `section`/`article`. Not one-per-pag
 </header>
 ```
 
-### `<nav>`,major navigation
+### `<nav>` - major navigation
 
 Wraps the main menu,almost always a list (Chapter 14 pattern):
 
@@ -53,7 +53,7 @@ Wraps the main menu,almost always a list (Chapter 14 pattern):
 
 Use `nav` only for major navigation (site menu, table of contents),not every link group.
 
-### `<main>`,the page's core
+### `<main>` - the page's core
 
 The unique central content. Rules: **exactly one** per page, never nested inside `header`/`footer`/`nav`:
 
@@ -66,7 +66,7 @@ The unique central content. Rules: **exactly one** per page, never nested inside
 </main>
 ```
 
-### `<footer>`,closing of page or section
+### `<footer>` - closing of page or section
 
 Author info, copyright, contact (pairs with `<address>` and `<small>` from Chapter 11):
 
@@ -143,16 +143,7 @@ Chapters 01 + 17 + 18 together:
 </html>
 ```
 
-```text
-<body>             all visible content
-  <header>         banner + <nav>
-  <main>           ONE core,holds <section>s
-    <section>      themed group,has <h2>
-      <div>        generic box,styled via class
-  <footer>         contact + fine print
-```
-
-## Gotchas
+## Rules
 
 - One `<main>` per page. Extra mains confuse navigation ("which one is the content?").
 - Don't put `<main>` inside `<header>`, `<footer>`, or `<nav>`,it must be a top-level zone of `<body>`.
@@ -170,4 +161,4 @@ Chapters 01 + 17 + 18 together:
 | `article` | Standalone piece | Must make sense on its own |
 | `aside` | Tangential box | Sidebar, tip, related links |
 
-**Next:** [19,Mini Project](19-mini-project.md) · **Prev:** [17,Grouping](17-div-section.md)
+

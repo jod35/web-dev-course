@@ -4,7 +4,7 @@
 
 ## Tag reference
 
-### `<blockquote>`,long / block quote
+### `<blockquote>` - long / block quote
 
 A standalone quoted passage. Browsers indent it. `cite` holds the **source URL** (not shown, but machine-readable):
 
@@ -14,7 +14,7 @@ A standalone quoted passage. Browsers indent it. `cite` holds the **source URL**
 </blockquote>
 ```
 
-### `<q>`,short inline quote
+### `<q>` - short inline quote
 
 A quote inside a sentence. Browsers add the quotation marks **for you**,don't type them:
 
@@ -24,7 +24,7 @@ A quote inside a sentence. Browsers add the quotation marks **for you**,don't ty
 
 Renders as: She said "Stay hungry."
 
-### `<cite>`,source title
+### `<cite>` - source title
 
 The title of the **work** quoted,a book, article, talk. Never a person's name on its own:
 
@@ -41,7 +41,7 @@ Full pattern,quote plus its source:
 </blockquote>
 ```
 
-## Gotchas
+## Rules
 
 - `<q>` inside `<q>` nests with alternating quote marks,browsers handle it.
 - `cite` the **work**, then name the author in plain text if needed: `<cite>Book</cite> by A. Uthor`.
@@ -55,4 +55,4 @@ Full pattern,quote plus its source:
 | `q` | Inline quote | Browser adds quotes |
 | `cite` | Source title | None |
 
-**Next:** [11,Special Blocks](11-special-blocks.md) · **Prev:** [09,Tiny Semantics](09-tiny-semantics.md)
+**Next:** [11 - Special Blocks](11-special-blocks.md) · **Prev:** [09 - Tiny Semantics](09-tiny-semantics.md)

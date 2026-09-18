@@ -55,7 +55,7 @@ Special schemes:
 <a href="tel:+255700000000">Call us</a>
 ```
 
-## Gotchas
+## Rules
 
 - Relative links keep working when you move the whole site; absolute links to your own pages break that portability.
 - An `<a>` without `href` is not a link,keyboard users can't reach it.
@@ -70,4 +70,4 @@ Special schemes:
 | New tabs | Rarely, with `rel="noopener"` |
 | Anchors | `href="#id"` ↔ `id="id"` |
 
-**Next:** [13,Images](13-images.md) · **Prev:** [11,Special Blocks](11-special-blocks.md)
+**Next:** [13 - Images](13-images.md) · **Prev:** [11 - Special Blocks](11-special-blocks.md)

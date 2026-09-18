@@ -14,7 +14,7 @@ Headings are **section titles**. Together they form the page's outline,the same 
 - `<h1>` = the page's **main title**,exactly **one** per page.
 - `<h2>` = major sections. `<h3>`–`<h6>` = smaller and smaller subsections.
 
-## Meaning first, size second
+## Meaning First -  size second
 
 Browsers draw `<h1>` biggest and `<h6>` smallest, with bold by default. But **never pick a heading for its size**:
 
@@ -45,4 +45,4 @@ Browsers draw `<h1>` biggest and `<h6>` smallest, with bold by default. But **ne
 | Pick by | Meaning/position, never visual size |
 | Matters for | Readers, screen readers, search engines |
 
-**Next:** [03,Headings h1–h6](03-headings-showcase.md) · **Prev:** [01,Basic Structure](01-basic-structure.md)
+**Next:** [03 - Headings h1–h6](03-headings-showcase.md) · **Prev:** [01 - Basic Structure](01-basic-structure.md)

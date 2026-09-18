@@ -48,7 +48,7 @@ To attach a visible caption, wrap in `<figure>` with `<figcaption>`:
 
 The `alt` describes **where the link goes**, not the pixels.
 
-## Gotchas
+## Rules
 
 - Never omit `alt`,validators flag it and readers suffer.
 - Huge photo files slow the page; resize before publishing (CSS can't shrink bytes).
@@ -63,4 +63,4 @@ The `alt` describes **where the link goes**, not the pixels.
 | `figure`/`figcaption` | Image + visible caption |
 | Linked `<img>` | `alt` = link destination |
 
-**Next:** [14,Lists](14-lists.md) · **Prev:** [12,Links](12-links.md)
+**Next:** [14 - Lists](14-lists.md) · **Prev:** [12 - Links](12-links.md)

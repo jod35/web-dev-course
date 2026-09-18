@@ -20,7 +20,7 @@ Which parts belong together? Without containers, CSS and screen readers see one 
 
 ## Tag reference
 
-### `<div>`,generic block container
+### `<div>` - generic block container
 
 A block-level box with **no meaning**. Use it to group things for styling or scripting:
 
@@ -41,7 +41,7 @@ A block-level box with **no meaning**. Use it to group things for styling or scr
 </div>
 ```
 
-### `<section>`,thematic group
+### `<section>` - thematic group
 
 A `section` is a `div` **with meaning**: a themed chunk of the page,like a chapter in a book. Rule: **every `<section>` needs a heading** (`h1`–`h6`) as its first child:
 
@@ -69,7 +69,7 @@ No heading? Use `<div>`,not `<section>`:
 </div>
 ```
 
-### `<span>`,inline div
+### `<span>` - inline div
 
 `span` is to inline content what `div` is to block content: a meaning-free wrapper inside a sentence:
 
@@ -114,7 +114,7 @@ Containers nest,inner closes before outer,like all HTML:
     <span>         inline hook inside <p>
 ```
 
-## Gotchas
+## Rules
 
 - Don't use `div` where a precise tag fits: a list of items is `<ul>`,not `<div>`s; tabular data is `<table>`,not `<div>`s.
 - Don't wrap every single element in a `div`,group things that belong together,extra boxes add noise for readers and CSS.
@@ -129,4 +129,4 @@ Containers nest,inner closes before outer,like all HTML:
 | `section` | Themed group | Must have a heading, else use `div` |
 | `span` | Generic inline group | Inside sentences only |
 
-**Next:** [18,Page Landmarks](18-landmarks.md) · **Prev:** [16,Forms Basics](16-forms-basics.md)
+**Next:** [18 - Page Landmarks](18-landmarks.md) · **Prev:** [16 - Forms Basics](16-forms-basics.md)

@@ -37,7 +37,7 @@ A correctly nested example,note no skipped levels:
 <h2>Prices</h2>
 ```
 
-## Gotchas
+## Rules
 
 - Two `<h1>` tags on one page: split the page or demote one to `<h2>`.
 - `<h1>` followed directly by `<h3>`: insert the missing `<h2>`, even if it feels redundant.
@@ -60,4 +60,4 @@ A correctly nested example,note no skipped levels:
 | `h2` | Large | Sections |
 | `h3`–`h6` | Shrinking | Subsections, never skipped |
 
-**Next:** [04,What Are Paragraphs?](04-paragraphs.md) · **Prev:** [02,What Are Headings?](02-headings.md)
+**Next:** [04 - What Are Paragraphs?](04-paragraphs.md) · **Prev:** [02 - What Are Headings?](02-headings.md)

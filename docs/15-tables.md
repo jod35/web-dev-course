@@ -53,7 +53,7 @@ Merging cells (use sparingly):
 <td rowspan="2">Open daily</td>
 ```
 
-## Gotchas
+## Rules
 
 - Every row should end up with the same effective column count,mismatches render ragged.
 - `th` without `scope` still works visually but leaves screen-reader users guessing.
@@ -68,4 +68,4 @@ Merging cells (use sparingly):
 | `th` + `scope` | Label columns/rows for readers |
 | `tr` | Contains only `th`/`td` |
 
-**Next:** [16,Forms Basics](16-forms-basics.md) · **Prev:** [14,Lists](14-lists.md)
+**Next:** [16 - Forms Basics](16-forms-basics.md) · **Prev:** [14 - Lists](14-lists.md)

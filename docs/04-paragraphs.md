@@ -60,4 +60,4 @@ It renders as a horizontal line, but its meaning is "the topic shifts here",it i
 | `br` | Line break, same thought | Yes |
 | `hr` | Thematic break | Yes |
 
-**Next:** [05,Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) · **Prev:** [03,Headings h1–h6](03-headings-showcase.md)
+**Next:** [05 - Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) · **Prev:** [03 - Headings h1–h6](03-headings-showcase.md)

@@ -2,7 +2,7 @@
 
 **Goal:** exact syntax for `p`, `br`, and `hr`.
 
-## `<p>`,paragraph
+## `<p>` - paragraph
 
 Block of thought. Space above and below is automatic:
 
@@ -10,7 +10,7 @@ Block of thought. Space above and below is automatic:
 <p>Fresh bread baked daily.</p>
 ```
 
-## `<br>`,line break
+## `<br>` - line break
 
 Empty tag,**no closing tag**. Breaks the line inside the same paragraph:
 
@@ -23,7 +23,7 @@ Renders as:
 Line one
 Line two
 
-## `<hr>`,thematic break
+## `<hr>` - thematic break
 
 Empty tag,**no closing tag**. Topic shift between blocks:
 
@@ -33,7 +33,7 @@ Empty tag,**no closing tag**. Topic shift between blocks:
 <p>Prices</p>
 ```
 
-## Gotchas
+## Rules
 
 - `<br>` inside headings is occasionally fine (a two-line title), but never use it for vertical spacing,that is CSS's job.
 - Multiple `<hr>` in a row almost always means your sections need headings instead.
@@ -46,4 +46,4 @@ Empty tag,**no closing tag**. Topic shift between blocks:
 | `br` | No | Line break, same thought |
 | `hr` | No | Thematic break |
 
-**Next:** [06,Combined](06-combined-structure.md) · **Prev:** [04,What Are Paragraphs?](04-paragraphs.md)
+**Next:** [06 - Combined](06-combined-structure.md) · **Prev:** [04 - What Are Paragraphs?](04-paragraphs.md)
