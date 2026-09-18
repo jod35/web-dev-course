@@ -1,6 +1,6 @@
 # 01 - Basic Structure of an HTML Page
 
-**Goal:** understand the skeleton every webpage is built on: declaration first, then one root, then metadata, then visible content.
+**Goal:** In this chapter you will learn the skeleton on which every webpage is built, starting with the declaration, then the single root element, then the metadata, and finally the visible content.
 
 ## The full template
 
@@ -18,14 +18,14 @@
 </html>
 ```
 
-Copy this to start **every** page. Read it top to bottom,order matters.
+Copy this template at the start of **every** page. Read it from top to bottom, because the order is significant.
 
 ## Tag reference
 
 ### `<!DOCTYPE html>` - declaration
 
-- Declares the document as **HTML5** so browsers render in standards mode (not quirks mode).
-- **Not a tag**,no closing tag, no attributes. Always the very first line, nothing above it.
+- This line declares the document as **HTML5** so that browsers render the page in standards mode instead of quirks mode.
+- It is **not a tag**, so it has no closing tag and no attributes. It must always be the very first line, with nothing above it.
 
 ```html
 <!DOCTYPE html>
@@ -33,8 +33,8 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 
 ### `<html>` - root element
 
-- The **parent of everything**. Wraps `<head>` and `<body>`. Needs `</html>` as the last line.
-- `lang` sets the page language for **SEO and screen readers**:
+- The `html` element is the **parent of everything**. It wraps both `<head>` and `<body>`, and its closing tag `</html>` must be the last line of the file.
+- The `lang` attribute sets the page language, which **screen readers and search engines use**:
 
 ```html
 <html lang="en">
@@ -48,8 +48,8 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 
 ### `<head>` - invisible metadata
 
-- Holds setup the visitor **never sees on the page**: `<title>`, `<meta charset>`, `<meta viewport>`, `<link>` to CSS, `<script>` to JS.
-- First child of `<html>`. Always **before** `<body>`.
+- The `head` element holds setup information which the visitor **never sees on the page itself**, including `<title>`, `<meta charset>`, `<meta viewport>`, `<link>` to CSS, and `<script>` to JS.
+- It is the first child of `<html>`, and it always appears **before** `<body>`.
 
 ```html
 <head>
@@ -61,14 +61,14 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 
 | Tag inside `<head>` | Job |
 |---------------------|-----|
-| `<title>` | Tab/window title + search-result title |
-| `<meta charset="utf-8">` | Character encoding,include always |
-| `<meta name="viewport" …>` | Makes mobile browsers scale correctly,include always |
+| `<title>` | The tab and window title, which is also used as the search-result title |
+| `<meta charset="utf-8">` | The character encoding, which should always be included |
+| `<meta name="viewport" …>` | The instruction which makes mobile browsers scale the page correctly, and which should always be included |
 
 ### `<body>` - visible content
 
-- **Everything you see** goes here: headings, paragraphs, lists, images, links, divs.
-- Second child of `<html>`. Exactly **one** `<body>` per page.
+- **Everything the visitor sees** belongs in the body, including headings, paragraphs, lists, images, links, and divs.
+- It is the second child of `<html>`, and each page contains exactly **one** `<body>` element.
 
 ```html
 <body>
@@ -91,14 +91,14 @@ Copy this to start **every** page. Read it top to bottom,order matters.
   <body>             2nd child,all visible content
 ```
 
-- `<html>` is the **parent**; `<head>` and `<body>` are its **children**.
-- `<head>` always **before** `<body>`. Nothing visible ever goes in `<head>` (except `<title>` on the tab).
+- The `<html>` element is the **parent**, while `<head>` and `<body>` are its **children**.
+- The `<head>` element always appears **before** the `<body>` element. No visible content ever belongs in `<head>`, although the `<title>` appears on the browser tab.
 
 ## Rules
 
-- One `<!DOCTYPE>`, one `<html>`, one `<head>`, one `<body>`,no more.
-- Close tags in reverse order: `<html>` opens second, closes last.
-- Forgetting `<meta charset>` can garble non-English characters. Forgetting `viewport` breaks mobile layout.
+- Each page contains one `<!DOCTYPE>`, one `<html>`, one `<head>`, and one `<body>`, with no additional copies.
+- Close the tags in reverse order, so the `<html>` tag which opens second also closes last.
+- If you omit `<meta charset>`, non-English characters can display incorrectly. If you omit the viewport tag, the layout breaks on mobile phones.
 
 ## Recap
 
@@ -110,5 +110,3 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 | 4th | `<body>` | Visible content |
 
 **Next:** [02 - What Are Headings?](02-headings.md)
-
-

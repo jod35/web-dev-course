@@ -1,18 +1,18 @@
 # 07 - Meaning vs Looks (The Core Rule)
 
-**Goal:** learn the most important distinction in HTML text: **semantic** elements describe meaning; visual elements only change looks.
+**Goal:** In this chapter you will learn the most important distinction in HTML text, which is that **semantic** elements describe meaning while visual elements only change appearance.
 
 ## The rule
 
-> **When in doubt, go semantic**,`<strong>` not `<b>`, `<em>` not `<i>`.
+> **When in doubt, go semantic.** Use `<strong>` instead of `<b>`, and use `<em>` instead of `<i>`.
 
-Semantic elements tell **browsers, screen readers, and search engines** what text *means*. Visual elements only change rendering.
+Semantic elements tell **browsers, screen readers, and search engines** what the text *means*. Visual elements only change the rendering.
 
 ## Tag reference
 
 ### `<strong>` - importance
 
-Renders bold **and** is announced as important by screen readers. Carries SEO weight:
+The `strong` element renders as bold text, **and** screen readers announce it as important. It also carries SEO weight:
 
 ```html
 <p>Warning: <strong>Do not enter.</strong></p>
@@ -20,17 +20,17 @@ Renders bold **and** is announced as important by screen readers. Carries SEO we
 
 ### `<b>` - visual bold only
 
-Looks bold. Means **nothing** to assistive tech or search:
+The `b` element looks bold, but it means **nothing** to assistive technology or to search engines:
 
 ```html
 <p>Use <b>bold</b> for looks alone.</p>
 ```
 
-Prefer `<strong>` unless you explicitly mean "styling only" (e.g., a product name in a review).
+You should prefer `<strong>` unless you explicitly mean styling only, for example when you mark a product name inside a review.
 
 ### `<em>` - emphasis
 
-Renders italic **and** is stressed by screen readers:
+The `em` element renders as italic text, **and** screen readers stress it when they read it aloud:
 
 ```html
 <p>We are <em>closed</em> today.</p>
@@ -42,11 +42,11 @@ Renders italic **and** is stressed by screen readers:
 <p>The term <i>croissant</i> is French.</p>
 ```
 
-Typical legitimate uses: foreign words, technical terms, transliterations. For stress, use `<em>`.
+Typical legitimate uses of `i` include foreign words, technical terms, and transliterations. When you want to place stress on a word, use `<em>` instead.
 
 ### `<mark>` - highlighted passage
 
-Marks text as **relevant**,like a highlighter pen (default yellow background):
+The `mark` element marks text as **relevant**, in the same way a highlighter pen marks paper, and it shows a yellow background by default:
 
 ```html
 <p>Result: <mark>passed</mark></p>
@@ -54,8 +54,8 @@ Marks text as **relevant**,like a highlighter pen (default yellow background):
 
 ## Rules
 
-- Nesting is fine: `<strong><em>both</em></strong>`,close in reverse order.
-- `<b>`/`<i>` are not deprecated,they are just meaning-free. Use them rarely and deliberately.
+- Nesting is acceptable, for example `<strong><em>both</em></strong>`, provided that you close the tags in reverse order.
+- The `<b>` and `<i>` elements are not deprecated. They are simply free of meaning, so they should be used rarely and deliberately.
 
 ## Recap
 
@@ -65,6 +65,6 @@ Marks text as **relevant**,like a highlighter pen (default yellow background):
 | `b` | None | Bold |
 | `em` | Emphasis | Italic |
 | `i` | None | Italic |
-| `mark` | Relevant/hit | Highlighted |
+| `mark` | Relevant or highlighted | Highlighted |
 
 **Next:** [08 - Code Family](08-code-family.md) · **Prev:** [06 - Combined](06-combined-structure.md)

@@ -1,10 +1,10 @@
 # 18 - Page Landmarks: header, nav, main, footer, article, aside
 
-**Goal:** build a full page skeleton with landmark tags screen readers and search engines understand.
+**Goal:** In this chapter you will build a complete page skeleton with landmark tags which screen readers and search engines understand.
 
 ## Why not only `div`?
 
-Chapter 17 gave you generic boxes. This page uses only them:
+Chapter 17 introduced generic boxes. The following page uses only those boxes:
 
 ```html
 <div id="header">
@@ -14,7 +14,7 @@ Chapter 17 gave you generic boxes. This page uses only them:
 <div id="footer">…</div>
 ```
 
-It renders fine, but assistive tech sees three identical boxes. Landmark tags say **what each box is**:
+It renders correctly, but assistive technology sees three identical boxes. Landmark tags state **what each box is**:
 
 ```html
 <header>…</header>
@@ -23,13 +23,13 @@ It renders fine, but assistive tech sees three identical boxes. Landmark tags sa
 <footer>…</footer>
 ```
 
-Screen-reader users jump straight to `<nav>` or `<main>`; search engines weigh `<main>` content highest.
+Screen-reader users can jump straight to the `<nav>` or `<main>` element, while search engines weigh the `<main>` content most heavily.
 
 ## Tag reference
 
 ### `<header>` - intro of page or section
 
-Page banner (logo, title) or the intro of a `section`/`article`. Not one-per-page,one per scope:
+The `header` element holds the banner of a page, such as the logo and title, or the intro of a `section` or `article` element. It is not limited to one per page, because it applies once per scope:
 
 ```html
 <header>
@@ -40,7 +40,7 @@ Page banner (logo, title) or the intro of a `section`/`article`. Not one-per-pag
 
 ### `<nav>` - major navigation
 
-Wraps the main menu,almost always a list (Chapter 14 pattern):
+The `nav` element wraps the main menu, which is almost always a list in the Chapter 14 pattern:
 
 ```html
 <nav>
@@ -51,11 +51,11 @@ Wraps the main menu,almost always a list (Chapter 14 pattern):
 </nav>
 ```
 
-Use `nav` only for major navigation (site menu, table of contents),not every link group.
+Use the `nav` element only for major navigation such as the site menu or table of contents, not for every group of links.
 
 ### `<main>` - the page's core
 
-The unique central content. Rules: **exactly one** per page, never nested inside `header`/`footer`/`nav`:
+The `main` element holds the unique central content of the page. Two rules apply: each page contains **exactly one** `main` element, and it must never sit inside `header`, `footer`, or `nav`:
 
 ```html
 <main>
@@ -68,7 +68,7 @@ The unique central content. Rules: **exactly one** per page, never nested inside
 
 ### `<footer>` - closing of page or section
 
-Author info, copyright, contact (pairs with `<address>` and `<small>` from Chapter 11):
+The `footer` element holds author information, copyright, and contact details, and it pairs naturally with `<address>` and `<small>` from Chapter 11:
 
 ```html
 <footer>
@@ -81,9 +81,9 @@ Author info, copyright, contact (pairs with `<address>` and `<small>` from Chapt
 
 | Tag | Question it answers | Example |
 |-----|---------------------|---------|
-| `article` | Could this stand alone (syndicated, shared)? | A recipe, a news post |
-| `section` | Is this a themed part of something bigger? | "Our Menu" inside the bakery page |
-| `aside` | Is this tangential (sidebar, tip, ad)? | Opening-hours box beside the menu |
+| `article` | Could this piece stand alone if it were syndicated or shared? | A recipe or a news post |
+| `section` | Is this a themed part of something larger? | The "Our Menu" section inside the bakery page |
+| `aside` | Is this tangential content such as a sidebar, tip, or ad? | An opening-hours box beside the menu |
 
 ```html
 <main>
@@ -98,11 +98,11 @@ Author info, copyright, contact (pairs with `<address>` and `<small>` from Chapt
 </main>
 ```
 
-A recipe (`article`) could be reposted on its own. The tip (`aside`) only makes sense beside it.
+A recipe in an `article` element could be reposted on its own. A tip in an `aside` element only makes sense beside the main content.
 
 ## Full skeleton
 
-Chapters 01 + 17 + 18 together:
+Chapters 01, 17, and 18 combine into the following structure:
 
 ```html
 <!DOCTYPE html>
@@ -145,20 +145,18 @@ Chapters 01 + 17 + 18 together:
 
 ## Rules
 
-- One `<main>` per page. Extra mains confuse navigation ("which one is the content?").
-- Don't put `<main>` inside `<header>`, `<footer>`, or `<nav>`,it must be a top-level zone of `<body>`.
-- `header`/`footer` inside an `article`/`section` belong to that block,not the whole page.
-- Don't fake landmarks with `<div id="header">`,same rendering, zero meaning.
+- Use one `<main>` element per page. Extra `main` elements confuse navigation, because readers cannot tell which block is the real content.
+- Do not place `<main>` inside `<header>`, `<footer>`, or `<nav>`, because it must form a top-level zone of `<body>`.
+- When `header` or `footer` sits inside an `article` or `section` element, it belongs to that block rather than to the whole page.
+- Do not fake landmarks with `<div id="header">`, because the rendering is the same but the meaning is lost.
 
 ## Recap
 
 | Tag | Job | Rule |
 |-----|-----|------|
-| `header` | Intro/banner | Per page or per section/article |
+| `header` | Intro or banner | One per page or per section and article |
 | `nav` | Major navigation | Wraps a list, not every link |
-| `main` | Core content | Exactly one, top-level in `body` |
-| `footer` | Closing/contact | Pairs with `address` + `small` |
+| `main` | Core content | Exactly one per page, at the top level of `body` |
+| `footer` | Closing and contact | Pairs with `address` and `small` |
 | `article` | Standalone piece | Must make sense on its own |
-| `aside` | Tangential box | Sidebar, tip, related links |
-
-
+| `aside` | Tangential box | Sidebar, tip, or related links |

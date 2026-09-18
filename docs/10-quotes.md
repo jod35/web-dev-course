@@ -1,12 +1,12 @@
 # 10 - Quotes: Block, Inline, Source
 
-**Goal:** quote correctly with three tags, three jobs.
+**Goal:** In this chapter you will learn how to quote correctly with three tags which perform three different jobs.
 
 ## Tag reference
 
 ### `<blockquote>` - long / block quote
 
-A standalone quoted passage. Browsers indent it. `cite` holds the **source URL** (not shown, but machine-readable):
+The `blockquote` element holds a standalone quoted passage. Browsers indent the passage, and the `cite` attribute holds the **source URL**, which remains machine-readable and is not displayed:
 
 ```html
 <blockquote cite="https://example.com/interview">
@@ -16,23 +16,23 @@ A standalone quoted passage. Browsers indent it. `cite` holds the **source URL**
 
 ### `<q>` - short inline quote
 
-A quote inside a sentence. Browsers add the quotation marks **for you**,don't type them:
+The `q` element holds a short quote inside a sentence. Browsers add the quotation marks **for you**, so do not type them yourself:
 
 ```html
 <p>She said <q>Stay hungry.</q></p>
 ```
 
-Renders as: She said "Stay hungry."
+It renders as: She said "Stay hungry."
 
 ### `<cite>` - source title
 
-The title of the **work** quoted,a book, article, talk. Never a person's name on its own:
+The `cite` element holds the title of the **work** which has been quoted, such as a book, an article, or a talk. It must never hold a person's name on its own:
 
 ```html
 <cite>Whole Earth Catalog</cite>
 ```
 
-Full pattern,quote plus its source:
+The following example shows the complete pattern with a quote and its source:
 
 ```html
 <blockquote cite="https://example.com/catalog">
@@ -43,9 +43,9 @@ Full pattern,quote plus its source:
 
 ## Rules
 
-- `<q>` inside `<q>` nests with alternating quote marks,browsers handle it.
-- `cite` the **work**, then name the author in plain text if needed: `<cite>Book</cite> by A. Uthor`.
-- `cite` attribute (on `blockquote`) = URL for machines. `<cite>` element = title for humans. Don't confuse them.
+- A `<q>` element can sit inside another `<q>` element, and browsers handle the alternating quote marks.
+- Cite the **work** first, and then name the author in plain text when that detail is needed, for example `<cite>Book</cite> by A. Uthor`.
+- The `cite` attribute on `blockquote` is a URL for machines, while the `<cite>` element is a title for humans, so the two must not be confused.
 
 ## Recap
 

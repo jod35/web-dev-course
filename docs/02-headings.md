@@ -1,48 +1,47 @@
 # 02 - What Are Headings?
 
-**Goal:** understand what headings **are for** before meeting all six levels.
+**Goal:** In this chapter you will learn what headings **are for** before you meet all six levels.
 
 ## Headings = the document outline
 
-Headings are **section titles**. Together they form the page's outline,the same way chapter titles outline a book:
+Headings are **section titles**. Together they form the outline of the page, in the same way that chapter titles outline a book:
 
 ```html
 <h1>Bakery</h1>
 <h2>Our Menu</h2>
 ```
 
-- `<h1>` = the page's **main title**,exactly **one** per page.
-- `<h2>` = major sections. `<h3>`–`<h6>` = smaller and smaller subsections.
+- The `<h1>` element holds the **main title** of the page, and each page contains exactly **one** `h1` element.
+- The `<h2>` element marks major sections, while `<h3>` through `<h6>` mark progressively smaller subsections.
 
 ## Meaning First -  size second
 
-Browsers draw `<h1>` biggest and `<h6>` smallest, with bold by default. But **never pick a heading for its size**:
+Browsers draw `<h1>` as the largest heading and `<h6>` as the smallest, with bold text by default. However, you should **never select a heading for its size**:
 
-- Need small text? Use CSS, not `<h4>`.
-- Need big text? Use CSS, not `<h1>`.
-- Pick the level that describes the section's **place in the outline**.
-
+- If you need small text, use CSS instead of `<h4>`.
+- If you need large text, use CSS instead of `<h1>`.
+- Select the level which describes the **position of the section in the outline**.
 
 ## Why headings matter beyond looks
 
-- **Screen readers:** blind users jump between headings to navigate. Skipping `h1 → h3` confuses them,a level appears missing.
-- **Search engines:** `h1`/`h2` text carries weight for what the page is about.
-- **Skimmers:** most visitors scan headings before reading anything.
+- **Screen readers:** Blind users jump from heading to heading in order to navigate. When you skip from `h1` to `h3`, they encounter a missing level and lose their place.
+- **Search engines:** The text in `h1` and `h2` elements carries extra weight when the search engine decides what the page is about.
+- **Skimmers:** Most visitors scan the headings before they read any paragraph text.
 
 ## Rules
 
-1. Exactly one `<h1>` per page.
-2. Never skip a level (`h1` → `h3`, `h2` → `h4`).
+1. Use exactly one `<h1>` element per page.
+2. Never skip a level, for example from `h1` to `h3` or from `h2` to `h4`.
 3. Keep headings short and descriptive.
-4. Don't use headings to style non-heading text.
+4. Do not use a heading to style text which is not really a heading.
 
 ## Recap
 
 | Idea | Detail |
 |------|--------|
-| What | Section titles forming the page outline |
-| Levels | `h1` (main) → `h6` (deepest subsection) |
-| Pick by | Meaning/position, never visual size |
-| Matters for | Readers, screen readers, search engines |
+| What | Section titles which form the page outline |
+| Levels | `h1` for the main title through `h6` for the deepest subsection |
+| Pick by | Meaning and position, never visual size |
+| Matters for | Readers, screen readers, and search engines |
 
 **Next:** [03 - Headings h1–h6](03-headings-showcase.md) · **Prev:** [01 - Basic Structure](01-basic-structure.md)

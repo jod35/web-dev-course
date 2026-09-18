@@ -1,21 +1,21 @@
 # 03 - Headings h1–h6 Showcase
 
-**Goal:** meet all six heading levels and see their relative sizes.
+**Goal:** In this chapter you will meet all six heading levels and see how their relative sizes compare.
 
 ## The rule first
 
-There must be one `<h1>` per page. Never skip heading levels 1 to 3.
+Each page must contain one `<h1>` element. Heading levels must never be skipped, for example from level 1 to level 3.
 
 ## All six levels
 
 | Tag | Renders (approx.) | Use for |
 |-----|-------------------|---------|
-| `<h1>` | **Bakery Homepage** (largest) | Page title,once |
+| `<h1>` | **Bakery Homepage** (largest) | Page title, used once |
 | `<h2>` | **Our Menu** | Major sections |
 | `<h3>` | **Drinks** | Subsections |
 | `<h4>` | **Hot Drinks** | Sub-subsections |
 | `<h5>` | **Tea Notes** | Deep detail |
-| `<h6>` | **Fine print head** (smallest) | Rarely,deepest level |
+| `<h6>` | **Fine print head** (smallest) | Rarely used, deepest level |
 
 ## Snippets
 
@@ -28,7 +28,7 @@ There must be one `<h1>` per page. Never skip heading levels 1 to 3.
 <h6>Fine print head</h6>
 ```
 
-A correctly nested example,note no skipped levels:
+The following example shows correct nesting, and you can see that no level has been skipped:
 
 ```html
 <h1>Bakery</h1>
@@ -39,9 +39,9 @@ A correctly nested example,note no skipped levels:
 
 ## Rules
 
-- Two `<h1>` tags on one page: split the page or demote one to `<h2>`.
-- `<h1>` followed directly by `<h3>`: insert the missing `<h2>`, even if it feels redundant.
-- Styling a paragraph to look big is **not** a heading,screen readers won't list it.
+- If a page contains two `<h1>` tags, split the page into two pages or demote one of the titles to `<h2>`.
+- If an `<h1>` element is followed directly by an `<h3>` element, insert the missing `<h2>` element, even when it feels redundant.
+- A paragraph which has been styled to look large is **not** a heading, so screen readers will not list it as one.
 
 <figure markdown="span">
 
@@ -56,7 +56,7 @@ A correctly nested example,note no skipped levels:
 
 | Level | Size hint | Role |
 |-------|-----------|------|
-| `h1` | Biggest | Page title ×1 |
+| `h1` | Biggest | Page title, used once |
 | `h2` | Large | Sections |
 | `h3`–`h6` | Shrinking | Subsections, never skipped |
 

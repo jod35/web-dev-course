@@ -1,22 +1,22 @@
 # 04 - What Are Paragraphs?
 
-**Goal:** understand paragraphs as blocks of thought,and how `br` and `hr` differ.
+**Goal:** In this chapter you will learn how paragraphs work as blocks of thought, and how `br` and `hr` differ from paragraphs.
 
 ## Paragraphs = blocks of thought
 
-A paragraph groups sentences into **one block, one idea**. It is the default unit of web text:
+A paragraph groups sentences into **one block which expresses one idea**. It is the default unit of web text:
 
 ```html
 <p>Fresh bread baked every morning.</p>
 ```
 
-- **Block-level:** each `<p>` starts on a new line, and browsers add space above and below automatically.
-- **Readability:** one idea per `<p>`. Short paragraphs scan far better on screens than walls of text.
+- **Block-level:** Each `<p>` element starts on a new line, and browsers add space above and below it automatically.
+- **Readability:** Each `<p>` element should hold one idea. Short paragraphs scan far better on screens than long walls of text.
 
 ## `<p>` vs `<br>`
 
-- `<p>` = a **new thought**,a new block.
-- `<br>` = a line break **inside the same thought**,an address, a poem, a signature block:
+- The `<p>` element starts a **new thought**, which means it creates a new block.
+- The `<br>` element creates a line break **inside the same thought**, which is useful for an address, a poem, or a signature block:
 
 ```html
 <p>Line one<br>Line two, same thought</p>
@@ -32,11 +32,11 @@ A paragraph groups sentences into **one block, one idea**. It is the default uni
 
 
 
-**Never** stack `<br><br><br>` to fake paragraph spacing. That is what `<p>` (and CSS margins) are for,stacked breaks mean nothing to screen readers.
+**Never** stack several `<br>` tags such as `<br><br><br>` in order to fake paragraph spacing. The `<p>` element, together with CSS margins, exists for that purpose, while stacked breaks carry no meaning for screen readers.
 
 ## `<hr>` = thematic break
 
-`<hr>` marks a **scene change** between blocks,a new scene in a story, menu switching to prices:
+The `<hr>` element marks a **scene change** between blocks, for example when a story moves to a new scene or when a menu switches to prices:
 
 ```html
 <p>Menu</p>
@@ -44,20 +44,20 @@ A paragraph groups sentences into **one block, one idea**. It is the default uni
 <p>Prices</p>
 ```
 
-It renders as a horizontal line, but its meaning is "the topic shifts here",it is **not** decoration.
+It renders as a horizontal line, but its meaning is that the topic shifts at this point, so it is **not** decoration.
 
 ## Rules
 
-1. One idea per `<p>`; keep them short.
-2. `<br>` is an empty tag,no closing tag, use sparingly.
-3. `<hr>` is an empty tag,a topic shift, not a divider graphic.
+1. Place one idea in each `<p>` element and keep paragraphs short.
+2. The `<br>` element is an empty tag without a closing tag, and it should be used sparingly.
+3. The `<hr>` element is an empty tag which signals a shift in topic, not a decorative divider.
 
 ## Recap
 
 | Tag | Meaning | Empty? |
 |-----|---------|--------|
 | `p` | Block of thought | No |
-| `br` | Line break, same thought | Yes |
+| `br` | Line break within the same thought | Yes |
 | `hr` | Thematic break | Yes |
 
 **Next:** [05 - Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) · **Prev:** [03 - Headings h1–h6](03-headings-showcase.md)

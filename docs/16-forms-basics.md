@@ -1,6 +1,6 @@
 # 16 - Forms Basics
 
-**Goal:** collect user input with `form`, `label`, `input`, and `button`.
+**Goal:** In this chapter you will learn how to collect user input with `form`, `label`, `input`, and `button`.
 
 ## Minimal form
 
@@ -14,9 +14,9 @@
 
 | Piece | Job |
 |-------|-----|
-| `form` | Groups inputs; `action` = where data goes, `method` = `get` or `post` |
-| `label` | Names an input,`for` must match the input's `id` |
-| `input` | The field itself,`type` picks its behavior |
+| `form` | Groups inputs, where `action` states where the data goes and `method` is either `get` or `post` |
+| `label` | Names an input, where `for` must match the input's `id` |
+| `input` | The field itself, where `type` selects its behaviour |
 | `button type="submit"` | Sends the form |
 
 ## Common `input` types
@@ -39,26 +39,26 @@
 
 | `type` | Collects | Notes |
 |--------|----------|-------|
-| `text` | Short text | Default type |
-| `email` | Email address | Browser validates format |
-| `number` | Number | `min`/`max`/`step` constrain |
-| `date` | Calendar date | ISO value `YYYY-MM-DD` |
-| `checkbox` | On/off | Label wrapping is fine |
+| `text` | Short text | The default type |
+| `email` | Email address | The browser validates the format |
+| `number` | Number | `min`, `max`, and `step` constrain the value |
+| `date` | Calendar date | The value uses ISO format `YYYY-MM-DD` |
+| `checkbox` | On or off state | Wrapping the input in a label is acceptable |
 
-`required` blocks empty submission; `name` is the key the server receives,an input without `name` sends nothing.
+The `required` attribute blocks empty submission, while the `name` attribute is the key which the server receives, so an input without a `name` attribute sends nothing.
 
 ## Rules
 
-- Clicking a `<label>` focuses its input,if it doesn't, your `for`/`id` mismatch.
-- `method="get"` puts data in the URL (searchable/shareable); `post` hides it in the request (orders, logins).
-- Never trust browser validation alone,servers must re-check everything.
+- When you click a `<label>` element, the browser focuses its input. If that focus does not happen, your `for` and `id` values do not match.
+- The value `method="get"` places the data in the URL, which makes it searchable and shareable, while `post` hides the data in the request, which suits orders and logins.
+- Never trust browser validation alone, because the server must re-check everything.
 
 ## Recap
 
 | Rule | Detail |
 |------|--------|
-| Label everything | `for` ↔ `id`, always |
-| Name everything | No `name` = no data sent |
-| Submit | `<button type="submit">`, not a link |
+| Label everything | Always pair `for` with `id` |
+| Name everything | Without a `name` attribute, no data is sent |
+| Submit | Use `<button type="submit">` instead of a link |
 
 **Next:** [17 - Grouping](17-div-section.md) · **Prev:** [15 - Tables](15-tables.md)

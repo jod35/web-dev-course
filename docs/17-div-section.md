@@ -1,10 +1,10 @@
 # 17 - Grouping: div, section, span
 
-**Goal:** group content with `div` (generic), `section` (thematic), and `span` (inline).
+**Goal:** In this chapter you will learn how to group content with `div` for generic blocks, `section` for thematic blocks, and `span` for inline runs.
 
 ## The problem
 
-So far every tag describes one thing: a heading, a paragraph, a list item. Real pages need **containers**,boxes that hold several tags together so you can move, style, or name them as a unit:
+So far every tag has described one thing, such as a heading, a paragraph, or a list item. Real pages also need **containers**, which are boxes that hold several tags together so that you can move, style, or name them as a unit:
 
 ```html
 <h2>Our Menu</h2>
@@ -16,13 +16,13 @@ So far every tag describes one thing: a heading, a paragraph, a list item. Real 
 <table>…</table>
 ```
 
-Which parts belong together? Without containers, CSS and screen readers see one flat list. `div` and `section` fix that.
+Which parts belong together? Without containers, CSS and screen readers see one flat list. The `div` and `section` elements solve that problem.
 
 ## Tag reference
 
 ### `<div>` - generic block container
 
-A block-level box with **no meaning**. Use it to group things for styling or scripting:
+The `div` element is a block-level box with **no meaning**. It groups things together for styling or scripting:
 
 ```html
 <div class="card">
@@ -31,8 +31,8 @@ A block-level box with **no meaning**. Use it to group things for styling or scr
 </div>
 ```
 
-- `class` names the group for CSS (`"card"` can repeat on many boxes).
-- `id` names one unique box on the page (`id="prices"` can appear only once, and links can jump to it: `<a href="#prices">`).
+- The `class` attribute names the group for CSS, so the value `"card"` can repeat on many boxes.
+- The `id` attribute names one unique box on the page, so the value `id="prices"` can appear only once, and links can jump to it with `<a href="#prices">`.
 
 ```html
 <div id="prices">
@@ -43,7 +43,7 @@ A block-level box with **no meaning**. Use it to group things for styling or scr
 
 ### `<section>` - thematic group
 
-A `section` is a `div` **with meaning**: a themed chunk of the page,like a chapter in a book. Rule: **every `<section>` needs a heading** (`h1`–`h6`) as its first child:
+A `section` is a `div` **with meaning**, because it marks a themed chunk of the page in the same way a chapter marks a book. The rule is that **every `<section>` element needs a heading** from `h1` to `h6` as its first child:
 
 ```html
 <section>
@@ -55,7 +55,7 @@ A `section` is a `div` **with meaning**: a themed chunk of the page,like a chapt
 </section>
 ```
 
-No heading? Use `<div>`,not `<section>`:
+If the group has no heading, use a `<div>` element instead of a `<section>` element:
 
 ```html
 <!-- Wrong: section with no heading -->
@@ -71,7 +71,7 @@ No heading? Use `<div>`,not `<section>`:
 
 ### `<span>` - inline div
 
-`span` is to inline content what `div` is to block content: a meaning-free wrapper inside a sentence:
+The `span` element is the inline counterpart of `div`. It is a meaning-free wrapper which sits inside a sentence:
 
 ```html
 <p>Result: <span class="price">$1</span></p>
@@ -79,7 +79,7 @@ No heading? Use `<div>`,not `<section>`:
 
 | Container | Block or inline? | Meaning? | Rule |
 |-----------|------------------|----------|------|
-| `div` | Block | None | Group for styling/scripting |
+| `div` | Block | None | Group for styling or scripting |
 | `section` | Block | Thematic group | Must contain a heading |
 | `span` | Inline | None | Never wrap whole paragraphs |
 
@@ -94,7 +94,7 @@ Need a wrapper?
 
 ## Nesting
 
-Containers nest,inner closes before outer,like all HTML:
+Containers nest in the same way as all HTML elements, so the inner element closes before the outer element:
 
 ```html
 <section>
@@ -116,17 +116,17 @@ Containers nest,inner closes before outer,like all HTML:
 
 ## Rules
 
-- Don't use `div` where a precise tag fits: a list of items is `<ul>`,not `<div>`s; tabular data is `<table>`,not `<div>`s.
-- Don't wrap every single element in a `div`,group things that belong together,extra boxes add noise for readers and CSS.
-- `id` values must be unique per page; `class` values may repeat.
-- `<div>` cannot go inside `<p>`,the browser will close the paragraph early. `<span>` can.
+- Do not use `div` where a precise tag fits. A list of items is a `<ul>` element rather than a set of `<div>` elements, and tabular data is a `<table>` element rather than a set of `<div>` elements.
+- Do not wrap every single element in a `div` element. Group things which belong together, because extra boxes add noise for readers and for CSS.
+- The `id` values must be unique on each page, while `class` values may repeat.
+- A `<div>` element cannot go inside a `<p>` element, because the browser closes the paragraph early. A `<span>` element can sit inside a paragraph.
 
 ## Recap
 
 | Tag | Job | Watch out |
 |-----|-----|-----------|
-| `div` | Generic block group | No meaning, needs `class`/`id` to be useful |
-| `section` | Themed group | Must have a heading, else use `div` |
-| `span` | Generic inline group | Inside sentences only |
+| `div` | Generic block group | It has no meaning, so it needs `class` or `id` to be useful |
+| `section` | Themed group | It must have a heading, otherwise use `div` |
+| `span` | Generic inline group | It belongs inside sentences only |
 
 **Next:** [18 - Page Landmarks](18-landmarks.md) · **Prev:** [16 - Forms Basics](16-forms-basics.md)

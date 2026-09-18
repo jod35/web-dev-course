@@ -1,12 +1,12 @@
 # 08 - Code Family
 
-**Goal:** mark up code, keyboard input, program output, and variables with meaning.
+**Goal:** In this chapter you will learn how to mark up code, keyboard input, program output, and variables so that each one carries its own meaning.
 
 ## Tag reference
 
 ### `<code>` - code fragment
 
-Inline code with code meaning (usually monospace). For multi-line blocks, wrap in `<pre>` (Chapter 11):
+The `code` element marks inline code as code, and browsers usually render it in monospace. For multi-line blocks, wrap the element in `<pre>`, as explained in Chapter 11:
 
 ```html
 <p>Run <code>print(x)</code> to debug.</p>
@@ -14,7 +14,7 @@ Inline code with code meaning (usually monospace). For multi-line blocks, wrap i
 
 ### `<kbd>` - keyboard input
 
-Keys the user must press. Put **each key** in its own tag:
+The `kbd` element marks keys which the user must press. Each key belongs in its own tag:
 
 ```html
 <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
@@ -22,7 +22,7 @@ Keys the user must press. Put **each key** in its own tag:
 
 ### `<samp>` - sample output
 
-Text a program produced:
+The `samp` element marks text which a program has produced:
 
 ```html
 <p>Output: <samp>Saved.</samp></p>
@@ -30,13 +30,13 @@ Text a program produced:
 
 ### `<var>` - variable
 
-A math or programming variable (usually italic):
+The `var` element marks a mathematics or programming variable, and browsers usually render it in italic:
 
 ```html
 <p><var>x</var> = 5</p>
 ```
 
-Combined example:
+The following example combines all four elements:
 
 ```html
 <p>Set <var>name</var> with <code>input()</code>, press <kbd>Enter</kbd>, expect <samp>Hello!</samp></p>
@@ -44,8 +44,8 @@ Combined example:
 
 ## Rules
 
-- `<code>` alone does **not** preserve line breaks,`<pre><code>…</code></pre>` does (see Chapter 11).
-- Don't use `<var>` for generic italics,that is `<i>` (or better, `<em>`).
+- The `<code>` element alone does **not** preserve line breaks. The combination `<pre><code>…</code></pre>` preserves them, as explained in Chapter 11.
+- Do not use `<var>` for generic italics, because that is the job of `<i>`, or better still of `<em>`.
 
 ## Recap
 

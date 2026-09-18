@@ -1,8 +1,8 @@
 # 15 - Tables
 
-**Goal:** present true tabular data with `table`,rows, headers, and captions.
+**Goal:** In this chapter you will learn how to present true tabular data with `table`, rows, headers, and captions.
 
-> Tables are for **data** (prices, schedules). Never use them for page layout,that era ended.
+> Tables are for **data** such as prices and schedules. Never use them for page layout, because that era has ended.
 
 ## Minimal table
 
@@ -33,20 +33,20 @@
 | Tag | Job |
 |-----|-----|
 | `table` | The whole table |
-| `caption` | Table title,first child, announced by readers |
-| `thead` / `tbody` (`tfoot`) | Header/body(/footer) row groups |
-| `tr` | Table row,holds `th`/`td` only |
-| `th` | Header cell,bold + centered by default |
+| `caption` | The table title, which is the first child and is announced by readers |
+| `thead` / `tbody` (`tfoot`) | Header, body, and footer row groups |
+| `tr` | Table row, which holds `th` and `td` only |
+| `th` | Header cell, which is bold and centred by default |
 | `td` | Data cell |
 
-`scope` tells readers which cells a header labels:
+The `scope` attribute tells readers which cells a header labels:
 
 ```html
 <th scope="col">Price</th>   <!-- labels the column below -->
 <th scope="row">Bread</th>   <!-- labels the row beside it -->
 ```
 
-Merging cells (use sparingly):
+Cells can be merged, although this technique should be used sparingly:
 
 ```html
 <td colspan="2">Sold out</td>
@@ -55,17 +55,17 @@ Merging cells (use sparingly):
 
 ## Rules
 
-- Every row should end up with the same effective column count,mismatches render ragged.
-- `th` without `scope` still works visually but leaves screen-reader users guessing.
-- Styling (borders, striping) belongs to CSS,keep markup structural.
+- Every row should end up with the same effective column count, because mismatches render as ragged tables.
+- A `th` element without a `scope` attribute still works visually, but it leaves screen-reader users guessing about the relationship.
+- Styling such as borders and striping belongs to CSS, so keep the markup structural.
 
 ## Recap
 
 | Piece | Rule |
 |-------|------|
-| `caption` | Always,names the table |
-| `thead`/`tbody` | Group header vs data rows |
-| `th` + `scope` | Label columns/rows for readers |
-| `tr` | Contains only `th`/`td` |
+| `caption` | Always include it in order to name the table |
+| `thead`/`tbody` | Group header rows separately from data rows |
+| `th` plus `scope` | Label columns and rows for readers |
+| `tr` | Contains only `th` and `td` |
 
 **Next:** [16 - Forms Basics](16-forms-basics.md) · **Prev:** [14 - Lists](14-lists.md)
