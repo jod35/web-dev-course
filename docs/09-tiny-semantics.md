@@ -18,7 +18,7 @@
 
 An `<abbr>` without `title` is pointless,never omit it.
 
-### `<time>`,date / time
+### `<time>` - date / time
 
 `datetime` holds the **machine-readable** value (ISO format); the content is the human reading:
 

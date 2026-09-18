@@ -83,7 +83,7 @@ Attributes provide additional information about the contents of an element. They
 
 ![Image title](./imgs/attributes.png){ width="300" }
 
-<figcaption>A closing tag</figcaption>
+<figcaption>HTML Attributes</figcaption>
 
 </figure>
 
@@ -96,12 +96,6 @@ Attributes provide additional information about the contents of an element. They
 2. **You write it in a text editor**,VS Code, Notepad, TextEdit, anything that saves plain text. Do **not** use Word or Google Docs: they add hidden formatting that breaks HTML.
 3. **You save it with an `.html` ending**, for example `index.html`. The `.html` tells the operating system and browser "read this as a webpage."
 4. **You open it in a browser**,double-click the file, or drag it into Chrome/Firefox/Edge. The browser reads the file top to bottom and draws the page.
-
-```text
-you type (index.html)  →  browser reads  →  page you see
-<h1>Bakery</h1>            understands        BIG TITLE
-<p>Fresh bread.</p>        "title + para"     plain paragraph
-```
 
 Practical rules for this course:
 

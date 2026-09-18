@@ -32,4 +32,4 @@ This is course material for HTML under the web development skilling program at M
 | 18 | [Page Landmarks](18-landmarks.md) | `header`, `nav`, `main`, `footer`, `article`, `aside` |
 | 19 | [Mini Project](19-mini-project.md) | Build one complete page from spec |
 
-**Next:** [01,Basic Structure](01-basic-structure.md)
+**Next:** [01 - Basic Structure](01-basic-structure.md)

@@ -22,7 +22,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 
 ## Tag reference
 
-### `<!DOCTYPE html>` - declaration, line 1
+### `<!DOCTYPE html>` - declaration
 
 - Declares the document as **HTML5** so browsers render in standards mode (not quirks mode).
 - **Not a tag**,no closing tag, no attributes. Always the very first line, nothing above it.
@@ -31,7 +31,7 @@ Copy this to start **every** page. Read it top to bottom,order matters.
 <!DOCTYPE html>
 ```
 
-### `<html>` - root element, line 2
+### `<html>` - root element
 
 - The **parent of everything**. Wraps `<head>` and `<body>`. Needs `</html>` as the last line.
 - `lang` sets the page language for **SEO and screen readers**:
