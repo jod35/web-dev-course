@@ -1,58 +1,92 @@
-# 10 - Quotes: Block, Inline, Source
+# 10 - Quotes
 
-**Goal:** In this chapter you will learn how to quote correctly with three tags which perform three different jobs.
+## 1. Inline Quotes
 
-## Tag reference
-
-### `<blockquote>` - long / block quote
-
-The `blockquote` element holds a standalone quoted passage. Browsers indent the passage, and the `cite` attribute holds the **source URL**, which remains machine-readable and is not displayed:
+The `<q>` element is used for a **short quotation** within a sentence.
 
 ```html
-<blockquote cite="https://example.com/interview">
-  Fresh bread needs time, not shortcuts.
+<p>
+    Albert Einstein said, <q>Imagination is more important than knowledge.</q>
+</p>
+```
+
+Browsers normally display quotation marks around the text.
+
+---
+
+## 2. Block Quotes
+
+The `<blockquote>` element is used for a **longer quotation** that stands on its own.
+
+```html
+<blockquote>
+    The important thing is not to stop questioning.
+    Curiosity has its own reason for existing.
 </blockquote>
 ```
 
-### `<q>` - short inline quote
+The browser normally displays a block quotation with indentation.
 
-The `q` element holds a short quote inside a sentence. Browsers add the quotation marks **for you**, so do not type them yourself:
+---
 
-```html
-<p>She said <q>Stay hungry.</q></p>
-```
+## 3. Citing the Source
 
-It renders as: She said "Stay hungry."
-
-### `<cite>` - source title
-
-The `cite` element holds the title of the **work** which has been quoted, such as a book, an article, or a talk. It must never hold a person's name on its own:
+The `cite` attribute can be used with `<blockquote>` to specify the source of a quotation.
 
 ```html
-<cite>Whole Earth Catalog</cite>
-```
-
-The following example shows the complete pattern with a quote and its source:
-
-```html
-<blockquote cite="https://example.com/catalog">
-  <p>Stay hungry, stay foolish.</p>
-  <footer>— <cite>Whole Earth Catalog</cite></footer>
+<blockquote cite="https://example.com/article">
+    The important thing is not to stop questioning.
 </blockquote>
 ```
 
-## Rules
+The `cite` attribute provides the source information but is not normally displayed on the page.
 
-- A `<q>` element can sit inside another `<q>` element, and browsers handle the alternating quote marks.
-- Cite the **work** first, and then name the author in plain text when that detail is needed, for example `<cite>Book</cite> by A. Uthor`.
-- The `cite` attribute on `blockquote` is a URL for machines, while the `<cite>` element is a title for humans, so the two must not be confused.
+---
 
-## Recap
+## 4. The `<cite>` Element
 
-| Tag | Job | Marks added? |
-|-----|-----|--------------|
-| `blockquote` | Block quote | Indent, no quotes |
-| `q` | Inline quote | Browser adds quotes |
-| `cite` | Source title | None |
+The `<cite>` element is used to identify the **title of a work**, such as a book, movie, song, or article.
+
+```html
+<p>
+    My favourite book is <cite>Things Fall Apart</cite>.
+</p>
+```
+
+It can also be used when identifying the source of a quotation:
+
+```html
+<blockquote>
+    The world is a fine place and worth fighting for.
+</blockquote>
+
+<p>
+    Source: <cite>Ernest Hemingway</cite>
+</p>
+```
+
+---
+
+## 5. `<q>` vs `<blockquote>`
+
+| Element          | Purpose                                  |
+| ---------------- | ---------------------------------------- |
+| `<q>`            | Short, inline quotation                  |
+| `<blockquote>`   | Longer, separate quotation               |
+| `<cite>`         | Identifies the title or source of a work |
+| `cite` attribute | Specifies the URL of the source          |
+
+### Example
+
+```html
+<p>
+    She said, <q>Learning never stops.</q>
+</p>
+
+<blockquote>
+    Education is the most powerful weapon which you can use
+    to change the world.
+</blockquote>
+```
 
 **Next:** [11 - Special Blocks](11-special-blocks.md) · **Prev:** [09 - Tiny Semantics](09-tiny-semantics.md)
