@@ -1060,38 +1060,38 @@
                   
 
 <h1 id="07-meaning-vs-looks-the-core-rule">07 - Meaning vs Looks (The Core Rule)<a class="headerlink" href="#07-meaning-vs-looks-the-core-rule" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> learn the most important distinction in HTML text: <strong>semantic</strong> elements describe meaning; visual elements only change looks.</p>
+<p><strong>Goal:</strong> In this chapter you will learn the most important distinction in HTML text, which is that <strong>semantic</strong> elements describe meaning while visual elements only change appearance.</p>
 <h2 id="the-rule">The rule<a class="headerlink" href="#the-rule" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p><strong>When in doubt, go semantic</strong>,<code>&lt;strong&gt;</code> not <code>&lt;b&gt;</code>, <code>&lt;em&gt;</code> not <code>&lt;i&gt;</code>.</p>
+<p><strong>When in doubt, go semantic.</strong> Use <code>&lt;strong&gt;</code> instead of <code>&lt;b&gt;</code>, and use <code>&lt;em&gt;</code> instead of <code>&lt;i&gt;</code>.</p>
 </blockquote>
-<p>Semantic elements tell <strong>browsers, screen readers, and search engines</strong> what text <em>means</em>. Visual elements only change rendering.</p>
+<p>Semantic elements tell <strong>browsers, screen readers, and search engines</strong> what the text <em>means</em>. Visual elements only change the rendering.</p>
 <h2 id="tag-reference">Tag reference<a class="headerlink" href="#tag-reference" title="Permanent link">&para;</a></h2>
 <h3 id="strong-importance"><code>&lt;strong&gt;</code> - importance<a class="headerlink" href="#strong-importance" title="Permanent link">&para;</a></h3>
-<p>Renders bold <strong>and</strong> is announced as important by screen readers. Carries SEO weight:</p>
+<p>The <code>strong</code> element renders as bold text, <strong>and</strong> screen readers announce it as important. It also carries SEO weight:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Warning: <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Do not enter.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="b-visual-bold-only"><code>&lt;b&gt;</code> - visual bold only<a class="headerlink" href="#b-visual-bold-only" title="Permanent link">&para;</a></h3>
-<p>Looks bold. Means <strong>nothing</strong> to assistive tech or search:</p>
+<p>The <code>b</code> element looks bold, but it means <strong>nothing</strong> to assistive technology or to search engines:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Use <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>bold<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> for looks alone.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Prefer <code>&lt;strong&gt;</code> unless you explicitly mean "styling only" (e.g., a product name in a review).</p>
+<p>You should prefer <code>&lt;strong&gt;</code> unless you explicitly mean styling only, for example when you mark a product name inside a review.</p>
 <h3 id="em-emphasis"><code>&lt;em&gt;</code> - emphasis<a class="headerlink" href="#em-emphasis" title="Permanent link">&para;</a></h3>
-<p>Renders italic <strong>and</strong> is stressed by screen readers:</p>
+<p>The <code>em</code> element renders as italic text, <strong>and</strong> screen readers stress it when they read it aloud:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>We are <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>closed<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> today.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="i-visual-italic-only"><code>&lt;i&gt;</code> - visual italic only<a class="headerlink" href="#i-visual-italic-only" title="Permanent link">&para;</a></h3>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The term <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>croissant<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> is French.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Typical legitimate uses: foreign words, technical terms, transliterations. For stress, use <code>&lt;em&gt;</code>.</p>
+<p>Typical legitimate uses of <code>i</code> include foreign words, technical terms, and transliterations. When you want to place stress on a word, use <code>&lt;em&gt;</code> instead.</p>
 <h3 id="mark-highlighted-passage"><code>&lt;mark&gt;</code> - highlighted passage<a class="headerlink" href="#mark-highlighted-passage" title="Permanent link">&para;</a></h3>
-<p>Marks text as <strong>relevant</strong>,like a highlighter pen (default yellow background):</p>
+<p>The <code>mark</code> element marks text as <strong>relevant</strong>, in the same way a highlighter pen marks paper, and it shows a yellow background by default:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Result: <span class="p">&lt;</span><span class="nt">mark</span><span class="p">&gt;</span>passed<span class="p">&lt;/</span><span class="nt">mark</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Nesting is fine: <code>&lt;strong&gt;&lt;em&gt;both&lt;/em&gt;&lt;/strong&gt;</code>,close in reverse order.</li>
-<li><code>&lt;b&gt;</code>/<code>&lt;i&gt;</code> are not deprecated,they are just meaning-free. Use them rarely and deliberately.</li>
+<li>Nesting is acceptable, for example <code>&lt;strong&gt;&lt;em&gt;both&lt;/em&gt;&lt;/strong&gt;</code>, provided that you close the tags in reverse order.</li>
+<li>The <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> elements are not deprecated. They are simply free of meaning, so they should be used rarely and deliberately.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1125,7 +1125,7 @@
 </tr>
 <tr>
 <td><code>mark</code></td>
-<td>Relevant/hit</td>
+<td>Relevant or highlighted</td>
 <td>Highlighted</td>
 </tr>
 </tbody>

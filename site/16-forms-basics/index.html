@@ -938,7 +938,7 @@
                   
 
 <h1 id="16-forms-basics">16 - Forms Basics<a class="headerlink" href="#16-forms-basics" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> collect user input with <code>form</code>, <code>label</code>, <code>input</code>, and <code>button</code>.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to collect user input with <code>form</code>, <code>label</code>, <code>input</code>, and <code>button</code>.</p>
 <h2 id="minimal-form">Minimal form<a class="headerlink" href="#minimal-form" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/order"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"name"</span><span class="p">&gt;</span>Name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
@@ -956,15 +956,15 @@
 <tbody>
 <tr>
 <td><code>form</code></td>
-<td>Groups inputs; <code>action</code> = where data goes, <code>method</code> = <code>get</code> or <code>post</code></td>
+<td>Groups inputs, where <code>action</code> states where the data goes and <code>method</code> is either <code>get</code> or <code>post</code></td>
 </tr>
 <tr>
 <td><code>label</code></td>
-<td>Names an input,<code>for</code> must match the input's <code>id</code></td>
+<td>Names an input, where <code>for</code> must match the input's <code>id</code></td>
 </tr>
 <tr>
 <td><code>input</code></td>
-<td>The field itself,<code>type</code> picks its behavior</td>
+<td>The field itself, where <code>type</code> selects its behaviour</td>
 </tr>
 <tr>
 <td><code>button type="submit"</code></td>
@@ -999,36 +999,36 @@
 <tr>
 <td><code>text</code></td>
 <td>Short text</td>
-<td>Default type</td>
+<td>The default type</td>
 </tr>
 <tr>
 <td><code>email</code></td>
 <td>Email address</td>
-<td>Browser validates format</td>
+<td>The browser validates the format</td>
 </tr>
 <tr>
 <td><code>number</code></td>
 <td>Number</td>
-<td><code>min</code>/<code>max</code>/<code>step</code> constrain</td>
+<td><code>min</code>, <code>max</code>, and <code>step</code> constrain the value</td>
 </tr>
 <tr>
 <td><code>date</code></td>
 <td>Calendar date</td>
-<td>ISO value <code>YYYY-MM-DD</code></td>
+<td>The value uses ISO format <code>YYYY-MM-DD</code></td>
 </tr>
 <tr>
 <td><code>checkbox</code></td>
-<td>On/off</td>
-<td>Label wrapping is fine</td>
+<td>On or off state</td>
+<td>Wrapping the input in a label is acceptable</td>
 </tr>
 </tbody>
 </table>
-<p><code>required</code> blocks empty submission; <code>name</code> is the key the server receives,an input without <code>name</code> sends nothing.</p>
+<p>The <code>required</code> attribute blocks empty submission, while the <code>name</code> attribute is the key which the server receives, so an input without a <code>name</code> attribute sends nothing.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Clicking a <code>&lt;label&gt;</code> focuses its input,if it doesn't, your <code>for</code>/<code>id</code> mismatch.</li>
-<li><code>method="get"</code> puts data in the URL (searchable/shareable); <code>post</code> hides it in the request (orders, logins).</li>
-<li>Never trust browser validation alone,servers must re-check everything.</li>
+<li>When you click a <code>&lt;label&gt;</code> element, the browser focuses its input. If that focus does not happen, your <code>for</code> and <code>id</code> values do not match.</li>
+<li>The value <code>method="get"</code> places the data in the URL, which makes it searchable and shareable, while <code>post</code> hides the data in the request, which suits orders and logins.</li>
+<li>Never trust browser validation alone, because the server must re-check everything.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1041,15 +1041,15 @@
 <tbody>
 <tr>
 <td>Label everything</td>
-<td><code>for</code> ↔ <code>id</code>, always</td>
+<td>Always pair <code>for</code> with <code>id</code></td>
 </tr>
 <tr>
 <td>Name everything</td>
-<td>No <code>name</code> = no data sent</td>
+<td>Without a <code>name</code> attribute, no data is sent</td>
 </tr>
 <tr>
 <td>Submit</td>
-<td><code>&lt;button type="submit"&gt;</code>, not a link</td>
+<td>Use <code>&lt;button type="submit"&gt;</code> instead of a link</td>
 </tr>
 </tbody>
 </table>

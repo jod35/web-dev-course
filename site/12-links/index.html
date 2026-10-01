@@ -960,12 +960,12 @@
                   
 
 <h1 id="12-links">12 - Links<a class="headerlink" href="#12-links" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> connect pages with <code>&lt;a&gt;</code>,the tag that makes the web a web.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to connect pages with the <code>&lt;a&gt;</code> element, which is the tag that makes the web a web.</p>
 <h2 id="the-tag">The tag<a class="headerlink" href="#the-tag" title="Permanent link">&para;</a></h2>
-<p><code>href</code> holds the destination. The content is the <strong>link text</strong>,it must describe the destination:</p>
+<p>The <code>href</code> attribute holds the destination, while the element content forms the <strong>link text</strong>, which must describe the destination:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://example.com/menu"</span><span class="p">&gt;</span>See our menu<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Never "click here",screen readers list links out of context, and search engines weigh link text.</p>
+<p>Never write "click here" as link text, because screen readers list links out of context and search engines weigh the link text heavily.</p>
 <h2 id="three-kinds-of-destination">Three kinds of destination<a class="headerlink" href="#three-kinds-of-destination" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">&lt;!-- absolute: another site --&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://example.com"</span><span class="p">&gt;</span>Example<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -996,13 +996,13 @@
 </tr>
 <tr>
 <td>Relative</td>
-<td>path, no scheme</td>
-<td>Your own site,portable across domains</td>
+<td>Path without a scheme</td>
+<td>Your own site, which stays portable across domains</td>
 </tr>
 <tr>
 <td>Anchor</td>
 <td><code>#</code></td>
-<td>Element with matching <code>id</code> on the page</td>
+<td>The element with the matching <code>id</code> on the same page</td>
 </tr>
 </tbody>
 </table>
@@ -1019,19 +1019,19 @@
 <tbody>
 <tr>
 <td><code>href</code></td>
-<td>Destination (required)</td>
+<td>The destination, which is required</td>
 </tr>
 <tr>
 <td><code>target="_blank"</code></td>
-<td>Open in a new tab,use rarely, warn the user</td>
+<td>Opens the link in a new tab, so use it rarely and warn the user</td>
 </tr>
 <tr>
 <td><code>rel="noopener"</code></td>
-<td>Security partner of <code>target="_blank"</code>,always pair them</td>
+<td>The security partner of <code>target="_blank"</code>, so always pair them</td>
 </tr>
 <tr>
 <td><code>title</code></td>
-<td>Extra hint,not a substitute for good link text</td>
+<td>An extra hint, which is not a substitute for good link text</td>
 </tr>
 </tbody>
 </table>
@@ -1041,9 +1041,9 @@
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Relative links keep working when you move the whole site; absolute links to your own pages break that portability.</li>
-<li>An <code>&lt;a&gt;</code> without <code>href</code> is not a link,keyboard users can't reach it.</li>
-<li>Images can be links too: wrap <code>&lt;img&gt;</code> in <code>&lt;a&gt;</code> (Chapter 13), with meaningful <code>alt</code>.</li>
+<li>Relative links keep working when you move the whole site, while absolute links to your own pages lose that portability.</li>
+<li>An <code>&lt;a&gt;</code> element without an <code>href</code> attribute is not a link, and keyboard users cannot reach it.</li>
+<li>Images can serve as links too. When you wrap an <code>&lt;img&gt;</code> element in an <code>&lt;a&gt;</code> element, as shown in Chapter 13, provide meaningful <code>alt</code> text.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1056,19 +1056,19 @@
 <tbody>
 <tr>
 <td>Link text</td>
-<td>Describes destination, never "click here"</td>
+<td>Describe the destination, and never write "click here"</td>
 </tr>
 <tr>
 <td>Own pages</td>
-<td>Relative URLs</td>
+<td>Use relative URLs</td>
 </tr>
 <tr>
 <td>New tabs</td>
-<td>Rarely, with <code>rel="noopener"</code></td>
+<td>Use them rarely, and always include <code>rel="noopener"</code></td>
 </tr>
 <tr>
 <td>Anchors</td>
-<td><code>href="#id"</code> ↔ <code>id="id"</code></td>
+<td>Match <code>href="#id"</code> with <code>id="id"</code></td>
 </tr>
 </tbody>
 </table>

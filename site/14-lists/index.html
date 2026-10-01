@@ -982,9 +982,9 @@
                   
 
 <h1 id="14-lists">14 - Lists<a class="headerlink" href="#14-lists" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> structure related items with unordered, ordered, and description lists.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to structure related items with unordered, ordered, and description lists.</p>
 <h2 id="ul-unordered-list"><code>&lt;ul&gt;</code> - unordered list<a class="headerlink" href="#ul-unordered-list" title="Permanent link">&para;</a></h2>
-<p>Bulleted items, order doesn't matter. Each item is an <code>&lt;li&gt;</code>:</p>
+<p>The <code>ul</code> element defines a bulleted list in which the order of the items does not matter. Each item is an <code>&lt;li&gt;</code> element:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bread<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Milk<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -992,20 +992,20 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="ol-ordered-list"><code>&lt;ol&gt;</code> - ordered list<a class="headerlink" href="#ol-ordered-list" title="Permanent link">&para;</a></h2>
-<p>Numbered items, order matters,steps, rankings. Browsers number automatically:</p>
+<p>The <code>ol</code> element defines a numbered list in which the order matters, for example for steps or rankings. Browsers number the items automatically:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Mix flour and water.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Knead ten minutes.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bake at 220°C.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Start numbering elsewhere with <code>start</code>, reverse with <code>reversed</code>:</p>
+<p>Start the numbering elsewhere with the <code>start</code> attribute, or reverse it with the <code>reversed</code> attribute:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">start</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Fifth step first<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="nesting-lists">Nesting lists<a class="headerlink" href="#nesting-lists" title="Permanent link">&para;</a></h2>
-<p>An <code>&lt;li&gt;</code> can hold a whole sub-list,the nested list goes <strong>inside</strong> the <code>&lt;li&gt;</code>, not after it:</p>
+<p>An <code>&lt;li&gt;</code> element can hold a complete sub-list. The nested list goes <strong>inside</strong> the <code>&lt;li&gt;</code> element, not after it:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bread
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1017,7 +1017,7 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="dl-description-list"><code>&lt;dl&gt;</code> - description list<a class="headerlink" href="#dl-description-list" title="Permanent link">&para;</a></h2>
-<p>Term/definition pairs,glossaries, menus with descriptions, metadata:</p>
+<p>The <code>dl</code> element defines term and definition pairs, which are useful for glossaries, menus with descriptions, and metadata:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>HyperText Markup Language,page structure.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
@@ -1043,15 +1043,15 @@
 </tr>
 <tr>
 <td><code>dd</code></td>
-<td>Definition/description</td>
+<td>Definition or description</td>
 </tr>
 </tbody>
 </table>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Only <code>&lt;li&gt;</code> may be a direct child of <code>ul</code>/<code>ol</code>,no bare text or <code>&lt;p&gt;</code> wrappers at that level.</li>
-<li>Don't fake lists with <code>&lt;br&gt;</code> or <code>-</code> dashes; readers lose the count and structure.</li>
-<li>Navigation menus are lists too (<code>&lt;nav&gt;&lt;ul&gt;…</code>),you'll meet this pattern constantly.</li>
+<li>Only an <code>&lt;li&gt;</code> element may be a direct child of <code>ul</code> or <code>ol</code>, so do not place bare text or <code>&lt;p&gt;</code> wrappers at that level.</li>
+<li>Do not fake lists with <code>&lt;br&gt;</code> tags or <code>-</code> dashes, because readers then lose the count and the structure.</li>
+<li>Navigation menus are lists too, and you will meet the <code>&lt;nav&gt;&lt;ul&gt;…</code> pattern constantly.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1065,17 +1065,17 @@
 <tbody>
 <tr>
 <td><code>ul</code></td>
-<td>Order irrelevant</td>
+<td>Order is irrelevant</td>
 <td>Bullets</td>
 </tr>
 <tr>
 <td><code>ol</code></td>
 <td>Order matters</td>
-<td>Numbers (auto)</td>
+<td>Numbers, added automatically</td>
 </tr>
 <tr>
 <td><code>dl</code></td>
-<td>Term → definition</td>
+<td>Term leads to definition</td>
 <td>None</td>
 </tr>
 </tbody>

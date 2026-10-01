@@ -938,9 +938,9 @@
                   
 
 <h1 id="15-tables">15 - Tables<a class="headerlink" href="#15-tables" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> present true tabular data with <code>table</code>,rows, headers, and captions.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to present true tabular data with <code>table</code>, rows, headers, and captions.</p>
 <blockquote>
-<p>Tables are for <strong>data</strong> (prices, schedules). Never use them for page layout,that era ended.</p>
+<p>Tables are for <strong>data</strong> such as prices and schedules. Never use them for page layout, because that era has ended.</p>
 </blockquote>
 <h2 id="minimal-table">Minimal table<a class="headerlink" href="#minimal-table" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
@@ -978,19 +978,19 @@
 </tr>
 <tr>
 <td><code>caption</code></td>
-<td>Table title,first child, announced by readers</td>
+<td>The table title, which is the first child and is announced by readers</td>
 </tr>
 <tr>
 <td><code>thead</code> / <code>tbody</code> (<code>tfoot</code>)</td>
-<td>Header/body(/footer) row groups</td>
+<td>Header, body, and footer row groups</td>
 </tr>
 <tr>
 <td><code>tr</code></td>
-<td>Table row,holds <code>th</code>/<code>td</code> only</td>
+<td>Table row, which holds <code>th</code> and <code>td</code> only</td>
 </tr>
 <tr>
 <td><code>th</code></td>
-<td>Header cell,bold + centered by default</td>
+<td>Header cell, which is bold and centred by default</td>
 </tr>
 <tr>
 <td><code>td</code></td>
@@ -998,19 +998,19 @@
 </tr>
 </tbody>
 </table>
-<p><code>scope</code> tells readers which cells a header labels:</p>
+<p>The <code>scope</code> attribute tells readers which cells a header labels:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"col"</span><span class="p">&gt;</span>Price<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>   <span class="cm">&lt;!-- labels the column below --&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"row"</span><span class="p">&gt;</span>Bread<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>   <span class="cm">&lt;!-- labels the row beside it --&gt;</span>
 </span></code></pre></div>
-<p>Merging cells (use sparingly):</p>
+<p>Cells can be merged, although this technique should be used sparingly:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Sold out<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Open daily<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Every row should end up with the same effective column count,mismatches render ragged.</li>
-<li><code>th</code> without <code>scope</code> still works visually but leaves screen-reader users guessing.</li>
-<li>Styling (borders, striping) belongs to CSS,keep markup structural.</li>
+<li>Every row should end up with the same effective column count, because mismatches render as ragged tables.</li>
+<li>A <code>th</code> element without a <code>scope</code> attribute still works visually, but it leaves screen-reader users guessing about the relationship.</li>
+<li>Styling such as borders and striping belongs to CSS, so keep the markup structural.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1023,19 +1023,19 @@
 <tbody>
 <tr>
 <td><code>caption</code></td>
-<td>Always,names the table</td>
+<td>Always include it in order to name the table</td>
 </tr>
 <tr>
 <td><code>thead</code>/<code>tbody</code></td>
-<td>Group header vs data rows</td>
+<td>Group header rows separately from data rows</td>
 </tr>
 <tr>
-<td><code>th</code> + <code>scope</code></td>
-<td>Label columns/rows for readers</td>
+<td><code>th</code> plus <code>scope</code></td>
+<td>Label columns and rows for readers</td>
 </tr>
 <tr>
 <td><code>tr</code></td>
-<td>Contains only <code>th</code>/<code>td</code></td>
+<td>Contains only <code>th</code> and <code>td</code></td>
 </tr>
 </tbody>
 </table>

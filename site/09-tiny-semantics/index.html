@@ -1016,39 +1016,39 @@
                   
 
 <h1 id="09-tiny-semantics-big-meaning">09 - Tiny Semantics - Big Meaning<a class="headerlink" href="#09-tiny-semantics-big-meaning" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> small inline tags that carry machine-readable meaning: abbreviations, dates, edits, formulas.</p>
+<p><strong>Goal:</strong> In this chapter you will learn small inline tags which carry machine-readable meaning for abbreviations, dates, edits, and formulas.</p>
 <h2 id="tag-reference">Tag reference<a class="headerlink" href="#tag-reference" title="Permanent link">&para;</a></h2>
 <h3 id="abbr-abbreviation"><code>&lt;abbr&gt;</code> - abbreviation<a class="headerlink" href="#abbr-abbreviation" title="Permanent link">&para;</a></h3>
-<p><code>title</code> <strong>must</strong> hold the full form,shown as a tooltip and announced by screen readers:</p>
+<p>The <code>title</code> attribute <strong>must</strong> hold the full form of the abbreviation. Browsers show it as a tooltip, and screen readers announce it:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"HyperText Markup Language"</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"Cascading Style Sheets"</span><span class="p">&gt;</span>CSS<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>An <code>&lt;abbr&gt;</code> without <code>title</code> is pointless,never omit it.</p>
+<p>An <code>&lt;abbr&gt;</code> element without a <code>title</code> attribute is pointless, so never omit it.</p>
 <h3 id="time-date-time"><code>&lt;time&gt;</code> - date / time<a class="headerlink" href="#time-date-time" title="Permanent link">&para;</a></h3>
-<p><code>datetime</code> holds the <strong>machine-readable</strong> value (ISO format); the content is the human reading:</p>
+<p>The <code>datetime</code> attribute holds the <strong>machine-readable</strong> value in ISO format, while the element content holds the human reading:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2026-09-16"</span><span class="p">&gt;</span>Sept 16, 2026<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"07:00"</span><span class="p">&gt;</span>7am<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Search engines and calendars can parse <code>datetime</code>,plain text they cannot.</p>
+<p>Search engines and calendars can parse the <code>datetime</code> value, while they cannot parse plain text.</p>
 <h3 id="del-ins-edits"><code>&lt;del&gt;</code> / <code>&lt;ins&gt;</code> - edits<a class="headerlink" href="#del-ins-edits" title="Permanent link">&para;</a></h3>
-<p>Deleted and inserted text. Browsers strike through <code>&lt;del&gt;</code> and underline <code>&lt;ins&gt;</code> <strong>with meaning</strong> (a document history, not decoration):</p>
+<p>The <code>del</code> and <code>ins</code> elements mark deleted and inserted text. Browsers strike through <code>&lt;del&gt;</code> content and underline <code>&lt;ins&gt;</code> content, <strong>and</strong> both elements carry meaning because they record the history of a document instead of adding decoration:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>Old price $5<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>New price $4<span class="p">&lt;/</span><span class="nt">ins</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">del</span><span class="p">&gt;</span>closed<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>open<span class="p">&lt;/</span><span class="nt">ins</span><span class="p">&gt;</span> on Sundays<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Optional <code>cite</code> (source URL) and <code>datetime</code> attributes record <em>why/when</em>:</p>
+<p>The optional <code>cite</code> and <code>datetime</code> attributes record the source and the date of the change:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">del</span> <span class="na">cite</span><span class="o">=</span><span class="s">"https://example.com/menu-v2"</span> <span class="na">datetime</span><span class="o">=</span><span class="s">"2026-09-01"</span><span class="p">&gt;</span>Old menu<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="sub-sup-subscript-superscript"><code>&lt;sub&gt;</code> / <code>&lt;sup&gt;</code> - subscript / superscript<a class="headerlink" href="#sub-sup-subscript-superscript" title="Permanent link">&para;</a></h3>
-<p>Formulas and footnotes,<strong>not</strong> generic small/raised styling:</p>
+<p>The <code>sub</code> and <code>sup</code> elements mark formulas and footnotes, and they must <strong>not</strong> be used for generic small or raised styling:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>H<span class="p">&lt;</span><span class="nt">sub</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">sub</span><span class="p">&gt;</span>O and x<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;del&gt;</code>/<code>&lt;ins&gt;</code> can wrap block content too (whole paragraphs), not just words.</li>
-<li>For footnote markers pair <code>&lt;sup&gt;</code> with a matching link (Chapter 12).</li>
+<li>The <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> elements can wrap block content such as whole paragraphs, not only single words.</li>
+<li>For footnote markers, pair the <code>&lt;sup&gt;</code> element with a matching link, as explained in Chapter 12.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1062,22 +1062,22 @@
 <tbody>
 <tr>
 <td><code>abbr</code></td>
-<td><code>title</code> (required in practice)</td>
+<td><code>title</code>, required in practice</td>
 <td><code>&lt;abbr title="…"&gt;HTML&lt;/abbr&gt;</code></td>
 </tr>
 <tr>
 <td><code>time</code></td>
-<td><code>datetime</code> (ISO)</td>
+<td><code>datetime</code> in ISO format</td>
 <td><code>&lt;time datetime="2026-09-16"&gt;…&lt;/time&gt;</code></td>
 </tr>
 <tr>
 <td><code>del</code> / <code>ins</code></td>
-<td><code>cite</code>, <code>datetime</code> (optional)</td>
+<td><code>cite</code> and <code>datetime</code>, both optional</td>
 <td><code>&lt;del&gt;old&lt;/del&gt; &lt;ins&gt;new&lt;/ins&gt;</code></td>
 </tr>
 <tr>
 <td><code>sub</code> / <code>sup</code></td>
-<td>,</td>
+<td>None</td>
 <td><code>H&lt;sub&gt;2&lt;/sub&gt;O</code>, <code>x&lt;sup&gt;2&lt;/sup&gt;</code></td>
 </tr>
 </tbody>

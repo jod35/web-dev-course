@@ -960,35 +960,35 @@
                   
 
 <h1 id="02-what-are-headings">02 - What Are Headings?<a class="headerlink" href="#02-what-are-headings" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> understand what headings <strong>are for</strong> before meeting all six levels.</p>
+<p><strong>Goal:</strong> In this chapter you will learn what headings <strong>are for</strong> before you meet all six levels.</p>
 <h2 id="headings-the-document-outline">Headings = the document outline<a class="headerlink" href="#headings-the-document-outline" title="Permanent link">&para;</a></h2>
-<p>Headings are <strong>section titles</strong>. Together they form the page's outline,the same way chapter titles outline a book:</p>
+<p>Headings are <strong>section titles</strong>. Together they form the outline of the page, in the same way that chapter titles outline a book:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bakery<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Our Menu<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <ul>
-<li><code>&lt;h1&gt;</code> = the page's <strong>main title</strong>,exactly <strong>one</strong> per page.</li>
-<li><code>&lt;h2&gt;</code> = major sections. <code>&lt;h3&gt;</code>–<code>&lt;h6&gt;</code> = smaller and smaller subsections.</li>
+<li>The <code>&lt;h1&gt;</code> element holds the <strong>main title</strong> of the page, and each page contains exactly <strong>one</strong> <code>h1</code> element.</li>
+<li>The <code>&lt;h2&gt;</code> element marks major sections, while <code>&lt;h3&gt;</code> through <code>&lt;h6&gt;</code> mark progressively smaller subsections.</li>
 </ul>
 <h2 id="meaning-first-size-second">Meaning First -  size second<a class="headerlink" href="#meaning-first-size-second" title="Permanent link">&para;</a></h2>
-<p>Browsers draw <code>&lt;h1&gt;</code> biggest and <code>&lt;h6&gt;</code> smallest, with bold by default. But <strong>never pick a heading for its size</strong>:</p>
+<p>Browsers draw <code>&lt;h1&gt;</code> as the largest heading and <code>&lt;h6&gt;</code> as the smallest, with bold text by default. However, you should <strong>never select a heading for its size</strong>:</p>
 <ul>
-<li>Need small text? Use CSS, not <code>&lt;h4&gt;</code>.</li>
-<li>Need big text? Use CSS, not <code>&lt;h1&gt;</code>.</li>
-<li>Pick the level that describes the section's <strong>place in the outline</strong>.</li>
+<li>If you need small text, use CSS instead of <code>&lt;h4&gt;</code>.</li>
+<li>If you need large text, use CSS instead of <code>&lt;h1&gt;</code>.</li>
+<li>Select the level which describes the <strong>position of the section in the outline</strong>.</li>
 </ul>
 <h2 id="why-headings-matter-beyond-looks">Why headings matter beyond looks<a class="headerlink" href="#why-headings-matter-beyond-looks" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Screen readers:</strong> blind users jump between headings to navigate. Skipping <code>h1 → h3</code> confuses them,a level appears missing.</li>
-<li><strong>Search engines:</strong> <code>h1</code>/<code>h2</code> text carries weight for what the page is about.</li>
-<li><strong>Skimmers:</strong> most visitors scan headings before reading anything.</li>
+<li><strong>Screen readers:</strong> Blind users jump from heading to heading in order to navigate. When you skip from <code>h1</code> to <code>h3</code>, they encounter a missing level and lose their place.</li>
+<li><strong>Search engines:</strong> The text in <code>h1</code> and <code>h2</code> elements carries extra weight when the search engine decides what the page is about.</li>
+<li><strong>Skimmers:</strong> Most visitors scan the headings before they read any paragraph text.</li>
 </ul>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Exactly one <code>&lt;h1&gt;</code> per page.</li>
-<li>Never skip a level (<code>h1</code> → <code>h3</code>, <code>h2</code> → <code>h4</code>).</li>
+<li>Use exactly one <code>&lt;h1&gt;</code> element per page.</li>
+<li>Never skip a level, for example from <code>h1</code> to <code>h3</code> or from <code>h2</code> to <code>h4</code>.</li>
 <li>Keep headings short and descriptive.</li>
-<li>Don't use headings to style non-heading text.</li>
+<li>Do not use a heading to style text which is not really a heading.</li>
 </ol>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1001,19 +1001,19 @@
 <tbody>
 <tr>
 <td>What</td>
-<td>Section titles forming the page outline</td>
+<td>Section titles which form the page outline</td>
 </tr>
 <tr>
 <td>Levels</td>
-<td><code>h1</code> (main) → <code>h6</code> (deepest subsection)</td>
+<td><code>h1</code> for the main title through <code>h6</code> for the deepest subsection</td>
 </tr>
 <tr>
 <td>Pick by</td>
-<td>Meaning/position, never visual size</td>
+<td>Meaning and position, never visual size</td>
 </tr>
 <tr>
 <td>Matters for</td>
-<td>Readers, screen readers, search engines</td>
+<td>Readers, screen readers, and search engines</td>
 </tr>
 </tbody>
 </table>

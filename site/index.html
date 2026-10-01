@@ -1004,25 +1004,25 @@
                   
 
 <h1 id="intro-to-html-what-html-is">Intro to HTML - What HTML Is<a class="headerlink" href="#intro-to-html-what-html-is" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> understand what HTML is, what it does, and how you write and save it,before you write your first page.</p>
+<p><strong>Goal:</strong> In this chapter you will learn what HTML is, what it does, and how you write and save it before you create your first page.</p>
 <h2 id="what-is-html">What is HTML?<a class="headerlink" href="#what-is-html" title="Permanent link">&para;</a></h2>
-<p><strong>HTML = HyperText , Language.</strong></p>
+<p><strong>HTML stands for HyperText Markup Language.</strong></p>
 <ul>
-<li><strong>HyperText</strong>: text that can link to other text. A page that can point to another page via links.</li>
-<li><strong>Markup</strong>: you <em>mark up</em> plain text with labels that say what each part <em>is</em>.</li>
-<li><strong>Language</strong>: a fixed set of labels (called <em>tags</em>) that every browser understands.</li>
+<li><strong>HyperText</strong> refers to text that can link to other text. A HyperText page can point to another page through links.</li>
+<li><strong>Markup</strong> means that you mark up plain text with labels which describe what each part is.</li>
+<li><strong>Language</strong> means that HTML provides a fixed set of labels, called <em>tags</em>, which every browser understands.</li>
 </ul>
-<p>HTML is <strong>not a programming language</strong>. It has no logic, no variables, no <code>if</code> statements. It is a <strong>, language</strong>: it describes the <em>structure and meaning</em> of content.</p>
+<p>HTML is <strong>not a programming language</strong>. It has no logic, no variables, and no <code>if</code> statements. It is a <strong>markup language</strong> because it describes the structure and meaning of content.</p>
 <h2 id="what-does-html-do">What does HTML do?<a class="headerlink" href="#what-does-html-do" title="Permanent link">&para;</a></h2>
 <p>HTML tells the browser <strong>what things are</strong>, not what they look like.</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bakery<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Fresh bread daily.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <ul>
-<li><code>&lt;h1&gt;Bakery&lt;/h1&gt;</code>,"this is the main title of the page."</li>
-<li><code>&lt;p&gt;Fresh bread daily.&lt;/p&gt;</code>,"this is a paragraph."</li>
+<li>The line <code>&lt;h1&gt;Bakery&lt;/h1&gt;</code> means that the text is the main title of the page.</li>
+<li>The line <code>&lt;p&gt;Fresh bread daily.&lt;/p&gt;</code> means that the text is a paragraph.</li>
 </ul>
-<p>The browser then decides how to show that: big bold title, plain paragraph. Exact colours, fonts, and layout come later with <strong>CSS</strong>. Behaviour and interactivity come later with <strong>JavaScript</strong>.</p>
+<p>The browser then decides how to display that meaning with a large bold title and a plain paragraph. The exact colours, fonts, and layout are added later with <strong>CSS</strong>. Behaviour and interactivity are added later with <strong>JavaScript</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -1049,12 +1049,12 @@
 </tr>
 </tbody>
 </table>
-<p>This course covers <strong>HTML only</strong>. One core rule to carry with you: <strong>choose tags by meaning, never by looks.</strong></p>
+<p>This course covers <strong>HTML only</strong>. One core rule applies throughout the course: <strong>choose tags by meaning, never by looks.</strong></p>
 <h2 id="tags-vs-elements">Tags vs elements<a class="headerlink" href="#tags-vs-elements" title="Permanent link">&para;</a></h2>
-<p>Beginners mix these up. They are different:</p>
+<p>Beginners often mix up these two terms, but they describe different things:</p>
 <ul>
-<li>A <strong>tag</strong> is the label in angle brackets: <code>&lt;p&gt;</code>, <code>&lt;/p&gt;</code>, <code>&lt;h1&gt;</code>.</li>
-<li>An <strong>element</strong> is the <em>whole unit</em>: opening tag + content + closing tag.</li>
+<li>A <strong>tag</strong> is the label inside angle brackets, for example <code>&lt;p&gt;</code>, <code>&lt;/p&gt;</code>, or <code>&lt;h1&gt;</code>.</li>
+<li>An <strong>element</strong> is the complete unit, which consists of the opening tag, the content, and the closing tag.</li>
 </ul>
 <figure>
 
@@ -1068,17 +1068,17 @@
 
 <figcaption>A closing tag</figcaption>
 </figure>
-<p>Most elements have both tags:</p>
+<p>Most elements have both an opening tag and a closing tag:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bakery<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>      <span class="cm">&lt;!-- opening &lt;h1&gt;, text, closing &lt;/h1&gt; --&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Fresh bread.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>  <span class="cm">&lt;!-- opening &lt;p&gt;, text, closing &lt;/p&gt; --&gt;</span>
 </span></code></pre></div>
-<p>A few elements have <strong>no content and no closing tag</strong>. These are called <strong>void (empty) elements</strong>:</p>
+<p>A few elements have <strong>no content and no closing tag</strong>. These elements are called <strong>void (empty) elements</strong>:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>   <span class="cm">&lt;!-- line break --&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>   <span class="cm">&lt;!-- horizontal rule --&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"bread.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Loaf of bread"</span><span class="p">&gt;</span>  <span class="cm">&lt;!-- image --&gt;</span>
 </span></code></pre></div>
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
-<p>Attributes provide additional information about the contents of an element. They appear on the opening tag of the element and are made up of two parts: a name and a value, separated by an equals sign.</p>
+<p>Attributes provide additional information about the contents of an element. They appear on the opening tag of the element and they consist of two parts, a name and a value, which are separated by an equals sign.</p>
 <figure>
 
 <a class="glightbox" data-type="image" href="./imgs/attributes.png"><img alt="Image title" src="./imgs/attributes.png" width="300" /></a>
@@ -1087,36 +1087,36 @@
 </figure>
 <div class="admonition note">
 <p class="admonition-title">The pattern to notice</p>
-<p>Opening tags can carry extra info called <strong>attributes</strong> (like <code>src</code> and <code>alt</code> above). Closing tags never do. You will meet each attribute when its chapter arrives,for now just recognise the shape.</p>
+<p>Opening tags can carry extra information in the form of <strong>attributes</strong>, such as <code>src</code> and <code>alt</code> in the example above. Closing tags never carry attributes. You will meet each attribute in its own chapter, so for now it is enough to recognise the general shape.</p>
 </div>
 <h2 id="how-html-is-stored-written-and-saved">How HTML is stored, written, and saved<a class="headerlink" href="#how-html-is-stored-written-and-saved" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>HTML is plain text.</strong> No special software creates it. It is just characters in a file.</li>
-<li><strong>You write it in a text editor</strong>,VS Code, Notepad, TextEdit, anything that saves plain text. Do <strong>not</strong> use Word or Google Docs: they add hidden formatting that breaks HTML.</li>
-<li><strong>You save it with an <code>.html</code> ending</strong>, for example <code>index.html</code>. The <code>.html</code> tells the operating system and browser "read this as a webpage."</li>
-<li><strong>You open it in a browser</strong>,double-click the file, or drag it into Chrome/Firefox/Edge. The browser reads the file top to bottom and draws the page.</li>
+<li><strong>HTML is plain text.</strong> No special software creates it. It consists of ordinary characters stored in a file.</li>
+<li><strong>You write HTML in a text editor</strong> such as VS Code, Notepad, or TextEdit, which are all programs that save plain text. Do <strong>not</strong> use Word or Google Docs because they add hidden formatting which breaks HTML.</li>
+<li><strong>You save the file with an <code>.html</code> ending</strong>, for example <code>index.html</code>. The <code>.html</code> ending tells the operating system and the browser that the file should be read as a webpage.</li>
+<li><strong>You open the file in a browser</strong> by double-clicking it or by dragging it into Chrome, Firefox, or Edge. The browser reads the file from top to bottom and draws the page.</li>
 </ol>
 <p>Practical rules for this course:</p>
 <ul>
-<li>Save every exercise as <code>index.html</code> in its own folder.</li>
-<li>Always use <strong>UTF-8 encoding</strong> (your editor's default). This keeps characters like <code>é</code>, <code>ñ</code>, <code>ü</code> intact.</li>
-<li>Name files in <strong>lowercase, no spaces</strong>: <code>index.html</code>, not <code>My Page.HTML</code>.</li>
-<li>After every change: <strong>save the file, then refresh the browser</strong>. No save = no change on screen.</li>
+<li>Save every exercise as <code>index.html</code> inside its own folder.</li>
+<li>Always use <strong>UTF-8 encoding</strong>, which is the default in most editors. UTF-8 keeps characters such as <code>é</code>, <code>ñ</code>, and <code>ü</code> intact.</li>
+<li>Name files in <strong>lowercase without spaces</strong>, for example <code>index.html</code> instead of <code>My Page.HTML</code>.</li>
+<li>After every change, <strong>save the file and then refresh the browser</strong>. If you do not save, the change will not appear on the screen.</li>
 </ul>
-<p>You do not need a server, the internet, or any build tool yet. A text file + a browser is the whole setup.</p>
+<p>You do not need a server, the internet, or any build tool yet. A text file and a browser provide the complete setup.</p>
 <h2 id="try-it-your-first-3-lines">Try it: your first 3 lines<a class="headerlink" href="#try-it-your-first-3-lines" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open your editor, create a new file.</li>
+<li>Open your editor and create a new file.</li>
 <li>Type exactly this:</li>
 </ol>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bakery<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Fresh bread daily.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <ol>
-<li>Save it as <code>index.html</code>.</li>
-<li>Open it in a browser.</li>
+<li>Save the file as <code>index.html</code>.</li>
+<li>Open the file in a browser.</li>
 </ol>
-<p>You just wrote HTML: two elements, four tags, one title and one paragraph. Everything from here on is more labels for more kinds of content.</p>
+<p>You have just written HTML with two elements, four tags, one title, and one paragraph. Every later chapter introduces more labels for more kinds of content.</p>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1128,27 +1128,27 @@
 <tbody>
 <tr>
 <td>What HTML is</td>
-<td>HyperText , Language,labels for structure and meaning</td>
+<td>HyperText Markup Language, a set of labels for structure and meaning</td>
 </tr>
 <tr>
 <td>What it does</td>
-<td>Says what content <em>is</em>; browser renders it; CSS handles looks, JS handles behaviour</td>
+<td>It states what content <em>is</em>; the browser renders it, CSS controls looks, and JS controls behaviour</td>
 </tr>
 <tr>
 <td>Tag</td>
-<td>The bracketed label: <code>&lt;p&gt;</code>, <code>&lt;/p&gt;</code></td>
+<td>The bracketed label, for example <code>&lt;p&gt;</code> or <code>&lt;/p&gt;</code></td>
 </tr>
 <tr>
 <td>Element</td>
-<td>Whole unit: opening tag + content + closing tag (or a lone void element like <code>&lt;br&gt;</code>)</td>
+<td>The complete unit, which is the opening tag plus the content plus the closing tag, or a lone void element such as <code>&lt;br&gt;</code></td>
 </tr>
 <tr>
 <td>How it lives</td>
-<td>Plain-text <code>.html</code> file, written in a code editor, opened in a browser</td>
+<td>A plain-text <code>.html</code> file which is written in a code editor and opened in a browser</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Next:</strong> <a href="00-index/">Course Index</a>,how the course is organised, then <a href="01-basic-structure/">01 - Basic Structure</a>.</p>
+<p><strong>Next:</strong> <a href="00-index/">Course Index</a>, which explains how the course is organised, then <a href="01-basic-structure/">01 - Basic Structure</a>.</p>
 
 
 

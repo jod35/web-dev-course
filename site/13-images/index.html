@@ -1004,9 +1004,9 @@
                   
 
 <h1 id="13-images">13 - Images<a class="headerlink" href="#13-images" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> embed images accessibly with <code>img</code>,and caption them with <code>figure</code>.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to embed images accessibly with <code>img</code>, and how to caption them with <code>figure</code>.</p>
 <h2 id="the-tag">The tag<a class="headerlink" href="#the-tag" title="Permanent link">&para;</a></h2>
-<p><code>src</code> is the file, <code>alt</code> is the <strong>text replacement</strong>. <code>alt</code> is effectively required,screen readers read it, search engines index it, and it shows when the image fails:</p>
+<p>The <code>src</code> attribute provides the image file, while the <code>alt</code> attribute provides the <strong>text replacement</strong>. The <code>alt</code> attribute is effectively required, because screen readers read it, search engines index it, and browsers show it when the image fails to load:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"bread.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Fresh loaves on a wooden shelf"</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="writing-good-alt">Writing good <code>alt</code><a class="headerlink" href="#writing-good-alt" title="Permanent link">&para;</a></h2>
@@ -1024,11 +1024,11 @@
 </tr>
 <tr>
 <td>Decorative border</td>
-<td>Empty: <code>alt=""</code> so readers skip it</td>
+<td>Leave it empty with <code>alt=""</code> so that readers skip it</td>
 </tr>
 <tr>
 <td>Image link</td>
-<td>Describe the destination: <code>alt="Our menu (PDF)"</code>, not "image"</td>
+<td>Describe the destination, for example <code>alt="Our menu (PDF)"</code> instead of "image"</td>
 </tr>
 </tbody>
 </table>
@@ -1036,26 +1036,26 @@
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/bread.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Fresh loaves"</span> <span class="na">width</span><span class="o">=</span><span class="s">"600"</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <ul>
-<li><code>src</code> paths follow the same relative/absolute rules as links (Chapter 12).</li>
-<li><code>width</code> (and <code>height</code>) reserve layout space so the page doesn't jump while loading. Fine-tune display size with CSS later.</li>
+<li>The <code>src</code> paths follow the same relative and absolute rules as links, as explained in Chapter 12.</li>
+<li>The <code>width</code> attribute, together with <code>height</code>, reserves layout space so that the page does not jump while it loads. Fine-tune the display size later with CSS.</li>
 </ul>
 <h2 id="captions-with-figure">Captions with <code>figure</code><a class="headerlink" href="#captions-with-figure" title="Permanent link">&para;</a></h2>
-<p>To attach a visible caption, wrap in <code>&lt;figure&gt;</code> with <code>&lt;figcaption&gt;</code>:</p>
+<p>To attach a visible caption to an image, wrap the image in a <code>&lt;figure&gt;</code> element with a <code>&lt;figcaption&gt;</code> element:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"oven.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Baker sliding loaves into a stone oven"</span><span class="p">&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>Morning bake, 5am.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p><code>&lt;figcaption&gt;</code> must be the first or last child of <code>&lt;figure&gt;</code>.</p>
+<p>The <code>&lt;figcaption&gt;</code> element must be the first or the last child of the <code>&lt;figure&gt;</code> element.</p>
 <h2 id="clickable-images">Clickable images<a class="headerlink" href="#clickable-images" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"menu.html"</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"menu-thumb.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Our menu"</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>The <code>alt</code> describes <strong>where the link goes</strong>, not the pixels.</p>
+<p>In this case the <code>alt</code> text describes <strong>where the link goes</strong>, not the appearance of the pixels.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Never omit <code>alt</code>,validators flag it and readers suffer.</li>
-<li>Huge photo files slow the page; resize before publishing (CSS can't shrink bytes).</li>
-<li><code>title</code> on images is not a substitute for <code>alt</code>.</li>
+<li>Never omit the <code>alt</code> attribute, because validators flag the omission and readers suffer the loss.</li>
+<li>Large photo files slow down the page, so resize images before you publish them, since CSS cannot shrink the number of bytes.</li>
+<li>The <code>title</code> attribute on images is not a substitute for <code>alt</code>.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1072,15 +1072,15 @@
 </tr>
 <tr>
 <td><code>alt</code></td>
-<td>Text replacement,always present</td>
+<td>Text replacement, which is always present</td>
 </tr>
 <tr>
 <td><code>figure</code>/<code>figcaption</code></td>
-<td>Image + visible caption</td>
+<td>Image with a visible caption</td>
 </tr>
 <tr>
 <td>Linked <code>&lt;img&gt;</code></td>
-<td><code>alt</code> = link destination</td>
+<td><code>alt</code> text states the link destination</td>
 </tr>
 </tbody>
 </table>

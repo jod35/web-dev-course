@@ -960,19 +960,19 @@
                   
 
 <h1 id="04-what-are-paragraphs">04 - What Are Paragraphs?<a class="headerlink" href="#04-what-are-paragraphs" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> understand paragraphs as blocks of thought,and how <code>br</code> and <code>hr</code> differ.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how paragraphs work as blocks of thought, and how <code>br</code> and <code>hr</code> differ from paragraphs.</p>
 <h2 id="paragraphs-blocks-of-thought">Paragraphs = blocks of thought<a class="headerlink" href="#paragraphs-blocks-of-thought" title="Permanent link">&para;</a></h2>
-<p>A paragraph groups sentences into <strong>one block, one idea</strong>. It is the default unit of web text:</p>
+<p>A paragraph groups sentences into <strong>one block which expresses one idea</strong>. It is the default unit of web text:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Fresh bread baked every morning.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <ul>
-<li><strong>Block-level:</strong> each <code>&lt;p&gt;</code> starts on a new line, and browsers add space above and below automatically.</li>
-<li><strong>Readability:</strong> one idea per <code>&lt;p&gt;</code>. Short paragraphs scan far better on screens than walls of text.</li>
+<li><strong>Block-level:</strong> Each <code>&lt;p&gt;</code> element starts on a new line, and browsers add space above and below it automatically.</li>
+<li><strong>Readability:</strong> Each <code>&lt;p&gt;</code> element should hold one idea. Short paragraphs scan far better on screens than long walls of text.</li>
 </ul>
 <h2 id="p-vs-br"><code>&lt;p&gt;</code> vs <code>&lt;br&gt;</code><a class="headerlink" href="#p-vs-br" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;p&gt;</code> = a <strong>new thought</strong>,a new block.</li>
-<li><code>&lt;br&gt;</code> = a line break <strong>inside the same thought</strong>,an address, a poem, a signature block:</li>
+<li>The <code>&lt;p&gt;</code> element starts a <strong>new thought</strong>, which means it creates a new block.</li>
+<li>The <code>&lt;br&gt;</code> element creates a line break <strong>inside the same thought</strong>, which is useful for an address, a poem, or a signature block:</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Line one<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Line two, same thought<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
@@ -982,19 +982,19 @@
 
 <figcaption>Paragraphs</figcaption>
 </figure>
-<p><strong>Never</strong> stack <code>&lt;br&gt;&lt;br&gt;&lt;br&gt;</code> to fake paragraph spacing. That is what <code>&lt;p&gt;</code> (and CSS margins) are for,stacked breaks mean nothing to screen readers.</p>
+<p><strong>Never</strong> stack several <code>&lt;br&gt;</code> tags such as <code>&lt;br&gt;&lt;br&gt;&lt;br&gt;</code> in order to fake paragraph spacing. The <code>&lt;p&gt;</code> element, together with CSS margins, exists for that purpose, while stacked breaks carry no meaning for screen readers.</p>
 <h2 id="hr-thematic-break"><code>&lt;hr&gt;</code> = thematic break<a class="headerlink" href="#hr-thematic-break" title="Permanent link">&para;</a></h2>
-<p><code>&lt;hr&gt;</code> marks a <strong>scene change</strong> between blocks,a new scene in a story, menu switching to prices:</p>
+<p>The <code>&lt;hr&gt;</code> element marks a <strong>scene change</strong> between blocks, for example when a story moves to a new scene or when a menu switches to prices:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Menu<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Prices<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>It renders as a horizontal line, but its meaning is "the topic shifts here",it is <strong>not</strong> decoration.</p>
+<p>It renders as a horizontal line, but its meaning is that the topic shifts at this point, so it is <strong>not</strong> decoration.</p>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ol>
-<li>One idea per <code>&lt;p&gt;</code>; keep them short.</li>
-<li><code>&lt;br&gt;</code> is an empty tag,no closing tag, use sparingly.</li>
-<li><code>&lt;hr&gt;</code> is an empty tag,a topic shift, not a divider graphic.</li>
+<li>Place one idea in each <code>&lt;p&gt;</code> element and keep paragraphs short.</li>
+<li>The <code>&lt;br&gt;</code> element is an empty tag without a closing tag, and it should be used sparingly.</li>
+<li>The <code>&lt;hr&gt;</code> element is an empty tag which signals a shift in topic, not a decorative divider.</li>
 </ol>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -1013,7 +1013,7 @@
 </tr>
 <tr>
 <td><code>br</code></td>
-<td>Line break, same thought</td>
+<td>Line break within the same thought</td>
 <td>Yes</td>
 </tr>
 <tr>

@@ -994,24 +994,24 @@
                   
 
 <h1 id="10-quotes-block-inline-source">10 - Quotes: Block, Inline, Source<a class="headerlink" href="#10-quotes-block-inline-source" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> quote correctly with three tags, three jobs.</p>
+<p><strong>Goal:</strong> In this chapter you will learn how to quote correctly with three tags which perform three different jobs.</p>
 <h2 id="tag-reference">Tag reference<a class="headerlink" href="#tag-reference" title="Permanent link">&para;</a></h2>
 <h3 id="blockquote-long-block-quote"><code>&lt;blockquote&gt;</code> - long / block quote<a class="headerlink" href="#blockquote-long-block-quote" title="Permanent link">&para;</a></h3>
-<p>A standalone quoted passage. Browsers indent it. <code>cite</code> holds the <strong>source URL</strong> (not shown, but machine-readable):</p>
+<p>The <code>blockquote</code> element holds a standalone quoted passage. Browsers indent the passage, and the <code>cite</code> attribute holds the <strong>source URL</strong>, which remains machine-readable and is not displayed:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">cite</span><span class="o">=</span><span class="s">"https://example.com/interview"</span><span class="p">&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  Fresh bread needs time, not shortcuts.
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h3 id="q-short-inline-quote"><code>&lt;q&gt;</code> - short inline quote<a class="headerlink" href="#q-short-inline-quote" title="Permanent link">&para;</a></h3>
-<p>A quote inside a sentence. Browsers add the quotation marks <strong>for you</strong>,don't type them:</p>
+<p>The <code>q</code> element holds a short quote inside a sentence. Browsers add the quotation marks <strong>for you</strong>, so do not type them yourself:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>She said <span class="p">&lt;</span><span class="nt">q</span><span class="p">&gt;</span>Stay hungry.<span class="p">&lt;/</span><span class="nt">q</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Renders as: She said "Stay hungry."</p>
+<p>It renders as: She said "Stay hungry."</p>
 <h3 id="cite-source-title"><code>&lt;cite&gt;</code> - source title<a class="headerlink" href="#cite-source-title" title="Permanent link">&para;</a></h3>
-<p>The title of the <strong>work</strong> quoted,a book, article, talk. Never a person's name on its own:</p>
+<p>The <code>cite</code> element holds the title of the <strong>work</strong> which has been quoted, such as a book, an article, or a talk. It must never hold a person's name on its own:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>Whole Earth Catalog<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Full pattern,quote plus its source:</p>
+<p>The following example shows the complete pattern with a quote and its source:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">cite</span><span class="o">=</span><span class="s">"https://example.com/catalog"</span><span class="p">&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Stay hungry, stay foolish.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>— <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>Whole Earth Catalog<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
@@ -1019,9 +1019,9 @@
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;q&gt;</code> inside <code>&lt;q&gt;</code> nests with alternating quote marks,browsers handle it.</li>
-<li><code>cite</code> the <strong>work</strong>, then name the author in plain text if needed: <code>&lt;cite&gt;Book&lt;/cite&gt; by A. Uthor</code>.</li>
-<li><code>cite</code> attribute (on <code>blockquote</code>) = URL for machines. <code>&lt;cite&gt;</code> element = title for humans. Don't confuse them.</li>
+<li>A <code>&lt;q&gt;</code> element can sit inside another <code>&lt;q&gt;</code> element, and browsers handle the alternating quote marks.</li>
+<li>Cite the <strong>work</strong> first, and then name the author in plain text when that detail is needed, for example <code>&lt;cite&gt;Book&lt;/cite&gt; by A. Uthor</code>.</li>
+<li>The <code>cite</code> attribute on <code>blockquote</code> is a URL for machines, while the <code>&lt;cite&gt;</code> element is a title for humans, so the two must not be confused.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>

@@ -938,7 +938,7 @@
                   
 
 <h1 id="06-combined-headings-paragraphs-in-the-basic-structure">06 - Combined: Headings + Paragraphs in the Basic Structure<a class="headerlink" href="#06-combined-headings-paragraphs-in-the-basic-structure" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> see where text lives inside the skeleton from Chapter 01.</p>
+<p><strong>Goal:</strong> In this chapter you will see where text lives inside the skeleton introduced in Chapter 01.</p>
 <h2 id="the-same-skeleton-now-with-text">The same skeleton - now with text<a class="headerlink" href="#the-same-skeleton-now-with-text" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -953,14 +953,14 @@
 </span></code></pre></div>
 <h2 id="where-each-piece-lives">Where each piece lives<a class="headerlink" href="#where-each-piece-lives" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> live <strong>inside <code>&lt;body&gt;</code></strong>,they are visible content.</li>
-<li><code>&lt;head&gt;</code> holds <strong>only</strong> <code>&lt;title&gt;</code> here, never visible text (the title shows on the browser tab).</li>
-<li><code>&lt;html&gt;</code> is the <strong>parent</strong> of both; <code>&lt;!DOCTYPE html&gt;</code> is the declaration above it all.</li>
+<li>The <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> elements live <strong>inside the <code>&lt;body&gt;</code> element</strong>, because they are visible content.</li>
+<li>The <code>&lt;head&gt;</code> element holds <strong>only</strong> the <code>&lt;title&gt;</code> element in this example, and it never holds visible text, although the title itself appears on the browser tab.</li>
+<li>The <code>&lt;html&gt;</code> element is the <strong>parent</strong> of both sections, while <code>&lt;!DOCTYPE html&gt;</code> is the declaration above them all.</li>
 </ul>
 <h2 id="why-this-matters">Why this matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Text placed in <code>&lt;head&gt;</code> (outside <code>&lt;title&gt;</code>) <strong>will not render</strong>,a classic beginner bug.</li>
-<li>Every chapter from here on adds tags that live in <code>&lt;body&gt;</code>, except page-level setup.</li>
+<li>Text which is placed in <code>&lt;head&gt;</code> outside the <code>&lt;title&gt;</code> element <strong>will not render</strong>, and this mistake is a classic beginner bug.</li>
+<li>Every chapter from here on adds tags which live in <code>&lt;body&gt;</code>, except for page-level setup tags.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -975,11 +975,11 @@
 <tr>
 <td><code>&lt;head&gt;</code></td>
 <td><code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code></td>
-<td>No (tab title only)</td>
+<td>No, tab title only</td>
 </tr>
 <tr>
 <td><code>&lt;body&gt;</code></td>
-<td><code>h1</code>–<code>h6</code>, <code>p</code>, everything in Ch. 07+</td>
+<td><code>h1</code>–<code>h6</code>, <code>p</code>, and everything from Ch. 07 onward</td>
 <td>Yes</td>
 </tr>
 </tbody>

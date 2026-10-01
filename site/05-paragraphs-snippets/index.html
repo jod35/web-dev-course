@@ -960,28 +960,28 @@
                   
 
 <h1 id="05-paragraphs-breaks-rules-syntax">05 - Paragraphs, Breaks, Rules (Syntax)<a class="headerlink" href="#05-paragraphs-breaks-rules-syntax" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> exact syntax for <code>p</code>, <code>br</code>, and <code>hr</code>.</p>
+<p><strong>Goal:</strong> In this chapter you will learn the exact syntax for <code>p</code>, <code>br</code>, and <code>hr</code>.</p>
 <h2 id="p-paragraph"><code>&lt;p&gt;</code> - paragraph<a class="headerlink" href="#p-paragraph" title="Permanent link">&para;</a></h2>
-<p>Block of thought. Space above and below is automatic:</p>
+<p>The <code>p</code> element defines a block of thought. The space above and below each paragraph is added automatically:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Fresh bread baked daily.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="br-line-break"><code>&lt;br&gt;</code> - line break<a class="headerlink" href="#br-line-break" title="Permanent link">&para;</a></h2>
-<p>Empty tag,<strong>no closing tag</strong>. Breaks the line inside the same paragraph:</p>
+<p>The <code>br</code> element is an empty tag, so it has <strong>no closing tag</strong>. It breaks the line inside the same paragraph:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Line one<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Line two<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Renders as:</p>
+<p>It renders as:</p>
 <p>Line one
 Line two</p>
 <h2 id="hr-thematic-break"><code>&lt;hr&gt;</code> - thematic break<a class="headerlink" href="#hr-thematic-break" title="Permanent link">&para;</a></h2>
-<p>Empty tag,<strong>no closing tag</strong>. Topic shift between blocks:</p>
+<p>The <code>hr</code> element is an empty tag, so it has <strong>no closing tag</strong>. It signals a shift in topic between blocks:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Menu<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Prices<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;br&gt;</code> inside headings is occasionally fine (a two-line title), but never use it for vertical spacing,that is CSS's job.</li>
-<li>Multiple <code>&lt;hr&gt;</code> in a row almost always means your sections need headings instead.</li>
+<li>A <code>&lt;br&gt;</code> element inside a heading is occasionally acceptable, for example in a two-line title, but it must never be used for vertical spacing, because that spacing is the job of CSS.</li>
+<li>Multiple <code>&lt;hr&gt;</code> elements in a row almost always indicate that the sections need headings instead.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
@@ -995,13 +995,13 @@ Line two</p>
 <tbody>
 <tr>
 <td><code>p</code></td>
-<td>Yes <code>&lt;/p&gt;</code></td>
+<td>Yes, <code>&lt;/p&gt;</code></td>
 <td>Block of thought</td>
 </tr>
 <tr>
 <td><code>br</code></td>
 <td>No</td>
-<td>Line break, same thought</td>
+<td>Line break within the same thought</td>
 </tr>
 <tr>
 <td><code>hr</code></td>

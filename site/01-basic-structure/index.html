@@ -1060,7 +1060,7 @@
                   
 
 <h1 id="01-basic-structure-of-an-html-page">01 - Basic Structure of an HTML Page<a class="headerlink" href="#01-basic-structure-of-an-html-page" title="Permanent link">&para;</a></h1>
-<p><strong>Goal:</strong> understand the skeleton every webpage is built on: declaration first, then one root, then metadata, then visible content.</p>
+<p><strong>Goal:</strong> In this chapter you will learn the skeleton on which every webpage is built, starting with the declaration, then the single root element, then the metadata, and finally the visible content.</p>
 <h2 id="the-full-template">The full template<a class="headerlink" href="#the-full-template" title="Permanent link">&para;</a></h2>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -1074,19 +1074,19 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>Copy this to start <strong>every</strong> page. Read it top to bottom,order matters.</p>
+<p>Copy this template at the start of <strong>every</strong> page. Read it from top to bottom, because the order is significant.</p>
 <h2 id="tag-reference">Tag reference<a class="headerlink" href="#tag-reference" title="Permanent link">&para;</a></h2>
 <h3 id="doctype-html-declaration"><code>&lt;!DOCTYPE html&gt;</code> - declaration<a class="headerlink" href="#doctype-html-declaration" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Declares the document as <strong>HTML5</strong> so browsers render in standards mode (not quirks mode).</li>
-<li><strong>Not a tag</strong>,no closing tag, no attributes. Always the very first line, nothing above it.</li>
+<li>This line declares the document as <strong>HTML5</strong> so that browsers render the page in standards mode instead of quirks mode.</li>
+<li>It is <strong>not a tag</strong>, so it has no closing tag and no attributes. It must always be the very first line, with nothing above it.</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span></code></pre></div>
 <h3 id="html-root-element"><code>&lt;html&gt;</code> - root element<a class="headerlink" href="#html-root-element" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The <strong>parent of everything</strong>. Wraps <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>. Needs <code>&lt;/html&gt;</code> as the last line.</li>
-<li><code>lang</code> sets the page language for <strong>SEO and screen readers</strong>:</li>
+<li>The <code>html</code> element is the <strong>parent of everything</strong>. It wraps both <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>, and its closing tag <code>&lt;/html&gt;</code> must be the last line of the file.</li>
+<li>The <code>lang</code> attribute sets the page language, which <strong>screen readers and search engines use</strong>:</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
 </span></code></pre></div>
@@ -1114,8 +1114,8 @@
 </table>
 <h3 id="head-invisible-metadata"><code>&lt;head&gt;</code> - invisible metadata<a class="headerlink" href="#head-invisible-metadata" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Holds setup the visitor <strong>never sees on the page</strong>: <code>&lt;title&gt;</code>, <code>&lt;meta charset&gt;</code>, <code>&lt;meta viewport&gt;</code>, <code>&lt;link&gt;</code> to CSS, <code>&lt;script&gt;</code> to JS.</li>
-<li>First child of <code>&lt;html&gt;</code>. Always <strong>before</strong> <code>&lt;body&gt;</code>.</li>
+<li>The <code>head</code> element holds setup information which the visitor <strong>never sees on the page itself</strong>, including <code>&lt;title&gt;</code>, <code>&lt;meta charset&gt;</code>, <code>&lt;meta viewport&gt;</code>, <code>&lt;link&gt;</code> to CSS, and <code>&lt;script&gt;</code> to JS.</li>
+<li>It is the first child of <code>&lt;html&gt;</code>, and it always appears <strong>before</strong> <code>&lt;body&gt;</code>.</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
@@ -1133,22 +1133,22 @@
 <tbody>
 <tr>
 <td><code>&lt;title&gt;</code></td>
-<td>Tab/window title + search-result title</td>
+<td>The tab and window title, which is also used as the search-result title</td>
 </tr>
 <tr>
 <td><code>&lt;meta charset="utf-8"&gt;</code></td>
-<td>Character encoding,include always</td>
+<td>The character encoding, which should always be included</td>
 </tr>
 <tr>
 <td><code>&lt;meta name="viewport" …&gt;</code></td>
-<td>Makes mobile browsers scale correctly,include always</td>
+<td>The instruction which makes mobile browsers scale the page correctly, and which should always be included</td>
 </tr>
 </tbody>
 </table>
 <h3 id="body-visible-content"><code>&lt;body&gt;</code> - visible content<a class="headerlink" href="#body-visible-content" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Everything you see</strong> goes here: headings, paragraphs, lists, images, links, divs.</li>
-<li>Second child of <code>&lt;html&gt;</code>. Exactly <strong>one</strong> <code>&lt;body&gt;</code> per page.</li>
+<li><strong>Everything the visitor sees</strong> belongs in the body, including headings, paragraphs, lists, images, links, and divs.</li>
+<li>It is the second child of <code>&lt;html&gt;</code>, and each page contains exactly <strong>one</strong> <code>&lt;body&gt;</code> element.</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bakery<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -1167,14 +1167,14 @@
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  &lt;body&gt;             2nd child,all visible content
 </span></code></pre></div>
 <ul>
-<li><code>&lt;html&gt;</code> is the <strong>parent</strong>; <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are its <strong>children</strong>.</li>
-<li><code>&lt;head&gt;</code> always <strong>before</strong> <code>&lt;body&gt;</code>. Nothing visible ever goes in <code>&lt;head&gt;</code> (except <code>&lt;title&gt;</code> on the tab).</li>
+<li>The <code>&lt;html&gt;</code> element is the <strong>parent</strong>, while <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are its <strong>children</strong>.</li>
+<li>The <code>&lt;head&gt;</code> element always appears <strong>before</strong> the <code>&lt;body&gt;</code> element. No visible content ever belongs in <code>&lt;head&gt;</code>, although the <code>&lt;title&gt;</code> appears on the browser tab.</li>
 </ul>
 <h2 id="rules">Rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li>One <code>&lt;!DOCTYPE&gt;</code>, one <code>&lt;html&gt;</code>, one <code>&lt;head&gt;</code>, one <code>&lt;body&gt;</code>,no more.</li>
-<li>Close tags in reverse order: <code>&lt;html&gt;</code> opens second, closes last.</li>
-<li>Forgetting <code>&lt;meta charset&gt;</code> can garble non-English characters. Forgetting <code>viewport</code> breaks mobile layout.</li>
+<li>Each page contains one <code>&lt;!DOCTYPE&gt;</code>, one <code>&lt;html&gt;</code>, one <code>&lt;head&gt;</code>, and one <code>&lt;body&gt;</code>, with no additional copies.</li>
+<li>Close the tags in reverse order, so the <code>&lt;html&gt;</code> tag which opens second also closes last.</li>
+<li>If you omit <code>&lt;meta charset&gt;</code>, non-English characters can display incorrectly. If you omit the viewport tag, the layout breaks on mobile phones.</li>
 </ul>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
