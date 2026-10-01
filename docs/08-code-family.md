@@ -1,59 +1,121 @@
 # 08 - Code Family
 
-**Goal:** In this chapter you will learn how to mark up code, keyboard input, program output, and variables so that each one carries its own meaning.
+HTML provides elements for displaying **computer code, programming examples, and technical text** on a webpage.
 
-## Tag reference
+## 1. Inline Code
 
-### `<code>` - code fragment
-
-The `code` element marks inline code as code, and browsers usually render it in monospace. For multi-line blocks, wrap the element in `<pre>`, as explained in Chapter 11:
+The `<code>` element is used for a short piece of code within a sentence.
 
 ```html
-<p>Run <code>print(x)</code> to debug.</p>
+<p>
+    Use the <code>print()</code> function to display text in Python.
+</p>
 ```
 
-### `<kbd>` - keyboard input
+The browser normally displays `<code>` text using a monospace font.
 
-The `kbd` element marks keys which the user must press. Each key belongs in its own tag:
+---
+
+## 2. Code Blocks
+
+For multiple lines of code, `<pre>` is commonly used together with `<code>`.
 
 ```html
-<p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.</p>
+<pre><code>
+name = "Jonathan"
+print(name)
+</code></pre>
 ```
 
-### `<samp>` - sample output
+`<pre>` preserves spaces and line breaks in the content.
 
-The `samp` element marks text which a program has produced:
+---
+
+## 3. Preserving Formatting with `<pre>`
+
+The `<pre>` element displays text using the spacing and line breaks written in the HTML.
 
 ```html
-<p>Output: <samp>Saved.</samp></p>
+<pre>
+Name: Jonathan
+Age: 27
+Country: Uganda
+</pre>
 ```
 
-### `<var>` - variable
+The spaces and line breaks are preserved.
 
-The `var` element marks a mathematics or programming variable, and browsers usually render it in italic:
+---
+
+## 4. Code with HTML
+
+When displaying HTML code on a webpage, remember that the browser normally interprets HTML tags instead of displaying them.
+
+For example:
 
 ```html
-<p><var>x</var> = 5</p>
+<p>Hello World</p>
 ```
 
-The following example combines all four elements:
+To display the tags as text, you need to use HTML character references:
 
 ```html
-<p>Set <var>name</var> with <code>input()</code>, press <kbd>Enter</kbd>, expect <samp>Hello!</samp></p>
+<pre><code>
+&lt;p&gt;Hello World&lt;/p&gt;
+</code></pre>
 ```
 
-## Rules
+The browser displays:
 
-- The `<code>` element alone does **not** preserve line breaks. The combination `<pre><code>…</code></pre>` preserves them, as explained in Chapter 11.
-- Do not use `<var>` for generic italics, because that is the job of `<i>`, or better still of `<em>`.
+```text
+<p>Hello World</p>
+```
 
-## Recap
+---
 
-| Tag | Means | Example |
-|-----|-------|---------|
-| `code` | Code fragment | `<code>print()</code>` |
-| `kbd` | Key to press | `<kbd>Enter</kbd>` |
-| `samp` | Program output | `<samp>Done.</samp>` |
-| `var` | Variable | `<var>x</var>` |
+## 5. Keyboard Input
+
+The `<kbd>` element represents **keyboard input**.
+
+```html
+<p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file.</p>
+```
+
+It is useful when writing instructions involving keyboard shortcuts.
+
+---
+
+## 6. Program Output
+
+The `<samp>` element represents **sample output from a computer program**.
+
+```html
+<p>
+    The program returned:
+    <samp>Hello, World!</samp>
+</p>
+```
+
+---
+
+## 7. Variables
+
+The `<var>` element represents a **variable** in mathematical or programming expressions.
+
+```html
+<p>The area of a rectangle is <var>width</var> × <var>height</var>.</p>
+```
+
+---
+
+## Important Elements
+
+| Element  | Purpose                          |
+| -------- | -------------------------------- |
+| `<code>` | Represents computer code         |
+| `<pre>`  | Preserves spaces and line breaks |
+| `<kbd>`  | Represents keyboard input        |
+| `<samp>` | Represents program output        |
+| `<var>`  | Represents a variable            |
 
 **Next:** [09 - Tiny Semantics](09-tiny-semantics.md) · **Prev:** [07 - Meaning vs Looks](07-meaning-vs-looks.md)
