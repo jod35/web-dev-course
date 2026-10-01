@@ -1,75 +1,136 @@
 # 09 - Tiny Semantics - Big Meaning
 
-**Goal:** In this chapter you will learn small inline tags which carry machine-readable meaning for abbreviations, dates, edits, and formulas.
+### Goal
 
-## Tag reference
+In this chapter, you will learn about small HTML elements that add **meaning** to text. These elements help browsers, search engines, screen readers, and other tools understand what the content represents.
 
-### `<abbr>` - abbreviation
+## Tag Reference
 
-The `title` attribute **must** hold the full form of the abbreviation. Browsers show it as a tooltip, and screen readers announce it:
+### `<abbr>` - Abbreviation
 
-```html
-<abbr title="HyperText Markup Language">HTML</abbr>
-```
+The `<abbr>` element represents an **abbreviation or acronym**.
 
 ```html
-<abbr title="Cascading Style Sheets">CSS</abbr>
+<p>I am learning <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 ```
 
-An `<abbr>` element without a `title` attribute is pointless, so never omit it.
+The `title` attribute provides the full meaning of the abbreviation.
 
-### `<time>` - date / time
+When the user hovers over the abbreviation, browsers commonly display the value of `title`.
 
-The `datetime` attribute holds the **machine-readable** value in ISO format, while the element content holds the human reading:
+Another example:
 
 ```html
-<time datetime="2026-09-16">Sept 16, 2026</time>
+<p>
+    The <abbr title="World Health Organization">WHO</abbr>
+    provides health information around the world.
+</p>
 ```
+
+---
+
+### `<time>` - Date and Time
+
+The `<time>` element represents a **specific date, time, or period**.
 
 ```html
-<time datetime="07:00">7am</time>
+<p>The class starts at <time>9:00 AM</time>.</p>
 ```
 
-Search engines and calendars can parse the `datetime` value, while they cannot parse plain text.
-
-### `<del>` / `<ins>` - edits
-
-The `del` and `ins` elements mark deleted and inserted text. Browsers strike through `<del>` content and underline `<ins>` content, **and** both elements carry meaning because they record the history of a document instead of adding decoration:
+For a date:
 
 ```html
-<del>Old price $5</del> <ins>New price $4</ins>
+<p>The event is on <time>2026-10-07</time>.</p>
 ```
+
+The `datetime` attribute can provide a machine-readable version of the date or time.
 
 ```html
-<p><del>closed</del> <ins>open</ins> on Sundays</p>
+<p>
+    PyCon Africa starts on
+    <time datetime="2026-10-07">October 7, 2026</time>.
+</p>
 ```
 
-The optional `cite` and `datetime` attributes record the source and the date of the change:
+The text is written for humans, while `datetime` gives computers a standard format to understand.
+
+---
+
+### `<del>` - Deleted Text
+
+The `<del>` element represents text that has been **removed or deleted**.
 
 ```html
-<del cite="https://example.com/menu-v2" datetime="2026-09-01">Old menu</del>
+<p>
+    The price is <del>50,000</del> 40,000 shillings.
+</p>
 ```
 
-### `<sub>` / `<sup>` - subscript / superscript
+Browsers normally display deleted text with a line through it.
 
-The `sub` and `sup` elements mark formulas and footnotes, and they must **not** be used for generic small or raised styling:
+---
+
+### `<ins>` - Inserted Text
+
+The `<ins>` element represents text that has been **added or inserted**.
 
 ```html
-<p>H<sub>2</sub>O and x<sup>2</sup></p>
+<p>
+    The price is <del>50,000</del> <ins>40,000</ins> shillings.
+</p>
 ```
 
-## Rules
+This can be useful when showing changes to a document.
 
-- The `<del>` and `<ins>` elements can wrap block content such as whole paragraphs, not only single words.
-- For footnote markers, pair the `<sup>` element with a matching link, as explained in Chapter 12.
+---
 
-## Recap
+### `<sub>` - Subscript
 
-| Tag | Key attribute | Example |
-|-----|---------------|---------|
-| `abbr` | `title`, required in practice | `<abbr title="…">HTML</abbr>` |
-| `time` | `datetime` in ISO format | `<time datetime="2026-09-16">…</time>` |
-| `del` / `ins` | `cite` and `datetime`, both optional | `<del>old</del> <ins>new</ins>` |
-| `sub` / `sup` | None | `H<sub>2</sub>O`, `x<sup>2</sup>` |
+The `<sub>` element displays text **below the normal text line**.
+
+It is commonly used in chemical formulas.
+
+```html
+<p>Water is H<sub>2</sub>O.</p>
+```
+
+It can also be used in mathematical expressions:
+
+```html
+<p>x<sub>1</sub> + x<sub>2</sub></p>
+```
+
+---
+
+### `<sup>` - Superscript
+
+The `<sup>` element displays text **above the normal text line**.
+
+It is commonly used for powers and mathematical expressions.
+
+```html
+<p>2<sup>3</sup> = 8</p>
+```
+
+It can also be used for ordinal numbers:
+
+```html
+<p>1<sup>st</sup> place</p>
+```
+
+---
+
+## Summary
+
+| Element  | Meaning                 |
+| -------- | ----------------------- |
+| `<abbr>` | Abbreviation or acronym |
+| `<time>` | Date or time            |
+| `<del>`  | Deleted content         |
+| `<ins>`  | Inserted content        |
+| `<sub>`  | Subscript               |
+| `<sup>`  | Superscript             |
+
+These elements may look small, but they give HTML **semantic meaning** rather than simply changing how text looks.
 
 **Next:** [10 - Quotes](10-quotes.md) · **Prev:** [08 - Code Family](08-code-family.md)
