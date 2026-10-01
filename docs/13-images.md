@@ -1,66 +1,175 @@
 # 13 - Images
 
-**Goal:** In this chapter you will learn how to embed images accessibly with `img`, and how to caption them with `figure`.
+## 1. What are Images?
 
-## The tag
+Images are pictures displayed on a webpage. They can make webpages more attractive and help communicate information.
 
-The `src` attribute provides the image file, while the `alt` attribute provides the **text replacement**. The `alt` attribute is effectively required, because screen readers read it, search engines index it, and browsers show it when the image fails to load:
-
-```html
-<img src="bread.jpg" alt="Fresh loaves on a wooden shelf">
-```
-
-## Writing good `alt`
-
-| Image | `alt` |
-|-------|-------|
-| Informative photo | Describe the content: `"Fresh loaves on a wooden shelf"` |
-| Decorative border | Leave it empty with `alt=""` so that readers skip it |
-| Image link | Describe the destination, for example `alt="Our menu (PDF)"` instead of "image" |
-
-## Size and paths
+HTML uses the `<img>` element to display images.
 
 ```html
-<img src="images/bread.jpg" alt="Fresh loaves" width="600">
+<img src="cat.jpg" alt="A cat">
 ```
 
-- The `src` paths follow the same relative and absolute rules as links, as explained in Chapter 12.
-- The `width` attribute, together with `height`, reserves layout space so that the page does not jump while it loads. Fine-tune the display size later with CSS.
+---
 
-## Captions with `figure`
+## 2. The `<img>` Element
 
-To attach a visible caption to an image, wrap the image in a `<figure>` element with a `<figcaption>` element:
+The `<img>` element is used to display an image.
+
+```html
+<img src="photo.jpg" alt="A beautiful landscape">
+```
+
+The `<img>` element does not have a closing tag.
+
+---
+
+## 3. The `src` Attribute
+
+The `src` attribute specifies the **location of the image**.
+
+```html
+<img src="cat.jpg" alt="A cat">
+```
+
+If the image is inside a folder:
+
+```html
+<img src="images/cat.jpg" alt="A cat">
+```
+
+The image can also come from a URL:
+
+```html
+<img src="https://example.com/cat.jpg" alt="A cat">
+```
+
+---
+
+## 4. The `alt` Attribute
+
+The `alt` attribute provides a description of the image.
+
+```html
+<img src="dog.jpg" alt="A brown dog">
+```
+
+The `alt` text is useful when:
+
+* The image cannot be displayed.
+* Someone uses a screen reader.
+* The image needs to be described to someone who cannot see it.
+
+---
+
+## 5. Image Width and Height
+
+The `width` attribute controls the width of an image.
+
+```html
+<img src="cat.jpg" alt="A cat" width="400">
+```
+
+The `height` attribute controls the height.
+
+```html
+<img src="cat.jpg" alt="A cat" width="400" height="300">
+```
+
+Both attributes can be used together.
+
+---
+
+## 6. Images in Folders
+
+Images are often stored in a separate folder.
+
+```text
+website/
+├── index.html
+└── images/
+    ├── cat.jpg
+    └── dog.jpg
+```
+
+To display `cat.jpg`:
+
+```html
+<img src="images/cat.jpg" alt="A cat">
+```
+
+---
+
+## 7. Image Captions
+
+A caption is visible text that describes or identifies an image.
+
+HTML provides `<figure>` and `<figcaption>` for images with captions.
 
 ```html
 <figure>
-  <img src="oven.jpg" alt="Baker sliding loaves into a stone oven">
-  <figcaption>Morning bake, 5am.</figcaption>
+    <img src="cat.jpg" alt="A sleeping cat">
+    <figcaption>A cat sleeping on a chair.</figcaption>
 </figure>
 ```
 
-The `<figcaption>` element must be the first or the last child of the `<figure>` element.
+### `<figure>`
 
-## Clickable images
+Groups an image and its caption together.
+
+### `<figcaption>`
+
+Contains the visible caption.
+
+---
+
+## 8. `alt` Text vs Caption
+
+`alt` text and captions have different purposes.
 
 ```html
-<a href="menu.html"><img src="menu-thumb.jpg" alt="Our menu"></a>
+<figure>
+    <img src="elephant.jpg" alt="An elephant walking through grass">
+    <figcaption>An elephant in Queen Elizabeth National Park.</figcaption>
+</figure>
 ```
 
-In this case the `alt` text describes **where the link goes**, not the appearance of the pixels.
+**`alt`**
 
-## Rules
+Provides a description of the image, mainly for accessibility and when the image cannot be displayed.
 
-- Never omit the `alt` attribute, because validators flag the omission and readers suffer the loss.
-- Large photo files slow down the page, so resize images before you publish them, since CSS cannot shrink the number of bytes.
-- The `title` attribute on images is not a substitute for `alt`.
+**`figcaption`**
 
-## Recap
+Provides a visible caption that appears with the image.
 
-| Attribute/Tag | Job |
-|---------------|-----|
-| `src` | Image file path |
-| `alt` | Text replacement, which is always present |
-| `figure`/`figcaption` | Image with a visible caption |
-| Linked `<img>` | `alt` text states the link destination |
+---
+
+## 9. Complete Example
+
+```html
+<figure>
+    <img
+        src="images/mountain.jpg"
+        alt="A mountain surrounded by trees"
+        width="500"
+    >
+
+    <figcaption>
+        A mountain surrounded by trees.
+    </figcaption>
+</figure>
+```
+
+### Important attributes and elements
+
+| Element/Attribute | Purpose                              |
+| ----------------- | ------------------------------------ |
+| `<img>`           | Displays an image                    |
+| `src`             | Specifies the image location         |
+| `alt`             | Describes the image                  |
+| `width`           | Sets the image width                 |
+| `height`          | Sets the image height                |
+| `<figure>`        | Groups an image with related content |
+| `<figcaption>`    | Adds a visible image caption         |
 
 **Next:** [14 - Lists](14-lists.md) · **Prev:** [12 - Links](12-links.md)
