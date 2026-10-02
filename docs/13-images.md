@@ -1,4 +1,4 @@
-# 13 - Images
+# Images
 
 ## 1. What are Images?
 

@@ -1,4 +1,4 @@
-# 02 - What Are Headings?
+# What Are Headings?
 
 **Goal:** In this chapter you will learn what headings **are for** before you meet all six levels.
 

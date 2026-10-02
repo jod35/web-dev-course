@@ -1,4 +1,4 @@
-# 11 - Special Blocks
+# Special Blocks
 
 **Goal:** In this chapter you will learn three block tags for exact whitespace, contact information, and fine print.
 

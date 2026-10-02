@@ -1,4 +1,4 @@
-# 07 - Meaning vs Looks (The Core Rule)
+# Meaning vs Looks (The Core Rule)
 
 HTML provides several elements for making text **stand out**. Some of these elements communicate meaning to the browser and assistive technologies, while others are mainly used to change the visual appearance of text.
 

@@ -1,4 +1,4 @@
-# 09 - Tiny Semantics - Big Meaning
+# Tiny Semantics - Big Meaning
 
 ### Goal
 

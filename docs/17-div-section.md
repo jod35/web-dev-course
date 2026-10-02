@@ -1,4 +1,4 @@
-# 17 - Grouping: div, section, span
+# Grouping: div, section, span
 
 **Goal:** In this chapter, you will learn how to group HTML content using `<div>`, `<section>`, and `<span>`. Although these elements can all be used to group content, they have different meanings and purposes.
 

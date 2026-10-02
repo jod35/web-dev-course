@@ -1,4 +1,4 @@
-# 12 - Links
+# Links
 
 ## 1. What are Links?
 

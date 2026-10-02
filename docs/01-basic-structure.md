@@ -1,4 +1,4 @@
-# 01 - Basic Structure of an HTML Page
+# Basic Structure of an HTML Page
 
 **Goal:** In this chapter you will learn the skeleton on which every webpage is built, starting with the declaration, then the single root element, then the metadata, and finally the visible content.
 

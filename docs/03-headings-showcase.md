@@ -1,4 +1,4 @@
-# 03 - Headings h1–h6 Showcase
+# Headings h1–h6 Showcase
 
 **Goal:** In this chapter you will meet all six heading levels and see how their relative sizes compare.
 

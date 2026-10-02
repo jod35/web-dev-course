@@ -1,4 +1,4 @@
-# 15 - Tables
+# Tables
 
 **Goal:** In this chapter, you will learn how to use HTML tables to organize related information into **rows and columns**. You will learn how to create tables, add headings and data, group rows, and add captions.
 

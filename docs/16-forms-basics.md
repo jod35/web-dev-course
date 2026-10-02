@@ -1,4 +1,4 @@
-# 16 - Forms Basics
+# Forms Basics
 
 **Goal:** In this chapter, you will learn how to create forms that allow users to **enter and submit information**. You will learn how forms work, how to create different types of inputs, how to label fields, and how to group related form controls.
 

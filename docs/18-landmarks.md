@@ -1,4 +1,4 @@
-# 18 - Page Landmarks: header, nav, main, footer, article, aside
+# Page Landmarks: header, nav, main, footer, article, aside
 
 **Goal:** Learn how to divide a web page into meaningful areas using semantic HTML elements.
 

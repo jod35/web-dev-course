@@ -1,4 +1,4 @@
-# 10 - Quotes
+# Quotes
 
 ## 1. Inline Quotes
 

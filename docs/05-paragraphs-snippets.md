@@ -1,4 +1,4 @@
-# 05 - Paragraphs, Breaks, Rules (Syntax)
+# Paragraphs, Breaks, Rules (Syntax)
 
 **Goal:** In this chapter you will learn the exact syntax for `p`, `br`, and `hr`.
 
