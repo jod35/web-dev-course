@@ -538,5 +538,3 @@ The key idea is:
 **`<table>` → `<tr>` → `<th>` / `<td>`**
 
 A table contains rows, and each row contains cells.
-
-**Next:** [16 - Forms Basics](16-forms-basics.md) · **Prev:** [14 - Lists](14-lists.md)

@@ -30,5 +30,3 @@ This course presents the HTML material for the web development skilling program 
 | 16 | [Forms Basics](16-forms-basics.md) | `form`, `label`, `input`, and `button` |
 | 17 | [Grouping: div, section, span](17-div-section.md) | `div` compared with `section`, `span`, and `class` and `id` hooks |
 | 18 | [Page Landmarks](18-landmarks.md) | `header`, `nav`, `main`, `footer`, `article`, and `aside` |
-
-**Next:** [01 - Basic Structure](01-basic-structure.md)

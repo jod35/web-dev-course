@@ -576,5 +576,3 @@ The most important relationship to remember is:
 ```
 
 A form provides the **structure for collecting information**. HTML defines the fields and their meaning, while a server-side application can receive and process the submitted data.
-
-**Next:** [17 - Grouping: div, section, span](17-div-section.md) · **Prev:** [15 - Tables](15-tables.md)

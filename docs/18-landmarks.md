@@ -631,5 +631,3 @@ The main idea is:
 ```
 
 These elements give your HTML **meaning and structure**, rather than just grouping elements together.
-
-**Prev:** [17 - Grouping: div, section, span](17-div-section.md)

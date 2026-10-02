@@ -108,5 +108,3 @@ Copy this template at the start of **every** page. Read it from top to bottom, b
 | 2nd | `<html lang>` | Root parent |
 | 3rd | `<head>` | Invisible metadata |
 | 4th | `<body>` | Visible content |
-
-**Next:** [02 - What Are Headings?](02-headings.md)

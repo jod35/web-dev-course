@@ -35,5 +35,3 @@
 |------|-------|----------|
 | `<head>` | `<title>`, `<meta>` | No, tab title only |
 | `<body>` | `h1`–`h6`, `p`, and everything from Ch. 07 onward | Yes |
-
-**Next:** [07 - Meaning vs Looks](07-meaning-vs-looks.md) · **Prev:** [05 - Paragraphs, Breaks, Rules](05-paragraphs-snippets.md)

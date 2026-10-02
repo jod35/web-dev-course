@@ -368,5 +368,3 @@ A useful way to think about them is:
 **`<div>` = generic block group**
 
 **`<span>` = generic inline group**
-
-**Next:** [18 - Page Landmarks](18-landmarks.md) · **Prev:** [16 - Forms Basics](16-forms-basics.md)

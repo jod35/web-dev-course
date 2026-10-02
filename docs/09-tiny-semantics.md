@@ -132,5 +132,3 @@ It can also be used for ordinal numbers:
 | `<sup>`  | Superscript             |
 
 These elements may look small, but they give HTML **semantic meaning** rather than simply changing how text looks.
-
-**Next:** [10 - Quotes](10-quotes.md) · **Prev:** [08 - Code Family](08-code-family.md)

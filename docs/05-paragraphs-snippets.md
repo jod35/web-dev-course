@@ -45,5 +45,3 @@ The `hr` element is an empty tag, so it has **no closing tag**. It signals a shi
 | `p` | Yes, `</p>` | Block of thought |
 | `br` | No | Line break within the same thought |
 | `hr` | No | Thematic break |
-
-**Next:** [06 - Combined](06-combined-structure.md) · **Prev:** [04 - What Are Paragraphs?](04-paragraphs.md)

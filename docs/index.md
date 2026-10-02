@@ -131,5 +131,3 @@ You have just written HTML with two elements, four tags, one title, and one para
 | Tag | The bracketed label, for example `<p>` or `</p>` |
 | Element | The complete unit, which is the opening tag plus the content plus the closing tag, or a lone void element such as `<br>` |
 | How it lives | A plain-text `.html` file which is written in a code editor and opened in a browser |
-
-**Next:** [Course Index](00-index.md), which explains how the course is organised, then [01 - Basic Structure](01-basic-structure.md).

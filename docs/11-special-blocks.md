@@ -53,5 +53,3 @@ Browsers render it one step smaller than normal text. It does **not** make the t
 | `pre` | Exact whitespace | Escape `<` as `&lt;` |
 | `address` | Author or owner contact | Not any address |
 | `small` | Fine print | Still readable, not hidden |
-
-**Next:** [12 - Links](12-links.md) · **Prev:** [10 - Quotes](10-quotes.md)

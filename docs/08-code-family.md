@@ -117,5 +117,3 @@ The `<var>` element represents a **variable** in mathematical or programming exp
 | `<kbd>`  | Represents keyboard input        |
 | `<samp>` | Represents program output        |
 | `<var>`  | Represents a variable            |
-
-**Next:** [09 - Tiny Semantics](09-tiny-semantics.md) · **Prev:** [07 - Meaning vs Looks](07-meaning-vs-looks.md)

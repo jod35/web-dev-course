@@ -171,5 +171,3 @@ Provides a visible caption that appears with the image.
 | `height`          | Sets the image height                |
 | `<figure>`        | Groups an image with related content |
 | `<figcaption>`    | Adds a visible image caption         |
-
-**Next:** [14 - Lists](14-lists.md) · **Prev:** [12 - Links](12-links.md)

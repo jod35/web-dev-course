@@ -59,5 +59,3 @@ The following example shows correct nesting, and you can see that no level has b
 | `h1` | Biggest | Page title, used once |
 | `h2` | Large | Sections |
 | `h3`–`h6` | Shrinking | Subsections, never skipped |
-
-**Next:** [04 - What Are Paragraphs?](04-paragraphs.md) · **Prev:** [02 - What Are Headings?](02-headings.md)

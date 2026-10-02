@@ -43,5 +43,3 @@ Browsers draw `<h1>` as the largest heading and `<h6>` as the smallest, with bol
 | Levels | `h1` for the main title through `h6` for the deepest subsection |
 | Pick by | Meaning and position, never visual size |
 | Matters for | Readers, screen readers, and search engines |
-
-**Next:** [03 - Headings h1–h6](03-headings-showcase.md) · **Prev:** [01 - Basic Structure](01-basic-structure.md)

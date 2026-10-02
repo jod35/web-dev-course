@@ -82,5 +82,3 @@ The `dl` element defines term and definition pairs, which are useful for glossar
 | `ul` | Order is irrelevant | Bullets |
 | `ol` | Order matters | Numbers, added automatically |
 | `dl` | Term leads to definition | None |
-
-**Next:** [15 - Tables](15-tables.md) · **Prev:** [13 - Images](13-images.md)

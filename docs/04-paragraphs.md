@@ -59,5 +59,3 @@ It renders as a horizontal line, but its meaning is that the topic shifts at thi
 | `p` | Block of thought | No |
 | `br` | Line break within the same thought | Yes |
 | `hr` | Thematic break | Yes |
-
-**Next:** [05 - Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) · **Prev:** [03 - Headings h1–h6](03-headings-showcase.md)

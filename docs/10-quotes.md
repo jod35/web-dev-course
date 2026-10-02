@@ -88,5 +88,3 @@ It can also be used when identifying the source of a quotation:
     to change the world.
 </blockquote>
 ```
-
-**Next:** [11 - Special Blocks](11-special-blocks.md) · **Prev:** [09 - Tiny Semantics](09-tiny-semantics.md)

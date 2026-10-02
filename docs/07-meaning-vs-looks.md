@@ -66,5 +66,3 @@ The `mark` element marks text as **relevant**, in the same way a highlighter pen
 | `em` | Emphasis | Italic |
 | `i` | None | Italic |
 | `mark` | Relevant or highlighted | Highlighted |
-
-**Next:** [08 - Code Family](08-code-family.md) · **Prev:** [06 - Combined](06-combined-structure.md)

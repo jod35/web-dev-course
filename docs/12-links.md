@@ -229,5 +229,3 @@ Navigation links help users move between the different pages of a website.
 | `target="_blank"` | Opens the link in a new browsing context |
 | `mailto:`         | Creates an email link                    |
 | `#id`             | Links to a specific location on a page   |
-
-**Next:** [13 - Images](13-images.md) · **Prev:** [11 - Special Blocks](11-special-blocks.md)
