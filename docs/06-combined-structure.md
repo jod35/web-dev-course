@@ -21,7 +21,7 @@ Here:
 * `<h1>` names the topic.
 * `<p>` gives you the detail.
 
-Browsers will render the heading bigger and bolder and put the paragraph underneath — but you're choosing them for meaning, not just looks.
+Browsers will render the heading bigger and bolder and put the paragraph underneath, but you're choosing them for meaning, not just looks.
 
 ---
 
@@ -42,7 +42,7 @@ One heading can comfortably introduce several paragraphs:
 </p>
 ```
 
-Both paragraphs sit under that `<h1>`. When you feel yourself starting a new idea or point, that's your cue for a new `<p>` — don't cram everything into one long block.
+Both paragraphs sit under that `<h1>`. When you feel yourself starting a new idea or point, that's your cue for a new `<p>`, don't cram everything into one long block.
 
 ---
 
@@ -189,7 +189,7 @@ In both cases the reader knows immediately what the paragraph will cover. If you
 
 ## 6. Don't Use Headings Just to Make Text Bigger
 
-It's a common slip — we like how `<h2>` looks, so we wrap any large text in it:
+It's a common slip, we like how `<h2>` looks, so we wrap any large text in it:
 
 ```html
 <h2>Welcome to my website</h2>
@@ -305,11 +305,11 @@ You'll reuse this pattern everywhere:
 <p>More specific information about the second section.</p>
 ```
 
-That repetition is a feature — once you see it, pages become easier to skim, and browsers, search engines and screen readers can build a better map of your content.
+That repetition is a feature, once you see it, pages become easier to skim, and browsers, search engines and screen readers can build a better map of your content.
 
 ---
 
-## 10. A Real-World Example — Uganda
+## 10. A Real-World Example: Uganda
 
 Say you're putting together a quick info page:
 
@@ -363,7 +363,7 @@ Uganda
 └── Culture
 ```
 
-You're not just displaying text — you're describing how the pieces relate.
+You're not just displaying text, you're describing how the pieces relate.
 
 ---
 
