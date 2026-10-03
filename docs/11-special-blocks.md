@@ -1,55 +1,55 @@
 # Special Blocks
 
-**Goal:** In this chapter you will learn three block tags for exact whitespace, contact information, and fine print.
+Three block tags you'll use less often, but when you need them, nothing else will do: one for exact whitespace, one for contact info, and one for fine print.
 
 ## Tag reference
 
-### `<pre>` - preformatted text
+### `<pre>` — preformatted text
 
-The `pre` element keeps **spaces and line breaks exactly** as you type them, and it is the only element which behaves this way. It is the home of multi-line code:
+`pre` is the only element that keeps **spaces and line breaks exactly** as you type them. That's why it's the home for multi-line code:
 
 ```html
 <pre>line 1
   indented line 2</pre>
 ```
 
-Pair the `pre` element with the `<code>` element when you want a code block which also carries meaning:
+If you want a code block that also says "this is code," pair it with `<code>`:
 
 ```html
 <pre><code>def hello():
     print("hi")</code></pre>
 ```
 
-### `<address>` - contact info
+### `<address>` — contact info
 
-The `address` element holds contact information for the **author or owner of the page or section**, and it must not be used for any postal address which happens to appear in the text:
+`address` holds contact information for the **author or owner of the page or section** — not just any postal address that happens to appear in your text:
 
 ```html
 <address>hello@mhsm.web<br>Dar es Salaam</address>
 ```
 
-Browsers usually render this element in italic. It belongs near the footer or the author bio.
+Browsers usually italicise it. You'll typically see it near the footer or an author bio.
 
-### `<small>` - fine print
+### `<small>` — fine print
 
-The `small` element holds side comments such as copyright lines, disclaimers, legal notes, and attributions:
+`small` is for side comments — copyright, disclaimers, legal notes, attributions:
 
 ```html
 <small>© 2026 MHSM. All rights reserved.</small>
 ```
 
-Browsers render it one step smaller than normal text. It does **not** make the text unimportant, since it only marks the text as secondary.
+Browsers render it a touch smaller than normal text. It doesn't make the text unimportant — it just marks it as secondary.
 
-## Rules
+## A few things to watch
 
-- Inside a `<pre>` element, you must still escape `<` as `&lt;`, because otherwise the browser reads it as a tag.
-- The `<address>` element must not contain headings or sectioning content, so restrict it to contact lines.
-- A `<small>` element inside a `<footer>` element is the classic pattern for a copyright line.
+- Inside `<pre>` you still need to escape `<` as `&lt;` — otherwise the browser thinks it's a tag.
+- `<address>` shouldn't contain headings or sectioning content — keep it to contact lines.
+- `<small>` inside `<footer>` is the classic combo for a copyright line.
 
 ## Recap
 
 | Tag | Job | Watch out |
 |-----|-----|-----------|
 | `pre` | Exact whitespace | Escape `<` as `&lt;` |
-| `address` | Author or owner contact | Not any address |
+| `address` | Author/owner contact | Not any random address |
 | `small` | Fine print | Still readable, not hidden |
