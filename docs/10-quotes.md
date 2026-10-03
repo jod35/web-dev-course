@@ -12,7 +12,7 @@ HTML makes a useful distinction between a quick quote inside a sentence and a lo
 </p>
 ```
 
-Browsers typically wrap it in quotation marks for you — no need to type them by hand.
+Browsers typically wrap it in quotation marks for you, no need to type them by hand.
 
 ---
 
@@ -47,7 +47,7 @@ That `cite` attribute won't be visible on the page, but it's there for tools tha
 
 ## 4. The `<cite>` Element
 
-`<cite>` identifies the **title of a work** — a book, film, song, article:
+`<cite>` identifies the **title of a work**, a book, film, song, article:
 
 ```html
 <p>
@@ -69,7 +69,7 @@ You can use it for attributions too:
 
 ---
 
-## 5. `<q>` vs `<blockquote>` — Which One?
+## 5. `<q>` vs `<blockquote>`: Which One?
 
 | Element / Attribute | Purpose |
 | ------------------- | ------- |
