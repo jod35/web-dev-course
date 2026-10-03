@@ -1,10 +1,10 @@
 # Lists
 
-**Goal:** In this chapter you will learn how to structure related items with unordered, ordered, and description lists.
+Lists are how we structure related items — shopping, steps, terms and definitions — without losing the relationship between them.
 
-## `<ul>` - unordered list
+## `<ul>` — unordered list
 
-The `ul` element defines a bulleted list in which the order of the items does not matter. Each item is an `<li>` element:
+`ul` is a bulleted list where **order doesn't matter**. Each item is an `<li>`:
 
 ```html
 <ul>
@@ -14,9 +14,9 @@ The `ul` element defines a bulleted list in which the order of the items does no
 </ul>
 ```
 
-## `<ol>` - ordered list
+## `<ol>` — ordered list
 
-The `ol` element defines a numbered list in which the order matters, for example for steps or rankings. Browsers number the items automatically:
+`ol` is a numbered list where **order matters** — steps, rankings. The browser numbers them for you:
 
 ```html
 <ol>
@@ -26,7 +26,7 @@ The `ol` element defines a numbered list in which the order matters, for example
 </ol>
 ```
 
-Start the numbering elsewhere with the `start` attribute, or reverse it with the `reversed` attribute:
+Need to start elsewhere or count backwards? Use `start` or `reversed`:
 
 ```html
 <ol start="5">
@@ -36,7 +36,7 @@ Start the numbering elsewhere with the `start` attribute, or reverse it with the
 
 ## Nesting lists
 
-An `<li>` element can hold a complete sub-list. The nested list goes **inside** the `<li>` element, not after it:
+An `<li>` can hold an entire sub-list — and the nested list belongs **inside** that `<li>`, not after it:
 
 ```html
 <ul>
@@ -50,35 +50,37 @@ An `<li>` element can hold a complete sub-list. The nested list goes **inside** 
 </ul>
 ```
 
-## `<dl>` - description list
+That's the pattern you'll see for menus and grouped items.
 
-The `dl` element defines term and definition pairs, which are useful for glossaries, menus with descriptions, and metadata:
+## `<dl>` — description list
+
+`dl` handles term + definition pairs — glossaries, menus with descriptions, metadata:
 
 ```html
 <dl>
   <dt>HTML</dt>
-  <dd>HyperText Markup Language,page structure.</dd>
+  <dd>HyperText Markup Language — page structure.</dd>
   <dt>CSS</dt>
-  <dd>Cascading Style Sheets,page styling.</dd>
+  <dd>Cascading Style Sheets — page styling.</dd>
 </dl>
 ```
 
-| Tag | Job |
-|-----|-----|
+| Tag | Role |
+|-----|------|
 | `dl` | The whole description list |
 | `dt` | Term |
 | `dd` | Definition or description |
 
-## Rules
+## A few habits to keep
 
-- Only an `<li>` element may be a direct child of `ul` or `ol`, so do not place bare text or `<p>` wrappers at that level.
-- Do not fake lists with `<br>` tags or `-` dashes, because readers then lose the count and the structure.
-- Navigation menus are lists too, and you will meet the `<nav><ul>…` pattern constantly.
+- Only `<li>` may sit directly inside `ul` or `ol` — no bare text or `<p>` wrappers at that level.
+- Don't fake a list with `<br>` or `-` dashes. You'll lose count, semantics and accessibility in one go.
+- Navigation menus are just lists — you'll see `<nav><ul>…` everywhere, so get comfortable with it.
 
 ## Recap
 
-| List | Use when | Markers |
-|------|----------|---------|
-| `ul` | Order is irrelevant | Bullets |
+| List | When to use it | Markers |
+|------|----------------|---------|
+| `ul` | Order doesn't matter | Bullets |
 | `ol` | Order matters | Numbers, added automatically |
-| `dl` | Term leads to definition | None |
+| `dl` | Term → definition | None |
