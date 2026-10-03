@@ -1,6 +1,6 @@
 # Code Family
 
-When you're writing about code, you want the markup to say "this is code" — not just look monospace. HTML gives you a little family of elements for that.
+When you're writing about code, you want the markup to say "this is code", not just look monospace. HTML gives you a little family of elements for that.
 
 ## 1. Inline Code
 
@@ -12,7 +12,7 @@ When you're writing about code, you want the markup to say "this is code" — no
 </p>
 ```
 
-Browsers typically render it in a monospace font, but the real win is semantics — tools know it's code.
+Browsers typically render it in a monospace font, but the real win is semantics, tools know it's code.
 
 ---
 
@@ -43,7 +43,7 @@ Country: Uganda
 </pre>
 ```
 
-What you type is what you get — line breaks and indentation included.
+What you type is what you get, line breaks and indentation included.
 
 ---
 
@@ -81,7 +81,7 @@ Handy when you're writing tutorials (like this one!).
 <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file.</p>
 ```
 
-Great for instructions and shortcuts — screen readers can also announce it more meaningfully than plain text.
+Great for instructions and shortcuts, screen readers can also announce it more meaningfully than plain text.
 
 ---
 
