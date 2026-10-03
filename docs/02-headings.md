@@ -1,6 +1,6 @@
 # What Are Headings?
 
-Headings are how we **introduce and organize sections** on a page. Think of them as the outline you'd scribble before writing an essay — just baked into HTML.
+Headings are how we **introduce and organize sections** on a page. Think of them as the outline you'd scribble before writing an essay, just baked into HTML.
 
 There are six of them:
 
@@ -17,9 +17,9 @@ There are six of them:
 
 ---
 
-## 1. The `<h1>` — main heading
+## 1. The `<h1>`: main heading
 
-`<h1>` is the big picture — what the whole page is about.
+`<h1>` is the big picture, what the whole page is about.
 
 ```html
 <h1>Introduction to HTML</h1>
@@ -39,7 +39,7 @@ That `<h1>` tells anyone skimming (and any screen reader) what they're about to 
 
 ---
 
-## 2. The `<h2>` — major sections
+## 2. The `<h2>`: major sections
 
 `<h2>` breaks the main topic into big chunks.
 
@@ -73,7 +73,7 @@ So `<h1>` is the book title; `<h2>`s are the chapter titles.
 
 ---
 
-## 3. The `<h3>` — subsections
+## 3. The `<h3>`: subsections
 
 Need to go deeper under an `<h2>`? That's `<h3>`.
 
@@ -113,7 +113,7 @@ Introduction to HTML       <h1>
 
 ---
 
-## 4. `<h4>`, `<h5>`, and `<h6>` — when you really need depth
+## 4. `<h4>`, `<h5>`, and `<h6>`: when you really need depth
 
 They work the same way, just deeper:
 
@@ -365,7 +365,7 @@ Much more meaningful than just making some text bigger than other text.
 
 ---
 
-## 11. Headings Help Everyone Navigate — Especially Screen Readers
+## 11. Headings Help Everyone Navigate: Especially Screen Readers
 
 A screen reader can pull out your headings and let a user jump between:
 
@@ -400,7 +400,7 @@ Visible on the page:
 </body>
 ```
 
-* `<title>` describes the document for the browser tab and search results — you won't see it in the page body.
+* `<title>` describes the document for the browser tab and search results: you won't see it in the page body.
 * `<h1>` is the visible headline for readers on the page itself.
 
 ---
@@ -433,4 +433,4 @@ A tidy page often looks like:
             └── <h3>Subsection</h3>
 ```
 
-Use them to make your content easier to **understand, navigate and maintain** — for you, for search engines, and for the next person who reads your code.
+Use them to make your content easier to **understand, navigate and maintain**, for you, for search engines, and for the next person who reads your code.
