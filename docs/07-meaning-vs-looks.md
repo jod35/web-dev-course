@@ -1,22 +1,16 @@
-# Meaning vs Looks (The Core Rule)
+# Meaning vs Looks — The Core Rule
 
-HTML provides several elements for making text **stand out**. Some of these elements communicate meaning to the browser and assistive technologies, while others are mainly used to change the visual appearance of text.
+HTML has several ways to make text stand out — but they aren't interchangeable. Some tell the browser and screen reader *what the text means*; others just change how it looks. Get this distinction right and most of your other choices get easier.
 
-The most important distinction to understand is:
+> **HTML is about meaning first, looks second.**
 
-> **HTML is about meaning, not just appearance.**
-
-For example, if you want to tell the browser that certain words are important, use `<strong>`. If you only want text to *look* bold without giving it additional importance, use `<b>`.
-
-The same idea applies to `<em>` and `<i>`.
+So if something is genuinely important, you'd reach for `<strong>`. If you only want it to *look* bold without implying importance, you'd use `<b>`. Same story with `<em>` vs `<i>`. Let's see why that matters.
 
 ---
 
-## 1. The `<strong>` Element
+## 1. `<strong>` — strong importance
 
-The `<strong>` element indicates that the content has **strong importance, seriousness, or urgency**.
-
-### Basic example
+`<strong>` says the content has **real importance, seriousness or urgency** — not just "make it bold."
 
 ```html
 <p>
@@ -24,13 +18,9 @@ The `<strong>` element indicates that the content has **strong importance, serio
 </p>
 ```
 
-The browser normally displays the text inside `<strong>` in **bold**.
+Yes, browsers usually render it bold. But the bold is a side effect; the meaning is the point. "Warning" deserves attention, so `<strong>` fits.
 
-However, the important part is not the bold appearance. The important part is the **meaning**.
-
-The word "Warning" is important to the reader, so `<strong>` is appropriate.
-
-### Another example
+Another:
 
 ```html
 <p>
@@ -38,43 +28,29 @@ The word "Warning" is important to the reader, so `<strong>` is appropriate.
 </p>
 ```
 
-Here, "must" is strongly important to the meaning of the sentence.
+That "must" changes what the reader should do.
 
----
+### Why we call it semantic
 
-### `<strong>` is semantic
-
-A semantic element tells us what the content **means**.
-
-For example:
+A semantic element describes what content *means*, not what it looks like.
 
 ```html
 <strong>Important:</strong>
 ```
 
-does not simply mean:
+doesn't mean
 
 > Make this text bold.
 
-It means:
+It means
 
 > This text has strong importance.
 
-This distinction becomes particularly useful for:
+That nuance helps with accessibility, screen readers, search engines, maintainability — and it keeps your CSS honest later on.
 
-* accessibility
-* screen readers
-* search engines
-* maintaining understandable HTML
-* styling content with CSS later
+### Don't use `<strong>` just because you want bold
 
----
-
-### `<strong>` does not mean "make it bold"
-
-Although browsers usually render `<strong>` as bold text, you should not choose it simply because you want bold text.
-
-For example:
+Browsers render it bold by default, but that shouldn't drive the decision:
 
 ```html
 <p>
@@ -82,19 +58,13 @@ For example:
 </p>
 ```
 
-If the price is not particularly important or urgent, `<strong>` may not be the best choice simply because you want it to appear bold.
-
-If you only want a visual effect, CSS is often more appropriate.
+If 50,000 UGX isn't actually urgent or important in context, `<strong>` is the wrong signal — even if you like the bold look. For pure styling, CSS is usually a better fit.
 
 ---
 
-## 2. The `<b>` Element
+## 2. `<b>` — draw attention, no extra importance
 
-The `<b>` element is used to draw attention to text **without saying that the text has increased importance**.
-
-By default, browsers display `<b>` as bold.
-
-### Example
+`<b>` also looks bold by default, but it **doesn't claim the text is more important**.
 
 ```html
 <p>
@@ -102,50 +72,38 @@ By default, browsers display `<b>` as bold.
 </p>
 ```
 
-The words "HTML Fundamentals" are visually noticeable, but they are not necessarily more important than the rest of the sentence.
+"HTML Fundamentals" stands out visually, but we're not saying it's more important than everything else in that sentence — just noticeable.
 
----
-
-### `<b>` is not the same as `<strong>`
-
-Compare these examples:
+### How `<b>` differs from `<strong>`
 
 ```html
 <p>
     <strong>Warning:</strong> The server is offline.
 </p>
 ```
-
-and:
+→ communicates importance.
 
 ```html
 <p>
     Learn <b>HTML</b>, CSS, and JavaScript.
 </p>
 ```
+→ draws the eye to "HTML" without adding importance.
 
-The first example communicates **importance**.
+Quick mental check:
 
-The second example simply draws attention to the word "HTML".
+| Element    | What you're saying |
+| ---------- | ------------------ |
+| `<strong>` | This matters a lot |
+| `<b>`      | Look here, but it's not "more important" |
 
-### Think of it this way
-
-| Element    | Meaning                        |
-| ---------- | ------------------------------ |
-| `<strong>` | This content is important      |
-| `<b>`      | Draw attention to this content |
-
-Both may appear bold, but they communicate different things.
+Both may render bold — yet they mean different things.
 
 ---
 
-## 3. The `<em>` Element
+## 3. `<em>` — emphasis
 
-The `<em>` element represents **emphasis**.
-
-Browsers normally display emphasized text in *italics*.
-
-### Example
+`<em>` is for **emphasis** that changes how a sentence is read. Browsers usually show it italic.
 
 ```html
 <p>
@@ -153,13 +111,9 @@ Browsers normally display emphasized text in *italics*.
 </p>
 ```
 
-The word "always" is emphasized because it changes how the sentence should be understood.
+"always" gets stress — it alters the intended reading.
 
----
-
-### `<em>` can change the meaning of a sentence
-
-Consider:
+### Emphasis can shift meaning entirely
 
 ```html
 <p>
@@ -167,43 +121,36 @@ Consider:
 </p>
 ```
 
-Now emphasize different words:
+Now stress different words:
 
 ```html
 <p>
     <em>I</em> said you should submit the assignment.
 </p>
 ```
-
-This emphasizes who said it.
+→ *I* said it (not someone else).
 
 ```html
 <p>
     I said <em>you</em> should submit the assignment.
 </p>
 ```
-
-This emphasizes who should submit it.
+→ *you* should do it.
 
 ```html
 <p>
     I said you should <em>submit</em> the assignment.
 </p>
 ```
+→ the action matters.
 
-This emphasizes the action.
-
-The emphasis can therefore affect how the sentence is interpreted.
+That tiny italic can change interpretation — which is exactly why `<em>` carries meaning.
 
 ---
 
-## 4. The `<i>` Element
+## 4. `<i>` — text set apart, not emphasized
 
-The `<i>` element represents text that is set apart from the surrounding content for a particular reason, without conveying the importance that `<strong>` or emphasis that `<em>` conveys.
-
-Browsers normally display `<i>` as *italic text*.
-
-### Example
+`<i>` is for text that should be set apart from its surroundings *without* implying emphasis or importance. It also renders italic by default.
 
 ```html
 <p>
@@ -211,9 +158,7 @@ Browsers normally display `<i>` as *italic text*.
 </p>
 ```
 
-Here, italics are commonly used for the scientific name.
-
-Another example:
+Scientific names are conventionally italic.
 
 ```html
 <p>
@@ -221,75 +166,48 @@ Another example:
 </p>
 ```
 
-The French word is visually differentiated from the surrounding English text.
+Foreign words are visually differentiated — same idea.
+
+### Not just "make it italic"
+
+`<i>` covers things like technical terms, foreign words, taxonomic names, thoughts, or any phrase that's conventionally displayed differently. If you only want italics for decoration, CSS is usually cleaner.
 
 ---
 
-### `<i>` is not simply "make text italic"
+## 5. `<em>` vs `<i>` — same look, different intent
 
-Although `<i>` normally produces italic text, its semantic purpose is broader than simply changing the font style.
+Both go italic, but ask *why* you're marking it up.
 
-It can be used for content such as:
-
-* technical terms
-* foreign words
-* taxonomic names
-* thoughts
-* terms that are conventionally displayed differently
-* other text that needs to be set apart from the surrounding content
-
-If you simply want to make something italic for visual reasons, CSS is generally a better choice.
-
----
-
-## 5. `<em>` vs `<i>`
-
-These two elements are often confused because both normally appear italic.
-
-The difference is **meaning**.
-
-### `<em>`
-
-Use `<em>` when the text should receive **emphasis**.
+**`<em>` — emphasis:**
 
 ```html
 <p>
     You should <em>really</em> read this chapter.
 </p>
 ```
+"really" is stressed.
 
-The word "really" is emphasized.
-
-### `<i>`
-
-Use `<i>` when the text needs to be **set apart from the surrounding text**, but is not necessarily emphasized.
+**`<i>` — set apart:**
 
 ```html
 <p>
     The word <i>computer</i> comes from Latin roots.
 </p>
 ```
+We're presenting the term differently, not stressing it.
 
-The word is being presented differently, rather than emphasized as particularly important.
+| Element | Purpose        | Default look |
+| ------- | -------------- | ------------ |
+| `<em>`  | Emphasis       | Italic       |
+| `<i>`   | Text set apart | Italic       |
 
-### Comparison
-
-| Element | Purpose        | Default appearance |
-| ------- | -------------- | ------------------ |
-| `<em>`  | Emphasis       | Italic             |
-| `<i>`   | Text set apart | Italic             |
-
-Again, the appearance is similar, but the meaning is different.
+Looks can fool you — meaning is what splits them.
 
 ---
 
-## 6. The `<mark>` Element
+## 6. `<mark>` — highlighted because it's relevant right now
 
-The `<mark>` element represents text that is **highlighted or marked because it is relevant in the current context**.
-
-Browsers normally display `<mark>` with a highlighted background.
-
-### Example
+`<mark>` highlights text that's **relevant in the current context**. Browsers usually give it a yellowish background.
 
 ```html
 <p>
@@ -297,13 +215,9 @@ Browsers normally display `<mark>` with a highlighted background.
 </p>
 ```
 
-The word "Python" has been highlighted because it matches what the user searched for.
+"Python" is highlighted because it matched the search — not because it's universally important.
 
----
-
-### Highlighting a passage
-
-You can use `<mark>` to draw attention to a particular part of a sentence.
+Other contexts:
 
 ```html
 <p>
@@ -311,141 +225,68 @@ You can use `<mark>` to draw attention to a particular part of a sentence.
 </p>
 ```
 
-The highlighted text is relevant to the reader.
-
-Another example:
-
 ```html
 <p>
     Remember to bring your <mark>student ID</mark> to the examination.
 </p>
 ```
 
-The phrase "student ID" is highlighted to draw the reader's attention to it.
+In each case, you're drawing the reader's eye to what's pertinent *here and now*.
 
 ---
 
-## 7. `<mark>` vs `<strong>`
+## 7. Quick contrasts you'll actually use
 
-These elements can both make something stand out, but they communicate different ideas.
+### `<mark>` vs `<strong>`
 
-### `<strong>`
+- `<strong>` → *"This is important."* E.g. `<strong>Do not share your password.</strong>`
+- `<mark>` → *"This is relevant/highlighted here."* E.g. `Your search found <mark>25 results</mark>.`
 
-Means:
+Highlighting isn't importance; importance isn't just highlighting.
 
-> This content is important.
-
-```html
-<p>
-    <strong>Do not share your password.</strong>
-</p>
-```
-
-### `<mark>`
-
-Means:
-
-> This part is being highlighted because it is relevant or noteworthy in this context.
-
-```html
-<p>
-    Your search found <mark>25 results</mark>.
-</p>
-```
-
-The result count is highlighted, but that does not necessarily mean it is inherently important.
-
----
-
-## 8. `<strong>` vs `<b>`
-
-Consider:
+### `<strong>` vs `<b>`
 
 ```html
 <p>
     <strong>Warning:</strong> Your account will be deleted.
 </p>
 ```
-
-The warning has strong importance.
-
-Now consider:
+That's urgent — `<strong>`.
 
 ```html
 <p>
     Learn <b>Python</b> with practical projects.
 </p>
 ```
+That's visually distinct — `<b>`.
 
-The word "Python" is simply being visually distinguished.
+Rule of thumb:
+- Importance → `<strong>`, eye-catcher without importance → `<b>`.
 
-### Quick rule
-
-Use:
-
-```html
-<strong>
-```
-
-when the **meaning is importance**.
-
-Use:
-
-```html
-<b>
-```
-
-when you want to **draw attention without adding importance**.
-
----
-
-## 9. `<em>` vs `<i>`
-
-Similarly:
+### `<em>` vs `<i>`
 
 ```html
 <p>
     You should <em>carefully</em> read the instructions.
 </p>
 ```
-
-The word "carefully" is emphasized.
-
-Whereas:
+Emphasis → `<em>`.
 
 ```html
 <p>
     The French word <i>bonjour</i> means hello.
 </p>
 ```
+Set apart → `<i>`.
 
-The foreign word is set apart from the surrounding text.
-
-### Quick rule
-
-Use:
-
-```html
-<em>
-```
-
-when the **meaning involves emphasis**.
-
-Use:
-
-```html
-<i>
-```
-
-when the text is **set apart without emphasis**.
+Rule of thumb:
+- Want vocal stress? `<em>`. Need a different voice or convention? `<i>`.
 
 ---
 
-## 10. Combining These Elements
+## 8. You Can Combine Them — Sparingly
 
-These elements can be nested when their meanings genuinely apply.
-
-For example:
+When both meanings really apply, nesting is fine:
 
 ```html
 <p>
@@ -455,13 +296,9 @@ For example:
     </strong>
 </p>
 ```
+`<strong>` = important. `<em>` = emphasis on "Important".
 
-Here:
-
-* `<strong>` communicates importance.
-* `<em>` gives emphasis to the word "Important".
-
-You can also combine highlighting with importance:
+Highlight plus importance is also okay when both are true:
 
 ```html
 <p>
@@ -469,13 +306,13 @@ You can also combine highlighting with importance:
 </p>
 ```
 
-However, don't combine elements simply to make text look more dramatic. Each element should have a meaningful purpose.
+Just don't stack them to make text look "more dramatic." If there's no meaning behind it, leave it out.
 
 ---
 
-## 11. Appearance Is Not the Main Point
+## 9. Appearance Isn't the Point
 
-By default, browsers generally render these elements like this:
+By default you'll see:
 
 ```html
 <strong>Important</strong>
@@ -485,7 +322,7 @@ By default, browsers generally render these elements like this:
 <mark>Highlighted</mark>
 ```
 
-The visual result is approximately:
+Roughly:
 
 * `<strong>` → **bold**
 * `<b>` → **bold**
@@ -493,112 +330,65 @@ The visual result is approximately:
 * `<i>` → *italic*
 * `<mark>` → highlighted background
 
-This can make `<strong>` and `<b>` appear identical, and `<em>` and `<i>` appear identical.
-
-But they are **not semantically identical**.
+So `<strong>` and `<b>` *can* look identical — same for `<em>`/`<i>`. That's exactly why you shouldn't choose based on looks.
 
 ---
 
-## 12. CSS Controls Appearance
+## 10. Let CSS Handle Looks
 
-HTML communicates structure and meaning. CSS controls presentation.
-
-For example, you can change how `<strong>` looks:
+HTML says what something *is*; CSS decides how it *looks*. So you can keep the meaning and change the presentation:
 
 ```html
 <strong class="warning">Warning</strong>
 ```
-
 ```css
 .warning {
     color: red;
     font-weight: normal;
 }
 ```
+It's still "strong importance," even if it's no longer bold.
 
-The `<strong>` element still communicates importance even though it is no longer visually bold.
-
-Similarly, you can make something look bold without using `<b>`:
+Likewise, you can make normal text look bold without `<b>`:
 
 ```html
 <p class="important">Important information</p>
 ```
-
 ```css
 .important {
     font-weight: bold;
 }
 ```
 
-This is useful because it separates **meaning** from **appearance**.
+Separating meaning from appearance is the habit that scales.
 
 ---
 
-## 13. Common Mistakes
+## 11. Common Mix-Ups
 
-### Mistake 1: Using `<b>` for everything that should be bold
+**"I want bold, so `<b>` everywhere."**
+If "Warning" is actually important, prefer `<strong>Warning</strong>`.
 
-```html
-<b>Warning</b>
-```
+**"I want italic, so `<i>` everywhere."**
+If you mean vocal emphasis — `You *must* read this` — use `<em>You must read this carefully.</em>`.
 
-If "Warning" is actually important, use:
-
-```html
-<strong>Warning</strong>
-```
-
----
-
-### Mistake 2: Using `<i>` for every italicized word
-
-```html
-<i>You must read this carefully.</i>
-```
-
-If the purpose is emphasis, use:
-
-```html
-<em>You must read this carefully.</em>
-```
-
----
-
-### Mistake 3: Using `<strong>` just for styling
-
+**"My favourite language is Python — I'll just strong it."**
 ```html
 <p>
     My favorite language is <strong>Python</strong>.
 </p>
 ```
+If "Python" isn't especially important in context, bolding it with `<strong>` muddies the signal. Consider `<b>` or CSS.
 
-If "Python" is not especially important, using `<strong>` purely to make it bold is not ideal.
-
-Consider CSS or `<b>` depending on the intended meaning.
-
----
-
-### Mistake 4: Using `<mark>` as a replacement for `<strong>`
-
+**"`<mark>` for warnings."**
 ```html
 <mark>WARNING: Do not delete this file.</mark>
 ```
-
-Highlighting and importance are different concepts.
-
-If the purpose is to communicate strong importance:
-
-```html
-<strong>WARNING: Do not delete this file.</strong>
-```
-
-If you also want the text highlighted because it is particularly relevant in the current context, then `<mark>` may be appropriate as well.
+That's importance, not highlighting. Reach for `<strong>` (and add `<mark>` only if highlighting is also relevant).
 
 ---
 
-## 14. A Practical Example
-
-Consider this paragraph:
+## 12. Putting It All Together
 
 ```html
 <p>
@@ -609,80 +399,51 @@ Consider this paragraph:
 </p>
 ```
 
-Each element has a different purpose:
+- `<strong>Important:</strong>` — strong importance.
+- `<em>always</em>` — vocal emphasis.
+- `<i>backup</i>` — term set apart.
+- `<mark>Remember to test your backups.</mark>` — relevant and worth highlighting now.
 
-### `<strong>`
-
-```html
-<strong>Important:</strong>
-```
-
-Communicates strong importance.
-
-### `<em>`
-
-```html
-<em>always</em>
-```
-
-Emphasizes the word "always".
-
-### `<i>`
-
-```html
-<i>backup</i>
-```
-
-Sets the term apart from the surrounding text.
-
-### `<mark>`
-
-```html
-<mark>Remember to test your backups.</mark>
-```
-
-Highlights information that is relevant to the reader.
+Each choice signals something a browser or screen reader can actually use.
 
 ---
 
-## 15. Quick Reference
+## 13. Quick Reference
 
-| Element    | Meaning                            | Typical appearance | Use it when                                             |
-| ---------- | ---------------------------------- | ------------------ | ------------------------------------------------------- |
-| `<strong>` | Strong importance                  | **Bold**           | Content is important or urgent                          |
-| `<b>`      | Attention without added importance | **Bold**           | You need visual distinction without semantic importance |
-| `<em>`     | Emphasis                           | *Italic*           | You want to emphasize the meaning of the text           |
-| `<i>`      | Text set apart                     | *Italic*           | Text needs a different voice or context                 |
-| `<mark>`   | Highlighted relevance              | Highlighted        | Text is relevant or noteworthy in the current context   |
+| Element    | Meaning                            | Typical look       | Reach for it when |
+| ---------- | ---------------------------------- | ------------------ | ----------------- |
+| `<strong>` | Strong importance                  | **Bold**           | Something is important or urgent |
+| `<b>`      | Attention without added importance | **Bold**           | You need visual distinction but no extra semantics |
+| `<em>`     | Emphasis                           | *Italic*           | You'd stress the word when speaking |
+| `<i>`      | Text set apart                     | *Italic*           | Term needs a different voice or convention |
+| `<mark>`   | Highlighted relevance              | Highlighted        | It's relevant or noteworthy *in this context* |
 
 ---
 
-## 16. The Main Idea
+## 14. The Main Idea
 
-Do not choose these elements based only on what they **look like**.
-
-Instead, ask what the text **means**.
+Don't pick these tags by how they render. Ask what the text *means*:
 
 ```text
-Is it important?
+Is it important or urgent?
         ↓
     <strong>
 
-Does it need emphasis?
+Does it need vocal stress?
         ↓
-      <em>
+       <em>
 
-Does it simply need to be visually distinguished?
+Just need to draw the eye without implying importance?
         ↓
-       <b>
+        <b>
 
-Is it being set apart from the surrounding text?
+Is it a term or phrase set apart by convention?
         ↓
-       <i>
+        <i>
 
-Does it need to be highlighted as relevant?
+Is it being highlighted because it's relevant right now?
         ↓
-     <mark>
+      <mark>
 ```
 
-The browser's default styling is only the starting point. **Semantic HTML describes the meaning of your content, while CSS can control how that content looks.**
+The browser's default styling is just a starting point. **Semantic HTML describes what your content is; CSS can decide how it looks.**
