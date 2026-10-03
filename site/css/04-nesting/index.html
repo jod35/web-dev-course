@@ -12,13 +12,13 @@
         <meta name="author" content="Jonathan Ssali">
       
       
-        <link rel="canonical" href="https://www.example.com/css/06-text-typography/">
+        <link rel="canonical" href="https://www.example.com/css/04-nesting/">
       
       
-        <link rel="prev" href="../05-colors-units/">
+        <link rel="prev" href="../03-selectors/">
       
       
-        <link rel="next" href="../07-flexbox/">
+        <link rel="next" href="../05-cascade/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Text & Typography - Web Development — MHSM (HTML • CSS • JS)</title>
+        <title>Nesting - Web Development — MHSM (HTML • CSS • JS)</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#text-typography" class="md-skip">
+        <a href="#nesting" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Text & Typography
+              Nesting
             
           </span>
         </div>
@@ -283,6 +283,32 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1049,6 +1075,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1138,61 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-selectors/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Selectors
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-cascade-specificity/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Cascade & Specificity
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-box-model/" class="md-nav__link">
+      <a href="../02-box-model/" class="md-nav__link">
         
   
   
@@ -1219,14 +1217,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-colors-units/" class="md-nav__link">
+      <a href="../03-selectors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Colors & Units
+  Selectors
 
     
   </span>
@@ -1262,7 +1260,7 @@
   <span class="md-ellipsis">
     
   
-  Text & Typography
+  Nesting
 
     
   </span>
@@ -1279,7 +1277,7 @@
   <span class="md-ellipsis">
     
   
-  Text & Typography
+  Nesting
 
     
   </span>
@@ -1305,10 +1303,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-setup" class="md-nav__link">
+  <a href="#without-nesting" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Base setup
+        Without nesting
       </span>
     </span>
   </a>
@@ -1316,10 +1314,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#headings" class="md-nav__link">
+  <a href="#with-nesting" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Headings
+        With nesting
       </span>
     </span>
   </a>
@@ -1327,10 +1325,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#font-stack" class="md-nav__link">
+  <a href="#the-refer-to-the-parent" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Font stack
+        The <code>&amp;</code> — refer to the parent
       </span>
     </span>
   </a>
@@ -1338,10 +1336,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spacing-for-readability" class="md-nav__link">
+  <a href="#when-to-nest" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Spacing for readability
+        When to nest
       </span>
     </span>
   </a>
@@ -1349,10 +1347,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-properties" class="md-nav__link">
+  <a href="#when-not-to-nest" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Useful properties
+        When not to nest
       </span>
     </span>
   </a>
@@ -1386,7 +1384,169 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-flexbox/" class="md-nav__link">
+      <a href="../05-cascade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  The Cascade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-specificity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Specificity
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-inheritance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inheritance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Color
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sizing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Layout
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-flexbox/" class="md-nav__link">
         
   
   
@@ -1413,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-grid/" class="md-nav__link">
+      <a href="../12-grid/" class="md-nav__link">
         
   
   
@@ -1440,14 +1600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-responsive/" class="md-nav__link">
+      <a href="../13-logical-properties/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Responsive Design
+  Logical Properties
 
     
   </span>
@@ -1467,14 +1627,257 @@
   
   
     <li class="md-nav__item">
-      <a href="../10-practice/" class="md-nav__link">
+      <a href="../14-custom-properties/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Putting It Together
+  Custom Properties
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-spacing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Spacing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-pseudo-elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pseudo-elements
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-pseudo-classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pseudo-classes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-borders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Borders
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-shadows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shadows
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Typography
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-responsive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Responsive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Functions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Practice
 
     
   </span>
@@ -1561,10 +1964,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-setup" class="md-nav__link">
+  <a href="#without-nesting" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Base setup
+        Without nesting
       </span>
     </span>
   </a>
@@ -1572,10 +1975,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#headings" class="md-nav__link">
+  <a href="#with-nesting" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Headings
+        With nesting
       </span>
     </span>
   </a>
@@ -1583,10 +1986,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#font-stack" class="md-nav__link">
+  <a href="#the-refer-to-the-parent" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Font stack
+        The <code>&amp;</code> — refer to the parent
       </span>
     </span>
   </a>
@@ -1594,10 +1997,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spacing-for-readability" class="md-nav__link">
+  <a href="#when-to-nest" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Spacing for readability
+        When to nest
       </span>
     </span>
   </a>
@@ -1605,10 +2008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-properties" class="md-nav__link">
+  <a href="#when-not-to-nest" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Useful properties
+        When not to nest
       </span>
     </span>
   </a>
@@ -1694,6 +2097,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1720,70 +2149,97 @@
                 
                   
 
-<h1 id="text-typography">Text &amp; Typography<a class="headerlink" href="#text-typography" title="Permanent link">&para;</a></h1>
-<p>Good typography is mostly restraint. Pick a readable size, a comfortable line height, and stick with it.</p>
-<h2 id="base-setup">Base setup<a class="headerlink" href="#base-setup" title="Permanent link">&para;</a></h2>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="s2">"Segoe UI"</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w">       </span><span class="c">/* 16px at default */</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1a1a1a</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+<h1 id="nesting">Nesting<a class="headerlink" href="#nesting" title="Permanent link">&para;</a></h1>
+<p>Nesting lets you write a selector inside another, so related rules stay together. It mirrors how your HTML is nested.</p>
+<h2 id="without-nesting">Without nesting<a class="headerlink" href="#without-nesting" title="Permanent link">&para;</a></h2>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#444</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
-<p><code>system-ui</code> uses the font the device already has, loads fast, and looks familiar on each OS.</p>
-<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">&para;</a></h2>
-<p>Keep them tight and bold, body text loose:</p>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">h1</span><span class="o">,</span><span class="w"> </span><span class="nt">h2</span><span class="o">,</span><span class="w"> </span><span class="nt">h3</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">p</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<h2 id="with-nesting">With nesting<a class="headerlink" href="#with-nesting" title="Permanent link">&para;</a></h2>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="err">h2</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#444</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="err">}</span>
 </span></code></pre></div>
-<p>Do not use headings for size. Use them for structure, then size them with CSS.</p>
-<h2 id="font-stack">Font stack<a class="headerlink" href="#font-stack" title="Permanent link">&para;</a></h2>
-<p>If you want a specific font, provide fallbacks:</p>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inter"</span><span class="p">,</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">code</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"JetBrains Mono"</span><span class="p">,</span><span class="w"> </span><span class="n">ui-monospace</span><span class="p">,</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<p>Both do the same thing. Nesting just keeps the <code>.card</code> family together.</p>
+<h2 id="the-refer-to-the-parent">The <code>&amp;</code> — refer to the parent<a class="headerlink" href="#the-refer-to-the-parent" title="Permanent link">&para;</a></h2>
+<p><code>&amp;</code> means “the current selector.” Use it for states and modifiers:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#eee</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="err">&amp;:hover</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="o">&amp;</span><span class="p">:</span><span class="nd">focus-visible</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="o">&amp;</span><span class="p">.</span><span class="nc">primary</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#0a58ca</span><span class="p">;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="err">}</span>
 </span></code></pre></div>
-<p>For this course, <code>system-ui</code> is enough. Add web fonts later once layout is solid.</p>
-<h2 id="spacing-for-readability">Spacing for readability<a class="headerlink" href="#spacing-for-readability" title="Permanent link">&para;</a></h2>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="kt">ch</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">           </span><span class="c">/* line length you can actually read */</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">.</span><span class="nc">lead</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">.</span><span class="nc">small</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.875</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#555</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<p>Compiles to <code>.btn:hover</code>, <code>.btn:focus-visible</code>, <code>.btn.primary</code>.</p>
+<h2 id="when-to-nest">When to nest<a class="headerlink" href="#when-to-nest" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Group a component and its children: <code>.card { h2, p, a { ... } }</code></li>
+<li>Add states: <code>&amp;:hover</code>, <code>&amp;:focus</code></li>
+<li>Nest media queries:</li>
+</ul>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="err">@media</span><span class="w"> </span><span class="err">(</span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="kt">px</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">padding</span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="err">}</span>
 </span></code></pre></div>
-<p><code>ch</code> is the width of a <code>0</code> character. <code>65ch</code> keeps lines from stretching across the whole screen.</p>
-<h2 id="useful-properties">Useful properties<a class="headerlink" href="#useful-properties" title="Permanent link">&para;</a></h2>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">upper</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span><span class="w"> </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.04</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">.</span><span class="nc">muted</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#6b7280</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">.</span><span class="nc">center</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">.</span><span class="nc">truncate</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="k">text-overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">ellipsis</span><span class="p">;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="k">white-space</span><span class="p">:</span><span class="w"> </span><span class="kc">nowrap</span><span class="p">;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+<h2 id="when-not-to-nest">When not to nest<a class="headerlink" href="#when-not-to-nest" title="Permanent link">&para;</a></h2>
+<p>Do not nest deeply just because you can:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c">/* too deep, hard to override */</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">.</span><span class="nc">page</span><span class="w"> </span><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">.</span><span class="nc">header</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">crimson</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
+<p>Prefer a class on the target:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="nc">card-title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">crimson</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>And inside:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="err">.card-title</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">crimson</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="err">}</span>
+</span></code></pre></div>
+<p>One level, maybe two, is enough. If you need three, add a class.</p>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Need</th>
-<th>Property</th>
+<th>Use</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Readable body</td>
-<td><code>font-size: 1rem</code>, <code>line-height: 1.6</code>, <code>max-width: 65ch</code></td>
+<td>Group children</td>
+<td><code>.card { h2 { ... } }</code></td>
 </tr>
 <tr>
-<td>Tight headings</td>
-<td><code>line-height: 1.2</code></td>
+<td>States</td>
+<td><code>&amp;:hover</code>, <code>&amp;:focus-visible</code></td>
 </tr>
 <tr>
-<td>Secondary text</td>
-<td>Smaller <code>font-size</code>, muted <code>color</code></td>
+<td>Modifier</td>
+<td><code>&amp;.primary</code></td>
+</tr>
+<tr>
+<td>Keep it shallow</td>
+<td>One level is ideal</td>
 </tr>
 </tbody>
 </table>
+<p>Nesting is convenience, not a requirement. Your CSS works the same with or without it.</p>
 
 
 
@@ -1823,7 +2279,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../05-colors-units/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Colors &amp; Units">
+          <a href="../03-selectors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Selectors">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1833,20 +2289,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Colors & Units
+                Selectors
               </div>
             </div>
           </a>
         
         
           
-          <a href="../07-flexbox/" class="md-footer__link md-footer__link--next" aria-label="Next: Flexbox">
+          <a href="../05-cascade/" class="md-footer__link md-footer__link--next" aria-label="Next: The Cascade">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Flexbox
+                The Cascade
               </div>
             </div>
             <div class="md-footer__button md-icon">

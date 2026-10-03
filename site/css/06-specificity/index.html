@@ -12,13 +12,13 @@
         <meta name="author" content="Jonathan Ssali">
       
       
-        <link rel="canonical" href="https://www.example.com/css/07-flexbox/">
+        <link rel="canonical" href="https://www.example.com/css/06-specificity/">
       
       
-        <link rel="prev" href="../06-text-typography/">
+        <link rel="prev" href="../05-cascade/">
       
       
-        <link rel="next" href="../08-grid/">
+        <link rel="next" href="../07-inheritance/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Flexbox - Web Development — MHSM (HTML • CSS • JS)</title>
+        <title>Specificity - Web Development — MHSM (HTML • CSS • JS)</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#flexbox" class="md-skip">
+        <a href="#specificity" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flexbox
+              Specificity
             
           </span>
         </div>
@@ -283,6 +283,32 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1049,6 +1075,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1138,61 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-selectors/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Selectors
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-cascade-specificity/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Cascade & Specificity
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-box-model/" class="md-nav__link">
+      <a href="../02-box-model/" class="md-nav__link">
         
   
   
@@ -1219,14 +1217,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-colors-units/" class="md-nav__link">
+      <a href="../03-selectors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Colors & Units
+  Selectors
 
     
   </span>
@@ -1246,14 +1244,41 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-text-typography/" class="md-nav__link">
+      <a href="../04-nesting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Text & Typography
+  Nesting
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-cascade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  The Cascade
 
     
   </span>
@@ -1289,7 +1314,7 @@
   <span class="md-ellipsis">
     
   
-  Flexbox
+  Specificity
 
     
   </span>
@@ -1306,7 +1331,7 @@
   <span class="md-ellipsis">
     
   
-  Flexbox
+  Specificity
 
     
   </span>
@@ -1332,10 +1357,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-row" class="md-nav__link">
+  <a href="#the-score" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Basic row
+        The score
       </span>
     </span>
   </a>
@@ -1343,10 +1368,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#direction-and-wrapping" class="md-nav__link">
+  <a href="#keeping-it-low" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Direction and wrapping
+        Keeping it low
       </span>
     </span>
   </a>
@@ -1354,32 +1379,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alignment" class="md-nav__link">
+  <a href="#where-people-slip" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Alignment
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-common-pattern-navbar" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        A common pattern — navbar
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-flex-vs-grid" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        When to use flex vs grid
+        Where people slip
       </span>
     </span>
   </a>
@@ -1413,7 +1416,142 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-grid/" class="md-nav__link">
+      <a href="../07-inheritance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inheritance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-color/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Color
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-sizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sizing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Layout
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-flexbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Flexbox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-grid/" class="md-nav__link">
         
   
   
@@ -1440,14 +1578,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-responsive/" class="md-nav__link">
+      <a href="../13-logical-properties/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Responsive Design
+  Logical Properties
 
     
   </span>
@@ -1467,14 +1605,257 @@
   
   
     <li class="md-nav__item">
-      <a href="../10-practice/" class="md-nav__link">
+      <a href="../14-custom-properties/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-  Putting It Together
+  Custom Properties
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-spacing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Spacing
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-pseudo-elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pseudo-elements
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-pseudo-classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pseudo-classes
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-borders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Borders
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-shadows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shadows
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Typography
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-responsive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Responsive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Functions
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Practice
 
     
   </span>
@@ -1561,10 +1942,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-row" class="md-nav__link">
+  <a href="#the-score" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Basic row
+        The score
       </span>
     </span>
   </a>
@@ -1572,10 +1953,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#direction-and-wrapping" class="md-nav__link">
+  <a href="#keeping-it-low" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Direction and wrapping
+        Keeping it low
       </span>
     </span>
   </a>
@@ -1583,32 +1964,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#alignment" class="md-nav__link">
+  <a href="#where-people-slip" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Alignment
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-common-pattern-navbar" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        A common pattern — navbar
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-use-flex-vs-grid" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        When to use flex vs grid
+        Where people slip
       </span>
     </span>
   </a>
@@ -1694,6 +2053,32 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1720,94 +2105,68 @@
                 
                   
 
-<h1 id="flexbox">Flexbox<a class="headerlink" href="#flexbox" title="Permanent link">&para;</a></h1>
-<p>Flexbox is for <strong>one-dimensional layout</strong>: a row or a column where you want to align and distribute items.</p>
-<h2 id="basic-row">Basic row<a class="headerlink" href="#basic-row" title="Permanent link">&para;</a></h2>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"row"</span><span class="p">&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>A<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>B<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>C<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h1 id="specificity">Specificity<a class="headerlink" href="#specificity" title="Permanent link">&para;</a></h1>
+<p>Specificity is the score that decides which selector wins when cascade order alone is not enough.</p>
+<h2 id="the-score">The score<a class="headerlink" href="#the-score" title="Permanent link">&para;</a></h2>
+<p>Three columns: <code>[id, class, type]</code>.</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">p</span><span class="w">              </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">1</span><span class="o">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">.</span><span class="nc">lead</span><span class="w">          </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="nt">0</span><span class="o">,</span><span class="nt">1</span><span class="o">,</span><span class="nt">0</span><span class="o">]</span><span class="w">  </span><span class="nt">wins</span><span class="w"> </span><span class="nt">over</span><span class="w"> </span><span class="nt">p</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">p</span><span class="p">.</span><span class="nc">lead</span><span class="w">         </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="nt">0</span><span class="o">,</span><span class="nt">1</span><span class="o">,</span><span class="nt">1</span><span class="o">]</span><span class="w">  </span><span class="nt">beats</span><span class="w"> </span><span class="p">.</span><span class="nc">lead</span><span class="w"> </span><span class="nt">alone</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">#</span><span class="nn">intro</span><span class="w">         </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="nt">1</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">]</span><span class="w">  </span><span class="nt">wins</span><span class="w"> </span><span class="nt">over</span><span class="w"> </span><span class="nt">any</span><span class="w"> </span><span class="nt">number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">classes</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w">    </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="nt">0</span><span class="o">,</span><span class="nt">1</span><span class="o">,</span><span class="nt">2</span><span class="o">]</span>
 </span></code></pre></div>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">row</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">/* share space equally */</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><code>gap</code> adds space between flex items without margin tricks.</p>
-<h2 id="direction-and-wrapping">Direction and wrapping<a class="headerlink" href="#direction-and-wrapping" title="Permanent link">&para;</a></h2>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="nc">row</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">row</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c">/* default */</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">.</span><span class="nc">col</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">.</span><span class="nc">wrap</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span></code></pre></div>
-<p><code>wrap</code> lets items flow to the next line on small screens, no media query needed.</p>
-<h2 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h2>
-<p>Two axes to remember:</p>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="nc">row</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span><span class="w"> </span><span class="c">/* main axis (horizontal for row) */</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w">             </span><span class="c">/* cross axis (vertical for row) */</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>Try: <code>justify-content: flex-start | center | space-between | space-around</code> and <code>align-items: stretch | center | flex-start | flex-end</code>.</p>
-<h2 id="a-common-pattern-navbar">A common pattern — navbar<a class="headerlink" href="#a-common-pattern-navbar" title="Permanent link">&para;</a></h2>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">"navbar"</span><span class="p">&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>MHSM<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Courses<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></code></pre></div>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="nc">navbar</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#eee</span><span class="p">;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">.</span><span class="nc">navbar</span><span class="w"> </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="when-to-use-flex-vs-grid">When to use flex vs grid<a class="headerlink" href="#when-to-use-flex-vs-grid" title="Permanent link">&para;</a></h2>
+<p>Left column beats everything to its right. One <code>id</code> beats any number of classes, so styling by <code>id</code> gets hard to override later.</p>
+<h2 id="keeping-it-low">Keeping it low<a class="headerlink" href="#keeping-it-low" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Flexbox</strong> — a line of items, navigation, card rows, centering a button.</li>
-<li><strong>Grid</strong> — a two-dimensional page layout, next chapter.</li>
+<li>Prefer classes. One class is easy to override with another class.</li>
+<li>Avoid <code>id</code> selectors for styling.</li>
+<li>Do not nest selectors deeply. <code>.card p</code> is fine, <code>body main .content article .card p a</code> is too much.</li>
+<li>To override, add another class, not <code>!important</code>.</li>
 </ul>
-<p>If you only need to distribute items in one direction, reach for flex first.</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">/* base */</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c">/* variant, just another class, same specificity, later wins */</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">.</span><span class="nc">btn-primary</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#0a58ca</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span><span class="p">&gt;</span>Save<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>No <code>!important</code>, no <code>id</code>.</p>
+<h2 id="where-people-slip">Where people slip<a class="headerlink" href="#where-people-slip" title="Permanent link">&para;</a></h2>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c">/* too specific from the start */</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">#</span><span class="nn">header</span><span class="w"> </span><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">crimson</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c">/* now you need even more specificity to change it */</span>
+</span></code></pre></div>
+<p>Instead:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">nav-link</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">crimson</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">.</span><span class="nc">nav-link</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#a00</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>Short, flat, easy to reason about.</p>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Property</th>
-<th>What it controls</th>
+<th>Selector</th>
+<th>Score</th>
+<th>Advice</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>display: flex</code></td>
-<td>Turns container into flex</td>
+<td><code>p</code></td>
+<td>[0,0,1]</td>
+<td>Base defaults</td>
 </tr>
 <tr>
-<td><code>gap</code></td>
-<td>Space between items</td>
+<td><code>.lead</code>, <code>:hover</code>, <code>[type="email"]</code></td>
+<td>[0,1,0]</td>
+<td>Most styling</td>
 </tr>
 <tr>
-<td><code>justify-content</code></td>
-<td>Main-axis distribution</td>
-</tr>
-<tr>
-<td><code>align-items</code></td>
-<td>Cross-axis alignment</td>
-</tr>
-<tr>
-<td><code>flex: 1</code></td>
-<td>Grow to fill available space</td>
+<td><code>#header</code></td>
+<td>[1,0,0]</td>
+<td>Avoid for styling</td>
 </tr>
 </tbody>
 </table>
@@ -1850,7 +2209,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../06-text-typography/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Text &amp; Typography">
+          <a href="../05-cascade/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Cascade">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1860,20 +2219,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Text & Typography
+                The Cascade
               </div>
             </div>
           </a>
         
         
           
-          <a href="../08-grid/" class="md-footer__link md-footer__link--next" aria-label="Next: Grid">
+          <a href="../07-inheritance/" class="md-footer__link md-footer__link--next" aria-label="Next: Inheritance">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Grid
+                Inheritance
               </div>
             </div>
             <div class="md-footer__button md-icon">
