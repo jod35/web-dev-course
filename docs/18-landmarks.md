@@ -1,6 +1,6 @@
 # Page Landmarks: header, nav, main, footer, article, aside
 
-Instead of wrapping everything in `<div>`, HTML gives us elements that say **what each part of the page is for**. That helps browsers, search engines and screen readers — and it makes your code much easier to follow.
+Instead of wrapping everything in `<div>`, HTML gives us elements that say **what each part of the page is for**. That helps browsers, search engines and screen readers, and it makes your code much easier to follow.
 
 ---
 
@@ -46,7 +46,7 @@ The takeaway: each element tells us the **purpose** of its content, not just how
 
 ---
 
-## `<header>` — Introductory content
+## `<header>`: Introductory content
 
 Think of `<header>` as the intro for a page or a section:
 
@@ -87,7 +87,7 @@ Here the header belongs to the `<article>`, not the whole page.
 
 ---
 
-## `<nav>` — Important navigation
+## `<nav>`: Important navigation
 
 `<nav>` wraps **major navigation links**:
 
@@ -99,7 +99,7 @@ Here the header belongs to the `<article>`, not the whole page.
 </nav>
 ```
 
-Use it for main site nav, section nav, or a table of contents — e.g.:
+Use it for main site nav, section nav, or a table of contents, e.g.:
 
 ```html
 <nav>
@@ -124,7 +124,7 @@ Save `<nav>` for genuinely important navigation blocks.
 
 ---
 
-## `<main>` — The primary content
+## `<main>`: The primary content
 
 `<main>` holds the **core content of that page**:
 
@@ -164,13 +164,13 @@ A fuller picture:
 </body>
 ```
 
-**One `<main>` per page** is the usual rule — and don't put site-wide chrome like nav or footer inside it.
+**One `<main>` per page** is the usual rule: and don't put site-wide chrome like nav or footer inside it.
 
 ---
 
-## `<footer>` — Closing info
+## `<footer>`: Closing info
 
-`<footer>` is for information about its page or section — copyright, contacts, related links, author:
+`<footer>` is for information about its page or section, copyright, contacts, related links, author:
 
 ```html
 <footer>
@@ -199,9 +199,9 @@ That footer describes the article, not the entire site.
 
 ---
 
-## `<article>` — Self-contained content
+## `<article>`: Self-contained content
 
-`<article>` is for a **standalone piece** — something that would make sense on its own if syndicated:
+`<article>` is for a **standalone piece**, something that would make sense on its own if syndicated:
 
 * a blog post
 * a news story
@@ -243,9 +243,9 @@ Each `<article>` is its own independent unit.
 
 ---
 
-## `<aside>` — Related but secondary
+## `<aside>`: Related but secondary
 
-`<aside>` is for content **related to the surroundings but not part of the main flow** — sidebars, related articles, callouts, quick facts:
+`<aside>` is for content **related to the surroundings but not part of the main flow**, sidebars, related articles, callouts, quick facts:
 
 ```html
 <aside>
@@ -421,20 +421,20 @@ vs.
 </header>
 ```
 
-The second version announces "this is a header" — that's the point of **semantic HTML**.
+The second version announces "this is a header", that's the point of **semantic HTML**.
 
 ---
 
 ## When to use each
 
-**`<header>`** — intro for a page or section:
+**`<header>`**: intro for a page or section:
 ```html
 <header>
     <h1>My Website</h1>
 </header>
 ```
 
-**`<nav>`** — an important group of navigation links:
+**`<nav>`**: an important group of navigation links:
 ```html
 <nav>
     <a href="/">Home</a>
@@ -442,7 +442,7 @@ The second version announces "this is a header" — that's the point of **semant
 </nav>
 ```
 
-**`<main>`** — primary content of the page:
+**`<main>`**: primary content of the page:
 ```html
 <main>
     <h1>About Us</h1>
@@ -450,7 +450,7 @@ The second version announces "this is a header" — that's the point of **semant
 </main>
 ```
 
-**`<article>`** — self-contained piece:
+**`<article>`**: self-contained piece:
 ```html
 <article>
     <h2>My Blog Post</h2>
@@ -458,7 +458,7 @@ The second version announces "this is a header" — that's the point of **semant
 </article>
 ```
 
-**`<aside>`** — related / supplementary:
+**`<aside>`**: related / supplementary:
 ```html
 <aside>
     <h2>Related</h2>
@@ -466,7 +466,7 @@ The second version announces "this is a header" — that's the point of **semant
 </aside>
 ```
 
-**`<footer>`** — footer for a page or section:
+**`<footer>`**: footer for a page or section:
 ```html
 <footer>
     <p>Copyright 2026</p>
@@ -475,11 +475,11 @@ The second version announces "this is a header" — that's the point of **semant
 
 ---
 
-## `<section>` vs `<article>` — A Quick Distinction
+## `<section>` vs `<article>`: A Quick Distinction
 
 They're easy to mix up:
 
-* `<section>` groups content by **theme** — "these things belong to the same topic/section of the page."
+* `<section>` groups content by **theme**: "these things belong to the same topic/section of the page."
 * `<article>` is a **self-contained piece** that could stand alone.
 
 ```html
@@ -510,13 +510,13 @@ They're easy to mix up:
 
 ## A few ground rules
 
-1. Reach for semantic elements when they actually describe your content — don't force them.
+1. Reach for semantic elements when they actually describe your content, don't force them.
 2. Keep one `<main>` for the primary content.
 3. Use `<nav>` only for important navigation.
 4. Use `<article>` when the content is genuinely self-contained.
 5. Use `<aside>` for related but secondary material.
 6. Remember `<header>`/`<footer>` can belong to the page *or* to an article/section.
-7. Don't pick these elements for how they look — use CSS for presentation.
+7. Don't pick these elements for how they look, use CSS for presentation.
 
 ---
 
