@@ -1,24 +1,20 @@
-# Tiny Semantics - Big Meaning
+# Tiny Semantics — Big Meaning
 
-### Goal
-
-In this chapter, you will learn about small HTML elements that add **meaning** to text. These elements help browsers, search engines, screen readers, and other tools understand what the content represents.
+Some of the smallest tags do the most useful work. They don't change much visually, but they tell browsers, screen readers and search engines *what* your text actually is.
 
 ## Tag Reference
 
-### `<abbr>` - Abbreviation
+### `<abbr>` — Abbreviation
 
-The `<abbr>` element represents an **abbreviation or acronym**.
+`<abbr>` marks an **abbreviation or acronym**. Pair it with `title` to give the full expansion:
 
 ```html
 <p>I am learning <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 ```
 
-The `title` attribute provides the full meaning of the abbreviation.
+Browsers often show the `title` as a tooltip on hover, and assistive tech can use it too.
 
-When the user hovers over the abbreviation, browsers commonly display the value of `title`.
-
-Another example:
+Another:
 
 ```html
 <p>
@@ -29,9 +25,9 @@ Another example:
 
 ---
 
-### `<time>` - Date and Time
+### `<time>` — Date and Time
 
-The `<time>` element represents a **specific date, time, or period**.
+`<time>` flags a **specific date, time or period**.
 
 ```html
 <p>The class starts at <time>9:00 AM</time>.</p>
@@ -43,7 +39,7 @@ For a date:
 <p>The event is on <time>2026-10-07</time>.</p>
 ```
 
-The `datetime` attribute can provide a machine-readable version of the date or time.
+Want to be machine-readable as well as human-friendly? Add `datetime`:
 
 ```html
 <p>
@@ -52,13 +48,13 @@ The `datetime` attribute can provide a machine-readable version of the date or t
 </p>
 ```
 
-The text is written for humans, while `datetime` gives computers a standard format to understand.
+Humans read "October 7, 2026"; computers parse `2026-10-07`.
 
 ---
 
-### `<del>` - Deleted Text
+### `<del>` — Deleted Text
 
-The `<del>` element represents text that has been **removed or deleted**.
+`<del>` means text that's been **removed**:
 
 ```html
 <p>
@@ -66,13 +62,13 @@ The `<del>` element represents text that has been **removed or deleted**.
 </p>
 ```
 
-Browsers normally display deleted text with a line through it.
+Browsers usually strike it through.
 
 ---
 
-### `<ins>` - Inserted Text
+### `<ins>` — Inserted Text
 
-The `<ins>` element represents text that has been **added or inserted**.
+`<ins>` is the counterpart — text that's been **added**:
 
 ```html
 <p>
@@ -80,21 +76,19 @@ The `<ins>` element represents text that has been **added or inserted**.
 </p>
 ```
 
-This can be useful when showing changes to a document.
+Useful when you're showing edits or price changes.
 
 ---
 
-### `<sub>` - Subscript
+### `<sub>` — Subscript
 
-The `<sub>` element displays text **below the normal text line**.
-
-It is commonly used in chemical formulas.
+`<sub>` sits **below the baseline** — think chemistry:
 
 ```html
 <p>Water is H<sub>2</sub>O.</p>
 ```
 
-It can also be used in mathematical expressions:
+Also handy for maths:
 
 ```html
 <p>x<sub>1</sub> + x<sub>2</sub></p>
@@ -102,17 +96,13 @@ It can also be used in mathematical expressions:
 
 ---
 
-### `<sup>` - Superscript
+### `<sup>` — Superscript
 
-The `<sup>` element displays text **above the normal text line**.
-
-It is commonly used for powers and mathematical expressions.
+`<sup>` sits **above the baseline** — exponents, ordinals:
 
 ```html
 <p>2<sup>3</sup> = 8</p>
 ```
-
-It can also be used for ordinal numbers:
 
 ```html
 <p>1<sup>st</sup> place</p>
@@ -122,13 +112,13 @@ It can also be used for ordinal numbers:
 
 ## Summary
 
-| Element  | Meaning                 |
-| -------- | ----------------------- |
-| `<abbr>` | Abbreviation or acronym |
-| `<time>` | Date or time            |
-| `<del>`  | Deleted content         |
-| `<ins>`  | Inserted content        |
-| `<sub>`  | Subscript               |
-| `<sup>`  | Superscript             |
+| Element  | What it means             |
+| -------- | ------------------------- |
+| `<abbr>` | Abbreviation or acronym   |
+| `<time>` | Date or time              |
+| `<del>`  | Deleted content           |
+| `<ins>`  | Inserted content          |
+| `<sub>`  | Subscript                 |
+| `<sup>`  | Superscript               |
 
-These elements may look small, but they give HTML **semantic meaning** rather than simply changing how text looks.
+Tiny elements, but they add real semantic meaning — not just a visual tweak.

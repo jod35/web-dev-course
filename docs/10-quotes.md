@@ -1,8 +1,10 @@
 # Quotes
 
+HTML makes a useful distinction between a quick quote inside a sentence and a longer passage set apart. It also gives you a clean way to say *where* a quote came from.
+
 ## 1. Inline Quotes
 
-The `<q>` element is used for a **short quotation** within a sentence.
+`<q>` is for a **short quotation inside a sentence**:
 
 ```html
 <p>
@@ -10,13 +12,13 @@ The `<q>` element is used for a **short quotation** within a sentence.
 </p>
 ```
 
-Browsers normally display quotation marks around the text.
+Browsers typically wrap it in quotation marks for you — no need to type them by hand.
 
 ---
 
 ## 2. Block Quotes
 
-The `<blockquote>` element is used for a **longer quotation** that stands on its own.
+For a **longer quotation that stands on its own**, use `<blockquote>`:
 
 ```html
 <blockquote>
@@ -25,13 +27,13 @@ The `<blockquote>` element is used for a **longer quotation** that stands on its
 </blockquote>
 ```
 
-The browser normally displays a block quotation with indentation.
+Browsers usually indent block quotes to set them apart.
 
 ---
 
 ## 3. Citing the Source
 
-The `cite` attribute can be used with `<blockquote>` to specify the source of a quotation.
+You can attach a source URL directly to `<blockquote>` with `cite`:
 
 ```html
 <blockquote cite="https://example.com/article">
@@ -39,13 +41,13 @@ The `cite` attribute can be used with `<blockquote>` to specify the source of a 
 </blockquote>
 ```
 
-The `cite` attribute provides the source information but is not normally displayed on the page.
+That `cite` attribute won't be visible on the page, but it's there for tools that want it.
 
 ---
 
 ## 4. The `<cite>` Element
 
-The `<cite>` element is used to identify the **title of a work**, such as a book, movie, song, or article.
+`<cite>` identifies the **title of a work** — a book, film, song, article:
 
 ```html
 <p>
@@ -53,7 +55,7 @@ The `<cite>` element is used to identify the **title of a work**, such as a book
 </p>
 ```
 
-It can also be used when identifying the source of a quotation:
+You can use it for attributions too:
 
 ```html
 <blockquote>
@@ -67,16 +69,16 @@ It can also be used when identifying the source of a quotation:
 
 ---
 
-## 5. `<q>` vs `<blockquote>`
+## 5. `<q>` vs `<blockquote>` — Which One?
 
-| Element          | Purpose                                  |
-| ---------------- | ---------------------------------------- |
-| `<q>`            | Short, inline quotation                  |
-| `<blockquote>`   | Longer, separate quotation               |
-| `<cite>`         | Identifies the title or source of a work |
-| `cite` attribute | Specifies the URL of the source          |
+| Element / Attribute | Purpose |
+| ------------------- | ------- |
+| `<q>` | Short, inline quotation |
+| `<blockquote>` | Longer, standalone quotation |
+| `<cite>` | Title or source of a work |
+| `cite` attribute | URL of the source |
 
-### Example
+Example with both:
 
 ```html
 <p>
