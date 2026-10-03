@@ -1,10 +1,10 @@
-# Tiny Semantics — Big Meaning
+# Tiny Semantics: Big Meaning
 
 Some of the smallest tags do the most useful work. They don't change much visually, but they tell browsers, screen readers and search engines *what* your text actually is.
 
 ## Tag Reference
 
-### `<abbr>` — Abbreviation
+### `<abbr>`: Abbreviation
 
 `<abbr>` marks an **abbreviation or acronym**. Pair it with `title` to give the full expansion:
 
@@ -25,7 +25,7 @@ Another:
 
 ---
 
-### `<time>` — Date and Time
+### `<time>`: Date and Time
 
 `<time>` flags a **specific date, time or period**.
 
@@ -52,7 +52,7 @@ Humans read "October 7, 2026"; computers parse `2026-10-07`.
 
 ---
 
-### `<del>` — Deleted Text
+### `<del>`: Deleted Text
 
 `<del>` means text that's been **removed**:
 
@@ -66,9 +66,9 @@ Browsers usually strike it through.
 
 ---
 
-### `<ins>` — Inserted Text
+### `<ins>`: Inserted Text
 
-`<ins>` is the counterpart — text that's been **added**:
+`<ins>` is the counterpart, text that's been **added**:
 
 ```html
 <p>
@@ -80,9 +80,9 @@ Useful when you're showing edits or price changes.
 
 ---
 
-### `<sub>` — Subscript
+### `<sub>`: Subscript
 
-`<sub>` sits **below the baseline** — think chemistry:
+`<sub>` sits **below the baseline**, think chemistry:
 
 ```html
 <p>Water is H<sub>2</sub>O.</p>
@@ -96,9 +96,9 @@ Also handy for maths:
 
 ---
 
-### `<sup>` — Superscript
+### `<sup>`: Superscript
 
-`<sup>` sits **above the baseline** — exponents, ordinals:
+`<sup>` sits **above the baseline**, exponents, ordinals:
 
 ```html
 <p>2<sup>3</sup> = 8</p>
@@ -121,4 +121,4 @@ Also handy for maths:
 | `<sub>`  | Subscript                 |
 | `<sup>`  | Superscript               |
 
-Tiny elements, but they add real semantic meaning — not just a visual tweak.
+Tiny elements, but they add real semantic meaning, not just a visual tweak.
