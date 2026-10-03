@@ -60,4 +60,40 @@
       <url>
         <loc>https://www.example.com/18-landmarks/</loc>
       </url>
+      <url>
+        <loc>https://www.example.com/css/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/01-what-is-css/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/02-selectors/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/03-cascade-specificity/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/04-box-model/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/05-colors-units/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/06-text-typography/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/07-flexbox/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/08-grid/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/09-responsive/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/css/10-practice/</loc>
+      </url>
+      <url>
+        <loc>https://www.example.com/js/</loc>
+      </url>
 </urlset>
