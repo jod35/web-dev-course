@@ -1,6 +1,6 @@
 # Tables
 
-When you have information that naturally sits in **rows and columns** — marks, prices, timetables — a table is the right tool. Not for layout, but for data where the row/column relationship matters.
+When you have information that naturally sits in **rows and columns**, marks, prices, timetables, a table is the right tool. Not for layout, but for data where the row/column relationship matters.
 
 ## What counts as tabular data?
 
@@ -52,9 +52,9 @@ Empty, of course. You need **rows** and **cells** inside it:
 
 ---
 
-# `<tr>` — Table Row
+# `<tr>`: Table Row
 
-`<tr>` is a **table row** — one horizontal line:
+`<tr>` is a **table row**, one horizontal line:
 
 ```html
 <tr>
@@ -84,9 +84,9 @@ Sarah    14
 
 ---
 
-# `<td>` — Table Data Cell
+# `<td>`: Table Data Cell
 
-`<td>` is a **data cell** — `td` = table data:
+`<td>` is a **data cell**, `td` = table data:
 
 ```html
 <td>John</td>
@@ -106,9 +106,9 @@ A row can hold several:
 
 ---
 
-# `<th>` — Table Header Cell
+# `<th>`: Table Header Cell
 
-`<th>` is a **header cell** — `th` = table header. Use it for row or column headings instead of plain `<td>`:
+`<th>` is a **header cell**, `th` = table header. Use it for row or column headings instead of plain `<td>`:
 
 Instead of:
 
@@ -158,7 +158,7 @@ That first row now properly labels the columns.
 
 ---
 
-# `<caption>` — Table Title
+# `<caption>`: Table Title
 
 `<caption>` gives the table a **title or description** and belongs right after `<table>`:
 
@@ -180,11 +180,11 @@ That first row now properly labels the columns.
 </table>
 ```
 
-Think of it as the table's heading — readers and screen readers thank you for it.
+Think of it as the table's heading, readers and screen readers thank you for it.
 
 ---
 
-# `<thead>` — Header Group
+# `<thead>`: Header Group
 
 `<thead>` groups the header rows:
 
@@ -206,7 +206,7 @@ Particularly useful when tables get longer or you want to style the header separ
 
 ---
 
-# `<tbody>` — Body Group
+# `<tbody>`: Body Group
 
 `<tbody>` wraps the main data rows:
 
@@ -240,9 +240,9 @@ Particularly useful when tables get longer or you want to style the header separ
 
 ---
 
-# `<tfoot>` — Footer / Summary
+# `<tfoot>`: Footer / Summary
 
-`<tfoot>` groups summary or footer rows — e.g. a total:
+`<tfoot>` groups summary or footer rows, e.g. a total:
 
 ```html
 <table>
@@ -344,7 +344,7 @@ Concrete example:
 
 ---
 
-# Rows vs Columns — A Quick Visual
+# Rows vs Columns: A Quick Visual
 
 ```html
 <table>
@@ -381,7 +381,7 @@ Remember: `<tr>` makes a row; `<th>`/`<td>` make cells *inside* that row.
 
 Sometimes a cell should stretch over several rows or columns.
 
-## `colspan` — span columns
+## `colspan`: span columns
 
 ```html
 <table>
@@ -400,7 +400,7 @@ That header now covers two columns.
 
 ---
 
-## `rowspan` — span rows
+## `rowspan`: span rows
 
 ```html
 <table>
@@ -429,7 +429,7 @@ Product | Price | Quantity
 Date    | Event | Location
 ```
 
-If you're reaching for a table just to position things on the page, pause — layout is a job for CSS (and landmarks like `header`/`main`), not tables.
+If you're reaching for a table just to position things on the page, pause, layout is a job for CSS (and landmarks like `header`/`main`), not tables.
 
 ---
 
