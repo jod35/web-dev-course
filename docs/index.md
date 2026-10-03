@@ -4,7 +4,7 @@ icon: lucide/house
 
 # The Basic Structure of an HTML Element
 
-HTML pages are built from **elements** — small labelled chunks that tell the browser what each bit of content actually *is*, not just how it looks.
+HTML pages are built from **elements**, small labelled chunks that tell the browser what each bit of content actually *is*, not just how it looks.
 
 Say you write:
 
@@ -70,7 +70,7 @@ If we pull it apart:
 
 </figure>
 
-The name in the middle is what matters — it says what kind of element you're opening. For instance:
+The name in the middle is what matters, it says what kind of element you're opening. For instance:
 
 ```html
 <p>
@@ -85,7 +85,7 @@ that's the main heading.
 ```html
 <strong>
 ```
-that's strongly important text — not just "bold for looks".
+that's strongly important text, not just "bold for looks".
 
 ---
 
@@ -216,10 +216,10 @@ Take:
 
 That gives us:
 
-* `<h1>` — opening tag
-* `My Website` — content
-* `</h1>` — closing tag
-* all of it together — an HTML element
+* `<h1>`: opening tag
+* `My Website`: content
+* `</h1>`: closing tag
+* all of it together: an HTML element
 
 One more, just to lock it in:
 
@@ -237,7 +237,7 @@ Important information    Content
 
 ## 7. Elements Can Contain Other Elements
 
-Elements can live inside other elements — we call it **nesting**.
+Elements can live inside other elements, we call it **nesting**.
 
 ```html
 <p>
@@ -283,7 +283,7 @@ This doesn't:
     This is <strong>important</p> information</strong>
 ```
 
-They're overlapping — browsers will try to guess what you meant, but don't make them.
+They're overlapping, browsers will try to guess what you meant, but don't make them.
 
 A handy rule of thumb:
 
@@ -305,7 +305,7 @@ We opened `<strong>` last, so we close it first.
 
 ## 9. Attributes
 
-Elements can carry **attributes** — extra info about that element.
+Elements can carry **attributes**, extra info about that element.
 
 ```html
 <a href="https://example.com">Visit Example</a>
@@ -367,7 +367,7 @@ For instance:
 
 ## 10. Multiple Attributes
 
-Yep, you can have more than one — just keep them inside the opening tag:
+Yep, you can have more than one, just keep them inside the opening tag:
 
 ```html
 <img src="cat.jpg" alt="A sleeping cat" width="400">
@@ -399,7 +399,7 @@ Some elements don't wrap content at all, so they don't need a closer.
 <img src="cat.jpg" alt="A sleeping cat">
 ```
 
-There's no `</img>` — it wouldn't make sense. We call it a **void element**.
+There's no `</img>`, it wouldn't make sense. We call it a **void element**.
 
 You'll see a few others a lot:
 
@@ -415,7 +415,7 @@ No content between tags, just the element itself.
 
 ---
 
-## 12. Element vs Tag — Not Quite the Same
+## 12. Element vs Tag: Not Quite the Same
 
 Take:
 
