@@ -1,8 +1,8 @@
 # What Are Headings?
 
-HTML headings are used to **introduce and organize sections of content** on a webpage.
+Headings are how we **introduce and organize sections** on a page. Think of them as the outline you'd scribble before writing an essay — just baked into HTML.
 
-HTML provides six heading elements:
+There are six of them:
 
 ```html
 <h1>Heading 1</h1>
@@ -13,19 +13,19 @@ HTML provides six heading elements:
 <h6>Heading 6</h6>
 ```
 
-They range from `<h1>`, the highest level of heading, to `<h6>`, the lowest.
+`<h1>` is the top-level heading, `<h6>` the deepest. Most pages live happily on just the first two or three.
 
 ---
 
-## 1. The `<h1>` Heading
+## 1. The `<h1>` — main heading
 
-`<h1>` represents the **main heading** of a page or document.
+`<h1>` is the big picture — what the whole page is about.
 
 ```html
 <h1>Introduction to HTML</h1>
 ```
 
-A page about HTML might begin with:
+A typical start might be:
 
 ```html
 <h1>Introduction to HTML</h1>
@@ -35,13 +35,13 @@ A page about HTML might begin with:
 </p>
 ```
 
-The `<h1>` tells the reader what the overall page is about.
+That `<h1>` tells anyone skimming (and any screen reader) what they're about to read.
 
 ---
 
-## 2. The `<h2>` Heading
+## 2. The `<h2>` — major sections
 
-`<h2>` represents a **major section** within the main topic.
+`<h2>` breaks the main topic into big chunks.
 
 ```html
 <h1>Introduction to HTML</h1>
@@ -59,7 +59,7 @@ The `<h1>` tells the reader what the overall page is about.
 </p>
 ```
 
-The structure is:
+Visualised:
 
 ```text
 Introduction to HTML
@@ -69,13 +69,13 @@ Introduction to HTML
 └── HTML Attributes
 ```
 
-`<h1>` is the main topic, while the `<h2>` elements introduce major sections.
+So `<h1>` is the book title; `<h2>`s are the chapter titles.
 
 ---
 
-## 3. The `<h3>` Heading
+## 3. The `<h3>` — subsections
 
-`<h3>` is used for a subsection within an `<h2>` section.
+Need to go deeper under an `<h2>`? That's `<h3>`.
 
 ```html
 <h1>Introduction to HTML</h1>
@@ -99,7 +99,7 @@ Introduction to HTML
 </p>
 ```
 
-The hierarchy is:
+Hierarchy:
 
 ```text
 Introduction to HTML       <h1>
@@ -113,9 +113,9 @@ Introduction to HTML       <h1>
 
 ---
 
-## 4. `<h4>`, `<h5>`, and `<h6>`
+## 4. `<h4>`, `<h5>`, and `<h6>` — when you really need depth
 
-The remaining headings are used for increasingly deeper levels of structure.
+They work the same way, just deeper:
 
 ```html
 <h1>Web Development</h1>
@@ -131,8 +131,6 @@ The remaining headings are used for increasingly deeper levels of structure.
 <h6>Strong Importance</h6>
 ```
 
-This creates a hierarchy:
-
 ```text
 Web Development              h1
 │
@@ -147,17 +145,15 @@ Web Development              h1
                 └── Strong Importance  h6
 ```
 
-In practice, most webpages primarily use `<h1>`, `<h2>`, and `<h3>`. The deeper levels are useful when a document has a more complex structure.
+Honestly, most sites you'll build at Migadde will use `<h1>`–`<h3>` and stop there. The lower levels are for docs with a lot of nesting.
 
 ---
 
-## 5. Headings Create a Hierarchy
+## 5. Headings Are About Hierarchy, Not Size
 
-Heading levels are not simply different font sizes.
+It's tempting to pick headings because "h2 looks nice and big." Don't.
 
-They describe the **relationship between sections of content**.
-
-For example:
+They describe **how sections relate**, not how big the text should be.
 
 ```html
 <h1>Learning Web Development</h1>
@@ -175,7 +171,7 @@ For example:
 <h3>Properties</h3>
 ```
 
-This represents:
+That means:
 
 ```text
 Learning Web Development
@@ -189,13 +185,13 @@ Learning Web Development
     └── Properties
 ```
 
-The heading levels communicate this structure.
+The levels carry the structure, even if CSS later makes them all look similar.
 
 ---
 
-## 6. Headings and Paragraphs
+## 6. Headings + Paragraphs
 
-Headings normally introduce the content that follows them.
+Usually a heading introduces whatever paragraphs follow it:
 
 ```html
 <h2>HTML Tables</h2>
@@ -209,8 +205,6 @@ Headings normally introduce the content that follows them.
 </p>
 ```
 
-Here:
-
 ```text
 HTML Tables
     ↓
@@ -219,43 +213,36 @@ Paragraph
 Paragraph
 ```
 
-The heading tells the reader what the following paragraphs are about.
+The heading sets expectations; the paragraphs deliver.
 
 ---
 
-## 7. Do Not Choose Headings Based on Size
+## 7. Don't Pick a Heading for Its Size
 
-A common beginner mistake is choosing `<h1>`, `<h2>`, or `<h3>` because of how large the text appears.
-
-For example:
+We've all done this:
 
 ```html
 <h3>This is a big title</h3>
 ```
 
-You should not use `<h3>` simply because you like its default size.
-
-The correct heading should be chosen based on the **structure of the content**.
-
-If something is the main heading, use:
+...just because we liked how `<h3>` looks by default. Use the level that matches the structure instead:
 
 ```html
 <h1>Main Heading</h1>
 ```
-
-If something is a major section under it, use:
+for the page title,
 
 ```html
 <h2>Major Section</h2>
 ```
-
-If it is a subsection, use:
+for a section beneath it,
 
 ```html
 <h3>Subsection</h3>
 ```
+for something inside that section.
 
-If you want to change the appearance, use CSS.
+Want it bigger or smaller? That's CSS's job:
 
 ```css
 h2 {
@@ -265,9 +252,9 @@ h2 {
 
 ---
 
-## 8. Avoid Skipping Heading Levels Without a Reason
+## 8. Try Not to Skip Levels
 
-Consider:
+This isn't invalid, but it usually means the outline wasn't thought through:
 
 ```html
 <h1>Web Development</h1>
@@ -275,11 +262,7 @@ Consider:
 <h3>HTML</h3>
 ```
 
-There is no `<h2>` between them.
-
-This does not necessarily make the HTML invalid, but it usually indicates that the document hierarchy has not been planned correctly.
-
-A clearer structure would be:
+There's an `<h2>` missing in between. Clearer:
 
 ```html
 <h1>Web Development</h1>
@@ -287,7 +270,7 @@ A clearer structure would be:
 <h2>HTML</h2>
 ```
 
-If HTML has subsections:
+And if HTML itself has sub-topics:
 
 ```html
 <h1>Web Development</h1>
@@ -299,15 +282,13 @@ If HTML has subsections:
 <h3>Attributes</h3>
 ```
 
-Think about heading levels as a hierarchy rather than a sequence of font sizes.
+Think hierarchy, not font-size ladder.
 
 ---
 
-## 9. Headings Do Not Have to Be Numbered
+## 9. You Don't Have to Use Every Level
 
-HTML does not require you to use every heading level.
-
-For example, this is perfectly reasonable:
+This is perfectly fine:
 
 ```html
 <h1>My Website</h1>
@@ -319,15 +300,13 @@ For example, this is perfectly reasonable:
 <h2>Contact</h2>
 ```
 
-You do not need an `<h3>` if there are no subsections.
-
-The important thing is that the hierarchy accurately represents the content.
+No `<h3>` needed if there are no subsections. Let the content dictate the levels.
 
 ---
 
 ## 10. A Real-World Example
 
-Imagine a webpage about programming.
+Say we're putting together a page about Python:
 
 ```html
 <h1>Learning Python</h1>
@@ -369,7 +348,7 @@ Imagine a webpage about programming.
 </p>
 ```
 
-The structure is:
+Structure:
 
 ```text
 Learning Python                 h1
@@ -382,17 +361,13 @@ Learning Python                 h1
     └── Classes                 h3
 ```
 
-This is much more meaningful than simply making some text large and some text small.
+Much more meaningful than just making some text bigger than other text.
 
 ---
 
-## 11. Headings Improve Accessibility
+## 11. Headings Help Everyone Navigate — Especially Screen Readers
 
-Headings are also important for people who use assistive technologies.
-
-A screen reader can use headings to help a user understand the structure of a webpage and navigate between sections.
-
-For example, a user may want to quickly move between:
+A screen reader can pull out your headings and let a user jump between:
 
 ```text
 About Us
@@ -401,15 +376,15 @@ Products
 Contact
 ```
 
-Properly structured headings make this possible.
-
-This is another reason why headings should represent the **actual structure of the document**, rather than being used only for visual styling.
+That's only useful if the headings reflect the actual structure, not just visual styling. So it's both a design and an accessibility habit.
 
 ---
 
-## 12. Headings Are Different From Page Titles
+## 12. Headings vs Page Titles
 
-A webpage can have a document title inside `<title>`:
+They look similar but do different jobs.
+
+In `<head>`:
 
 ```html
 <head>
@@ -417,7 +392,7 @@ A webpage can have a document title inside `<title>`:
 </head>
 ```
 
-And a visible main heading:
+Visible on the page:
 
 ```html
 <body>
@@ -425,34 +400,27 @@ And a visible main heading:
 </body>
 ```
 
-These serve different purposes.
-
-### `<title>`
-
-The `<title>` describes the webpage as a browser document. It can appear in the browser tab and other contexts.
-
-### `<h1>`
-
-The `<h1>` is visible page content and represents the main heading of the page.
+* `<title>` describes the document for the browser tab and search results — you won't see it in the page body.
+* `<h1>` is the visible headline for readers on the page itself.
 
 ---
 
 ## Quick Reference
 
-| Element | Purpose              |
-| ------- | -------------------- |
-| `<h1>`  | Main heading         |
-| `<h2>`  | Major section        |
-| `<h3>`  | Subsection           |
-| `<h4>`  | Smaller subsection   |
-| `<h5>`  | Deeper subsection    |
-| `<h6>`  | Lowest heading level |
+| Element | Use for            |
+| ------- | ------------------ |
+| `<h1>`  | Main page heading  |
+| `<h2>`  | Major section      |
+| `<h3>`  | Subsection         |
+| `<h4>`  | Smaller subsection |
+| `<h5>`  | Deeper subsection  |
+| `<h6>`  | Lowest level       |
 
-The important idea is:
+The takeaway:
 
-> **Heading levels describe the structure of your content, not its visual size.**
+> **Heading levels describe what your content *is*, not how big it should look.**
 
-A well-structured webpage might look like:
+A tidy page often looks like:
 
 ```text
 <h1>Page Topic</h1>
@@ -465,4 +433,4 @@ A well-structured webpage might look like:
             └── <h3>Subsection</h3>
 ```
 
-Use headings to make your content easier to **understand, navigate, and maintain**.
+Use them to make your content easier to **understand, navigate and maintain** — for you, for search engines, and for the next person who reads your code.
