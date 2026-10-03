@@ -1,8 +1,8 @@
 # Paragraphs, Breaks, Rules (Syntax)
 
-Here's the exact syntax for `p`, `br`, and `hr` — nothing extra.
+Here's the exact syntax for `p`, `br`, and `hr`, nothing extra.
 
-## `<p>` — paragraph
+## `<p>`: paragraph
 
 `p` wraps a block of thought. Spacing above and below is added for you:
 
@@ -10,7 +10,7 @@ Here's the exact syntax for `p`, `br`, and `hr` — nothing extra.
 <p>Fresh bread baked daily.</p>
 ```
 
-## `<br>` — line break
+## `<br>`: line break
 
 Empty tag, so **no closing tag**. It just breaks the line inside the same paragraph:
 
@@ -23,9 +23,9 @@ Renders as:
 Line one
 Line two
 
-## `<hr>` — thematic break
+## `<hr>`: thematic break
 
-Also an empty tag — **no closing tag**. It signals a shift in topic between blocks:
+Also an empty tag, **no closing tag**. It signals a shift in topic between blocks:
 
 ```html
 <p>Menu</p>
@@ -35,7 +35,7 @@ Also an empty tag — **no closing tag**. It signals a shift in topic between bl
 
 ## A couple of guardrails
 
-- A `<br>` inside a heading can be okay for a two-line title, but never use it for vertical spacing — that's what CSS margins are for.
+- A `<br>` inside a heading can be okay for a two-line title, but never use it for vertical spacing: that's what CSS margins are for.
 - Seeing several `<hr>`s in a row? That's usually a hint you actually want headings instead.
 
 ## Recap
