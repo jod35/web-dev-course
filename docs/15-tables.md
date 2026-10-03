@@ -1,19 +1,15 @@
 # Tables
 
-**Goal:** In this chapter, you will learn how to use HTML tables to organize related information into **rows and columns**. You will learn how to create tables, add headings and data, group rows, and add captions.
+When you have information that naturally sits in **rows and columns** — marks, prices, timetables — a table is the right tool. Not for layout, but for data where the row/column relationship matters.
 
-## What is an HTML Table?
+## What counts as tabular data?
 
-An HTML table is used to present information in **rows and columns**.
-
-Tables are useful for information such as:
+Think:
 
 * Student marks
-* Product prices
+* Product prices and quantities
 * Class timetables
-* Employee information
 * Sales records
-* Schedules
 
 For example:
 
@@ -23,22 +19,20 @@ For example:
 | Sarah |  14 | S1    |
 | David |  16 | S3    |
 
-In HTML, this information can be represented using several elements.
+HTML gives you a handful of elements to build exactly that.
 
 ---
 
 # The Basic Table
 
-The `<table>` element creates a table.
+`<table>` creates the table:
 
 ```html
 <table>
 </table>
 ```
 
-However, an empty table does not contain any information. We need to add **rows** and **cells**.
-
-A simple table looks like this:
+Empty, of course. You need **rows** and **cells** inside it:
 
 ```html
 <table>
@@ -58,18 +52,16 @@ A simple table looks like this:
 
 ---
 
-# `<tr>` - Table Row
+# `<tr>` — Table Row
 
-The `<tr>` element creates a **table row**.
+`<tr>` is a **table row** — one horizontal line:
 
 ```html
 <tr>
 </tr>
 ```
 
-Each `<tr>` represents one horizontal row in the table.
-
-For example:
+Two rows, for instance:
 
 ```html
 <table>
@@ -85,8 +77,6 @@ For example:
 </table>
 ```
 
-This creates two rows.
-
 ```text
 John     15
 Sarah    14
@@ -94,17 +84,15 @@ Sarah    14
 
 ---
 
-# `<td>` - Table Data Cell
+# `<td>` — Table Data Cell
 
-The `<td>` element represents a **cell containing table data**.
-
-`td` means **table data**.
+`<td>` is a **data cell** — `td` = table data:
 
 ```html
 <td>John</td>
 ```
 
-A row can contain multiple data cells:
+A row can hold several:
 
 ```html
 <tr>
@@ -114,19 +102,13 @@ A row can contain multiple data cells:
 </tr>
 ```
 
-This row has three cells.
-
-```text
-| John | 15 | S2 |
-```
+→ three cells: `| John | 15 | S2 |`
 
 ---
 
-# `<th>` - Table Header Cell
+# `<th>` — Table Header Cell
 
-The `<th>` element represents a **heading for a row or column**.
-
-`th` means **table header**.
+`<th>` is a **header cell** — `th` = table header. Use it for row or column headings instead of plain `<td>`:
 
 Instead of:
 
@@ -138,7 +120,7 @@ Instead of:
 </tr>
 ```
 
-use:
+prefer:
 
 ```html
 <tr>
@@ -148,7 +130,7 @@ use:
 </tr>
 ```
 
-A complete table might look like:
+Full example:
 
 ```html
 <table>
@@ -172,13 +154,13 @@ A complete table might look like:
 </table>
 ```
 
-The first row contains the column headings.
+That first row now properly labels the columns.
 
 ---
 
-# `<caption>` - Table Caption
+# `<caption>` — Table Title
 
-The `<caption>` element gives a table a **title or description**.
+`<caption>` gives the table a **title or description** and belongs right after `<table>`:
 
 ```html
 <table>
@@ -198,15 +180,13 @@ The `<caption>` element gives a table a **title or description**.
 </table>
 ```
 
-The caption describes what the table is about.
-
-A `<caption>` should be placed immediately after the opening `<table>` tag.
+Think of it as the table's heading — readers and screen readers thank you for it.
 
 ---
 
-# `<thead>` - Table Header
+# `<thead>` — Header Group
 
-The `<thead>` element groups the rows containing the table's header information.
+`<thead>` groups the header rows:
 
 ```html
 <table>
@@ -222,13 +202,13 @@ The `<thead>` element groups the rows containing the table's header information.
 </table>
 ```
 
-It is particularly useful for larger or more structured tables.
+Particularly useful when tables get longer or you want to style the header separately.
 
 ---
 
-# `<tbody>` - Table Body
+# `<tbody>` — Body Group
 
-The `<tbody>` element groups the main data rows of a table.
+`<tbody>` wraps the main data rows:
 
 ```html
 <table>
@@ -258,15 +238,11 @@ The `<tbody>` element groups the main data rows of a table.
 </table>
 ```
 
-The `<tbody>` contains the main information in the table.
-
 ---
 
-# `<tfoot>` - Table Footer
+# `<tfoot>` — Footer / Summary
 
-The `<tfoot>` element groups rows containing summary or footer information.
-
-For example, a sales table might contain a total:
+`<tfoot>` groups summary or footer rows — e.g. a total:
 
 ```html
 <table>
@@ -304,7 +280,7 @@ For example, a sales table might contain a total:
 
 # Complete Table Structure
 
-A well-structured table can contain:
+Putting it together, a well-structured table often looks like:
 
 ```text
 <table>
@@ -334,7 +310,7 @@ A well-structured table can contain:
 </table>
 ```
 
-A complete example:
+Concrete example:
 
 ```html
 <table>
@@ -368,9 +344,7 @@ A complete example:
 
 ---
 
-# Understanding Rows and Columns
-
-Consider this table:
+# Rows vs Columns — A Quick Visual
 
 ```html
 <table>
@@ -388,7 +362,7 @@ Consider this table:
 </table>
 ```
 
-The table has **2 rows** and **3 columns**.
+→ **2 rows**, **3 columns**:
 
 ```text
              Columns
@@ -399,19 +373,15 @@ The table has **2 rows** and **3 columns**.
 Rows → | John | 15  | S2    |
 ```
 
-A `<tr>` creates a row.
-
-A `<th>` or `<td>` creates a cell within that row.
+Remember: `<tr>` makes a row; `<th>`/`<td>` make cells *inside* that row.
 
 ---
 
-# Combining Cells
+# Spanning Cells
 
-HTML allows cells to span multiple rows or columns.
+Sometimes a cell should stretch over several rows or columns.
 
-## `colspan`
-
-The `colspan` attribute allows a cell to span multiple **columns**.
+## `colspan` — span columns
 
 ```html
 <table>
@@ -426,13 +396,11 @@ The `colspan` attribute allows a cell to span multiple **columns**.
 </table>
 ```
 
-The header cell spans two columns.
+That header now covers two columns.
 
 ---
 
-## `rowspan`
-
-The `rowspan` attribute allows a cell to span multiple **rows**.
+## `rowspan` — span rows
 
 ```html
 <table>
@@ -447,15 +415,13 @@ The `rowspan` attribute allows a cell to span multiple **rows**.
 </table>
 ```
 
-The `Name` cell spans two rows.
+"Name" stretches over two rows.
 
 ---
 
-# Tables Are for Tabular Data
+# Tables Are for Data, Not Layout
 
-Tables should be used when information has a meaningful relationship between **rows and columns**.
-
-Good examples include:
+Good fits:
 
 ```text
 Student | Class | Mark
@@ -463,30 +429,30 @@ Product | Price | Quantity
 Date    | Event | Location
 ```
 
-Tables should not be used simply to position elements on a webpage. Page layout should be handled using modern HTML and CSS.
+If you're reaching for a table just to position things on the page, pause — layout is a job for CSS (and landmarks like `header`/`main`), not tables.
 
 ---
 
-# Important Elements and Attributes
+# At a glance
 
-| Element/Attribute | Purpose                                |
-| ----------------- | -------------------------------------- |
-| `<table>`         | Creates a table                        |
-| `<caption>`       | Gives the table a title or description |
-| `<tr>`            | Creates a table row                    |
-| `<th>`            | Creates a header cell                  |
-| `<td>`            | Creates a data cell                    |
-| `<thead>`         | Groups table header rows               |
-| `<tbody>`         | Groups the main table rows             |
-| `<tfoot>`         | Groups footer or summary rows          |
-| `colspan`         | Makes a cell span multiple columns     |
-| `rowspan`         | Makes a cell span multiple rows        |
+| Element / Attribute | What it does |
+| ------------------- | ------------ |
+| `<table>` | Creates a table |
+| `<caption>` | Title / description for the table |
+| `<tr>` | Table row |
+| `<th>` | Header cell |
+| `<td>` | Data cell |
+| `<thead>` | Groups header rows |
+| `<tbody>` | Groups main rows |
+| `<tfoot>` | Groups footer / summary rows |
+| `colspan` | Span multiple columns |
+| `rowspan` | Span multiple rows |
 
 ---
 
 # Recap
 
-The basic table structure is:
+Minimal table:
 
 ```html
 <table>
@@ -502,7 +468,7 @@ The basic table structure is:
 </table>
 ```
 
-For a more structured table:
+More structured:
 
 ```html
 <table>
@@ -533,8 +499,8 @@ For a more structured table:
 </table>
 ```
 
-The key idea is:
+Keep this in mind:
 
 **`<table>` → `<tr>` → `<th>` / `<td>`**
 
-A table contains rows, and each row contains cells.
+A table holds rows; each row holds cells.
