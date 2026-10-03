@@ -4,7 +4,7 @@ You'll spend a lot of time inside this skeleton, so let's get comfortable with i
 
 ## The full template
 
-Keep this handy — you'll want it at the top of **every** page you create:
+Keep this handy, you'll want it at the top of **every** page you create:
 
 ```html
 <!DOCTYPE html>
@@ -24,16 +24,16 @@ Read it top to bottom; the order actually matters.
 
 ## Tag reference
 
-### `<!DOCTYPE html>` — declaration
+### `<!DOCTYPE html>`: declaration
 
 - This first line tells the browser "this is HTML5, so use standards mode." Without it you can end up in quirks mode and wonder why things look odd.
-- It's **not a tag**, so there's no closing tag and no attributes. It has to be the very first line — nothing above it, not even a comment.
+- It's **not a tag**, so there's no closing tag and no attributes. It has to be the very first line: nothing above it, not even a comment.
 
 ```html
 <!DOCTYPE html>
 ```
 
-### `<html>` — root element
+### `<html>`: root element
 
 - Think of `<html>` as the parent of everything. It wraps `<head>` and `<body>`, and its closing tag `</html>` should be the last line in the file.
 - The `lang` attribute hints the page language to screen readers and search engines:
@@ -48,9 +48,9 @@ Read it top to bottom; the order actually matters.
 | `sw` | Swahili |
 | `fr` | French |
 
-### `<head>` — invisible metadata
+### `<head>`: invisible metadata
 
-- `<head>` holds setup info you **don't see on the page itself** — the tab title, character set, viewport hint, CSS links, JS, and so on. It's the first child of `<html>` and always comes **before** `<body>`.
+- `<head>` holds setup info you **don't see on the page itself**: the tab title, character set, viewport hint, CSS links, JS, and so on. It's the first child of `<html>` and always comes **before** `<body>`.
 
 ```html
 <head>
@@ -62,13 +62,13 @@ Read it top to bottom; the order actually matters.
 
 | Tag inside `<head>` | What it does |
 |---------------------|--------------|
-| `<title>` | Tab/window title — also what shows up in search results |
-| `<meta charset="utf-8">` | Character encoding — just include it, always |
-| `<meta name="viewport" …>` | Tells mobile browsers how to scale the page — also always include it |
+| `<title>` | Tab/window title: also what shows up in search results |
+| `<meta charset="utf-8">` | Character encoding: just include it, always |
+| `<meta name="viewport" …>` | Tells mobile browsers how to scale the page: also always include it |
 
-### `<body>` — what visitors actually see
+### `<body>`: what visitors actually see
 
-- Headings, paragraphs, lists, images, links — if it's visible, it lives in `<body>`. Each page has exactly **one** `<body>`, and it's the second child of `<html>`.
+- Headings, paragraphs, lists, images, links: if it's visible, it lives in `<body>`. Each page has exactly **one** `<body>`, and it's the second child of `<html>`.
 
 ```html
 <body>
@@ -85,18 +85,18 @@ Read it top to bottom; the order actually matters.
 ## Hierarchy (who's inside who)
 
 ```text
-<!DOCTYPE html>      declaration — comes first, owns nothing
-<html>               PARENT — wraps everything
-  <head>             1st child — invisible setup
-  <body>             2nd child — all visible content
+<!DOCTYPE html>      declaration, comes first, owns nothing
+<html>               PARENT, wraps everything
+  <head>             1st child, invisible setup
+  <body>             2nd child, all visible content
 ```
 
 - `<html>` is the parent; `<head>` and `<body>` are its children.
-- `<head>` always comes before `<body>`. No visible content goes in `<head>` — though `<title>` will show up on the browser tab.
+- `<head>` always comes before `<body>`. No visible content goes in `<head>`: though `<title>` will show up on the browser tab.
 
 ## A few ground rules
 
-- One `<!DOCTYPE>`, one `<html>`, one `<head>`, and one `<body>` per page — no extras.
+- One `<!DOCTYPE>`, one `<html>`, one `<head>`, and one `<body>` per page: no extras.
 - Close tags in reverse order. The `<html>` you opened second? It closes last.
 - Skip `<meta charset>` and non-English characters can turn to gibberish. Skip the viewport tag and your layout will look broken on phones. We've all been there.
 
@@ -113,7 +113,7 @@ Read it top to bottom; the order actually matters.
 
 ## The Basic Structure of an HTML Element
 
-HTML pages are built from **elements** — labelled chunks that tell the browser what each piece of content *means* and how it should be structured.
+HTML pages are built from **elements**, labelled chunks that tell the browser what each piece of content *means* and how it should be structured.
 
 Here's a paragraph element:
 
@@ -194,7 +194,7 @@ That name in the middle is the important bit:
 ```html
 <strong>
 ```
-→ strongly important — not just "make it bold".
+→ strongly important, not just "make it bold".
 
 ---
 
@@ -224,7 +224,7 @@ Content:
 Learning HTML
 ```
 
-And it doesn't have to be plain text — elements can hold other elements too:
+And it doesn't have to be plain text, elements can hold other elements too:
 
 ```html
 <p>
@@ -331,7 +331,7 @@ Important information    Content
 
 ### 7. Elements Can Contain Other Elements
 
-Elements inside other elements — that's **nesting**.
+Elements inside other elements, that's **nesting**.
 
 ```html
 <p>
@@ -358,7 +358,7 @@ That's how simple pieces combine into more interesting pages.
 
 ### 8. Proper Nesting
 
-Close in the right order. Think of packing boxes — you close the inner one before the outer one.
+Close in the right order. Think of packing boxes, you close the inner one before the outer one.
 
 This is fine:
 
@@ -375,7 +375,7 @@ This isn't:
     This is <strong>important</p> information</strong>
 ```
 
-The tags overlap — browsers will guess, but don't make them.
+The tags overlap, browsers will guess, but don't make them.
 
 A rule of thumb you'll hear a lot:
 
@@ -459,7 +459,7 @@ E.g.:
 
 ### 10. Multiple Attributes
 
-Yep, you can have more than one — just keep them inside the opening tag:
+Yep, you can have more than one, just keep them inside the opening tag:
 
 ```html
 <img src="cat.jpg" alt="A sleeping cat" width="400">
@@ -491,7 +491,7 @@ Some elements never wrap content, so they don't need a closer:
 <img src="cat.jpg" alt="A sleeping cat">
 ```
 
-No `</img>` — we'd call this a **void element**.
+No `</img>`, we'd call this a **void element**.
 
 Common ones you'll see:
 
@@ -507,7 +507,7 @@ No content between tags, just the element on its own.
 
 ---
 
-### 12. Element vs Tag — Not Quite the Same
+### 12. Element vs Tag: Not Quite the Same
 
 Take:
 
