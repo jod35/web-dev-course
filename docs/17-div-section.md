@@ -1,6 +1,6 @@
 # Grouping: div, section, span
 
-As pages get bigger, you'll need ways to bundle related bits together. `<div>`, `<section>` and `<span>` all group content — but they signal different things.
+As pages get bigger, you'll need ways to bundle related bits together. `<div>`, `<section>` and `<span>` all group content, but they signal different things.
 
 ## Why group at all?
 
@@ -21,9 +21,9 @@ Without grouping, everything's just floating. HTML gives you distinct elements f
 
 ---
 
-# `<div>` — Generic Block Container
+# `<div>`: Generic Block Container
 
-`<div>` is your **generic block wrapper** — it groups content without saying what it means:
+`<div>` is your **generic block wrapper**, it groups content without saying what it means:
 
 ```html
 <div>
@@ -59,9 +59,9 @@ It keeps that cluster together and gives CSS or JavaScript a convenient hook to 
 
 ---
 
-# `<section>` — A Thematic Section
+# `<section>`: A Thematic Section
 
-`<section>` is for a **thematically related chunk** of the document — a section with its own topic:
+`<section>` is for a **thematically related chunk** of the document, a section with its own topic:
 
 ```html
 <section>
@@ -105,7 +105,7 @@ Those headings are part of the structure, not just decoration.
 
 ---
 
-# `<div>` vs `<section>` — Which One?
+# `<div>` vs `<section>`: Which One?
 
 ```html
 <div>
@@ -132,9 +132,9 @@ If the bundle represents a real topic-based section, prefer `<section>`. If you 
 
 ---
 
-# `<span>` — Generic Inline Container
+# `<span>`: Generic Inline Container
 
-`<span>` is the inline cousin — it wraps **small pieces inside a line**:
+`<span>` is the inline cousin, it wraps **small pieces inside a line**:
 
 ```html
 <p>
@@ -143,7 +143,7 @@ If the bundle represents a real topic-based section, prefer `<section>`. If you 
 </p>
 ```
 
-Unlike `<div>`, it doesn't start a new block — it stays in the flow of text.
+Unlike `<div>`, it doesn't start a new block, it stays in the flow of text.
 
 ```html
 <p>Hello <span>Jonathan</span>, welcome!</p>
@@ -164,13 +164,13 @@ You'll often want to flag a particular phrase:
 </p>
 ```
 
-By itself `<span>` doesn't add meaning — it just identifies that slice so you can style or script it.
+By itself `<span>` doesn't add meaning, it just identifies that slice so you can style or script it.
 
 ---
 
-# `<span>` vs `<div>` — Inline vs Block
+# `<span>` vs `<div>`: Inline vs Block
 
-**`<div>`** — block-level:
+**`<div>`**: block-level:
 
 ```html
 <div>
@@ -183,7 +183,7 @@ By itself `<span>` doesn't add meaning — it just identifies that slice so you 
 ```
 → each group sits on its own line/ block.
 
-**`<span>`** — inline:
+**`<span>`**: inline:
 
 ```html
 <p>
@@ -207,7 +207,7 @@ These grouping elements get most useful with `class` or `id`:
 </div>
 ```
 
-A class marks a category — several elements can share it:
+A class marks a category, several elements can share it:
 
 ```html
 <section class="course">
