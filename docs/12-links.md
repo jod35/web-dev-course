@@ -4,7 +4,7 @@
 
 Links are how users **jump from one place to another** on the web.
 
-HTML uses the `<a>` element — the **anchor** — for that:
+HTML uses the `<a>` element, the **anchor**, for that:
 
 ```html
 <a href="about.html">About Us</a>
@@ -24,9 +24,9 @@ A hyperlink is just an `<a>` with a destination:
 
 Breaking it down:
 
-* `<a>` — the anchor element
-* `href` — where it points
-* `Google` — the clickable label
+* `<a>`: the anchor element
+* `href`: where it points
+* `Google`: the clickable label
 
 ---
 
@@ -112,7 +112,7 @@ Want the link to open elsewhere? Add `target`:
 </a>
 ```
 
-`target="_blank"` usually opens a new tab — handy for external sites so you don't pull people away from yours.
+`target="_blank"` usually opens a new tab, handy for external sites so you don't pull people away from yours.
 
 ---
 
@@ -175,7 +175,7 @@ Put those `<a>`s together and you've got site navigation:
 </nav>
 ```
 
-That's how users move between pages — simple, but essential.
+That's how users move between pages, simple, but essential.
 
 ---
 
