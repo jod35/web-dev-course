@@ -28,19 +28,32 @@ p {
 
 If that line is wrong, nothing you write in `styles.css` will show up. Check the filename and the `href` first when styles seem to do nothing.
 
-## Chapters at a glance
+## Chapters at a glance — web.dev order, simpler titles
 
 | Chapter | You will get comfortable with |
 |---------|-------------------------------|
-| [What is CSS?](01-what-is-css.md) | What CSS does, where to write it, and the basic rule shape |
-| [Selectors](02-selectors.md) | Type, class, id, attribute, pseudo-class and combinators, and how to choose the right one |
-| [Cascade & Specificity](03-cascade-specificity.md) | Why one rule wins over another, and how to keep specificity low |
-| [Box Model](04-box-model.md) | Content, padding, border, margin, and `box-sizing` |
-| [Colors & Units](05-colors-units.md) | `hex`, `rgb`, `hsl`, `rem`, `em`, `%`, `vw`/`vh` and when to use each |
-| [Text & Typography](06-text-typography.md) | Fonts, sizes, spacing, and readable type |
-| [Flexbox](07-flexbox.md) | One-dimensional layout: rows and columns with `flex` |
-| [Grid](08-grid.md) | Two-dimensional layout: real page grids with `grid` |
-| [Responsive Design](09-responsive.md) | Media queries, fluid sizing, and mobile-first habits |
-| [Putting It Together](10-practice.md) | A small page built with HTML and CSS, end to end |
+| [What is CSS?](01-what-is-css.md) | What CSS does, where to write it, and the rule shape |
+| [Box Model](02-box-model.md) | Content, padding, border, margin, `box-sizing` |
+| [Selectors](03-selectors.md) | Type, class, id, attribute, and combinators |
+| [Nesting](04-nesting.md) | Nesting selectors with `&` |
+| [The Cascade](05-cascade.md) | Source order and importance |
+| [Specificity](06-specificity.md) | The `[id,class,type]` score |
+| [Inheritance](07-inheritance.md) | What inherits and how to control it |
+| [Color](08-color.md) | `hex`, `rgb`, `hsl`, `currentColor` |
+| [Sizing](09-sizing.md) | `px`, `rem`, `%`, `vw`/`vh`, `min()`/`clamp()` |
+| [Layout](10-layout.md) | Flow, positioning, and choosing a mode |
+| [Flexbox](11-flexbox.md) | One-dimensional layout with `flex` |
+| [Grid](12-grid.md) | Two-dimensional layout with `grid` |
+| [Logical Properties](13-logical-properties.md) | `inline`/`block` vs `left`/`right` |
+| [Custom Properties](14-custom-properties.md) | Variables with `var()` |
+| [Spacing](15-spacing.md) | Scale, `padding` vs `margin` vs `gap` |
+| [Pseudo-elements](16-pseudo-elements.md) | `::before`, `::after`, `::first-line` |
+| [Pseudo-classes](17-pseudo-classes.md) | `:hover`, `:focus-visible`, `:nth-child` |
+| [Borders](18-borders.md) | `border`, `border-radius`, `outline` |
+| [Shadows](19-shadows.md) | `box-shadow` and `text-shadow` |
+| [Typography](20-typography.md) | Fonts, sizes, and readable type |
+| [Responsive](21-responsive.md) | Media queries and mobile-first |
+| [Functions](22-functions.md) | `calc()`, `min()`, `max()`, `clamp()` |
+| [Practice](23-practice.md) | A complete page with HTML and CSS |
 
 > HTML describes what things are. CSS describes how they look. Keep that split in mind and both languages get simpler.

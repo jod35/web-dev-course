@@ -43,16 +43,29 @@ The CSS track builds on HTML. You will link a `styles.css` file and style the sa
 
 | Chapter | You will get comfortable with |
 |---------|-------------------------------|
-| [What is CSS?](css/01-what-is-css.md) | What CSS does and the basic rule shape |
-| [Selectors](css/02-selectors.md) | Type, class, id, attribute, and pseudo-classes |
-| [Cascade & Specificity](css/03-cascade-specificity.md) | Why one rule wins and how to keep specificity low |
-| [Box Model](css/04-box-model.md) | Content, padding, border, margin, `box-sizing` |
-| [Colors & Units](css/05-colors-units.md) | `hex`/`rgb`/`hsl`, `rem`/`em`/`%`/`vw` |
-| [Text & Typography](css/06-text-typography.md) | Fonts, sizes, spacing, readable type |
-| [Flexbox](css/07-flexbox.md) | One-dimensional layout with `flex` |
-| [Grid](css/08-grid.md) | Two-dimensional layout with `grid` |
-| [Responsive Design](css/09-responsive.md) | Media queries and mobile-first habits |
-| [Putting It Together](css/10-practice.md) | A complete page with HTML and CSS |
+| [What is CSS?](css/01-what-is-css.md) | What CSS does and the rule shape |
+| [Box Model](css/02-box-model.md) | Content, padding, border, margin, `box-sizing` |
+| [Selectors](css/03-selectors.md) | Type, class, id, attribute, combinators |
+| [Nesting](css/04-nesting.md) | Nesting with `&` |
+| [The Cascade](css/05-cascade.md) | Source order and importance |
+| [Specificity](css/06-specificity.md) | The `[id,class,type]` score |
+| [Inheritance](css/07-inheritance.md) | What inherits |
+| [Color](css/08-color.md) | `hex`, `rgb`, `hsl`, `currentColor` |
+| [Sizing](css/09-sizing.md) | `px`, `rem`, `%`, `vw`, `min()`/`clamp()` |
+| [Layout](css/10-layout.md) | Flow, positioning, choosing a mode |
+| [Flexbox](css/11-flexbox.md) | One-dimensional layout with `flex` |
+| [Grid](css/12-grid.md) | Two-dimensional layout with `grid` |
+| [Logical Properties](css/13-logical-properties.md) | `inline`/`block` vs physical |
+| [Custom Properties](css/14-custom-properties.md) | Variables with `var()` |
+| [Spacing](css/15-spacing.md) | Scale, `padding` vs `margin` vs `gap` |
+| [Pseudo-elements](css/16-pseudo-elements.md) | `::before`, `::after` |
+| [Pseudo-classes](css/17-pseudo-classes.md) | `:hover`, `:focus-visible`, `:nth-child` |
+| [Borders](css/18-borders.md) | `border` and `border-radius` |
+| [Shadows](css/19-shadows.md) | `box-shadow` and `text-shadow` |
+| [Typography](css/20-typography.md) | Fonts and readable type |
+| [Responsive](css/21-responsive.md) | Media queries, mobile-first |
+| [Functions](css/22-functions.md) | `calc()`, `min()`, `max()`, `clamp()` |
+| [Practice](css/23-practice.md) | A complete HTML and CSS page |
 
 ## JavaScript track
 
