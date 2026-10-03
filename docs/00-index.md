@@ -1,6 +1,12 @@
-# Basic HTML Course: Start Here
+# Web Development Courses: Start Here
 
-This is the HTML track for the web development skilling program at Makerere High School Migadde. It's written to be read front-to-back, but you can also dip into any chapter when you need a refresher.
+This site hosts the web development skilling program at Makerere High School Migadde. It is written to be read front-to-back, but you can also dip into any chapter when you need a refresher.
+
+Use the tabs at the top to switch tracks: **HTML** for structure, **CSS** for style, and **JavaScript** (coming soon) for behavior.
+
+## HTML track
+
+The HTML track teaches structure and meaning.
 
 ## How to get the most out of it
 
@@ -30,3 +36,24 @@ This is the HTML track for the web development skilling program at Makerere High
 | [Forms Basics](16-forms-basics.md) | `form`, `label`, `input`, and `button` |
 | [Grouping: div, section, span](17-div-section.md) | When to reach for `div` vs `section` vs `span` (and where `class`/`id` fit) |
 | [Page Landmarks](18-landmarks.md) | `header`, `nav`, `main`, `footer`, `article`, and `aside` |
+
+## CSS track
+
+The CSS track builds on HTML. You will link a `styles.css` file and style the same pages you already marked up.
+
+| Chapter | You will get comfortable with |
+|---------|-------------------------------|
+| [What is CSS?](css/01-what-is-css.md) | What CSS does and the basic rule shape |
+| [Selectors](css/02-selectors.md) | Type, class, id, attribute, and pseudo-classes |
+| [Cascade & Specificity](css/03-cascade-specificity.md) | Why one rule wins and how to keep specificity low |
+| [Box Model](css/04-box-model.md) | Content, padding, border, margin, `box-sizing` |
+| [Colors & Units](css/05-colors-units.md) | `hex`/`rgb`/`hsl`, `rem`/`em`/`%`/`vw` |
+| [Text & Typography](css/06-text-typography.md) | Fonts, sizes, spacing, readable type |
+| [Flexbox](css/07-flexbox.md) | One-dimensional layout with `flex` |
+| [Grid](css/08-grid.md) | Two-dimensional layout with `grid` |
+| [Responsive Design](css/09-responsive.md) | Media queries and mobile-first habits |
+| [Putting It Together](css/10-practice.md) | A complete page with HTML and CSS |
+
+## JavaScript track
+
+Coming soon. You will find it under the **JavaScript** tab when chapters are ready. If you want to prepare, get comfortable with the HTML and CSS tracks first.
