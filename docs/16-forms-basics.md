@@ -1,6 +1,6 @@
 # Forms Basics
 
-Forms are how users **give you information** — log in, register, search, give feedback, place an order. If a page needs input, you'll likely need a form.
+Forms are how users **give you information**, log in, register, search, give feedback, place an order. If a page needs input, you'll likely need a form.
 
 ## What is a Form?
 
@@ -19,7 +19,7 @@ A tiny example:
 
 ---
 
-# `<form>` — The Container
+# `<form>`: The Container
 
 `<form>` wraps the controls that collect information:
 
@@ -35,7 +35,7 @@ Inside you can place things like `<input>`, `<label>`, `<textarea>`, `<select>`,
 
 ---
 
-# `<label>` — Describing a Control
+# `<label>`: Describing a Control
 
 `<label>` tells users what a field is for. Link it to the input via `for` ↔ `id`:
 
@@ -50,11 +50,11 @@ for="name"
 id="name"
 ```
 
-That connection also means clicking the label focuses the input — a small usability win.
+That connection also means clicking the label focuses the input, a small usability win.
 
 ---
 
-# `<input>` — The Workhorse
+# `<input>`: The Workhorse
 
 `<input>` can collect many kinds of data. The `type` attribute says which:
 
@@ -113,7 +113,7 @@ Browsers can then validate the shape of an email and show a suitable keyboard on
 <input type="password" id="password">
 ```
 
-Characters are hidden as you type — as you'd expect.
+Characters are hidden as you type, as you'd expect.
 
 ---
 
@@ -152,9 +152,9 @@ The browser will often show a date picker.
 
 ---
 
-# Textarea — For Longer Text
+# Textarea: For Longer Text
 
-When you need **multiple lines**, use `<textarea>` — unlike `<input>`, it has an opening and closing tag:
+When you need **multiple lines**, use `<textarea>`, unlike `<input>`, it has an opening and closing tag:
 
 ```html
 <label for="message">Message:</label>
@@ -170,7 +170,7 @@ Size it with `rows`/`cols` if you like:
 
 ---
 
-# Select and Option — Drop-Down
+# Select and Option: Drop-Down
 
 `<select>` creates the list; `<option>`s are the choices:
 
@@ -187,7 +187,7 @@ Size it with `rows`/`cols` if you like:
 
 ---
 
-# Radio Buttons — Pick One
+# Radio Buttons: Pick One
 
 Radios let you choose **one option from a group**. The key is they share the same `name`:
 
@@ -208,7 +208,7 @@ name="gender"
 
 ---
 
-# Checkboxes — Pick Many
+# Checkboxes: Pick Many
 
 Unlike radios, you can tick **several** boxes:
 
@@ -242,8 +242,8 @@ Example with both:
 <input type="text" id="username" name="username">
 ```
 
-* `id` — identifies the element *in the page* (for `<label>`).
-* `name` — identifies the field *when submitted*.
+* `id`: identifies the element *in the page* (for `<label>`).
+* `name`: identifies the field *when submitted*.
 
 ---
 
@@ -297,7 +297,7 @@ The browser will block submission until it's done.
 >
 ```
 
-It fades when you start typing. It should **not** replace a proper `<label>` — labels are always needed.
+It fades when you start typing. It should **not** replace a proper `<label>`, labels are always needed.
 
 ---
 
@@ -333,7 +333,7 @@ For a button that *doesn't* submit (e.g. JS actions):
 
 ---
 
-# Form Submission — `action` and `method`
+# Form Submission: `action` and `method`
 
 `action` says **where** the data goes:
 
@@ -357,8 +357,8 @@ For a button that *doesn't* submit (e.g. JS actions):
 </form>
 ```
 
-* `GET` — requesting/searching; values may appear in the URL. Good for searches.
-* `POST` — creating/changing data; values go in the request body. Good for registrations, logins.
+* `GET`: requesting/searching; values may appear in the URL. Good for searches.
+* `POST`: creating/changing data; values go in the request body. Good for registrations, logins.
 
 ---
 
@@ -427,7 +427,7 @@ For a button that *doesn't* submit (e.g. JS actions):
 
 ---
 
-# Grouping Controls — `<fieldset>` and `<legend>`
+# Grouping Controls: `<fieldset>` and `<legend>`
 
 For larger forms, group related fields:
 
