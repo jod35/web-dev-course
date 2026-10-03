@@ -76,32 +76,13 @@ a[target="_blank"] { text-decoration: underline; }
 input[type="email"] { border-color: #888; }
 ```
 
-## Pseudo-classes
-
-Style states or positions:
-
-```css
-a:hover { color: crimson; }
-a:focus-visible { outline: 2px solid #333; }
-li:first-child { font-weight: bold; }
-input:disabled { opacity: 0.6; }
-```
-
-## Pseudo-elements
-
-Style a part of an element:
-
-```css
-p::first-line { font-weight: 600; }
-blockquote::before { content: "“"; }
-```
-
 ## Choosing
 
 - Repeatable visual style: use a **class**.
 - One-off anchor target: `id` is okay, but do not style by `id` unless you must.
-- State or position: **pseudo-class**.
 - Keep selectors short. If you write `body main article ul li a`, you probably need a class on the `a` instead.
+
+Pseudo-classes like `:hover` and pseudo-elements like `::before` have their own chapters later, so we keep selectors focused here.
 
 ## Recap
 
@@ -111,4 +92,3 @@ blockquote::before { content: "“"; }
 | Class | `.card`, `.lead` | Most styling |
 | ID | `#header` | Unique anchors, not for routine styling |
 | Attribute | `[type="email"]` | Style by attribute |
-| Pseudo-class | `:hover`, `:focus` | States |
