@@ -16,7 +16,7 @@ Pictures on a page make it more inviting and can explain things words alone can'
 <img src="photo.jpg" alt="A beautiful landscape">
 ```
 
-Notice there's no closing tag — `<img>` is a void element. It sits there and displays the image.
+Notice there's no closing tag, `<img>` is a void element. It sits there and displays the image.
 
 ---
 
@@ -74,7 +74,7 @@ Think of it as "what would I say if I had to describe this image over the phone?
 <img src="cat.jpg" alt="A cat" width="400" height="300">
 ```
 
-You can use one or both — browsers will scale accordingly.
+You can use one or both, browsers will scale accordingly.
 
 ---
 
@@ -114,7 +114,7 @@ A caption is the visible text you see under a picture. HTML pairs `<figure>` and
 
 ---
 
-## 8. `alt` Text vs Caption — Not the Same Job
+## 8. `alt` Text vs Caption: Not the Same Job
 
 ```html
 <figure>
@@ -123,8 +123,8 @@ A caption is the visible text you see under a picture. HTML pairs `<figure>` and
 </figure>
 ```
 
-* **`alt`** — functional description, for accessibility and when the image can't be shown.
-* **`figcaption`** — visible caption the reader sees alongside the image.
+* **`alt`**: functional description, for accessibility and when the image can't be shown.
+* **`figcaption`**: visible caption the reader sees alongside the image.
 
 You'll often need both.
 
