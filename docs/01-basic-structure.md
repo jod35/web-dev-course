@@ -1,8 +1,10 @@
 # Basic Structure of an HTML Page
 
-**Goal:** In this chapter you will learn the skeleton on which every webpage is built, starting with the declaration, then the single root element, then the metadata, and finally the visible content.
+You'll spend a lot of time inside this skeleton, so let's get comfortable with it. Every webpage you build starts the same way: a declaration up top, one root element holding everything, a bit of invisible setup, and then the visible content.
 
 ## The full template
+
+Keep this handy — you'll want it at the top of **every** page you create:
 
 ```html
 <!DOCTYPE html>
@@ -18,23 +20,23 @@
 </html>
 ```
 
-Copy this template at the start of **every** page. Read it from top to bottom, because the order is significant.
+Read it top to bottom; the order actually matters.
 
 ## Tag reference
 
-### `<!DOCTYPE html>` - declaration
+### `<!DOCTYPE html>` — declaration
 
-- This line declares the document as **HTML5** so that browsers render the page in standards mode instead of quirks mode.
-- It is **not a tag**, so it has no closing tag and no attributes. It must always be the very first line, with nothing above it.
+- This first line tells the browser "this is HTML5, so use standards mode." Without it you can end up in quirks mode and wonder why things look odd.
+- It's **not a tag**, so there's no closing tag and no attributes. It has to be the very first line — nothing above it, not even a comment.
 
 ```html
 <!DOCTYPE html>
 ```
 
-### `<html>` - root element
+### `<html>` — root element
 
-- The `html` element is the **parent of everything**. It wraps both `<head>` and `<body>`, and its closing tag `</html>` must be the last line of the file.
-- The `lang` attribute sets the page language, which **screen readers and search engines use**:
+- Think of `<html>` as the parent of everything. It wraps `<head>` and `<body>`, and its closing tag `</html>` should be the last line in the file.
+- The `lang` attribute hints the page language to screen readers and search engines:
 
 ```html
 <html lang="en">
@@ -46,10 +48,9 @@ Copy this template at the start of **every** page. Read it from top to bottom, b
 | `sw` | Swahili |
 | `fr` | French |
 
-### `<head>` - invisible metadata
+### `<head>` — invisible metadata
 
-- The `head` element holds setup information which the visitor **never sees on the page itself**, including `<title>`, `<meta charset>`, `<meta viewport>`, `<link>` to CSS, and `<script>` to JS.
-- It is the first child of `<html>`, and it always appears **before** `<body>`.
+- `<head>` holds setup info you **don't see on the page itself** — the tab title, character set, viewport hint, CSS links, JS, and so on. It's the first child of `<html>` and always comes **before** `<body>`.
 
 ```html
 <head>
@@ -59,16 +60,15 @@ Copy this template at the start of **every** page. Read it from top to bottom, b
 </head>
 ```
 
-| Tag inside `<head>` | Job |
-|---------------------|-----|
-| `<title>` | The tab and window title, which is also used as the search-result title |
-| `<meta charset="utf-8">` | The character encoding, which should always be included |
-| `<meta name="viewport" …>` | The instruction which makes mobile browsers scale the page correctly, and which should always be included |
+| Tag inside `<head>` | What it does |
+|---------------------|--------------|
+| `<title>` | Tab/window title — also what shows up in search results |
+| `<meta charset="utf-8">` | Character encoding — just include it, always |
+| `<meta name="viewport" …>` | Tells mobile browsers how to scale the page — also always include it |
 
-### `<body>` - visible content
+### `<body>` — what visitors actually see
 
-- **Everything the visitor sees** belongs in the body, including headings, paragraphs, lists, images, links, and divs.
-- It is the second child of `<html>`, and each page contains exactly **one** `<body>` element.
+- Headings, paragraphs, lists, images, links — if it's visible, it lives in `<body>`. Each page has exactly **one** `<body>`, and it's the second child of `<html>`.
 
 ```html
 <body>
@@ -78,29 +78,29 @@ Copy this template at the start of **every** page. Read it from top to bottom, b
 ```
 
 <figure markdown="span">
-![The struture of an HTML page](./imgs/structure.png)
-<figcaption> The struture of an HTML page </figcaption>
+![The structure of an HTML page](./imgs/structure.png)
+<figcaption> The structure of an HTML page </figcaption>
 </figure>
 
-## Hierarchy (who is inside who)
+## Hierarchy (who's inside who)
 
 ```text
-<!DOCTYPE html>      declaration,comes first, owns nothing
-<html>               PARENT,wraps all
-  <head>             1st child,invisible setup
-  <body>             2nd child,all visible content
+<!DOCTYPE html>      declaration — comes first, owns nothing
+<html>               PARENT — wraps everything
+  <head>             1st child — invisible setup
+  <body>             2nd child — all visible content
 ```
 
-- The `<html>` element is the **parent**, while `<head>` and `<body>` are its **children**.
-- The `<head>` element always appears **before** the `<body>` element. No visible content ever belongs in `<head>`, although the `<title>` appears on the browser tab.
+- `<html>` is the parent; `<head>` and `<body>` are its children.
+- `<head>` always comes before `<body>`. No visible content goes in `<head>` — though `<title>` will show up on the browser tab.
 
-## Rules
+## A few ground rules
 
-- Each page contains one `<!DOCTYPE>`, one `<html>`, one `<head>`, and one `<body>`, with no additional copies.
-- Close the tags in reverse order, so the `<html>` tag which opens second also closes last.
-- If you omit `<meta charset>`, non-English characters can display incorrectly. If you omit the viewport tag, the layout breaks on mobile phones.
+- One `<!DOCTYPE>`, one `<html>`, one `<head>`, and one `<body>` per page — no extras.
+- Close tags in reverse order. The `<html>` you opened second? It closes last.
+- Skip `<meta charset>` and non-English characters can turn to gibberish. Skip the viewport tag and your layout will look broken on phones. We've all been there.
 
-## Recap
+## Quick recap
 
 | Order | Tag | Role |
 |-------|-----|------|
@@ -113,35 +113,33 @@ Copy this template at the start of **every** page. Read it from top to bottom, b
 
 ## The Basic Structure of an HTML Element
 
-HTML documents are built from **elements**. An HTML element tells the browser what a particular piece of content represents and how it should be structured.
+HTML pages are built from **elements** — labelled chunks that tell the browser what each piece of content *means* and how it should be structured.
 
-For example:
+Here's a paragraph element:
 
 ```html
 <p>Hello, world!</p>
 ```
 
-This is a paragraph element.
-
-To understand HTML well, you need to understand the different parts that make up an element.
+Simple enough, but there are a few moving parts worth naming.
 
 ---
 
 ### 1. The Basic Pattern
 
-A typical HTML element looks like this:
+Most elements look like this:
 
 ```html
 <element>Content</element>
 ```
 
-For example:
+So this:
 
 ```html
 <p>Hello, world!</p>
 ```
 
-The element has three main parts:
+is really three parts:
 
 ```text
 <p>        Hello, world!        </p>
@@ -151,21 +149,19 @@ The element has three main parts:
  └────────────────────────────────── Opening tag
 ```
 
-The complete combination of the opening tag, content, and closing tag is called an **element**.
+Together, those three make an **element**.
 
 ---
 
 ### 2. The Opening Tag
 
-The opening tag tells the browser where an element begins.
-
-For example:
+This tells the browser "start here."
 
 ```html
 <p>
 ```
 
-The opening tag consists of:
+Pulled apart:
 
 ```text
 <   p   >
@@ -175,61 +171,60 @@ The opening tag consists of:
 └────────── Opening angle bracket
 ```
 
-The element name tells the browser what kind of element it is.
+<figure markdown="span">
 
-For example:
+![Diagram of an opening tag](./imgs/opening_tag.png){ width="300" }
+
+<figcaption>An opening tag</figcaption>
+
+</figure>
+
+That name in the middle is the important bit:
 
 ```html
 <p>
 ```
-
-means paragraph.
+→ paragraph.
 
 ```html
 <h1>
 ```
-
-means a level-one heading.
+→ main heading.
 
 ```html
 <strong>
 ```
-
-means strongly important content.
+→ strongly important — not just "make it bold".
 
 ---
 
 ### 3. The Content
 
-The content is the information contained inside the element.
-
-For example:
+Whatever lives between the tags.
 
 ```html
 <p>Hello, world!</p>
 ```
 
-The content is:
+Content:
 
 ```text
 Hello, world!
 ```
 
-Another example:
+Another:
 
 ```html
 <h1>Learning HTML</h1>
 ```
 
-The content is:
+Content:
 
 ```text
 Learning HTML
 ```
 
-The content does not have to be plain text. Some elements can contain other HTML elements.
-
-For example:
+And it doesn't have to be plain text — elements can hold other elements too:
 
 ```html
 <p>
@@ -237,37 +232,30 @@ For example:
 </p>
 ```
 
-Here, the `<p>` element contains text as well as a `<strong>` element.
+That paragraph contains text *and* a `<strong>` element.
 
 ---
 
 ### 4. The Closing Tag
 
-The closing tag tells the browser where the element ends.
-
-For example:
+This says "we're done."
 
 ```html
 </p>
 ```
 
-Notice the `/`.
-
-Compare:
+See the `/`? That's the clue.
 
 ```html
 <p>
 ```
-
-with:
+vs.
 
 ```html
 </p>
 ```
 
-The `/` indicates that this is the **closing tag**.
-
-The structure is:
+That slash marks it as the **closing tag**:
 
 ```text
 <   p   >
@@ -277,7 +265,7 @@ The structure is:
 └────────── Opening angle bracket
 ```
 
-For the closing tag:
+and for the closer:
 
 ```text
 <   /   p   >
@@ -292,13 +280,11 @@ For the closing tag:
 
 ### 5. The Complete Element
 
-When the opening tag, content, and closing tag are combined, we have an HTML element:
+Put them together:
 
 ```html
 <p>Hello, world!</p>
 ```
-
-We can break it down as:
 
 ```text
 <p>          → Opening tag
@@ -308,7 +294,7 @@ Hello, world! → Content
 </p>         → Closing tag
 ```
 
-Together:
+In shorthand:
 
 ```text
 Opening tag + Content + Closing tag = Element
@@ -318,26 +304,22 @@ Opening tag + Content + Closing tag = Element
 
 ### 6. Another Example
 
-Consider:
-
 ```html
 <h1>My Website</h1>
 ```
 
-It contains:
+That breaks down to:
 
 * `<h1>` → opening tag
 * `My Website` → content
 * `</h1>` → closing tag
-* the entire thing → HTML element
+* the whole thing → HTML element
 
-Another example:
+One more:
 
 ```html
 <strong>Important information</strong>
 ```
-
-Here:
 
 ```text
 <strong>                 Opening tag
@@ -349,9 +331,7 @@ Important information    Content
 
 ### 7. Elements Can Contain Other Elements
 
-HTML elements can be placed inside other elements. This is called **nesting**.
-
-For example:
+Elements inside other elements — that's **nesting**.
 
 ```html
 <p>
@@ -359,9 +339,7 @@ For example:
 </p>
 ```
 
-The `<strong>` element is inside the `<p>` element.
-
-The structure can be represented as:
+`<strong>` lives inside `<p>`. As a little tree:
 
 ```text
 <p>
@@ -374,15 +352,15 @@ The structure can be represented as:
 └── information.
 ```
 
-This allows us to build more complex documents from simple elements.
+That's how simple pieces combine into more interesting pages.
 
 ---
 
 ### 8. Proper Nesting
 
-When elements are nested, they should be closed in the correct order.
+Close in the right order. Think of packing boxes — you close the inner one before the outer one.
 
-Correct:
+This is fine:
 
 ```html
 <p>
@@ -390,22 +368,20 @@ Correct:
 </p>
 ```
 
-The `<strong>` element opens and closes inside the `<p>` element.
-
-Incorrect:
+This isn't:
 
 ```html
 <p>
     This is <strong>important</p> information</strong>
 ```
 
-The elements overlap incorrectly.
+The tags overlap — browsers will guess, but don't make them.
 
-A useful rule is:
+A rule of thumb you'll hear a lot:
 
-> **The last element you open should be the first element you close.**
+> **Last opened, first closed.**
 
-For example:
+E.g.:
 
 ```html
 <p>
@@ -415,35 +391,31 @@ For example:
 </p>
 ```
 
-The `<strong>` element was opened last, so it is closed first.
+We opened `<strong>` last, so we close it first.
 
 ---
 
 ### 9. Attributes
 
-HTML elements can also have **attributes**.
-
-An attribute provides additional information about an element.
-
-For example:
+Attributes add extra info to an element:
 
 ```html
 <a href="https://example.com">Visit Example</a>
 ```
 
-The basic element is:
+Start from the bare element:
 
 ```html
 <a>Visit Example</a>
 ```
 
-But the opening tag contains an attribute:
+Add the detail to the opening tag:
 
 ```html
 <a href="https://example.com">
 ```
 
-Here:
+Breakdown:
 
 ```text
 <a
@@ -459,7 +431,15 @@ href
 └── Attribute value
 ```
 
-The complete structure is:
+<figure markdown="span">
+
+![Diagram of HTML attributes](./imgs/attributes.png){ width="300" }
+
+<figcaption>HTML attributes on the opening tag</figcaption>
+
+</figure>
+
+General shape:
 
 ```text
 <element attribute="value">
@@ -467,7 +447,7 @@ The complete structure is:
 </element>
 ```
 
-For example:
+E.g.:
 
 ```html
 <a href="https://example.com">
@@ -479,15 +459,13 @@ For example:
 
 ### 10. Multiple Attributes
 
-An element can have multiple attributes.
-
-For example:
+Yep, you can have more than one — just keep them inside the opening tag:
 
 ```html
 <img src="cat.jpg" alt="A sleeping cat" width="400">
 ```
 
-This element has three attributes:
+That's three:
 
 ```text
 src   → cat.jpg
@@ -495,9 +473,7 @@ alt   → A sleeping cat
 width → 400
 ```
 
-Attributes are written inside the opening tag.
-
-The general pattern is:
+Pattern:
 
 ```html
 <element attribute="value" attribute="value">
@@ -509,23 +485,15 @@ The general pattern is:
 
 ### 11. Not Every Element Has a Closing Tag
 
-Some HTML elements do not contain content and therefore do not need a closing tag.
-
-For example:
+Some elements never wrap content, so they don't need a closer:
 
 ```html
 <img src="cat.jpg" alt="A sleeping cat">
 ```
 
-There is no:
+No `</img>` — we'd call this a **void element**.
 
-```html
-</img>
-```
-
-The `<img>` element is a **void element**.
-
-Other common void elements include:
+Common ones you'll see:
 
 ```html
 <br>
@@ -535,21 +503,19 @@ Other common void elements include:
 <link>
 ```
 
-For these elements, there is no content between an opening and closing tag.
+No content between tags, just the element on its own.
 
 ---
 
-### 12. Element vs Tag
+### 12. Element vs Tag — Not Quite the Same
 
-These terms are related but are not exactly the same.
-
-Consider:
+Take:
 
 ```html
 <p>Hello</p>
 ```
 
-The tags are:
+Tags are:
 
 ```html
 <p>
@@ -561,21 +527,19 @@ and:
 </p>
 ```
 
-The **element** is the entire structure:
+The **element** is the whole bundle:
 
 ```html
 <p>Hello</p>
 ```
 
-So:
+Short version:
 
-> A **tag** is part of an element, while an **element** is the complete structure.
+> A tag is a marker; an element is the complete structure (tags + content).
 
 ---
 
 ### 13. A Complete Example
-
-Consider this:
 
 ```html
 <p class="introduction">
@@ -583,7 +547,7 @@ Consider this:
 </p>
 ```
 
-We can break it down into:
+Unpacked:
 
 ```text
 <p class="introduction">
@@ -613,7 +577,7 @@ HTML
 └── Closing tag of the paragraph
 ```
 
-The outer element is the paragraph:
+Outer wrapper is the paragraph:
 
 ```html
 <p class="introduction">
@@ -621,19 +585,19 @@ The outer element is the paragraph:
 </p>
 ```
 
-Inside it is another element:
+Inside it:
 
 ```html
 <strong>HTML</strong>
 ```
 
-This demonstrates how HTML elements can be combined to create structured content.
+Each bit has a clear job.
 
 ---
 
 ### 14. The General Structure to Remember
 
-For most HTML elements, remember this pattern:
+Most elements you'll write:
 
 ```html
 <element attribute="value">
@@ -641,7 +605,7 @@ For most HTML elements, remember this pattern:
 </element>
 ```
 
-For example:
+E.g.:
 
 ```html
 <p class="intro">
@@ -658,13 +622,13 @@ Welcome...          Content
 </p>                Closing tag
 ```
 
-But some elements are void elements:
+Void elements break the rule:
 
 ```html
 <element attribute="value">
 ```
 
-For example:
+E.g.:
 
 ```html
 <img src="photo.jpg" alt="A photo">
@@ -674,7 +638,7 @@ For example:
 
 ### Summary
 
-An HTML element can consist of:
+Picture it like this:
 
 ```text
 Opening tag
@@ -694,17 +658,17 @@ For example:
 <p class="intro">Hello, world!</p>
 ```
 
-The important concepts are:
+At a glance:
 
-| Part            | Purpose                                |
-| --------------- | -------------------------------------- |
-| Opening tag     | Starts the element                     |
-| Element name    | Identifies what the element represents |
-| Attribute       | Provides additional information        |
-| Attribute value | Gives the attribute its value          |
-| Content         | Information contained in the element   |
-| Closing tag     | Ends the element                       |
+| Part            | What it does                        |
+| --------------- | ----------------------------------- |
+| Opening tag     | Kicks the element off               |
+| Element name    | Says what kind of element it is     |
+| Attribute       | Adds extra info                     |
+| Attribute value | The value for that attribute        |
+| Content         | Whatever's inside                   |
+| Closing tag     | Wraps it up                         |
 
-The key distinction to remember is:
+If you remember one line:
 
-**Tags create the boundaries of elements. Elements provide structure and meaning to HTML content.**
+**Tags are the brackets. Elements are the meaningful chunks those brackets create.**
