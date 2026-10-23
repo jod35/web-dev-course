@@ -1,0 +1,22 @@
+/* Small readability fixes. The theme supplies the rest of the design. */
+
+.md-typeset table {
+  font-size: 0.85rem;
+}
+
+.md-typeset table th,
+.md-typeset table td {
+  vertical-align: top;
+}
+
+.md-typeset code {
+  overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 44em) {
+  .md-typeset table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}

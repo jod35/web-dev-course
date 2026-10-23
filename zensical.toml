@@ -1,7 +1,7 @@
 [project]
 site_url = "https://www.example.com/"
-site_name = "Web Development — MHSM (HTML • CSS • JS)"
-site_description = "Web development skilling program at Makerere High School Migadde — HTML, CSS, and JavaScript, taught front-to-back with hands-on examples."
+site_name = "Web Development at MHSM"
+site_description = "Course notes and exercises for the web development program at Makerere High School Migadde: HTML, CSS, and JavaScript."
 site_author = "Jonathan Ssali"
 
 # copyright = "Copyright &copy; 2026 Jonathan Ssali"
@@ -14,23 +14,23 @@ nav = [
   { "Home" = "index.md" },
   { "HTML" = [
     { "Course Index" = "00-index.md" },
-    { "Basic Structure" = "01-basic-structure.md" },
-    { "What Are Headings?" = "02-headings.md" },
-    { "Headings h1–h6 Showcase" = "03-headings-showcase.md" },
-    { "What Are Paragraphs?" = "04-paragraphs.md" },
-    { "Paragraphs, Breaks, Rules" = "05-paragraphs-snippets.md" },
-    { "Combined: Headings + Paragraphs" = "06-combined-structure.md" },
-    { "Meaning vs Looks" = "07-meaning-vs-looks.md" },
-    { "Code Family" = "08-code-family.md" },
-    { "Tiny Semantics" = "09-tiny-semantics.md" },
-    { "Quotes" = "10-quotes.md" },
-    { "Special Blocks" = "11-special-blocks.md" },
+    { "Elements and Page Structure" = "01-basic-structure.md" },
+    { "Headings" = "02-headings.md" },
+    { "Heading Levels" = "03-headings-showcase.md" },
+    { "Paragraphs" = "04-paragraphs.md" },
+    { "Text Blocks" = "05-paragraphs-snippets.md" },
+    { "Build Your First Page" = "06-combined-structure.md" },
+    { "Emphasis and Meaning" = "07-meaning-vs-looks.md" },
+    { "Code and Technical Text" = "08-code-family.md" },
+    { "Small Semantic Tags" = "09-tiny-semantics.md" },
+    { "Quotations" = "10-quotes.md" },
+    { "Address and Fine Print" = "11-special-blocks.md" },
     { "Links" = "12-links.md" },
     { "Images" = "13-images.md" },
     { "Lists" = "14-lists.md" },
     { "Tables" = "15-tables.md" },
-    { "Forms Basics" = "16-forms-basics.md" },
-    { "Grouping: div, section, span" = "17-div-section.md" },
+    { "Forms" = "16-forms-basics.md" },
+    { "Grouping Content" = "17-div-section.md" },
     { "Page Landmarks" = "18-landmarks.md" },
   ]},
   { "CSS" = [
@@ -57,12 +57,12 @@ nav = [
     { "Typography" = "css/20-typography.md" },
     { "Responsive" = "css/21-responsive.md" },
     { "Functions" = "css/22-functions.md" },
-    { "Practice" = "css/23-practice.md" },
+    { "Practice: Build a Page" = "css/23-practice.md" },
   ]},
-  { "JavaScript (Coming Soon)" = "js/index.md" },
+  { "JavaScript (planned)" = "js/index.md" },
 ]
 
-# extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css"]
 # extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]
@@ -71,7 +71,6 @@ nav = [
 # favicon = "images/favicon.png"
 language = "en"
 features = [
-  "announce.dismiss",
   # "content.action.edit",
   # "content.action.view",
   "content.code.annotate",

@@ -1,7 +1,7 @@
 [project]
 name = "course"
 version = "0.1.0"
-description = "Add your description here"
+description = "Course notes and exercises for the web development program at Makerere High School Migadde"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
