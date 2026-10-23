@@ -1,5 +1,4 @@
-# Web Development Courses: Start Here
-
+# Web Development Course
 This site hosts the web development skilling program at Makerere High School Migadde. It is written to be read front-to-back, but you can also dip into any chapter when you need a refresher.
 
 Use the tabs at the top to switch tracks: **HTML** for structure, **CSS** for style, and **JavaScript** (coming soon) for behavior.
