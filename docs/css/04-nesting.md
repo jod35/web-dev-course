@@ -1,14 +1,28 @@
 # Nesting
 
-Nesting lets you write a selector inside another, so related rules stay together. It mirrors how your HTML is nested.
+CSS nesting lets you write a selector inside another rule. It keeps related styles together and mirrors the structure of your HTML.
+
+Native CSS nesting is supported in current browsers. If you need to support an older browser, write the selectors separately.
 
 ## Without nesting
 
 ```css
-.card { padding: 1rem; border: 1px solid #ddd; }
-.card h2 { margin: 0 0 0.5rem 0; }
-.card p { color: #444; }
-.card a { text-decoration: none; }
+.card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  color: #444;
+}
+
+.card a {
+  text-decoration: none;
+}
 ```
 
 ## With nesting
@@ -18,25 +32,39 @@ Nesting lets you write a selector inside another, so related rules stay together
   padding: 1rem;
   border: 1px solid #ddd;
 
-  h2 { margin: 0 0 0.5rem 0; }
-  p { color: #444; }
-  a { text-decoration: none; }
+  h2 {
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    color: #444;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 ```
 
-Both do the same thing. Nesting just keeps the `.card` family together.
+Both versions do the same thing. The nested version keeps the `.card` styles in one place.
 
-## The `&` — refer to the parent
+## The `&` selector
 
-`&` means “the current selector.” Use it for states and modifiers:
+`&` refers to the parent selector. Use it for states and modifiers:
 
 ```css
 .btn {
   padding: 0.5rem 1rem;
   background: #eee;
 
-  &:hover { background: #ddd; }
-  &:focus-visible { outline: 2px solid #333; }
+  &:hover {
+    background: #ddd;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+  }
 
   &.primary {
     background: #0a58ca;
@@ -45,13 +73,11 @@ Both do the same thing. Nesting just keeps the `.card` family together.
 }
 ```
 
-Compiles to `.btn:hover`, `.btn:focus-visible`, `.btn.primary`.
+This compiles to `.btn:hover`, `.btn:focus-visible`, and `.btn.primary`.
 
-## When to nest
+## Nesting media queries
 
-- Group a component and its children: `.card { h2, p, a { ... } }`
-- Add states: `&:hover`, `&:focus`
-- Nest media queries:
+Media queries can also be nested:
 
 ```css
 .card {
@@ -63,38 +89,38 @@ Compiles to `.btn:hover`, `.btn:focus-visible`, `.btn.primary`.
 }
 ```
 
+This keeps the responsive change next to the component it affects.
+
 ## When not to nest
 
-Do not nest deeply just because you can:
+Do not nest just because you can. Deep selectors are hard to override:
 
 ```css
-/* too deep, hard to override */
-.page .content .card .header h2 a { color: crimson; }
+/* avoid */
+.page .content .card .header h2 a {
+  color: crimson;
+}
 ```
 
 Prefer a class on the target:
 
 ```css
-.card-title { color: crimson; }
-```
-
-And inside:
-
-```css
-.card {
-  .card-title { color: crimson; }
+.card-title {
+  color: crimson;
 }
 ```
 
-One level, maybe two, is enough. If you need three, add a class.
+One level of nesting is usually enough. If you need three, add a class instead.
 
-## Recap
+## Try it
 
-| Use | Example |
-|-----|---------|
-| Group children | `.card { h2 { ... } }` |
-| States | `&:hover`, `&:focus-visible` |
-| Modifier | `&.primary` |
-| Keep it shallow | One level is ideal |
+Take a card component and write its styles without nesting. Then rewrite them with nesting.
 
-Nesting is convenience, not a requirement. Your CSS works the same with or without it.
+1. Put the card's own properties in the outer rule.
+2. Nest the `h2`, `p`, and `a` rules inside `.card`.
+3. Add `&:hover` and `&:focus-visible` states.
+4. Add a nested media query that changes the padding at `640px`.
+
+Open the page and check that the styles still apply. If they do not, confirm that the opening and closing braces match.
+
+Next: [The Cascade](05-cascade.md)

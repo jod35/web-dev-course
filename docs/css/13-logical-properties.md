@@ -1,43 +1,54 @@
 # Logical Properties
 
-Physical properties use left/right/top/bottom. Logical properties use inline/block, so they adapt when writing direction changes.
+Physical properties use `left`, `right`, `top`, and `bottom`. Logical properties use `inline` and `block`, so they adapt when the writing direction changes.
 
-## Why
+## Why use them
 
 Physical:
 
 ```css
-.card { margin-left: 1rem; padding-right: 1rem; }
+.card {
+  margin-left: 1rem;
+  padding-right: 1rem;
+}
 ```
 
 Logical:
 
 ```css
-.card { margin-inline-start: 1rem; padding-inline-end: 1rem; }
+.card {
+  margin-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
 ```
 
-`inline` means along the text direction (horizontal for English, vertical for some scripts). `block` means perpendicular.
+`inline` means along the text direction. For English that is horizontal. `block` means perpendicular to the text direction. For English that is vertical.
 
 ## Mapping
 
-- `margin-left` → `margin-inline-start`
-- `margin-right` → `margin-inline-end`
-- `padding-top` → `padding-block-start`
-- `padding-bottom` → `padding-block-end`
-- `width` → `inline-size`
-- `height` → `block-size`
+| Physical | Logical |
+|----------|---------|
+| `margin-left` | `margin-inline-start` |
+| `margin-right` | `margin-inline-end` |
+| `padding-top` | `padding-block-start` |
+| `padding-bottom` | `padding-block-end` |
+| `width` | `inline-size` |
+| `height` | `block-size` |
 
 ```css
 .container {
   inline-size: min(100% - 2rem, 70rem);
-  margin-inline: auto; /* centers regardless of direction */
+  margin-inline: auto;
 }
 ```
 
-## When to use
+`margin-inline: auto` centres a block regardless of writing direction.
 
-- Use logical properties for spacing that should follow text flow, especially if your site may be translated.
-- For a simple English-only page at MHSM, physical properties still work, but `margin-inline: auto` for centering is a good habit now.
+## When to use logical properties
+
+- Use them for spacing that should follow the text flow.
+- Use them when a page may be translated or displayed in a different writing mode.
+- For simple English-only pages, physical properties still work. `margin-inline: auto` is a good habit to start with.
 
 ```css
 .card {
@@ -47,13 +58,14 @@ Logical:
 }
 ```
 
-## Recap
+## Try it
 
-| Physical | Logical |
-|----------|---------|
-| `margin-left` | `margin-inline-start` |
-| `padding-right` | `padding-inline-end` |
-| `width` | `inline-size` |
-| `height` | `block-size` |
+1. Take a card with `padding-left`, `padding-right`, `margin-top`, and `margin-bottom`.
+2. Rewrite the properties using logical equivalents.
+3. Centre a container with `margin-inline: auto`.
+4. Add a thick border on the start side with `border-inline-start`.
+5. Check the page in the browser. It should look the same for English text.
 
-Prefer logical for margins, padding, and borders that should respect writing mode.
+If a logical property seems to do nothing, check the browser's support and whether the element has a writing mode override.
+
+Next: [Custom Properties](14-custom-properties.md)

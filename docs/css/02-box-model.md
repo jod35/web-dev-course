@@ -1,21 +1,26 @@
 # Box Model
 
-Every element is a rectangular box. That box has four layers from inside out: content, padding, border, margin.
+Every element is a rectangular box. The box has four layers, from inside out:
 
 ```text
-  margin
-  ┌─────────────────────┐
-  │  border             │
-  │  ┌───────────────┐  │
-  │  │ padding       │  │
-  │  │ ┌───────────┐ │  │
-  │  │ │ content   │ │  │
-  │  │ └───────────┘ │  │
-  │  └───────────────┘  │
-  └─────────────────────┘
+margin
+┌─────────────────────────┐
+│ border                  │
+│ ┌─────────────────────┐ │
+│ │ padding             │ │
+│ │ ┌─────────────────┐ │ │
+│ │ │ content         │ │ │
+│ │ └─────────────────┘ │ │
+│ └─────────────────────┘ │
+└─────────────────────────┘
 ```
 
-## Seeing it
+- **Content:** the text or image.
+- **Padding:** space inside the border, around the content.
+- **Border:** the edge of the box.
+- **Margin:** space outside the border, between this box and its neighbours.
+
+## Seeing the box model
 
 ```html
 <div class="card">Hello</div>
@@ -30,35 +35,48 @@ Every element is a rectangular box. That box has four layers from inside out: co
 }
 ```
 
-`width` sets the content width by default. Padding pushes the border out, margin pushes neighbors away.
+By default, `width` sets the content width only. The visible box is wider because padding and border are added:
+
+```text
+visible width = width + padding left + padding right + border left + border right
+```
+
+That default is called `content-box` and it catches almost everyone at least once.
 
 ## `box-sizing`
 
-The default `content-box` makes `width` ignore padding and border, so the rendered size is `width + padding + border`. That trips people up.
-
-Fix it once at the top of your file:
+Set `box-sizing: border-box` once at the top of the stylesheet:
 
 ```css
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 .card {
-  width: 240px; /* now includes padding and border */
+  width: 240px;
   padding: 16px;
   border: 2px solid #333;
 }
 ```
 
-Now `240px` is the visible box width. Use this for every project at MHSM.
+Now `240px` includes the padding and border. This makes widths easier to reason about, especially in layouts.
 
-## Padding vs margin
+## Padding and margin
 
-- **Padding** — space inside the box, between content and border. Background color covers it.
-- **Margin** — space outside the box, between this box and the next. Background does not cover it.
+- **Padding** is inside the box. The background colour covers it.
+- **Margin** is outside the box. The background does not cover it.
 
 ```css
-.card { padding: 1rem; }   /* breathing room inside */
-.stack > * + * { margin-top: 1rem; } /* space between siblings */
+.card {
+  padding: 1rem;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
 ```
+
+Use padding when you want more space around the content inside a box. Use margin when you want space between boxes.
 
 ## Shorthand
 
@@ -76,30 +94,38 @@ margin: 1rem 0 2rem;
 padding: 1rem 1.5rem 1rem 1.5rem;
 ```
 
-Same for `border`, plus width/style/color:
+The same pattern works for `border`, although you also need a width, style, and colour:
 
 ```css
-.card { border: 1px solid #ddd; }
+.card {
+  border: 1px solid #ddd;
+}
 ```
 
-## Margin collapse — the surprise
+## Margin collapse
 
-Vertical margins between block elements collapse. Only the larger one wins:
+Vertical margins between block elements can collapse. The larger margin wins:
 
 ```css
-h2 { margin-bottom: 1rem; }
-p  { margin-top: 1rem; }
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+}
 ```
 
-Gap between them is `1rem`, not `2rem`. This is normal. If you need exact control, use padding or a flex/grid gap instead.
+The gap between them is `1rem`, not `2rem`. This is normal. If you need exact spacing, use padding or `gap` in a flex or grid container.
 
-## Recap
+## Try it
 
-| Layer | What it does | Background? |
-|-------|--------------|-------------|
-| Content | Text/image size | Yes |
-| Padding | Inner space | Yes |
-| Border | Edge line | Yes (border itself) |
-| Margin | Outer space | No |
+1. Add a card to a page with a background colour, padding, border, and margin.
+2. Open the browser's developer tools and inspect the card.
+3. Find the box model diagram in the styles panel. Hover over the content, padding, border, and margin areas to see them highlighted.
+4. Change `box-sizing` from `border-box` to `content-box` and compare the visible width.
+5. Put the setting back.
 
-Remember: `* { box-sizing: border-box; }` and think padding for inner space, margin for outer space.
+If the box is wider than you expected, check whether `box-sizing` is set.
+
+Next: [Selectors](03-selectors.md)

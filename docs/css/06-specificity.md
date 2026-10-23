@@ -1,64 +1,95 @@
 # Specificity
 
-Specificity is the score that decides which selector wins when cascade order alone is not enough.
+Specificity decides which selector wins when two rules have the same importance. It is often written as a three-part score:
 
-## The score
-
-Three columns: `[id, class, type]`.
-
-```css
-p              → [0,0,1]
-.lead          → [0,1,0]  wins over p
-p.lead         → [0,1,1]  beats .lead alone
-#intro         → [1,0,0]  wins over any number of classes
-nav a:hover    → [0,1,2]
+```text
+[id, class, type]
 ```
 
-Left column beats everything to its right. One `id` beats any number of classes, so styling by `id` gets hard to override later.
+## Reading the score
 
-## Keeping it low
+```text
+p              [0,0,1]
+.lead          [0,1,0]
+p.lead         [0,1,1]
+#intro         [1,0,0]
+nav a:hover    [0,1,2]
+```
 
-- Prefer classes. One class is easy to override with another class.
-- Avoid `id` selectors for styling.
-- Do not nest selectors deeply. `.card p` is fine, `body main .content article .card p a` is too much.
-- To override, add another class, not `!important`.
+- The id column beats everything to its right.
+- The class column beats the type column.
+- A later rule only wins when both rules have the same score.
+
+One id beats any number of classes:
+
+```css
+#intro {
+  color: crimson;
+}
+
+.lead {
+  color: blue;
+}
+```
+
+The `#intro` rule wins even if `.lead` comes later.
+
+## Keep specificity low
+
+- Prefer classes.
+- Avoid id selectors for styling.
+- Do not nest selectors deeply.
+- To override a rule, add another class rather than `!important`.
 
 ```css
 /* base */
-.btn { padding: 0.5rem 1rem; border: none; }
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+}
 
-/* variant, just another class, same specificity, later wins */
-.btn-primary { background: #0a58ca; color: #fff; }
+/* variant, same specificity, later wins */
+.btn-primary {
+  background: #0a58ca;
+  color: #fff;
+}
 ```
 
 ```html
 <button class="btn btn-primary">Save</button>
 ```
 
-No `!important`, no `id`.
-
-## Where people slip
+## A common mistake
 
 ```css
 /* too specific from the start */
-#header nav ul li a { color: crimson; }
-
-/* now you need even more specificity to change it */
+#header nav ul li a {
+  color: crimson;
+}
 ```
 
-Instead:
+If you later need a different colour for one link, you have to write an even more specific selector. Prefer:
 
 ```css
-.nav-link { color: crimson; }
-.nav-link:hover { color: #a00; }
+.nav-link {
+  color: crimson;
+}
+
+.nav-link:hover {
+  color: #a00;
+}
 ```
 
-Short, flat, easy to reason about.
+Short selectors are easier to read and easier to override.
 
-## Recap
+## Try it
 
-| Selector | Score | Advice |
-|----------|-------|--------|
-| `p` | [0,0,1] | Base defaults |
-| `.lead`, `:hover`, `[type="email"]` | [0,1,0] | Most styling |
-| `#header` | [1,0,0] | Avoid for styling |
+1. Create a paragraph with `id="intro"` and `class="lead"`.
+2. Write a `p` rule, a `.lead` rule, and an `#intro` rule, each with a different colour.
+3. Predict which colour wins. Check in the browser.
+4. Remove the id rule and predict again.
+5. Rewrite the styles so the paragraph uses only a class and the result is still clear.
+
+If you need a chain of ids and `!important` to change one element, simplify the selectors instead.
+
+Next: [Inheritance](07-inheritance.md)

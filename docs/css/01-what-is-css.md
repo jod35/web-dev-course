@@ -1,6 +1,6 @@
 # What is CSS?
 
-HTML says what things are. CSS says how they look. A paragraph stays a paragraph, but CSS decides its color, size, spacing, and where it sits on the page.
+CSS controls how HTML looks. A paragraph is still a paragraph, but CSS decides its colour, size, spacing, and position on the page.
 
 ## A first rule
 
@@ -11,16 +11,18 @@ p {
 }
 ```
 
-Read it as: select `p` elements, then apply these declarations.
+A rule has a selector and a declaration block:
 
 ```text
-p          → selector (what to style)
-{ }        → declaration block
-color      → property
-#333       → value
+p          selector: which elements to style
+{ }        declaration block
+color      property
+#333       value
 ```
 
-Another:
+Read it as: select every `<p>` element, then apply these declarations.
+
+A rule can have several declarations:
 
 ```css
 h1 {
@@ -31,7 +33,9 @@ h1 {
 
 ## Where CSS lives
 
-**External file (use this by default):**
+### External stylesheet
+
+Put CSS in a separate file and link it from `<head>`:
 
 ```html
 <head>
@@ -46,45 +50,35 @@ body {
 }
 ```
 
-**Internal (in `<style>`) — handy for quick tests:**
+This is the normal choice. It keeps HTML readable and lets you reuse the same styles on several pages.
+
+### Internal stylesheet
+
+A `<style>` block inside `<head>` works for small tests:
 
 ```html
 <style>
-  p { color: crimson; }
+  p {
+    color: crimson;
+  }
 </style>
 ```
 
-**Inline (avoid for normal styling):**
+Use it for quick experiments, not for a whole site.
+
+### Inline styles
+
+An inline style applies to one element:
 
 ```html
 <p style="color: crimson;">Hello</p>
 ```
 
-Prefer external files. They keep HTML readable, let browsers cache the CSS, and let you style many pages from one place.
+Avoid inline styles for normal styling. They are hard to reuse and hard to override.
 
-## The shape to remember
+## A starting stylesheet
 
-```css
-selector {
-  property: value;
-  property: value;
-}
-```
-
-Example with two declarations:
-
-```css
-.card {
-  padding: 1rem;
-  border: 1px solid #ddd;
-}
-```
-
-If you can read that shape, you can read any CSS file.
-
-## A small habit
-
-Start every CSS project with this at the top of `styles.css`:
+Start a project with a small reset and readable defaults:
 
 ```css
 * {
@@ -99,14 +93,26 @@ body {
 }
 ```
 
-It normalizes sizing and gives you a clean, readable baseline. You will tweak it later, but starting here saves surprises.
+`box-sizing: border-box` makes width calculations easier. The body rule sets a readable font and removes the browser's default margin.
 
-## Recap
+## Check your work
 
-| Question | Answer |
-|----------|--------|
-| What does CSS do? | Controls presentation of HTML |
-| Where should it live? | In an external `styles.css` linked from `<head>` |
-| What is a rule? | Selector plus declaration block |
+If your styles do not apply:
 
-Next: selectors — how to target exactly the elements you want.
+- Check the stylesheet path in `href`.
+- Check that the CSS file is saved with a `.css` extension.
+- Check that the `<link>` is inside `<head>`.
+- Check for a missing `}` or `;` in the CSS file.
+- Reload the page after saving.
+
+## Try it
+
+1. Create `index.html` and `styles.css` in the same folder.
+2. Link the stylesheet from the HTML file.
+3. Add a heading and two paragraphs.
+4. Change the body font, text colour, and line height in the CSS.
+5. Add a rule that makes all links a different colour.
+
+If nothing changes, fix the link before adding more CSS.
+
+Next: [Box Model](02-box-model.md)

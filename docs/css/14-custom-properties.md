@@ -2,7 +2,7 @@
 
 Custom properties, often called CSS variables, let you name a value and reuse it.
 
-## Defining and using
+## Defining and using a custom property
 
 ```css
 :root {
@@ -12,48 +12,85 @@ Custom properties, often called CSS variables, let you name a value and reuse it
   --radius: 0.5rem;
 }
 
-body { background: var(--bg); color: var(--text); }
-.btn-primary { background: var(--primary); color: #fff; border-radius: var(--radius); }
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+}
 ```
 
-Define on `:root` to make them global.
+Define global values on `:root`. Use `var(--name)` to read them.
 
 ## Fallbacks
 
-If a variable is missing, `var()` can provide a fallback:
+If a custom property is missing, `var()` can provide a fallback:
 
 ```css
-.card { color: var(--text, #222); }
+.card {
+  color: var(--text, #222);
+}
 ```
 
-## Changing at runtime
+The fallback is used only when the property is not defined.
 
-Override per component or per state:
+## Overriding values
+
+A custom property can be redefined on a smaller part of the page:
 
 ```css
-.card { --card-bg: #fff; background: var(--card-bg); }
-.card.featured { --card-bg: #f0f6ff; }
+.card {
+  --card-bg: #fff;
+  background: var(--card-bg);
+}
 
-.btn { background: var(--primary); }
-.btn:hover { --primary: hsl(220 90% 36%); }
+.card.featured {
+  --card-bg: #f0f6ff;
+}
 ```
 
-No extra classes needed on the property itself.
+The `background` declaration stays the same. Only the value of `--card-bg` changes.
+
+You can also change a variable in a state:
+
+```css
+.btn {
+  background: var(--primary);
+}
+
+.btn:hover {
+  --primary: hsl(220 90% 36%);
+}
+```
 
 ## Scoping
 
-A custom property is scoped to its element and inherits to descendants:
+Custom properties are scoped to the element where they are defined and inherit to descendants:
 
 ```css
-.section { --gap: 1rem; }
-.section .cards { gap: var(--gap); } /* inherits 1rem */
-.section.compact { --gap: 0.5rem; }  /* override for compact sections */
+.section {
+  --gap: 1rem;
+}
+
+.section .cards {
+  gap: var(--gap);
+}
+
+.section.compact {
+  --gap: 0.5rem;
+}
 ```
 
-## When to use
+The compact section changes the gap without writing a new rule for `.cards`.
 
-- Palette, spacing scale, radius, shadows: define once in `:root`.
-- Theming: change variables, not every rule.
+## When to use them
+
+- Palette, spacing scale, radius, and shadows: define once on `:root`.
+- Theming: change a few variables instead of every rule.
 - Calculations: `calc(var(--gap) * 2)`.
 
 ```css
@@ -62,13 +99,20 @@ A custom property is scoped to its element and inherits to descendants:
   --space-2: 0.5rem;
   --space-4: 1rem;
 }
-.stack > * + * { margin-top: var(--space-4); }
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
 ```
 
-## Recap
+## Try it
 
-| Need | Write |
-|------|-------|
-| Define | `--name: value` on `:root` or a selector |
-| Use | `var(--name)` or `var(--name, fallback)` |
-| Override | Redefine same variable on a narrower selector |
+1. Define a colour palette and a spacing scale on `:root`.
+2. Use the variables for a button, a card, and a stack of paragraphs.
+3. Add a `.compact` class that overrides the spacing variable.
+4. Change the primary colour in one place and check that every component updates.
+5. Add a fallback to one `var()` and remove the variable temporarily to see it work.
+
+If a variable does not work, check for a missing `--`, a typo in the name, or a definition that is outside the element's scope.
+
+Next: [Spacing](15-spacing.md)

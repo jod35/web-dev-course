@@ -1,70 +1,84 @@
 # Responsive Design
 
-Your page will be opened on phones, tablets, and laptops. Responsive design means it reads well on all of them without building separate pages.
+A page may be opened on a phone, tablet, or laptop. Responsive design means the same page stays readable on all of them.
 
-## Fluid first
+## Start with fluid styles
 
-Before any media query, make things fluid:
+Before adding media queries, make the content flexible:
 
 ```css
 .container {
   width: min(100% - 2rem, 70rem);
-  margin-inline: auto; /* centers it */
+  margin-inline: auto;
 }
-img, video { max-width: 100%; height: auto; }
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 ```
 
-`min(100% - 2rem, 70rem)` gives you breathing room on small screens and a max width on large ones.
+The container keeps a little space at the edges on small screens and stops growing at `70rem` on large ones. Media elements shrink instead of overflowing.
 
 ## Media queries
 
-Add adjustments where the layout actually breaks, usually around `640px` and `1024px`:
+Add a media query when the layout actually breaks:
 
 ```css
 .layout {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
 }
-/* mobile: single column by default */
-.layout { grid-template-columns: 1fr; }
 
-/* tablet and up: two columns */
 @media (min-width: 640px) {
-  .layout { grid-template-columns: 200px 1fr; }
+  .layout {
+    grid-template-columns: 200px 1fr;
+  }
 }
 ```
 
-Mobile-first means base styles are for small screens, media queries add complexity as space grows. It keeps CSS smaller and more predictable.
+This is mobile-first: the base styles are for the narrow layout, and the media query adds complexity as space grows.
 
-## Viewport meta
+Common breakpoints are around `640px` and `1024px`, but choose them by testing your content, not because a framework uses them.
 
-Without this, mobile browsers zoom out and your media queries seem ignored:
+## The viewport meta tag
+
+Without this tag, mobile browsers zoom out and your media queries seem to be ignored:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-You already have it in the HTML template. Do not remove it.
+It belongs inside `<head>`.
 
-## Typography that scales
+## Text that scales
 
 ```css
-h1 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
 ```
 
-`clamp(min, preferred, max)` keeps headings readable without a pile of breakpoints. Use it for hero titles, not for every `p`.
+`clamp(min, preferred, max)` keeps a heading readable without adding a breakpoint for every size. Use it for large display text, not for every paragraph.
 
 ## Testing
 
-- In the browser, use DevTools device toolbar and drag the width.
-- Test real tap targets: buttons at least `44px` tall.
-- Check text at `200%` zoom — it should still be readable without horizontal scroll.
+- Use the browser's developer tools and drag the viewport width.
+- Test with a real phone if possible.
+- Check tap targets. Buttons and links should be at least `44px` tall.
+- Zoom the page to 200% and check that text is still readable and does not require horizontal scrolling.
+- Check that focus outlines are visible at every width.
 
-## Recap
+## Try it
 
-| Habit | Why |
-|-------|-----|
-| Fluid container + `max-width: 100%` on media | No overflow on small screens |
-| Mobile-first + `min-width` queries | Simpler overrides |
-| `meta viewport` present | Media queries actually work |
-| `clamp()` for hero type | Smooth scaling |
+1. Build a page with a header, a main section, and two cards.
+2. Make the cards stack by default.
+3. Add a `min-width: 640px` media query that puts them side by side.
+4. Change the heading size with `clamp()`.
+5. Test at `320px`, `640px`, and `1280px`. Fix anything that overflows or becomes unreadable.
+
+If the mobile layout looks zoomed out, check the viewport meta tag.
+
+Next: [Functions](22-functions.md)

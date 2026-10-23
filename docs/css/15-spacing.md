@@ -1,10 +1,8 @@
 # Spacing
 
-Spacing is how you add breathing room. Use a scale, not random values.
+Spacing makes a page readable. Use a small scale instead of choosing a new value for every gap.
 
-## A scale
-
-Define a small scale and stick to it:
+## A spacing scale
 
 ```css
 :root {
@@ -17,63 +15,92 @@ Define a small scale and stick to it:
 }
 ```
 
-Then use only those:
+Then use only those values:
 
 ```css
-.card { padding: var(--space-4); }
-.stack > * + * { margin-top: var(--space-4); }
-.navbar { gap: var(--space-4); }
+.card {
+  padding: var(--space-4);
+}
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.navbar {
+  gap: var(--space-4);
+}
 ```
 
-## Padding for inner, margin for outer
+A scale keeps spacing consistent and makes it easy to adjust the whole page later.
 
-- **Padding** — inside the box, background covers it.
-- **Margin** — outside, separates from neighbors.
+## Padding, margin, and gap
+
+- **Padding** is space inside a box. The background covers it.
+- **Margin** is space outside a box. It separates the box from its neighbours.
+- **Gap** adds space between children in flex or grid layout.
 
 ```css
-.card { padding: 1rem; } /* inside */
-.card + .card { margin-top: 1rem; } /* between cards */
+.card {
+  padding: 1rem;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
 ```
 
-## Gap for flex and grid
-
-Prefer `gap` over margins for flex/grid children:
-
-```css
-.row { display: flex; gap: 1rem; }
-.cards { display: grid; gap: 1rem; }
-```
-
-`gap` adds space only between items, not at edges.
+Prefer `gap` over margins for flex and grid children. It adds space only between items, not at the edges.
 
 ## Logical spacing
 
-Use logical properties so spacing follows writing mode:
+Logical properties follow the writing direction:
 
 ```css
-.card { padding-inline: 1rem; padding-block: 0.75rem; }
-.container { margin-inline: auto; }
+.card {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.container {
+  margin-inline: auto;
+}
 ```
+
+Use them when the page may be translated or displayed in a different writing mode.
 
 ## A simple stack
 
 ```css
-.stack > * + * { margin-top: var(--space-4); }
+.stack > * + * {
+  margin-top: var(--space-4);
+}
 ```
 
-Or with flex:
+Or with flexbox:
 
 ```css
-.stack { display: flex; flex-direction: column; gap: var(--space-4); }
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
 ```
 
-Both give consistent vertical rhythm.
+Both create consistent vertical rhythm. The flex version avoids margin collapse.
 
-## Recap
+## Try it
 
-| Need | Use |
-|------|-----|
-| Scale | Define `--space-*` and reuse |
-| Inner space | `padding` |
-| Outer space | `margin` or `gap` |
-| Rhythm | `stack` pattern or `gap` |
+1. Define a spacing scale with four values.
+2. Use it for card padding, a stack of paragraphs, and a flex row.
+3. Change the middle value and see which parts of the page move.
+4. Replace one margin with `gap` in a flex container.
+5. Make the window narrow and check that the spacing still looks reasonable.
+
+If the gaps look uneven, check whether some elements still have default margins.
+
+Next: [Pseudo-elements](16-pseudo-elements.md)
