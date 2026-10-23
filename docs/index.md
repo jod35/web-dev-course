@@ -1,582 +1,72 @@
----
-icon: lucide/house
----
-
-# The Basic Structure of an HTML Element
-
-HTML pages are built from **elements**, small labelled chunks that tell the browser what each bit of content actually *is*, not just how it looks.
-
-Say you write:
-
-```html
-<p>Hello, world!</p>
-```
-
-That's a paragraph element. Nothing fancy, but if you get how it's put together, the rest of HTML clicks pretty quickly.
-
----
-
-## 1. The Basic Pattern
-
-Most elements follow this shape:
-
-```html
-<element>Content</element>
-```
-
-So this:
-
-```html
-<p>Hello, world!</p>
-```
-
-is really three pieces working together:
-
-```text
-<p>        Hello, world!        </p>
- │               │                │
- │               │                └── Closing tag
- │               └────────────────── Content
- └────────────────────────────────── Opening tag
-```
-
-Put those three together and you've got an **element**.
-
----
-
-## 2. The Opening Tag
-
-This is where the browser learns "an element starts here."
-
-```html
-<p>
-```
-
-If we pull it apart:
-
-```text
-<   p   >
-│   │   │
-│   │   └── Closing angle bracket
-│   └────── Element name
-└────────── Opening angle bracket
-```
-
-<figure markdown="span">
-
-![Diagram of an opening tag](./imgs/opening_tag.png){ width="300" }
-
-<figcaption>An opening tag</figcaption>
-
-</figure>
-
-The name in the middle is what matters, it says what kind of element you're opening. For instance:
-
-```html
-<p>
-```
-that's a paragraph. 
-
-```html
-<h1>
-```
-that's the main heading.
-
-```html
-<strong>
-```
-that's strongly important text, not just "bold for looks".
-
----
-
-## 3. The Content
-
-This is simply what's *inside* the element.
-
-```html
-<p>Hello, world!</p>
-```
-
-The content there is:
-
-```text
-Hello, world!
-```
-
-Another one:
-
-```html
-<h1>Learning HTML</h1>
-```
-
-Content:
-
-```text
-Learning HTML
-```
-
-And content isn't always just plain text. You can tuck other elements inside too:
-
-```html
-<p>
-    This is <strong>very important</strong> information.
-</p>
-```
-
-Here the paragraph holds both text and a `<strong>` element.
-
----
-
-## 4. The Closing Tag
-
-Same idea, but it says "we're done."
-
-```html
-</p>
-```
-
-Spot the `/`? That's the giveaway.
-
-Compare:
-
-```html
-<p>
-```
-
-with:
-
-```html
-</p>
-```
-
-That slash marks it as the **closing tag**:
-
-```text
-<   p   >
-│   │   │
-│   │   └── Closing angle bracket
-│   └────── Element name
-└────────── Opening angle bracket
-```
-
-vs.
-
-```text
-<   /   p   >
-│   │   │   │
-│   │   │   └── Closing angle bracket
-│   │   └────── Element name
-│   └────────── Forward slash
-└────────────── Opening angle bracket
-```
-
-<figure markdown="span">
-
-![Diagram of a closing tag](./imgs/closing_tag.png){ width="300" }
-
-<figcaption>A closing tag</figcaption>
-
-</figure>
-
----
-
-## 5. The Complete Element
-
-When you combine the three, you get the full package:
-
-```html
-<p>Hello, world!</p>
-```
-
-Broken down:
-
-```text
-<p>          → Opening tag
-
-Hello, world! → Content
-
-</p>         → Closing tag
-```
-
-Or more simply:
-
-```text
-Opening tag + Content + Closing tag = Element
-```
-
----
-
-## 6. Another Example
-
-Take:
-
-```html
-<h1>My Website</h1>
-```
-
-That gives us:
-
-* `<h1>`: opening tag
-* `My Website`: content
-* `</h1>`: closing tag
-* all of it together: an HTML element
-
-One more, just to lock it in:
-
-```html
-<strong>Important information</strong>
-```
-
-```text
-<strong>                 Opening tag
-Important information    Content
-</strong>                Closing tag
-```
-
----
-
-## 7. Elements Can Contain Other Elements
-
-Elements can live inside other elements, we call it **nesting**.
-
-```html
-<p>
-    This is <strong>important</strong> information.
-</p>
-```
-
-The `<strong>` sits inside the `<p>`. If you sketch it as a tree:
-
-```text
-<p>
-│
-├── This is
-│
-├── <strong>
-│   └── important
-│
-└── information.
-```
-
-That's how you build more interesting pages from simple pieces.
-
----
-
-## 8. Proper Nesting
-
-When you nest, close in the right order. Ever closed a box before putting the lid on inside?
-
-This works:
-
-```html
-<p>
-    This is <strong>important</strong> information.
-</p>
-```
-
-The `<strong>` opens and closes entirely inside `<p>`.
-
-This doesn't:
-
-```html
-<p>
-    This is <strong>important</p> information</strong>
-```
-
-They're overlapping, browsers will try to guess what you meant, but don't make them.
-
-A handy rule of thumb:
-
-> **Last opened, first closed.**
-
-Like this:
-
-```html
-<p>
-    <strong>
-        Important text
-    </strong>
-</p>
-```
-
-We opened `<strong>` last, so we close it first.
-
----
-
-## 9. Attributes
-
-Elements can carry **attributes**, extra info about that element.
-
-```html
-<a href="https://example.com">Visit Example</a>
-```
-
-Start from a bare element:
-
-```html
-<a>Visit Example</a>
-```
-
-Now add detail to its opening tag:
-
-```html
-<a href="https://example.com">
-```
-
-Here:
-
-```text
-<a
-│
-└── Element name
-
-href
-│
-└── Attribute name
-
-"https://example.com"
-│
-└── Attribute value
-```
-
-<figure markdown="span">
-
-![Diagram of HTML attributes](./imgs/attributes.png){ width="300" }
-
-<figcaption>HTML attributes on the opening tag</figcaption>
-
-</figure>
-
-In general:
-
-```text
-<element attribute="value">
-    Content
-</element>
-```
-
-For instance:
-
-```html
-<a href="https://example.com">
-    Visit Example
-</a>
-```
-
----
-
-## 10. Multiple Attributes
-
-Yep, you can have more than one, just keep them inside the opening tag:
-
-```html
-<img src="cat.jpg" alt="A sleeping cat" width="400">
-```
-
-That one carries three:
-
-```text
-src   → cat.jpg
-alt   → A sleeping cat
-width → 400
-```
-
-Pattern:
-
-```html
-<element attribute="value" attribute="value">
-    Content
-</element>
-```
-
----
-
-## 11. Not Every Element Has a Closing Tag
-
-Some elements don't wrap content at all, so they don't need a closer.
-
-```html
-<img src="cat.jpg" alt="A sleeping cat">
-```
-
-There's no `</img>`, it wouldn't make sense. We call it a **void element**.
-
-You'll see a few others a lot:
-
-```html
-<br>
-<hr>
-<input>
-<meta>
-<link>
-```
-
-No content between tags, just the element itself.
-
----
-
-## 12. Element vs Tag: Not Quite the Same
-
-Take:
-
-```html
-<p>Hello</p>
-```
-
-The *tags* are:
-
-```html
-<p>
-```
-
-and:
-
-```html
-</p>
-```
-
-The **element** is the whole thing:
-
-```html
-<p>Hello</p>
-```
-
-So simply:
-
-> A tag is a marker; an element is the complete structure (tags + content).
-
----
-
-## 13. A Complete Example
-
-Let's unpack this:
-
-```html
-<p class="introduction">
-    Welcome to <strong>HTML</strong>!
-</p>
-```
-
-```text
-<p class="introduction">
-│ │
-│ └── Attribute
-│
-└── Element name
-
-Welcome to
-│
-└── Text content
-
-<strong>
-│
-└── Nested element
-
-HTML
-│
-└── Content of the <strong> element
-
-</strong>
-│
-└── Closing tag of the nested element
-
-</p>
-│
-└── Closing tag of the paragraph
-```
-
-The outer wrapper is the paragraph:
-
-```html
-<p class="introduction">
-    ...
-</p>
-```
-
-Inside it sits:
-
-```html
-<strong>HTML</strong>
-```
-
-Nested, tidy, and each bit has a job.
-
----
-
-## 14. The General Structure to Remember
-
-For most elements you'll use:
-
-```html
-<element attribute="value">
-    Content
-</element>
-```
-
-Like:
-
-```html
-<p class="intro">
-    Welcome to my website.
-</p>
-```
-
-Where:
-
-```text
-<p>                 Element name
-class="intro"       Attribute
-Welcome...          Content
-</p>                Closing tag
-```
-
-Void elements are the exception:
-
-```html
-<element attribute="value">
-```
-
-Example:
-
-```html
-<img src="photo.jpg" alt="A photo">
-```
-
----
-
-## Summary
-
-Think of it like this:
-
-```text
-Opening tag
-     ↓
-<element attribute="value">
-     ↓
-Content
-     ↓
-Closing tag
-     ↓
-</element>
-```
-
-E.g.:
-
-```html
-<p class="intro">Hello, world!</p>
-```
-
-Quick recap:
-
-| Part            | What it does                           |
-| --------------- | -------------------------------------- |
-| Opening tag     | Kicks the element off                  |
-| Element name    | Says what kind of element it is        |
-| Attribute       | Adds extra info                        |
-| Attribute value | The value for that attribute           |
-| Content         | Whatever's inside                      |
-| Closing tag     | Wraps it up                            |
-
-If you remember one line, make it this:
-
-**Tags are the brackets. Elements are the meaningful chunks those brackets create.**
+# Web Development Courses: Start Here
+
+This site hosts the web development skilling program at Makerere High School Migadde. It is written to be read front-to-back, but you can also dip into any chapter when you need a refresher.
+
+Use the tabs at the top to switch tracks: **HTML** for structure, **CSS** for style, and **JavaScript** (coming soon) for behavior.
+
+## HTML track
+
+The HTML track teaches structure and meaning.
+
+## How to get the most out of it
+
+1. **Go in order the first time.** Each chapter assumes you've seen the one before it.
+2. **Type the examples out**, don't just copy-paste. Save them as `index.html` and open that file in your browser. You'll learn more from one typo you fix than from ten snippets you skim.
+3. Chapters marked **reference** are deliberately detailed. Skim them on the first pass and come back when you need the exact syntax.
+
+## Chapters at a glance
+
+| Chapter | You'll get familiar with |
+|---------|--------------------------|
+| [Basic Structure](01-basic-structure.md) | `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`: the skeleton every page needs |
+| [What Are Headings?](02-headings.md) | Why headings matter for outline, SEO and screen readers |
+| [Headings h1–h6](03-headings-showcase.md) | The six levels, the single-`h1` guideline, and why skipping levels trips people up |
+| [What Are Paragraphs?](04-paragraphs.md) | Paragraphs as blocks of thought: and how `p` differs from `br` and `hr` |
+| [Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) | The actual syntax for `p`, `br`, and `hr` |
+| [Combined: Text in the Basic Structure](06-combined-structure.md) | Putting `h1` and `p` inside `<body>`, and the idea of parents and children |
+| [Meaning vs Looks](07-meaning-vs-looks.md) | `strong` vs `b`, `em` vs `i`, `mark`: and the habit of choosing meaning first |
+| [Code Family](08-code-family.md) | `code`, `kbd`, `samp`, and `var` for technical text |
+| [Tiny Semantics](09-tiny-semantics.md) | `abbr`, `time`, `del`/`ins`, `sub`/`sup`: small tags, real meaning |
+| [Quotes](10-quotes.md) | `blockquote`, `q`, and `cite` |
+| [Special Blocks](11-special-blocks.md) | `pre`, `address`, and `small` |
+| [Links](12-links.md) | `a` and `href`: absolute, relative and anchor URLs |
+| [Images](13-images.md) | `img`, `alt`, and `figure`/`figcaption` |
+| [Lists](14-lists.md) | `ul`, `ol`, `li`, nesting, and `dl` |
+| [Tables](15-tables.md) | `table`, `caption`, `thead`/`tbody`, `tr`/`th`/`td` |
+| [Forms Basics](16-forms-basics.md) | `form`, `label`, `input`, and `button` |
+| [Grouping: div, section, span](17-div-section.md) | When to reach for `div` vs `section` vs `span` (and where `class`/`id` fit) |
+| [Page Landmarks](18-landmarks.md) | `header`, `nav`, `main`, `footer`, `article`, and `aside` |
+
+## CSS track
+
+The CSS track builds on HTML. You will link a `styles.css` file and style the same pages you already marked up.
+
+| Chapter | You will get comfortable with |
+|---------|-------------------------------|
+| [What is CSS?](css/01-what-is-css.md) | What CSS does and the rule shape |
+| [Box Model](css/02-box-model.md) | Content, padding, border, margin, `box-sizing` |
+| [Selectors](css/03-selectors.md) | Type, class, id, attribute, combinators |
+| [Nesting](css/04-nesting.md) | Nesting with `&` |
+| [The Cascade](css/05-cascade.md) | Source order and importance |
+| [Specificity](css/06-specificity.md) | The `[id,class,type]` score |
+| [Inheritance](css/07-inheritance.md) | What inherits |
+| [Color](css/08-color.md) | `hex`, `rgb`, `hsl`, `currentColor` |
+| [Sizing](css/09-sizing.md) | `px`, `rem`, `%`, `vw`, `min()`/`clamp()` |
+| [Layout](css/10-layout.md) | Flow, positioning, choosing a mode |
+| [Flexbox](css/11-flexbox.md) | One-dimensional layout with `flex` |
+| [Grid](css/12-grid.md) | Two-dimensional layout with `grid` |
+| [Logical Properties](css/13-logical-properties.md) | `inline`/`block` vs physical |
+| [Custom Properties](css/14-custom-properties.md) | Variables with `var()` |
+| [Spacing](css/15-spacing.md) | Scale, `padding` vs `margin` vs `gap` |
+| [Pseudo-elements](css/16-pseudo-elements.md) | `::before`, `::after` |
+| [Pseudo-classes](css/17-pseudo-classes.md) | `:hover`, `:focus-visible`, `:nth-child` |
+| [Borders](css/18-borders.md) | `border` and `border-radius` |
+| [Shadows](css/19-shadows.md) | `box-shadow` and `text-shadow` |
+| [Typography](css/20-typography.md) | Fonts and readable type |
+| [Responsive](css/21-responsive.md) | Media queries, mobile-first |
+| [Functions](css/22-functions.md) | `calc()`, `min()`, `max()`, `clamp()` |
+| [Practice](css/23-practice.md) | A complete HTML and CSS page |
+
+## JavaScript track
+
+Coming soon. You will find it under the **JavaScript** tab when chapters are ready. If you want to prepare, get comfortable with the HTML and CSS tracks first.
