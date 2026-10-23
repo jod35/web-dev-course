@@ -1,326 +1,127 @@
-# Grouping: div, section, span
+# Grouping Content
 
-As pages get bigger, you'll need ways to bundle related bits together. `<div>`, `<section>` and `<span>` all group content, but they signal different things.
+As a page grows, you need to group related content. HTML has two block containers, `<div>` and `<section>`, and one inline container, `<span>`. They look similar in the browser but mean different things.
 
-## Why group at all?
+## `<div>`: a generic block
 
-Imagine a page outline:
-
-```text
-Header
-    Navigation
-
-Main content
-    About us
-    Our services
-
-Footer
-```
-
-Without grouping, everything's just floating. HTML gives you distinct elements for those bundles.
-
----
-
-# `<div>`: Generic Block Container
-
-`<div>` is your **generic block wrapper**, it groups content without saying what it means:
+`<div>` groups content without saying what the group is:
 
 ```html
 <div>
-    <h2>About Us</h2>
-    <p>We build software for businesses.</p>
+  <h2>About us</h2>
+  <p>We teach students how to build websites.</p>
 </div>
 ```
 
-It simply says:
+Use `<div>` when no more specific element describes the group. It is common for layout and for CSS or JavaScript hooks.
 
-> These elements belong together.
-
-That's why `<div>` is handy when no more specific semantic element fits.
-
----
-
-## `<div>` as a Container
-
-A `<div>` can hold pretty much anything:
+A `<div>` can contain headings, paragraphs, links, and other blocks:
 
 ```html
-<div>
-    <h2>Student Information</h2>
-
-    <p>Name: Jonathan</p>
-    <p>Class: S2</p>
-
-    <a href="profile.html">View Profile</a>
+<div class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:webclub@example.com">webclub@example.com</a></p>
 </div>
 ```
 
-It keeps that cluster together and gives CSS or JavaScript a convenient hook to target.
+## `<section>`: a thematic section
 
----
-
-# `<section>`: A Thematic Section
-
-`<section>` is for a **thematically related chunk** of the document, a section with its own topic:
+`<section>` groups content that forms a distinct part of the document:
 
 ```html
 <section>
-    <h2>About Us</h2>
-
-    <p>
-        We teach students how to build websites.
-    </p>
+  <h2>Our courses</h2>
+  <p>We teach HTML, CSS, and JavaScript.</p>
 </section>
 ```
 
-Unlike `<div>`, it carries meaning:
+The difference from `<div>` is meaning. A `<section>` says "this is a section of the page", not just "these elements are grouped".
 
-> This is a distinct section of the document.
+A section usually has a heading. Without a heading, it is hard for readers and assistive technology to know what the section is for. If the group has no heading and no semantic meaning, use a `<div>`.
 
----
+## `<span>`: a generic inline container
 
-## Sections Usually Have a Heading
-
-A heading that labels the section helps readers and assistive tech:
+`<span>` groups a small piece of content inside a line:
 
 ```html
-<section>
-    <h2>Our Services</h2>
-
-    <p>We provide web development services.</p>
-</section>
+<p>My favourite language is <span class="highlight">Python</span>.</p>
 ```
 
-Followed by another:
+`<span>` does not start a new line. Use it when you need to style or target part of a sentence. Without a class, `id`, or script, a `<span>` does nothing.
 
-```html
-<section>
-    <h2>Contact Us</h2>
+## Choosing between them
 
-    <p>Get in touch with our team.</p>
-</section>
-```
+| Element | Display | Meaning | Use when |
+|---------|---------|---------|----------|
+| `<section>` | Block | A distinct thematic section | The content has its own heading and topic |
+| `<div>` | Block | No semantic meaning | You need a generic block for layout or styling |
+| `<span>` | Inline | No semantic meaning | You need to target part of a line |
 
-Those headings are part of the structure, not just decoration.
+If the content is a page header, navigation, main content, article, sidebar, or footer, use the semantic landmarks from the next chapter instead of a `<div>`.
 
----
+## Classes and ids
 
-# `<div>` vs `<section>`: Which One?
+Grouping elements become more useful with `class` and `id`.
 
-```html
-<div>
-    <h2>About Us</h2>
-    <p>We teach programming.</p>
-</div>
-```
-
-vs.
-
-```html
-<section>
-    <h2>About Us</h2>
-    <p>We teach programming.</p>
-</section>
-```
-
-Both will group, but they say different things:
-
-* **`<div>`** → "Grouped together." No semantics attached.
-* **`<section>`** → "This is a meaningful section."
-
-If the bundle represents a real topic-based section, prefer `<section>`. If you just need a generic box for styling or scripting and nothing semantic fits, use `<div>`.
-
----
-
-# `<span>`: Generic Inline Container
-
-`<span>` is the inline cousin, it wraps **small pieces inside a line**:
-
-```html
-<p>
-    My favourite language is
-    <span>Python</span>.
-</p>
-```
-
-Unlike `<div>`, it doesn't start a new block, it stays in the flow of text.
-
-```html
-<p>Hello <span>Jonathan</span>, welcome!</p>
-```
-
-That `<span>` is part of the same paragraph, not a separate block.
-
----
-
-# `<span>` for Part of a Sentence
-
-You'll often want to flag a particular phrase:
-
-```html
-<p>
-    The weather today is
-    <span>very warm</span>.
-</p>
-```
-
-By itself `<span>` doesn't add meaning, it just identifies that slice so you can style or script it.
-
----
-
-# `<span>` vs `<div>`: Inline vs Block
-
-**`<div>`**: block-level:
-
-```html
-<div>
-    First group
-</div>
-
-<div>
-    Second group
-</div>
-```
-→ each group sits on its own line/ block.
-
-**`<span>`**: inline:
-
-```html
-<p>
-    This is <span>one</span> sentence.
-</p>
-```
-→ stays within the surrounding line.
-
-Think: **block vs inline** is the core split.
-
----
-
-# Grouping with Classes and IDs
-
-These grouping elements get most useful with `class` or `id`:
-
-```html
-<div class="card">
-    <h2>Python</h2>
-    <p>A programming language.</p>
-</div>
-```
-
-A class marks a category, several elements can share it:
+A class can be shared by several elements:
 
 ```html
 <section class="course">
-    <h2>Python Course</h2>
+  <h2>HTML</h2>
 </section>
 
 <section class="course">
-    <h2>HTML Course</h2>
+  <h2>CSS</h2>
 </section>
 ```
 
-An `id` identifies one unique element:
+An `id` identifies one element:
 
 ```html
 <div id="main-content">
-    <h1>Welcome</h1>
+  <h1>Welcome</h1>
 </div>
 ```
 
-You'll lean on them heavily once you add CSS and JavaScript.
+Use classes for styling groups and ids for in-page links or JavaScript hooks. Do not use the same `id` twice on a page.
 
----
-
-# Bringing Them Together
-
-A page can use all three at once:
+## A complete example
 
 ```html
 <section>
+  <h2>Our courses</h2>
 
-    <h2>Our Courses</h2>
+  <div class="course">
+    <h3>HTML</h3>
+    <p>Learn how to structure a <span class="term">web page</span>.</p>
+  </div>
 
-    <div class="course">
-        <h3>HTML</h3>
-        <p>Learn how to build <span>web pages</span>.</p>
-    </div>
-
-    <div class="course">
-        <h3>Python</h3>
-        <p>Learn how to build <span>programs</span>.</p>
-    </div>
-
+  <div class="course">
+    <h3>CSS</h3>
+    <p>Learn how to style the <span class="term">same page</span>.</p>
+  </div>
 </section>
 ```
 
-* `<section>` → the **Courses section** as a whole.
-* `<div>` → each individual course card.
-* `<span>` → a small inline highlight inside the paragraph.
+- `<section>` groups the courses section.
+- Each `<div>` groups one course.
+- Each `<span>` marks a phrase inside a paragraph.
 
----
+The `<div>` elements could be `<article>` elements because each course is a self-contained item. The next chapter explains when that is a better choice.
 
-# How to Choose
+## Exercise: choose the wrapper
 
-Ask what the grouping *means*:
+For each item, choose `<section>`, `<div>`, or `<span>` and explain why:
 
-* **A distinct thematic section?** → `<section>`:
-```html
-<section>
-    <h2>Our Services</h2>
-    ...
-</section>
-```
+1. A group of three news stories, each with its own heading.
+2. A wrapper that only exists to apply a grid layout.
+3. The word "sold out" inside a product paragraph.
+4. A "Contact us" block with a heading and two paragraphs.
 
-* **Just need a generic block box?** → `<div>`:
-```html
-<div>
-    ...
-</div>
-```
+Check your answers against these questions:
 
-* **A small inline slice?** → `<span>`:
-```html
-<p>This is <span>important</span> information.</p>
-```
+- Does the group have its own heading and topic?
+- Is the group only needed for layout or styling?
+- Is the content inline or block-level?
 
----
-
-# At a glance
-
-| Element | What it's for |
-| ------- | ------------- |
-| `<section>` | Groups thematically related content |
-| `<div>` | Generic block-level container |
-| `<span>` | Generic inline container |
-| `class` | Marks elements as belonging to a group |
-| `id` | Unique identifier for one element |
-
----
-
-# Recap
-
-In short:
-
-```text
-<section>
-    A meaningful section of the document
-</section>
-
-<div>
-    A generic block-level group
-</div>
-
-<p>
-    Some text with a
-    <span>small inline group</span>
-    inside it.
-</p>
-```
-
-Mental shorthand:
-
-**`<section>` = meaningful group**
-
-**`<div>` = generic block**
-
-**`<span>` = generic inline**
+Next: [Page Landmarks](18-landmarks.md)

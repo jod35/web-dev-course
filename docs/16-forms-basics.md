@@ -1,502 +1,246 @@
-# Forms Basics
+# Forms
 
-Forms are how users **give you information**, log in, register, search, give feedback, place an order. If a page needs input, you'll likely need a form.
-
-## What is a Form?
-
-It's simply a section of a page where people can **enter or pick information**. You'll see them for logins, registrations, contact pages, search boxes, surveys and bookings.
-
-A tiny example:
+Forms collect information from the reader: a login, a search, a registration, or a message. A form is a set of controls inside a `<form>` element.
 
 ```html
 <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name">
-
-    <button type="submit">Submit</button>
+  <p>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </p>
+  <button type="submit">Submit</button>
 </form>
 ```
 
----
+The form above has a label, a text field, and a submit button. It does not send the data anywhere yet because the `action` is missing.
 
-# `<form>`: The Container
+## Labels
 
-`<form>` wraps the controls that collect information:
-
-```html
-<form>
-
-    <!-- Form controls go here -->
-
-</form>
-```
-
-Inside you can place things like `<input>`, `<label>`, `<textarea>`, `<select>`, `<button>`, `<fieldset>` and friends.
-
----
-
-# `<label>`: Describing a Control
-
-`<label>` tells users what a field is for. Link it to the input via `for` ↔ `id`:
+Every input needs a label. Use `<label for="...">` and match it to the input's `id`:
 
 ```html
-<label for="name">Name:</label>
-<input type="text" id="name">
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
 ```
 
-```text
-for="name"
-     ↓
-id="name"
-```
+The `for` value must match the `id` exactly. Clicking the label then focuses the input, and screen readers can announce which field is which.
 
-That connection also means clicking the label focuses the input, a small usability win.
+Do not replace a label with a placeholder. Placeholders disappear as soon as the reader types.
 
----
+## Input types
 
-# `<input>`: The Workhorse
+The `type` attribute changes what the input accepts and which keyboard appears on mobile:
 
-`<input>` can collect many kinds of data. The `type` attribute says which:
-
-```html
-<input type="text">
-```
-
-Common types:
-
-| Type | When you'd use it |
-| ---- | ----------------- |
-| `text` | General text |
-| `email` | Email address (browser can validate) |
-| `password` | Password (hidden as you type) |
-| `number` | Numeric value |
-| `date` | Pick a date |
-| `time` | Pick a time |
-| `checkbox` | Multiple choices |
+| Type | Use for |
+|------|---------|
+| `text` | General single-line text |
+| `email` | Email addresses |
+| `password` | Passwords, hidden as typed |
+| `number` | Numbers |
+| `date` | A date |
+| `time` | A time |
+| `search` | Search terms |
+| `checkbox` | Several choices |
 | `radio` | One choice from a group |
-| `file` | File upload |
-| `search` | Search box |
-| `submit` | Submit the form |
-
----
-
-# Text Input
+| `file` | Uploading a file |
+| `submit` | A submit button |
 
 ```html
-<label for="name">Name:</label>
-<input type="text" id="name">
+<label for="age">Age</label>
+<input type="number" id="age" name="age" min="10" max="100">
 ```
 
-A user might type:
+Browsers can validate some types. An `email` input rejects text that does not look like an email address, and `required` blocks an empty submission.
 
-```text
-Jonathan
-```
+## Longer text: `<textarea>`
 
----
-
-# Email Input
+Use `<textarea>` for multiple lines:
 
 ```html
-<label for="email">Email:</label>
-<input type="email" id="email">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5"></textarea>
 ```
 
-Browsers can then validate the shape of an email and show a suitable keyboard on mobile.
+The `rows` attribute sets the visible height. It is a starting size, not a character limit.
 
----
-
-# Password Input
+## Drop-down lists: `<select>` and `<option>`
 
 ```html
-<label for="password">Password:</label>
-<input type="password" id="password">
-```
-
-Characters are hidden as you type, as you'd expect.
-
----
-
-# Number Input
-
-```html
-<label for="age">Age:</label>
-<input type="number" id="age">
-```
-
-You can bound it:
-
-```html
-<input type="number" id="age" min="10" max="100">
-```
-
----
-
-# Date Input
-
-```html
-<label for="birthday">Date of Birth:</label>
-<input type="date" id="birthday">
-```
-
-The browser will often show a date picker.
-
----
-
-# Time Input
-
-```html
-<label for="appointment">Appointment Time:</label>
-<input type="time" id="appointment">
-```
-
----
-
-# Textarea: For Longer Text
-
-When you need **multiple lines**, use `<textarea>`, unlike `<input>`, it has an opening and closing tag:
-
-```html
-<label for="message">Message:</label>
-
-<textarea id="message"></textarea>
-```
-
-Size it with `rows`/`cols` if you like:
-
-```html
-<textarea id="message" rows="5" cols="40"></textarea>
-```
-
----
-
-# Select and Option: Drop-Down
-
-`<select>` creates the list; `<option>`s are the choices:
-
-```html
-<label for="country">Country:</label>
-
-<select id="country">
-    <option>Uganda</option>
-    <option>Kenya</option>
-    <option>Tanzania</option>
-    <option>Rwanda</option>
+<label for="country">Country</label>
+<select id="country" name="country">
+  <option value="uganda">Uganda</option>
+  <option value="kenya">Kenya</option>
+  <option value="tanzania">Tanzania</option>
 </select>
 ```
 
----
+Each `<option>` is one choice. The `value` is what gets submitted.
 
-# Radio Buttons: Pick One
+## Radio buttons: one choice
 
-Radios let you choose **one option from a group**. The key is they share the same `name`:
-
-```html
-<p>Gender:</p>
-
-<input type="radio" id="male" name="gender" value="male">
-<label for="male">Male</label>
-
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Female</label>
-```
-
-```html
-name="gender"
-```
-→ tells the browser they belong together.
-
----
-
-# Checkboxes: Pick Many
-
-Unlike radios, you can tick **several** boxes:
-
-```html
-<p>Languages you know:</p>
-
-<input type="checkbox" id="python" name="language" value="python">
-<label for="python">Python</label>
-
-<input type="checkbox" id="javascript" name="language" value="javascript">
-<label for="javascript">JavaScript</label>
-
-<input type="checkbox" id="java" name="language" value="java">
-<label for="java">Java</label>
-```
-
----
-
-# The `name` Attribute
-
-`name` is what the form sends to the server:
-
-```html
-<input type="text" name="username">
-```
-
-Example with both:
-
-```html
-<label for="username">Username:</label>
-<input type="text" id="username" name="username">
-```
-
-* `id`: identifies the element *in the page* (for `<label>`).
-* `name`: identifies the field *when submitted*.
-
----
-
-# The `value` Attribute
-
-`value` is what gets submitted for that control:
-
-```html
-<input
-    type="radio"
-    id="uganda"
-    name="country"
-    value="uganda"
->
-<label for="uganda">Uganda</label>
-```
-
-If this is selected, the submitted value is `uganda`.
-
----
-
-# Required Fields
-
-Add `required` when a field must be filled before submission:
-
-```html
-<label for="email">Email:</label>
-
-<input
-    type="email"
-    id="email"
-    name="email"
-    required
->
-```
-
-The browser will block submission until it's done.
-
----
-
-# Placeholder Text
-
-`placeholder` shows a temporary hint inside the input:
-
-```html
-<input
-    type="text"
-    id="username"
-    name="username"
-    placeholder="Enter your username"
->
-```
-
-It fades when you start typing. It should **not** replace a proper `<label>`, labels are always needed.
-
----
-
-# The Submit Button
-
-You need a way to send the form:
-
-```html
-<button type="submit">Submit</button>
-```
-
-That `type="submit"` is the signal to the browser: "submit this form."
-
----
-
-# The `<button>` Element
-
-```html
-<button>Click Me</button>
-```
-
-Inside forms, be explicit:
-
-```html
-<button type="submit">Submit</button>
-```
-
-For a button that *doesn't* submit (e.g. JS actions):
-
-```html
-<button type="button">Click Me</button>
-```
-
----
-
-# Form Submission: `action` and `method`
-
-`action` says **where** the data goes:
-
-```html
-<form action="/register">
-    ...
-</form>
-```
-
-`method` says **how**:
-
-```html
-<form action="/register" method="post">
-    ...
-</form>
-```
-
-```html
-<form action="/search" method="get">
-    ...
-</form>
-```
-
-* `GET`: requesting/searching; values may appear in the URL. Good for searches.
-* `POST`: creating/changing data; values go in the request body. Good for registrations, logins.
-
----
-
-# Complete Example
-
-```html
-<form action="/register" method="post">
-
-    <h2>Create an Account</h2>
-
-    <label for="name">Name:</label>
-    <input
-        type="text"
-        id="name"
-        name="name"
-        required
-    >
-
-    <br>
-
-    <label for="email">Email:</label>
-    <input
-        type="email"
-        id="email"
-        name="email"
-        required
-    >
-
-    <br>
-
-    <label for="password">Password:</label>
-    <input
-        type="password"
-        id="password"
-        name="password"
-        required
-    >
-
-    <br>
-
-    <label for="country">Country:</label>
-
-    <select id="country" name="country">
-        <option value="uganda">Uganda</option>
-        <option value="kenya">Kenya</option>
-        <option value="tanzania">Tanzania</option>
-    </select>
-
-    <br>
-
-    <label for="message">About You:</label>
-
-    <textarea
-        id="message"
-        name="message"
-        rows="5"
-        cols="40"
-    ></textarea>
-
-    <br>
-
-    <button type="submit">Register</button>
-
-</form>
-```
-
----
-
-# Grouping Controls: `<fieldset>` and `<legend>`
-
-For larger forms, group related fields:
+Radio buttons in the same group share a `name`. Only one can be selected.
 
 ```html
 <fieldset>
+  <legend>Year of study</legend>
 
-    <legend>Personal Information</legend>
+  <label>
+    <input type="radio" name="year" value="s1">
+    S1
+  </label>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-
+  <label>
+    <input type="radio" name="year" value="s2">
+    S2
+  </label>
 </fieldset>
 ```
 
-`<fieldset>` is the group; `<legend>` is its title.
+`<fieldset>` groups related controls. `<legend>` gives the group a name. This is much clearer than putting the question in a separate paragraph.
 
----
+## Checkboxes: several choices
 
-# At a glance
-
-| Element / Attribute | What it does |
-| ------------------- | ------------ |
-| `<form>` | Wraps the form |
-| `<label>` | Describes a form control |
-| `<input>` | Creates an input |
-| `<textarea>` | Multi-line text input |
-| `<select>` | Drop-down list |
-| `<option>` | An option in the list |
-| `<button>` | Clickable button |
-| `<fieldset>` | Groups related controls |
-| `<legend>` | Title for a fieldset |
-| `type` | Kind of input or button |
-| `id` | Identity in the page |
-| `name` | Name sent on submission |
-| `value` | Value submitted |
-| `required` | Must be completed |
-| `placeholder` | Temporary hint |
-| `action` | Where data is sent |
-| `method` | How data is sent |
-
-# Recap
-
-Core shape:
+Checkboxes use the same `name` when they belong to one question, but each can be selected independently:
 
 ```html
-<form>
+<fieldset>
+  <legend>Languages you know</legend>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
+  <label>
+    <input type="checkbox" name="language" value="python">
+    Python
+  </label>
 
-    <button type="submit">Submit</button>
+  <label>
+    <input type="checkbox" name="language" value="javascript">
+    JavaScript
+  </label>
+</fieldset>
+```
 
+## `name` and `value`
+
+- `id` identifies the element within the page. It connects a label to its control.
+- `name` identifies the field when the form is submitted.
+- `value` is the data sent for that control.
+
+```html
+<label for="username">Username</label>
+<input type="text" id="username" name="username">
+```
+
+If a field has no `name`, its value is not submitted.
+
+## Required fields and placeholders
+
+```html
+<label for="email">Email</label>
+<input
+  type="email"
+  id="email"
+  name="email"
+  placeholder="you@example.com"
+  required
+>
+```
+
+`required` makes the field mandatory. `placeholder` shows a temporary hint inside the field. Use a placeholder for an example format, not as a replacement for a label.
+
+## Submitting the form
+
+A submit button sends the form:
+
+```html
+<button type="submit">Register</button>
+```
+
+Use `type="button"` for a button that should not submit the form.
+
+The `action` attribute says where the data goes, and `method` says how:
+
+```html
+<form action="/register" method="post">
+```
+
+- `GET` puts the values in the URL. It is suitable for searches and requests that do not change data.
+- `POST` sends the values in the request body. It is suitable for registrations, logins, and other changes.
+
+You will need a server to process the data. For now, focus on the markup and the browser's built-in validation.
+
+## A complete registration form
+
+```html
+<form action="/register" method="post">
+  <h2>Create an account</h2>
+
+  <p>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </p>
+
+  <p>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </p>
+
+  <p>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </p>
+
+  <fieldset>
+    <legend>Year of study</legend>
+    <label>
+      <input type="radio" name="year" value="s1">
+      S1
+    </label>
+    <label>
+      <input type="radio" name="year" value="s2">
+      S2
+    </label>
+  </fieldset>
+
+  <p>
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="uganda">Uganda</option>
+      <option value="kenya">Kenya</option>
+      <option value="tanzania">Tanzania</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="message">About you</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+  </p>
+
+  <button type="submit">Register</button>
 </form>
 ```
 
-Structure within:
+The fields are wrapped in paragraphs so they appear on separate lines. CSS can arrange them in columns later.
 
-```text
-<form>
-    ├── <label>
-    ├── <input>
-    ├── <textarea>
-    ├── <select>
-    │     └── <option>
-    └── <button>
-</form>
-```
+## Check your work
 
-Forms give you **the structure for collecting information**. HTML defines the fields and what they mean; the server then receives and does something with that data.
+- Does every input have a label?
+- Does every label's `for` match an input `id`?
+- Do radio buttons in one group share a `name`?
+- Are radio buttons and checkboxes inside a `<fieldset>` with a `<legend>`?
+- Does every control that should be submitted have a `name`?
+- Did you use `required` only on fields that are genuinely required?
+- Does the form still make sense when navigated with the Tab key?
+
+## Try it
+
+Build a contact form with:
+
+1. a name field,
+2. an email field,
+3. a drop-down for the reason for contact,
+4. a radio group for preferred contact method,
+5. a message textarea,
+6. a submit button.
+
+Open the form and try to submit it while the required fields are empty. Read the browser's message. Then fill it in and check that the fields accept the expected input.
+
+Next: [Grouping Content](17-div-section.md)

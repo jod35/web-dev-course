@@ -1,159 +1,121 @@
 # Images
 
-## 1. What are Images?
+Images can explain something faster than text, but they also need care. An image without useful alt text is invisible to screen reader users, and an image without dimensions can make the page jump while it loads.
 
-Pictures on a page make it more inviting and can explain things words alone can't. HTML uses a single element for that:
-
-```html
-<img src="cat.jpg" alt="A cat">
-```
-
----
-
-## 2. The `<img>` Element
+The element is `<img>`:
 
 ```html
-<img src="photo.jpg" alt="A beautiful landscape">
+<img src="bread.jpg" alt="A loaf of brown bread on a wooden table">
 ```
 
-Notice there's no closing tag, `<img>` is a void element. It sits there and displays the image.
+`<img>` is a void element, so it has no closing tag. It has two required attributes in practice: `src` and `alt`.
 
----
+## `src`: where the image is
 
-## 3. The `src` Attribute
-
-`src` tells the browser **where to find the image**:
+`src` is the path to the image file:
 
 ```html
-<img src="cat.jpg" alt="A cat">
+<img src="bread.jpg" alt="A loaf of brown bread">
 ```
 
-In a folder?
+If the image is in a folder:
 
 ```html
-<img src="images/cat.jpg" alt="A cat">
+<img src="images/bread.jpg" alt="A loaf of brown bread">
 ```
 
-Or out on the web:
+You can also use a full URL:
 
 ```html
-<img src="https://example.com/cat.jpg" alt="A cat">
+<img src="https://example.com/bread.jpg" alt="A loaf of brown bread">
 ```
 
----
+For your own projects, keep images in a folder such as `images/` and use relative paths.
 
-## 4. The `alt` Attribute
+## `alt`: a text description
 
-`alt` is the text description for the image:
+`alt` describes the image for people who cannot see it. It is used by screen readers, shown when the image fails to load, and read by search engines.
 
 ```html
-<img src="dog.jpg" alt="A brown dog">
+<img src="gorilla.jpg" alt="A mountain gorilla sitting in tall grass">
 ```
 
-You'll need it when:
+Write what matters about the image in context, not a list of every detail. Ask: if this image were removed, what would the reader miss?
 
-* the image fails to load,
-* someone is using a screen reader,
-* you need a text fallback for any other reason.
+### Images that are only decoration
 
-Think of it as "what would I say if I had to describe this image over the phone?"
-
----
-
-## 5. Image Width and Height
-
-`width` sets the display width:
+If an image is purely decorative and the surrounding text already explains everything, use an empty alt:
 
 ```html
-<img src="cat.jpg" alt="A cat" width="400">
+<img src="divider.png" alt="">
 ```
 
-`height` does the same vertically:
+Do not write `alt="image"` or `alt="picture of..."`. Those words add no information.
+
+### Images inside links
+
+If an image is the only content of a link, the alt text should describe the destination:
 
 ```html
-<img src="cat.jpg" alt="A cat" width="400" height="300">
+<a href="menu.html">
+  <img src="menu-icon.png" alt="See the menu" width="40" height="40">
+</a>
 ```
 
-You can use one or both, browsers will scale accordingly.
+## Width and height
 
----
-
-## 6. Images in Folders
-
-Most sites keep images tidily in a folder:
-
-```text
-website/
-├── index.html
-└── images/
-    ├── cat.jpg
-    └── dog.jpg
-```
-
-Referencing `cat.jpg` from `index.html`:
+The `width` and `height` attributes give the browser the image's dimensions:
 
 ```html
-<img src="images/cat.jpg" alt="A cat">
+<img
+  src="bread.jpg"
+  alt="A loaf of brown bread"
+  width="400"
+  height="300"
+>
 ```
 
----
+Providing both helps the browser reserve space before the image loads, which prevents the page from shifting. CSS can change the displayed size later.
 
-## 7. Image Captions
+## Figures and captions
 
-A caption is the visible text you see under a picture. HTML pairs `<figure>` and `<figcaption>` for that:
+Use `<figure>` and `<figcaption>` when an image needs a visible caption:
 
 ```html
 <figure>
-    <img src="cat.jpg" alt="A sleeping cat">
-    <figcaption>A cat sleeping on a chair.</figcaption>
+  <img
+    src="gorilla.jpg"
+    alt="A mountain gorilla sitting in tall grass"
+    width="500"
+    height="350"
+  >
+  <figcaption>A mountain gorilla in Mgahinga Gorilla National Park.</figcaption>
 </figure>
 ```
 
-* `<figure>` groups the image and its caption.
-* `<figcaption>` holds the caption text itself.
+- `<figure>` groups the image with its caption.
+- `<figcaption>` holds the visible caption.
 
----
+Alt text and captions do different jobs. Alt text is for people who cannot see the image. The caption is visible to everyone and adds context.
 
-## 8. `alt` Text vs Caption: Not the Same Job
+## Check your work
 
-```html
-<figure>
-    <img src="elephant.jpg" alt="An elephant walking through grass">
-    <figcaption>An elephant in Queen Elizabeth National Park.</figcaption>
-</figure>
-```
+- Does every `<img>` have `src` and `alt`?
+- Is the alt text a useful description, not a filename?
+- Are purely decorative images marked with `alt=""`?
+- Does the image path match the actual file name and folder?
+- Do images have `width` and `height` so the page does not jump?
+- Does the image still make sense at a narrow window width?
 
-* **`alt`**: functional description, for accessibility and when the image can't be shown.
-* **`figcaption`**: visible caption the reader sees alongside the image.
+## Try it
 
-You'll often need both.
+Add an image to a page you have already built. Include:
 
----
+1. a relative path to an image in an `images/` folder,
+2. useful alt text,
+3. `width` and `height`,
+4. a `<figure>` and `<figcaption>` if the image needs a visible caption.
 
-## 9. Complete Example
+Then temporarily change the file name in `src` and reload. Read the alt text in the broken image. Would someone who cannot see the picture still understand what was there? Fix the path afterwards.
 
-```html
-<figure>
-    <img
-        src="images/mountain.jpg"
-        alt="A mountain surrounded by trees"
-        width="500"
-    >
-
-    <figcaption>
-        A mountain surrounded by trees.
-    </figcaption>
-</figure>
-```
-
-### At a glance
-
-| Element / Attribute | Role |
-| ------------------- | ---- |
-| `<img>` | Displays an image |
-| `src` | Where the image lives |
-| `alt` | Text description |
-| `width` | Display width |
-| `height` | Display height |
-| `<figure>` | Groups image with its caption |
-| `<figcaption>` | The visible caption |
+Next: [Lists](14-lists.md)

@@ -1,71 +1,50 @@
-# Web Development Course
-This site hosts the web development skilling program at Makerere High School Migadde. It is written to be read front-to-back, but you can also dip into any chapter when you need a refresher.
+# Web Development at MHSM
 
-Use the tabs at the top to switch tracks: **HTML** for structure, **CSS** for style, and **JavaScript** (coming soon) for behavior.
+This site contains the course notes and exercises for the web development program at Makerere High School Migadde. You will learn how to structure pages with HTML, style them with CSS, and later add behaviour with JavaScript.
 
-## HTML track
+## Start here
 
-The HTML track teaches structure and meaning.
+1. Read [Elements and Page Structure](01-basic-structure.md). It explains the parts of an HTML element and the skeleton every page needs.
+2. Create a folder for your work and add a file called `index.html`.
+3. Open that file in a browser. Keep the editor and the browser open side by side, change something, save, and reload.
 
-## How to get the most out of it
+If you can see a heading and a paragraph in the browser, you are ready to continue.
 
-1. **Go in order the first time.** Each chapter assumes you've seen the one before it.
-2. **Type the examples out**, don't just copy-paste. Save them as `index.html` and open that file in your browser. You'll learn more from one typo you fix than from ten snippets you skim.
-3. Chapters marked **reference** are deliberately detailed. Skim them on the first pass and come back when you need the exact syntax.
+## What you need
 
-## Chapters at a glance
+- A plain text editor. Notepad, TextEdit, VS Code, or any editor that saves plain text will work.
+- A modern browser such as Firefox, Chrome, Edge, or Safari.
+- A folder where you can keep your practice files.
 
-| Chapter | You'll get familiar with |
-|---------|--------------------------|
-| [Basic Structure](01-basic-structure.md) | `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`: the skeleton every page needs |
-| [What Are Headings?](02-headings.md) | Why headings matter for outline, SEO and screen readers |
-| [Headings h1–h6](03-headings-showcase.md) | The six levels, the single-`h1` guideline, and why skipping levels trips people up |
-| [What Are Paragraphs?](04-paragraphs.md) | Paragraphs as blocks of thought: and how `p` differs from `br` and `hr` |
-| [Paragraphs, Breaks, Rules](05-paragraphs-snippets.md) | The actual syntax for `p`, `br`, and `hr` |
-| [Combined: Text in the Basic Structure](06-combined-structure.md) | Putting `h1` and `p` inside `<body>`, and the idea of parents and children |
-| [Meaning vs Looks](07-meaning-vs-looks.md) | `strong` vs `b`, `em` vs `i`, `mark`: and the habit of choosing meaning first |
-| [Code Family](08-code-family.md) | `code`, `kbd`, `samp`, and `var` for technical text |
-| [Tiny Semantics](09-tiny-semantics.md) | `abbr`, `time`, `del`/`ins`, `sub`/`sup`: small tags, real meaning |
-| [Quotes](10-quotes.md) | `blockquote`, `q`, and `cite` |
-| [Special Blocks](11-special-blocks.md) | `pre`, `address`, and `small` |
-| [Links](12-links.md) | `a` and `href`: absolute, relative and anchor URLs |
-| [Images](13-images.md) | `img`, `alt`, and `figure`/`figcaption` |
-| [Lists](14-lists.md) | `ul`, `ol`, `li`, nesting, and `dl` |
-| [Tables](15-tables.md) | `table`, `caption`, `thead`/`tbody`, `tr`/`th`/`td` |
-| [Forms Basics](16-forms-basics.md) | `form`, `label`, `input`, and `button` |
-| [Grouping: div, section, span](17-div-section.md) | When to reach for `div` vs `section` vs `span` (and where `class`/`id` fit) |
-| [Page Landmarks](18-landmarks.md) | `header`, `nav`, `main`, `footer`, `article`, and `aside` |
+You do not need an account, a framework, or a build tool for the HTML and CSS chapters.
 
-## CSS track
+## Course tracks
 
-The CSS track builds on HTML. You will link a `styles.css` file and style the same pages you already marked up.
+### [HTML](00-index.md)
 
-| Chapter | You will get comfortable with |
-|---------|-------------------------------|
-| [What is CSS?](css/01-what-is-css.md) | What CSS does and the rule shape |
-| [Box Model](css/02-box-model.md) | Content, padding, border, margin, `box-sizing` |
-| [Selectors](css/03-selectors.md) | Type, class, id, attribute, combinators |
-| [Nesting](css/04-nesting.md) | Nesting with `&` |
-| [The Cascade](css/05-cascade.md) | Source order and importance |
-| [Specificity](css/06-specificity.md) | The `[id,class,type]` score |
-| [Inheritance](css/07-inheritance.md) | What inherits |
-| [Color](css/08-color.md) | `hex`, `rgb`, `hsl`, `currentColor` |
-| [Sizing](css/09-sizing.md) | `px`, `rem`, `%`, `vw`, `min()`/`clamp()` |
-| [Layout](css/10-layout.md) | Flow, positioning, choosing a mode |
-| [Flexbox](css/11-flexbox.md) | One-dimensional layout with `flex` |
-| [Grid](css/12-grid.md) | Two-dimensional layout with `grid` |
-| [Logical Properties](css/13-logical-properties.md) | `inline`/`block` vs physical |
-| [Custom Properties](css/14-custom-properties.md) | Variables with `var()` |
-| [Spacing](css/15-spacing.md) | Scale, `padding` vs `margin` vs `gap` |
-| [Pseudo-elements](css/16-pseudo-elements.md) | `::before`, `::after` |
-| [Pseudo-classes](css/17-pseudo-classes.md) | `:hover`, `:focus-visible`, `:nth-child` |
-| [Borders](css/18-borders.md) | `border` and `border-radius` |
-| [Shadows](css/19-shadows.md) | `box-shadow` and `text-shadow` |
-| [Typography](css/20-typography.md) | Fonts and readable type |
-| [Responsive](css/21-responsive.md) | Media queries, mobile-first |
-| [Functions](css/22-functions.md) | `calc()`, `min()`, `max()`, `clamp()` |
-| [Practice](css/23-practice.md) | A complete HTML and CSS page |
+Structure and meaning. You will mark up headings, paragraphs, links, images, lists, tables, forms, and page sections.
 
-## JavaScript track
+### [CSS](css/index.md)
 
-Coming soon. You will find it under the **JavaScript** tab when chapters are ready. If you want to prepare, get comfortable with the HTML and CSS tracks first.
+Presentation. You will link a stylesheet and learn how to control colour, spacing, type, layout, and responsive behaviour.
+
+### JavaScript
+
+Not available yet. The [JavaScript page](js/index.md) explains what is planned. Finish the HTML and CSS tracks first.
+
+## How to use the notes
+
+- Work through the chapters in order the first time. Later chapters assume you have seen the earlier ones.
+- Type the examples yourself instead of copying them. You will remember the mistakes you fix.
+- Do the short practice tasks. Reading code is not the same as writing it.
+- Use the navigation at the end of each page. It follows the order of the course.
+
+## When something does not work
+
+**The page is blank.** Check that the file ends in `.html` and that you opened the file you just saved.
+
+**The tags appear as text.** Check the file extension. A file named `index.txt` will show the markup instead of rendering it.
+
+**The styles do not apply.** Check that the stylesheet is in the same folder as the HTML file and that the `href` matches its name exactly.
+
+**The browser still shows the old version.** Save the file, then reload the page. If that fails, clear the cache or open the file again.

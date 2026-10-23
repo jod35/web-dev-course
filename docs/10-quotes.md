@@ -1,92 +1,70 @@
-# Quotes
+# Quotations
 
-HTML makes a useful distinction between a quick quote inside a sentence and a longer passage set apart. It also gives you a clean way to say *where* a quote came from.
+HTML has separate elements for a short quote inside a sentence and a longer quote set apart from the main text. It also has a way to name the source.
 
-## 1. Inline Quotes
+## Short quotes: `<q>`
 
-`<q>` is for a **short quotation inside a sentence**:
+Use `<q>` for a quotation inside a sentence:
 
 ```html
-<p>
-    Albert Einstein said, <q>Imagination is more important than knowledge.</q>
-</p>
+<p>Our teacher said, <q>Read the question twice before you answer it.</q></p>
 ```
 
-Browsers typically wrap it in quotation marks for you, no need to type them by hand.
+Browsers usually add quotation marks. Do not type the quotes yourself as well.
 
----
+## Block quotes: `<blockquote>`
 
-## 2. Block Quotes
-
-For a **longer quotation that stands on its own**, use `<blockquote>`:
+Use `<blockquote>` for a longer quotation that stands on its own:
 
 ```html
 <blockquote>
-    The important thing is not to stop questioning.
-    Curiosity has its own reason for existing.
+  <p>All animals are equal, but some animals are more equal than others.</p>
 </blockquote>
 ```
 
-Browsers usually indent block quotes to set them apart.
+A blockquote is a block element. Browsers usually indent it. If the quotation contains more than one paragraph, put each paragraph in its own `<p>` inside the blockquote.
 
----
+## Naming the source
 
-## 3. Citing the Source
-
-You can attach a source URL directly to `<blockquote>` with `cite`:
-
-```html
-<blockquote cite="https://example.com/article">
-    The important thing is not to stop questioning.
-</blockquote>
-```
-
-That `cite` attribute won't be visible on the page, but it's there for tools that want it.
-
----
-
-## 4. The `<cite>` Element
-
-`<cite>` identifies the **title of a work**, a book, film, song, article:
-
-```html
-<p>
-    My favourite book is <cite>Things Fall Apart</cite>.
-</p>
-```
-
-You can use it for attributions too:
+Use `<cite>` for the title of a work: a book, article, film, song, or report.
 
 ```html
 <blockquote>
-    The world is a fine place and worth fighting for.
+  <p>All animals are equal, but some animals are more equal than others.</p>
 </blockquote>
-
-<p>
-    Source: <cite>Ernest Hemingway</cite>
-</p>
+<p>George Orwell, <cite>Animal Farm</cite></p>
 ```
 
----
+`<cite>` is not for the author's name. The author goes in ordinary text; the title goes in `<cite>`.
 
-## 5. `<q>` vs `<blockquote>`: Which One?
-
-| Element / Attribute | Purpose |
-| ------------------- | ------- |
-| `<q>` | Short, inline quotation |
-| `<blockquote>` | Longer, standalone quotation |
-| `<cite>` | Title or source of a work |
-| `cite` attribute | URL of the source |
-
-Example with both:
+The `cite` attribute on `<blockquote>` can hold a URL for the source, but it is not visible on the page:
 
 ```html
-<p>
-    She said, <q>Learning never stops.</q>
-</p>
-
-<blockquote>
-    Education is the most powerful weapon which you can use
-    to change the world.
+<blockquote cite="https://example.com/animal-farm">
+  <p>All animals are equal, but some animals are more equal than others.</p>
 </blockquote>
 ```
+
+If readers need the source, add a visible link as well.
+
+## Reference
+
+| Element or attribute | Use for |
+|----------------------|---------|
+| `<q>` | A short inline quotation |
+| `<blockquote>` | A longer quotation set apart from the text |
+| `<cite>` | The title of a work |
+| `cite` attribute | A URL for the source of a quotation |
+
+## Exercise: quote a book
+
+Find a sentence you like from a book, article, or speech. Add it to a page and include:
+
+- a `<blockquote>` for the quotation,
+- a visible source line,
+- `<cite>` around the title of the work,
+- a `cite` attribute if you have a URL for the source.
+
+Check that the quotation marks appear once and that the source line names the work, not just the author.
+
+Next: [Address and Fine Print](11-special-blocks.md)

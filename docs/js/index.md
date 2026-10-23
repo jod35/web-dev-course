@@ -1,17 +1,24 @@
-# JavaScript: Coming Soon
+# JavaScript
 
-The HTML track gave you structure, the CSS track gave you style. JavaScript will add behavior: clicks, forms, fetching data, and updating the page without reloading.
+The JavaScript track has not been written yet. It will be added after the HTML and CSS material is complete.
 
-## What is planned
+JavaScript adds behaviour to a page: responding to clicks, checking form input, updating content, and loading data without reloading the page.
 
-| Area | What you will build |
-|------|---------------------|
-| Language basics | Variables, functions, conditionals, loops |
-| DOM | Selecting elements, handling clicks and input |
-| Forms | Validation and feedback |
-| Fetch | Loading data from an API |
-| Projects | Small, complete pages that combine HTML, CSS, and JS |
+## Planned topics
 
-This section is a placeholder so the site navigation already has a home for the next track. Chapters will appear here once the JavaScript course is authored, in the same style and order as the HTML and CSS tracks.
+- Variables, functions, conditionals, and loops.
+- Selecting elements and responding to events.
+- Reading and validating form input.
+- Updating the page without reloading it.
+- Loading data from an API.
+- Small projects that combine HTML, CSS, and JavaScript.
 
-Want to get ready? Make sure you are comfortable with the HTML and CSS tracks first. That foundation makes the JS track much smoother.
+The topics are a plan, not a promise of a fixed schedule. The page will be replaced with lessons when the track is ready.
+
+## What to do now
+
+- Finish the [HTML course](../00-index.md). You need to be able to build a page and understand its structure.
+- Finish the [CSS course](../css/index.md). You need to be able to style and lay out a page.
+- Keep practising in the browser. Open the developer console and read errors when something breaks.
+
+There is no benefit in starting JavaScript before you can build and style a simple page without copying every line.

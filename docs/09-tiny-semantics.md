@@ -1,124 +1,83 @@
-# Tiny Semantics: Big Meaning
+# Small Semantic Tags
 
-Some of the smallest tags do the most useful work. They don't change much visually, but they tell browsers, screen readers and search engines *what* your text actually is.
+Some useful HTML elements do not change the page much. Their job is to add meaning that browsers and screen readers can use.
 
-## Tag Reference
+## Abbreviations: `<abbr>`
 
-### `<abbr>`: Abbreviation
-
-`<abbr>` marks an **abbreviation or acronym**. Pair it with `title` to give the full expansion:
+Use `<abbr>` for an abbreviation or acronym. The `title` attribute gives the full form:
 
 ```html
 <p>I am learning <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 ```
 
-Browsers often show the `title` as a tooltip on hover, and assistive tech can use it too.
+The full form may appear as a tooltip when the reader hovers over the abbreviation. Do not use `title` to repeat information that is already visible.
 
-Another:
+## Dates and times: `<time>`
 
-```html
-<p>
-    The <abbr title="World Health Organization">WHO</abbr>
-    provides health information around the world.
-</p>
-```
-
----
-
-### `<time>`: Date and Time
-
-`<time>` flags a **specific date, time or period**.
+`<time>` marks a specific date, time, or duration:
 
 ```html
-<p>The class starts at <time>9:00 AM</time>.</p>
+<p>Sports Day starts at <time datetime="08:00">8am</time>.</p>
+<p>The event is on <time datetime="2026-11-06">Friday, 6 November</time>.</p>
 ```
 
-For a date:
+The text between the tags is for humans. The `datetime` attribute is machine-readable. It uses the format `YYYY-MM-DD` for dates and `HH:MM` for times.
+
+You can also mark a duration:
 
 ```html
-<p>The event is on <time>2026-10-07</time>.</p>
+<p>The journey takes <time datetime="PT2H30M">two and a half hours</time>.</p>
 ```
 
-Want to be machine-readable as well as human-friendly? Add `datetime`:
+## Deleted and inserted text: `<del>` and `<ins>`
+
+Use `<del>` for text that has been removed and `<ins>` for text that has been added:
 
 ```html
-<p>
-    PyCon Africa starts on
-    <time datetime="2026-10-07">October 7, 2026</time>.
-</p>
+<p>The price is <del>5,000</del> <ins>4,000</ins> shillings.</p>
 ```
 
-Humans read "October 7, 2026"; computers parse `2026-10-07`.
+Browsers usually show `<del>` with a line through it and `<ins>` underlined. This is useful for price changes, corrections, and showing edits. Add `datetime` if the time of the change matters.
 
----
+## Subscript and superscript
 
-### `<del>`: Deleted Text
-
-`<del>` means text that's been **removed**:
-
-```html
-<p>
-    The price is <del>50,000</del> 40,000 shillings.
-</p>
-```
-
-Browsers usually strike it through.
-
----
-
-### `<ins>`: Inserted Text
-
-`<ins>` is the counterpart, text that's been **added**:
-
-```html
-<p>
-    The price is <del>50,000</del> <ins>40,000</ins> shillings.
-</p>
-```
-
-Useful when you're showing edits or price changes.
-
----
-
-### `<sub>`: Subscript
-
-`<sub>` sits **below the baseline**, think chemistry:
+`<sub>` lowers text below the baseline. `<sup>` raises it above the baseline.
 
 ```html
 <p>Water is H<sub>2</sub>O.</p>
+<p>2<sup>3</sup> = 8.</p>
 ```
 
-Also handy for maths:
+Do not use these elements just to move text around visually. Use CSS for positioning.
+
+## Reference
+
+| Element | Meaning | Example |
+|---------|---------|---------|
+| `<abbr>` | Abbreviation or acronym | `<abbr title="World Health Organization">WHO</abbr>` |
+| `<time>` | Date, time, or duration | `<time datetime="2026-11-06">6 November</time>` |
+| `<del>` | Removed text | `<del>5,000</del>` |
+| `<ins>` | Inserted text | `<ins>4,000</ins>` |
+| `<sub>` | Subscript | `H<sub>2</sub>O` |
+| `<sup>` | Superscript | `2<sup>3</sup>` |
+
+## Exercise: update a notice
+
+Take this notice and add the appropriate semantic tags:
 
 ```html
-<p>x<sub>1</sub> + x<sub>2</sub></p>
+<p>The WHO visit is on 6 November.</p>
+<p>The meeting starts at 9am.</p>
+<p>The old venue was the library. The new venue is the school hall.</p>
+<p>The price of lunch is 5,000 shillings.</p>
+<p>Water is H2O.</p>
 ```
 
----
+Check that:
 
-### `<sup>`: Superscript
+- the abbreviation has a full form,
+- both dates and times use `<time>`,
+- the old and new information use `<del>` and `<ins>`,
+- the chemical formula uses `<sub>`.
 
-`<sup>` sits **above the baseline**, exponents, ordinals:
-
-```html
-<p>2<sup>3</sup> = 8</p>
-```
-
-```html
-<p>1<sup>st</sup> place</p>
-```
-
----
-
-## Summary
-
-| Element  | What it means             |
-| -------- | ------------------------- |
-| `<abbr>` | Abbreviation or acronym   |
-| `<time>` | Date or time              |
-| `<del>`  | Deleted content           |
-| `<ins>`  | Inserted content          |
-| `<sub>`  | Subscript                 |
-| `<sup>`  | Superscript               |
-
-Tiny elements, but they add real semantic meaning, not just a visual tweak.
+Next: [Quotations](10-quotes.md)

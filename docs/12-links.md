@@ -1,222 +1,162 @@
 # Links
 
-## 1. What are Links?
-
-Links are how users **jump from one place to another** on the web.
-
-HTML uses the `<a>` element, the **anchor**, for that:
+Links let readers move between pages, jump to a section, or send an email. HTML uses the anchor element, `<a>`, for all of these.
 
 ```html
-<a href="about.html">About Us</a>
+<a href="menu.html">See the menu</a>
 ```
 
-The text "About Us" is what the visitor actually clicks.
+- `<a>` creates the link.
+- `href` says where the link goes.
+- The text between the tags is what readers click.
 
----
+## Linking to another website
 
-## 2. The `<a>` Element
-
-A hyperlink is just an `<a>` with a destination:
+Use the full URL, including `https://`:
 
 ```html
-<a href="https://www.google.com">Google</a>
+<p>Visit the <a href="https://www.python.org">Python website</a>.</p>
 ```
 
-Breaking it down:
+This is an absolute URL because it contains the full address.
 
-* `<a>`: the anchor element
-* `href`: where it points
-* `Google`: the clickable label
+## Linking to your own pages
 
----
-
-## 3. The `href` Attribute
-
-`href` says **where the link goes**:
-
-```html
-<a href="about.html">About Us</a>
-```
-
-That destination could be:
-
-* another page on your site
-* a page on a different website
-* a spot on the same page
-* an email address
-
----
-
-## 4. Linking to Another Website
-
-Use the full URL:
-
-```html
-<a href="https://www.wikipedia.org">Wikipedia</a>
-```
-
-```html
-<a href="https://www.python.org">Python</a>
-```
-
----
-
-## 5. Linking to Another Page on Your Site
-
-Say your site looks like this:
+Use a relative path when the target is part of your site:
 
 ```text
 website/
 ├── index.html
-├── about.html
+├── menu.html
 └── contact.html
 ```
 
-From `index.html` you can point to the others directly:
-
 ```html
-<a href="about.html">About Us</a>
+<a href="menu.html">Menu</a>
+<a href="contact.html">Contact</a>
 ```
 
-```html
-<a href="contact.html">Contact Us</a>
-```
-
----
-
-## 6. Linking to a Page Inside a Folder
-
-If the target lives in a folder, include that folder in the path:
+If the file is inside a folder, include the folder name:
 
 ```text
 website/
 ├── index.html
 └── pages/
-    ├── about.html
+    ├── menu.html
     └── contact.html
 ```
 
 ```html
-<a href="pages/about.html">About Us</a>
+<a href="pages/menu.html">Menu</a>
 ```
 
----
+The path is relative to the page containing the link. A broken link is usually a filename or folder mistake.
 
-## 7. Opening a Link in a New Tab
+## Opening a link in a new tab
 
-Want the link to open elsewhere? Add `target`:
+Add `target="_blank"` to open the link in a new tab:
 
 ```html
-<a href="https://www.python.org" target="_blank">
-    Python
+<a href="https://www.python.org" target="_blank" rel="noopener">Python</a>
+```
+
+Only do this for links where leaving the page would interrupt the reader. Avoid opening every link in a new tab. When you use `target="_blank"`, add `rel="noopener"` so the new page cannot control the original tab through `window.opener`.
+
+## Linking to an email address
+
+Use `mailto:`:
+
+```html
+<a href="mailto:webclub@example.com">Email the web club</a>
+```
+
+The browser will try to open the reader's email application.
+
+## Linking to a section on the same page
+
+Give the target element an `id`, then link to it with `#`:
+
+```html
+<h2 id="contact">Contact</h2>
+
+<p><a href="#contact">Go to contact details</a></p>
+```
+
+The `id` must be unique on the page. The link scrolls to the element with that id.
+
+## Linking an image
+
+An image can be the clickable content:
+
+```html
+<a href="menu.html">
+  <img src="images/bread.jpg" alt="See the bread menu" width="300">
 </a>
 ```
 
-`target="_blank"` usually opens a new tab, handy for external sites so you don't pull people away from yours.
+If the image is the only content of the link, its alt text should describe the link destination.
 
----
+## Navigation
 
-## 8. Linking to an Email Address
-
-Use the `mailto:` scheme:
-
-```html
-<a href="mailto:example@email.com">
-    Send me an email
-</a>
-```
-
-Clicking it will try to open the visitor's email app.
-
----
-
-## 9. Linking to a Specific Spot on a Page
-
-Give an element an `id` first:
-
-```html
-<h2 id="contact">Contact Us</h2>
-```
-
-Then link to it with a hash:
-
-```html
-<a href="#contact">Go to Contact Us</a>
-```
-
-That `#` tells the browser "find the element with this id and scroll to it."
-
----
-
-## 10. Linking an Image
-
-An image can be the clickable thing too:
-
-```html
-<a href="about.html">
-    <img src="images/logo.png" alt="About Us" width="200">
-</a>
-```
-
-Click the image → go to `about.html`.
-
----
-
-## 11. Navigation Links
-
-Put those `<a>`s together and you've got site navigation:
+A group of links can become site navigation:
 
 ```html
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="contact.html">Contact</a>
 </nav>
 ```
 
-That's how users move between pages, simple, but essential.
+`<nav>` is covered in the page landmarks chapter. For now, remember that navigation is still a group of links.
 
----
-
-## 12. Putting It Together
+## Complete example
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MHSM Bakery</title>
 </head>
-
 <body>
+  <h1>MHSM Bakery</h1>
 
-    <h1>My Website</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <p>
+    Read about our bread on the <a href="menu.html">menu page</a>.
+  </p>
 
-    <h2>Welcome</h2>
-
-    <p>
-        Visit the
-        <a href="https://www.python.org">Python website</a>
-        to learn more about Python.
-    </p>
-
+  <p>
+    You can also visit the
+    <a href="https://www.python.org" target="_blank" rel="noopener">Python website</a>.
+  </p>
 </body>
 </html>
 ```
 
-### At a glance
+## Check your work
 
-| Element / Attribute | What it's for |
-| ------------------- | ------------- |
-| `<a>` | Creates a link |
-| `href` | Where the link points |
-| `target` | Where to open it |
-| `target="_blank"` | Open in a new tab/window |
-| `mailto:` | Make it an email link |
-| `#id` | Jump to an element on the page |
+- Click every link. It should go to the page or section you expected.
+- Check the spelling and capitalisation of file names. `Menu.html` and `menu.html` are different on many servers.
+- Do not use "click here" as link text. Describe the destination instead.
+- Add `rel="noopener"` when you use `target="_blank"`.
+
+## Try it
+
+Create two pages, `index.html` and `contact.html`, in the same folder. On `index.html`:
+
+1. Add a `<nav>` with a link to `contact.html`.
+2. Add a link to an external website.
+3. Add a section with `id="hours"` and a link that jumps to it.
+4. Add a `mailto:` link.
+
+Open the page and test each link. Then rename `contact.html` to `contact-us.html` without updating the link and see what the browser reports. Fix the link afterwards.
+
+Next: [Images](13-images.md)

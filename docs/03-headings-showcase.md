@@ -1,63 +1,73 @@
-# Headings h1–h6 Showcase
+# Heading Levels
 
-You'll meet all six heading levels here and see how they stack up, not just how big they look, but when you'd actually reach for each one.
+This page is a quick reference for `<h1>` to `<h6>`. Use it when you need to check which level belongs where.
 
-## The rule to carry with you
+## The six levels
 
-Every page should have one `<h1>`, that's the page's title. And don't skip levels just because you like the default size (jumping straight from `<h1>` to `<h3>` is a giveaway you picked for looks, not structure).
+| Tag | Use | Example |
+|-----|-----|---------|
+| `<h1>` | Page title, once per page | MHSM Bakery |
+| `<h2>` | Major section | Our Menu |
+| `<h3>` | Subsection inside an `<h2>` | Drinks |
+| `<h4>` | Deeper subsection | Hot Drinks |
+| `<h5>` | Rarely needed | Tea Notes |
+| `<h6>` | Rarely needed | Fine Print |
 
-## All six levels
-
-| Tag | Rough default look | When you'd use it |
-|-----|-------------------|-------------------|
-| `<h1>` | **Bakery Homepage** (largest) | Page title: once per page |
-| `<h2>` | **Our Menu** | Major sections |
-| `<h3>` | **Drinks** | Subsections inside an h2 |
-| `<h4>` | **Hot Drinks** | Deeper nesting |
-| `<h5>` | **Tea Notes** | Fine detail you'll rarely need |
-| `<h6>` | **Fine print head** (smallest) | Deepest level, used sparingly |
-
-## Snippets
-
-```html
-<h1>Bakery</h1>
-<h2>Our Menu</h2>
-<h3>Drinks</h3>
-<h4>Hot Drinks</h4>
-<h5>Tea Notes</h5>
-<h6>Fine print head</h6>
-```
-
-Here's what correct nesting looks like, no levels skipped:
-
-```html
-<h1>Bakery</h1>
-<h2>Our Menu</h2>
-<h3>Drinks</h3>
-<h2>Prices</h2>
-```
-
-`<h2>` → `<h3>` is fine; `<h1>` → `<h3>` without an `<h2>` isn't ideal.
-
-## A few habits to avoid
-
-- Two `<h1>`s on one page? Split it into two pages or demote one to `<h2>`.
-- `<h1>` followed immediately by `<h3>`? Slip in that missing `<h2>`: even if it feels a bit redundant.
-- A paragraph styled to look huge is **not** a heading. Screen readers won't list it, and your outline breaks.
+The browser's default size is not a reason to choose a level. The outline is.
 
 <figure markdown="span">
-
-![Image title](./imgs/heading.png){ width="400" }
-
-<figcaption>Headings</figcaption>
-
+  ![Headings from h1 to h6 shown in decreasing size](./imgs/heading.png){ width="400" }
+  <figcaption>Default heading sizes, largest to smallest</figcaption>
 </figure>
 
+## A correct outline
 
-## Quick recap
+```html
+<h1>Bakery</h1>
+  <h2>Menu</h2>
+    <h3>Bread</h3>
+    <h3>Pastries</h3>
+  <h2>Prices</h2>
+  <h2>Contact</h2>
+```
 
-| Level | Size hint | Role |
-|-------|-----------|------|
-| `h1` | Biggest | Page title, once |
-| `h2` | Large | Sections |
-| `h3`–`h6` | Shrinking | Subsections: don't skip |
+This outline is valid even though it does not use `<h4>`, `<h5>`, or `<h6>`. Use only the levels your content needs.
+
+## An outline with a problem
+
+```html
+<h1>Bakery</h1>
+  <h3>Menu</h3>
+  <h3>Prices</h3>
+```
+
+The page jumps from level 1 to level 3. A screen reader user will hear a gap in the structure, and the page will be harder to scan.
+
+## Exercise: fix the outline
+
+The headings below are out of order. Rewrite them so they form a sensible outline with one `<h1>`, the main sections as `<h2>`, and the items under `Bread` as `<h3>`.
+
+```html
+<h1>MHSM Bakery</h1>
+<h3>Bread</h3>
+<h4>White bread</h4>
+<h4>Brown bread</h4>
+<h3>Pastries</h3>
+<h2>Contact</h2>
+```
+
+When you have rewritten it, check:
+
+- Is there exactly one `<h1>`?
+- Does every `<h3>` sit under an `<h2>`?
+- Does each heading describe the content below it?
+
+## Quick rules
+
+- One `<h1>` per page.
+- Do not skip levels.
+- Do not use headings just to make text bigger.
+- Keep heading text short and descriptive.
+- Use CSS to change appearance.
+
+Next: [Paragraphs](04-paragraphs.md)
